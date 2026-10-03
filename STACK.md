@@ -39,6 +39,17 @@ Edit `config.mjs` only: `title`, `tagline`, `systemPrompt`, `examples`. Server s
 - Fallbacks: skill says opt in by default for Opus 5.5 (`fallbacks: "default"`, beta `server-side-fallback-2026-07-01`, via `client.beta.messages`). Scaffold has it behind `USE_FALLBACKS=1`; SDK typing for the scalar form not verified. Tell the owner if on.
 - Price: $4 in / $20 out per MTok; cache reads $0.20/MTok.
 
+## Navigator (rules, lookups, endpoints)
+
+- **Endpoints** (server.mjs): `GET /api/lookup?address=<id or text>&date=YYYY-MM-DD` (stack, per-rule results, not legal advice), `GET /api/rules`, `GET /api/lookups`.
+- **Build pipeline**: `extract-rules.mjs` (per-doc extraction) -> `consolidate-rules.mjs` (dedupe, stable ids, curated patches) -> `rules.json` -> `build-lookups.mjs` -> `lookups.json` (500 addresses). All model calls go through `lib/llm.mjs` and are cached in `cache/`, so a rerun is cheap.
+- **One command after a new document**: `npm run rebuild -- --with-lookups` (p-a-3's rebuild; ingest writes `new-<doc>-N` ids, then rules, lookups and changes are regenerated).
+- **Results**: applies | unknown | superseded | not_yet_effective | pending. Time status comes from `changelog.mjs` `asOf`; coverage (units, year built, a named blocking fact) and local-over-state supersession are applied by `build-lookups.mjs`. Missing data gives `unknown` naming the condition, never a silent applies.
+- **As-of queries**: not-yet-effective and pending entries carry `if_in_force` (the unknown or superseded result they take once in force); `lib/navigator.mjs` applies it when the query date moves the rule into force.
+- **Curated patches** in `consolidate-rules.mjs`: SF rent ordinance coverage (units first issued a CO after 1979-06-13 are exempt, from D079); Berkeley coverage rule (D009); NJ P.L. 2026 c.43 / Jersey City / Hoboken conflict flags; MA H.5222 pending; key_value wording for MA ch. 40P and Santa Ana.
+- **`source_note`** (optional string on a rule): set when the quoted span is verbatim in a fetched page, not the starter corpus. Official hosts are labelled `alt`; others are `secondary` with confidence capped at 0.5.
+- **Not verified**: the `api` backend mode; a real judges' score (selfcheck is a proxy).
+
 ## Deploy, no owner account
 - Primary: run on the owner's laptop, demo from localhost. Zero accounts.
 - If judges need a public URL: Cloudflare quick tunnel (`cloudflared tunnel --url http://localhost:3000`) needs no account per my recollection. NOT verified; cloudflared is not installed (a brew step). URL is temporary and dies with the laptop session.
