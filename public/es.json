@@ -1,0 +1,242 @@
+{
+ "r-0001": {
+  "requirement": "Se prohíbe vender, licenciar o proporcionar de cualquier otra forma a los arrendadores de Berkeley un algoritmo de precios coordinados que fije o recomiende rentas o niveles de ocupación para unidades residenciales en Berkeley. También se prohíbe que los arrendadores usen dicho algoritmo. Un algoritmo de precios coordinados es aquel que usa datos no públicos de la competencia (Competitor Data) para recomendar rentas, cargos, tasas de ocupación u otras condiciones del contrato de arrendamiento de forma coordinada entre un arrendador de Berkeley y sus competidores, incluso a través de un proveedor externo."
+ },
+ "r-0002": {
+  "requirement": "Antes de recibir un cargo por un informe de crédito del consumidor y el procesamiento de la solicitud, el propietario o su agente debe entregar al solicitante una declaración clara y visible de derechos sobre el cargo de evaluación de inquilinos (Tenant Screening Fee Rights Statement) y una declaración del límite máximo del cargo según el Civil Code 1950.6(b). Esto puede incluirse en la solicitud de alquiler o en un aviso por separado. Además, los propietarios no pueden cobrar a los inquilinos actuales ningún cargo no reembolsable por renovar un arrendamiento, incluidos los cargos relacionados con la salida de un compañero de vivienda o con agregar o reemplazar a un compañero de vivienda."
+ },
+ "r-0003": {
+  "requirement": "Los inquilinos de unidades total o parcialmente cubiertas no pueden ser desalojados sin causa justificada. El desalojo por falta de pago requiere que la renta adeudada sea de al menos un mes de la renta justa de mercado de HUD (HUD Fair Market Rent). Los inquilinos no pueden ser desalojados por negarse a firmar un contrato de arrendamiento sustancialmente similar cuando vence un contrato de plazo fijo. El desalojo por incumplimiento de una condición esencial del contrato requiere cuatro cosas: que la condición haya sido acordada mutuamente, que el incumplimiento haya causado un daño real y sustancial, que la conducta del inquilino haya sido irrazonable y que se haya entregado un aviso detallado para cesar la conducta. Los avisos de terminación deben incluir orientación y la información de contacto de la Junta de Rentas (Rent Board). Los arrendadores deben presentar los avisos de terminación y las citaciones/demandas ante la Junta de Rentas (Rent Board) dentro de los 3 días hábiles siguientes a su entrega."
+ },
+ "r-0004": {
+  "requirement": "Los arrendadores no pueden negarse a alquilar a una persona, ni terminar un arrendamiento, por sus antecedentes penales."
+ },
+ "r-0005": {
+  "requirement": "Los propietarios deben pagar asistencia de reubicación a los inquilinos desalojados para que el propietario pueda retirar la propiedad del mercado de alquiler conforme al Ellis Act. Los montos son los mismos que para los desalojos por mudanza del propietario y se ajustan anualmente según el CPI."
+ },
+ "r-0006": {
+  "requirement": "Los propietarios deben pagar asistencia de reubicación a los inquilinos desalojados por mudanza del propietario. El monto se ajusta cada año según el aumento del CPI de 12 meses; para 2026 el ajuste es del 1.5%."
+ },
+ "r-0007": {
+  "requirement": "Los arrendadores que reúnan los requisitos pueden aumentar los límites máximos permanentes de renta de 2025 en un 1.0%, no antes del 1 de enero de 2026. Los arrendadores deben cumplir las condiciones requeridas y dar a los inquilinos el aviso exigido por la Regulation 1148."
+ },
+ "r-0008": {
+  "requirement": "Los arrendadores de unidades totalmente cubiertas solo pueden aumentar la renta cada año según el Ajuste General Anual (Annual General Adjustment, AGA). El AGA se fija en el 65% del aumento del CPI-U del Área de la Bahía (medido del 1 de julio al 30 de junio) y nunca puede superar el 5%, aunque la fórmula dé una cifra mayor."
+ },
+ "r-0009": {
+  "requirement": "Los proveedores de vivienda de alquiler no pueden preguntar sobre los antecedentes penales ni las verificaciones de antecedentes penales, exigir que se divulguen ni usarlos en anuncios, solicitudes, selección de inquilinos o decisiones. Esto incluye negarse a añadir a un familiar directo o descalificar a inquilinos de asistencia para el alquiler, como Section 8, por sus antecedentes penales. Cualquier acción desfavorable basada en antecedentes penales requiere un aviso por escrito y la oportunidad de responder, y los proveedores deben colocar de forma visible el Notice to Rental Applicants and Tenants en los materiales de solicitud, en los sitios web y en los lugares que los solicitantes visitan con frecuencia."
+ },
+ "r-0010": {
+  "requirement": "Los propietarios deben pagar a los inquilinos intereses sobre su depósito de seguridad al final de cada año. Si el inquilino se muda antes de que termine el año, el propietario debe pagar una cantidad proporcional."
+ },
+ "r-0011": {
+  "requirement": "Los propietarios no pueden exigir un depósito de seguridad más alto ni un alquiler más alto debido a los antecedentes penales de un solicitante o inquilino."
+ },
+ "r-0012": {
+  "requirement": "Un propietario o un dueño que adquirió la propiedad por ejecución hipotecaria y que planea terminar un arrendamiento o una ocupación posterior a la ejecución hipotecaria debe entregar al inquilino un Notice of Tenants' Rights and Resources al mismo tiempo que el Notice to Quit o el Notice of Non-renewal of Lease. También debe enviar a la Office of Housing Stability de la Ciudad una copia de ese aviso, usando el Submission Verification Form en línea, junto con un Certificate of Compliance/Service."
+ },
+ "r-0013": {
+  "requirement": "Los proveedores de vivienda cubiertos no pueden aplicar prohibiciones generales contra solicitantes con arrestos o condenas. Deben revisar cada caso de forma individual y no pueden tomar en cuenta arrestos que no resultaron en condena, condenas sujetas a alivio judicial como la eliminación (expungement) o el sellado de antecedentes, ni condenas de hace más de 5 años al decidir la elegibilidad o un desalojo. Tampoco pueden usar puntajes de crédito para aprobar o rechazar a solicitantes, solo pueden usar el historial de crédito en lugar de un historial de alquiler que no esté disponible, no pueden rechazar a un solicitante por no tener historial de crédito y deben tomar en cuenta un historial comprobado de haber pagado una carga de alquiler más alta."
+ },
+ "r-0014": {
+  "requirement": "Los propietarios en Boston no pueden discriminar al alquilar vivienda por características protegidas, entre ellas raza, color, religión, discapacidad, origen nacional, ascendencia, sexo, identidad de género, expresión de género, edad, orientación sexual, estado civil, asistencia para el alquiler, situación familiar y condición militar. En particular, los propietarios no pueden rechazar a solicitantes porque usen asistencia para el alquiler, como Section 8, discapacidad del seguro social o vales para veteranos."
+ },
+ "r-0015": {
+  "requirement": "Es ilegal usar o distribuir un algoritmo de precios común como parte de un contrato, una combinación en forma de trust o una conspiración para restringir el comercio en violación del Cartwright Act. También es ilegal usarlo o distribuirlo mientras se obliga a otra persona a fijar o adoptar un precio o una condición comercial que el algoritmo recomiende para los mismos productos o servicios, o para productos o servicios similares, en California."
+ },
+ "r-0016": {
+  "requirement": "Un propietario puede cobrar una tarifa de evaluación de la solicitud solo hasta el monto de sus costos reales de evaluación, sujeto a un límite de $30 por solicitante ajustado anualmente según el CPI, y no puede cobrar una tarifa cuando sabe o debería saber que no hay ni habrá pronto una unidad disponible. El propietario debe ofrecer un proceso de \"el primero que llegue y califique\" que cobre solo a los solicitantes que realmente se consideren, o un reembolso completo a los solicitantes no seleccionados. También debe entregar un recibo detallado, reembolsar cualquier parte no utilizada de la tarifa y darle al solicitante una copia del informe de crédito dentro de los 7 días después de recibirlo."
+ },
+ "r-0017": {
+  "requirement": "Una vez que un inquilino ha ocupado una propiedad residencial de forma continua y legal durante 12 meses (o 24 meses en algunos casos en que se agregaron inquilinos adultos), el propietario solo puede terminar el arrendamiento por una causa justa de la lista, ya sea por culpa del inquilino o sin culpa del inquilino, y esa causa debe indicarse en el aviso por escrito. En una terminación sin culpa del inquilino, por ejemplo cuando el propietario se muda a la vivienda, retira la propiedad del mercado de alquiler, existe una orden del gobierno, o hay una demolición o remodelación sustancial, el propietario debe pagar asistencia para la reubicación o renunciar al alquiler del último mes. Si se trata de una violación del contrato de arrendamiento que se puede corregir, el propietario primero debe darle al inquilino la oportunidad de corregirla."
+ },
+ "r-0018": {
+  "requirement": "Los hogares de inquilinos desplazados temporalmente por menos de 20 días debido a obras de mejoras de capital deben recibir un pago diario de reubicación más los gastos reales de mudanza, según lo establece Civil Code § 1947.9."
+ },
+ "r-0019": {
+  "requirement": "Los arrendadores, vendedores y agentes de alquiler pueden usar cualquier criterio razonable para seleccionar a los solicitantes, como la capacidad del solicitante para pagar el alquiler, cuidar el apartamento y respetar los derechos de los demás, pero el criterio debe aplicarse de manera igual y uniforme a todos los solicitantes. Se prohíbe la discriminación en la vivienda, incluso al mostrar o alquilar un apartamento, por motivo de categorías protegidas, incluida la fuente de ingresos, como los vales de Section 8 y los beneficios públicos."
+ },
+ "r-0020": {
+  "requirement": "En cualquier período de 12 meses, el propietario de una propiedad residencial no puede aumentar el monto bruto del alquiler en más de lo que resulte menor entre el 5% más el cambio regional en el costo de vida (CPI) o el 10%. La base es el alquiler más bajo cobrado en los 12 meses anteriores, sin contar los descuentos o concesiones aceptados. Si se queda el mismo inquilino, el alquiler puede aumentarse en no más de dos incrementos durante ese período. El alquiler inicial de un nuevo arrendamiento en el que no queda ningún inquilino anterior puede fijarse libremente, y cualquier aumento requiere aviso según Civil Code Section 827."
+ },
+ "r-0021": {
+  "requirement": "El arrendador debe aceptar un informe de evaluación de inquilinos reutilizable si el solicitante lo entrega. El arrendador que cobre una tarifa de evaluación bajo el proceso de § 1950.6(c)(2)(A) debe entregar sus criterios de evaluación por escrito junto con la solicitud, considerar las solicitudes completas en el orden en que las recibe y aprobar al primer solicitante que cumpla con los criterios."
+ },
+ "r-0022": {
+  "requirement": "Los proveedores de vivienda no pueden tomar en cuenta los arrestos que no terminaron en una condena, los antecedentes sellados o eliminados (expunged), ni los antecedentes de justicia juvenil, y no pueden imponer prohibiciones generales a las personas con antecedentes penales. El rechazo basado en una condena debe estar directamente relacionado con la capacidad del solicitante para ser un buen inquilino sin poner en peligro la salud y la seguridad de otras personas o de la propiedad, tomando en cuenta la naturaleza y la gravedad del delito y el tiempo transcurrido desde la conducta."
+ },
+ "r-0023": {
+  "requirement": "Los propietarios y otros proveedores de vivienda, incluidas las empresas externas de evaluación de inquilinos, no pueden discriminar al evaluar o alquilar por motivo de una característica protegida, incluida la fuente de ingresos, como los vales de Section 8 y HUD-VASH, el SSI y la ayuda para el alquiler. Tampoco pueden hacer preguntas sobre características protegidas, publicar anuncios discriminatorios ni usar un criterio de ingresos que no cuente los ingresos combinados de las personas que viven juntas de la misma manera que los de las personas casadas."
+ },
+ "r-0024": {
+  "requirement": "Cuando hay un subsidio de alquiler del gobierno, cualquier criterio de ingresos debe basarse solo en la parte del alquiler que pagará el inquilino. El proveedor no puede usar el historial de crédito a menos que le ofrezca al solicitante la opción de presentar otra prueba legal y verificable de su capacidad de pago, como pagos de beneficios del gobierno, registros de pago de salario o estados de cuenta bancarios. Si el solicitante presenta esa prueba, el proveedor debe darle un tiempo razonable para responder y debe considerar razonablemente esa prueba en lugar del historial de crédito."
+ },
+ "r-0025": {
+  "requirement": "Los proveedores de vivienda no pueden cobrar un depósito de seguridad más alto a hogares con niños ni según la fuente de ingresos, como Section 8. Tampoco pueden cobrar depósitos ni rentas por mascotas por animales de servicio o animales de apoyo emocional."
+ },
+ "r-0026": {
+  "requirement": "Las deducciones se limitan a las cantidades razonablemente necesarias para cubrir renta no pagada, daños causados por el inquilino que vayan más allá del desgaste normal por uso, la limpieza para dejar la unidad en las condiciones en que se recibió al mudarse y (si el contrato de arrendamiento lo permite) la restauración de bienes personales. No se pueden cobrar los daños que ya existían ni el desgaste normal por uso, y la limpieza profesional solo se puede cobrar si es razonablemente necesaria. El arrendador debe ofrecer una inspección antes de la mudanza, fotografiar la unidad según se requiere y devolver cualquier saldo restante del depósito con un estado de cuenta detallado y la documentación de respaldo dentro de los 21 días calendario después de que el inquilino desocupe la unidad; el depósito de seguridad nunca puede calificarse como no reembolsable."
+ },
+ "r-0027": {
+  "requirement": "Un arrendador no puede exigir ni recibir un depósito de seguridad, sin importar cómo se le llame, de más de un mes de renta, además de la renta del primer mes pagada al mudarse. La renta del último mes cuenta para este límite, y ciertos arrendadores pequeños pueden cobrar hasta dos meses de renta."
+ },
+ "r-0028": {
+  "requirement": "Las rentas de las propiedades de alquiler cubiertas en Jersey City están reguladas. Los arrendadores que deseen aumentos por encima de los niveles regulados deben presentar una solicitud ante la Oficina (por ejemplo, solicitudes de aumento por mejoras de capital, por mejoras de capital en unidades desocupadas o por dificultad económica) a través del portal Tyler. Los inquilinos pueden presentar una Illegal Rent Petition (petición por renta ilegal), o una Failure to Maintain Service Petition (petición por falta de mantenimiento de servicios) para solicitar una reducción de renta por malas condiciones del edificio o del apartamento."
+ },
+ "r-0029": {
+  "requirement": "Los arrendadores de unidades cubiertas que no están bajo RSO no pueden terminar un arrendamiento sin una de las causas justas indicadas, ya sea por culpa del inquilino o sin culpa del inquilino, y deben pagar asistencia de reubicación en los desalojos sin culpa del inquilino. Los inquilinos desalojados por una razón atribuible a ellos (por ejemplo, falta de pago, incumplimiento del contrato de arrendamiento no corregido, molestia (nuisance), uso ilegal, negación de acceso, subarrendatario no aprobado) no tienen derecho a asistencia de reubicación."
+ },
+ "r-0030": {
+  "requirement": "Los arrendadores no pueden desalojar a un inquilino bajo RSO o JCO por falta de pago de renta, a menos que el inquilino deba más que la Fair Market Rent (renta justa de mercado) correspondiente al número de habitaciones de la unidad."
+ },
+ "r-0031": {
+  "requirement": "Antes de cualquier desalojo sin culpa del inquilino de una unidad bajo RSO o JCO, el arrendador debe presentar una Declaration of Intent to Evict (Declaración de Intención de Desalojar) ante LAHD y pagar asistencia de reubicación por unidad. El pago debe ponerse a disposición dentro de los 15 días siguientes a la entrega del aviso, o depositarse en una cuenta de garantía (escrow) dentro de ese plazo."
+ },
+ "r-0032": {
+  "requirement": "Los arrendadores solo pueden desalojar de una unidad bajo RSO por las causas indicadas atribuibles al inquilino (falta de pago, incumplimiento del contrato de arrendamiento no corregido, molestia (nuisance) o daños, uso ilegal, no renovar un acuerdo similar, negación de acceso, subarrendatario no aprobado) o por causas sin culpa del inquilino (mudanza del propietario o de un familiar, administrador residente requerido, demolición o retiro de la unidad del mercado de alquiler, orden gubernamental, conversión a vivienda asequible). Los desalojos sin culpa del inquilino requieren asistencia de reubicación, una Landlord Declaration of Intent to Evict (Declaración del Arrendador de Intención de Desalojar) presentada ante LAHD y un aviso por escrito de 30 o 60 días."
+ },
+ "r-0033": {
+  "requirement": "Los inquilinos de Protected Units que se demuelan para una nueva construcción pueden permanecer hasta un máximo de 6 meses antes de que empiece la construcción, lo que incluye un aviso de 6 meses para mudarse. También tienen derecho a reubicación, derecho a regresar si la demolición no se lleva a cabo y, en algunos casos, derecho de preferencia (right of first refusal) en el nuevo edificio. Los propietarios deben pagar la cantidad más alta entre la que fija la ley estatal Housing Crisis Act y la que fija la Ciudad para la reubicación, con pagos estandarizados mayores para los hogares de menores ingresos."
+ },
+ "r-0034": {
+  "requirement": "El alquiler de las unidades sujetas a la RSO solo puede subirse una vez cada 12 meses, y solo según el porcentaje de aumento permitido, que fue del 3% para el período del 1 de julio de 2025 al 30 de junio de 2026. Desde el 2 de febrero de 2026, los propietarios ya no pueden agregar un porcentaje adicional por servicios públicos (utilities) ni un 10% adicional por un dependiente agregado. Los propietarios todavía pueden agregar un 10% por un inquilino adicional que no sea dependiente, dentro de los 60 días después de enterarse de la presencia de ese inquilino. El alquiler puede restablecerse al precio de mercado después de una mudanza voluntaria, de ciertos desalojos por culpa del inquilino o por orden oficial, o de un Tenant Buyout Agreement."
+ },
+ "r-0035": {
+  "requirement": "Después de registrar las unidades y dar aviso por escrito, los propietarios de unidades sujetas a la RSO pueden trasladar al inquilino la tarifa de registro de la RSO, de $1.61 al mes, y la tarifa del SCEP, de $2.83 al mes (1/12 del 50% de la tarifa anual del SCEP). Estos recargos son aparte del alquiler y se suman a él. También se puede agregar un recargo de $3.00 por instalar un detector de humo conectado al cableado eléctrico (hard-wired) o un detector combinado de humo y monóxido de carbono."
+ },
+ "r-0036": {
+  "requirement": "Con la aprobación del LAHD, los propietarios pueden recuperar los costos de mejoras de capital que duren al menos cinco años, de renovaciones principales, de refuerzos sísmicos Soft-Story y de obras exigidas por órdenes del gobierno. Los propietarios también pueden solicitar un aumento Just and Reasonable cuando el ingreso neto de operación, ajustado por inflación, no cubra los gastos de operación."
+ },
+ "r-0037": {
+  "requirement": "La RSO trata el pago de intereses sobre los depósitos de garantía de las unidades de alquiler sujetas a la RSO. El documento de origen no da detalles sobre la tasa, los plazos ni la forma de pago."
+ },
+ "r-0038": {
+  "requirement": "Proyecto de ley que prohibiría la fijación de alquileres mediante algoritmos. Los documentos de origen solo muestran el título del proyecto de ley y su historial legislativo, no las disposiciones de fondo."
+ },
+ "r-0039": {
+  "requirement": "Proyecto de ley para impedir la fijación concertada de alquileres mediante algoritmos en el mercado de vivienda de alquiler. No fue aprobado: se remitió al House Committee on Ways and Means."
+ },
+ "r-0040": {
+  "requirement": "Si un inquilino con contrato de arrendamiento por escrito no paga el alquiler, el propietario puede terminar el contrato con un aviso por escrito de 14 días para desalojar (notice to quit). El contrato no se termina si el inquilino paga todo el alquiler adeudado, más intereses y costos, a más tardar el día en que vence la respuesta (answer) en la demanda de posesión. Si la falta de pago se debió a que una agencia del gobierno no entregó, o entregó con retraso, un pago de subsistencia que no sea salario o un pago de alquiler, el tribunal debe aplazar la audiencia por al menos 7 días."
+ },
+ "r-0041": {
+  "requirement": "Cualquiera de las partes puede terminar un arrendamiento a voluntad (tenancy at will) mediante un aviso por escrito con tres meses de anticipación, o con la anticipación equivalente al intervalo de pago del alquiler o de 30 días, lo que sea mayor, si el alquiler se paga con una frecuencia mayor que cada tres meses. Por falta de pago, el arrendador puede dar un aviso de desalojo (notice to quit) de 14 días. El inquilino puede detener la terminación pagando la totalidad de lo adeudado dentro de 10 días, a menos que haya recibido un aviso similar en los 12 meses anteriores. Si el aviso no incluye la declaración obligatoria sobre el derecho a subsanar, el plazo para subsanar se extiende hasta la fecha de la contestación (answer date), y los tribunales deben aplazar la audiencia por al menos 7 días cuando la falta de pago se haya debido a un pago atrasado de una agencia del gobierno."
+ },
+ "r-0042": {
+  "requirement": "Un aviso de terminación entregado dentro de los seis meses posteriores a que un inquilino realice una acción protegida se presume que es una represalia. El arrendador solo puede refutar esta presunción con pruebas claras y convincentes de que tenía una razón independiente y de que habría actuado de la misma manera en el mismo momento. La acción protegida incluye hacer valer las leyes de vivienda, denunciar infracciones del código, presentar quejas por escrito al arrendador, y organizar un sindicato de inquilinos o afiliarse a uno. Un arrendador que tome represalias debe pagar daños y perjuicios, costas y honorarios de abogado, y cualquier cláusula del contrato de arrendamiento que renuncie a estas protecciones es nula."
+ },
+ "r-0043": {
+  "requirement": "Las ciudades y pueblos que adopten el control de alquileres conforme al Chapter 40P no pueden usar esa regulación para abarcar desalojos, ocupación, servicios, conversión a condominio ni la exclusión de propiedades de la regulación."
+ },
+ "r-0044": {
+  "requirement": "Las ciudades y pueblos no pueden promulgar, mantener ni hacer cumplir ningún tipo de control de alquileres. La excepción es una ciudad o pueblo que acepte el Chapter 40P, y su control de alquileres debe cumplir tres condiciones: el cumplimiento por parte de los propietarios debe volverse voluntario seis meses después de la adopción inicial; no puede aplicarse a propietarios de menos de diez unidades de alquiler ni a unidades con un alquiler justo de mercado superior a $400; y el municipio debe pagar a los propietarios, de sus fondos generales, la diferencia entre el alquiler justo de mercado y el alquiler controlado de cada unidad."
+ },
+ "r-0045": {
+  "requirement": "Un aviso de aumento de alquiler recibido dentro de los seis meses posteriores a que un inquilino realice una acción protegida se presume que es una represalia. La acción protegida incluye hacer valer las leyes de vivienda, denunciar infracciones, presentar quejas por escrito, u organizar un sindicato de inquilinos o afiliarse a uno. El arrendador solo puede refutar la presunción con pruebas claras y convincentes de una justificación independiente suficiente."
+ },
+ "r-0046": {
+  "requirement": "Los proveedores de vivienda no pueden negarse a alquilar, establecer condiciones diferentes, hacer preguntas o registros, por escrito u orales, ni anunciar preferencias basadas en características protegidas. Las características protegidas son: raza, credo religioso, color, origen nacional, sexo, identidad de género, orientación sexual, edad, información genética, ascendencia, estado civil, condición de veterano o de miembro de las fuerzas armadas, discapacidad (incluidas la ceguera y la deficiencia auditiva), tener un perro guía entrenado, recibir asistencia pública o subsidios de vivienda (incluida la asistencia para el alquiler), y tener hijos que vayan a ocupar la vivienda. Los proveedores tampoco pueden negarse a alquilar porque una persona necesite una modificación o un ajuste razonable por una discapacidad."
+ },
+ "r-0047": {
+  "requirement": "Al comienzo de un arrendamiento o antes, un arrendador residencial o su agente solo puede cobrar el alquiler del primer mes, el alquiler del último mes, un depósito de seguridad de no más de un mes de alquiler, y el costo de una cerradura y llave. El depósito debe mantenerse en una cuenta bancaria separada que genere intereses en un banco de Massachusetts, y se deben entregar al inquilino recibos y una declaración sobre el estado de la vivienda; se deben intereses al 5% o a la tasa bancaria, si esta es menor, y el depósito debe devolverse dentro de los 30 días posteriores a la terminación del arrendamiento, descontando únicamente las deducciones permitidas y detalladas."
+ },
+ "r-0048": {
+  "requirement": "La Executive Office of Housing and Livable Communities puede emitir reglamentos que permitan una tarifa opcional, posiblemente no reembolsable, en lugar de un depósito de seguridad; el inquilino puede optar por pagar un depósito en su lugar, y el total de las tarifas más cualquier depósito no puede superar un mes de alquiler. Un arrendador que ofrezca esta opción debe ofrecerla a todos los solicitantes aprobados, sin importar sus ingresos, características protegidas o puntaje de crédito, y no puede usar esos factores para fijar la tarifa."
+ },
+ "r-0049": {
+  "requirement": "Los propietarios de propiedades de alquiler y sus agentes no pueden pagar ni usar los servicios de un coordinador, es decir, cualquier persona que opere un software algorítmico de gestión de ingresos o un dispositivo algorítmico que realice una función de coordinación. Ninguna persona puede realizar una función de coordinación, facilitar acuerdos anticompetitivos entre propietarios ni participar en la coordinación paralela de precios de unidades residenciales razonablemente intercambiables."
+ },
+ "r-0050": {
+  "requirement": "Un arrendador o su agente no puede cobrar una tarifa de solicitud, ni ninguna tarifa similar, de más de $50 para solicitar el arrendamiento o subarrendamiento de una propiedad residencial de alquiler. El límite se ajusta cada 1 de enero según los aumentos del CPI (índice de precios al consumidor), y cualquier cantidad cobrada indebidamente se le devuelve al solicitante."
+ },
+ "r-0051": {
+  "requirement": "Antes de aceptar cualquier tarifa de solicitud, un proveedor de vivienda debe informar al solicitante por escrito si sus criterios de elegibilidad incluyen una revisión de antecedentes penales, y que el solicitante puede presentar pruebas de inexactitudes, rehabilitación u otros factores atenuantes. Si se determina que hubo una violación, la Division on Civil Rights puede ordenar la devolución de la tarifa de solicitud, a menos que se le proporcione vivienda al solicitante como remedio."
+ },
+ "r-0052": {
+  "requirement": "Los arrendadores no pueden tomar represalias mediante el desalojo, la modificación sustancial del contrato de arrendamiento o la no renovación cuando los inquilinos hacen valer sus derechos, presentan de buena fe quejas sobre infracciones del código o se unen a organizaciones de inquilinos."
+ },
+ "r-0053": {
+  "requirement": "Un arrendador residencial no puede desalojar a un inquilino ni negarse a renovar un contrato de arrendamiento, escrito u oral, sin una de las causas justificadas establecidas por la ley, y debe probar esa causa ante el tribunal. Las causas incluyen la falta de pago, la conducta desordenada, los daños, las violaciones de las reglas o del contrato de arrendamiento, un aumento de alquiler legal no pagado, los pagos atrasados habituales, el rechazo de cambios razonables al contrato de arrendamiento, la ocupación por el propietario en edificios pequeños, el retiro permanente del uso residencial, la conversión a condominio o cooperativa, el fin de la ocupación basada en el empleo y ciertas determinaciones penales o civiles. Cada causa tiene su propio plazo de Notice to Quit (aviso de desalojo)."
+ },
+ "r-0054": {
+  "requirement": "Si el director ordenó a un proveedor de vivienda que alojara a un solicitante y el proveedor luego gana una apelación que anula esa orden, el proveedor puede desalojar al antiguo solicitante de la unidad proporcionada en virtud de la orden. El proveedor debe dar un aviso de al menos 45 días."
+ },
+ "r-0055": {
+  "requirement": "Los inquilinos que reúnan los requisitos en un edificio que se convierte en condominio o cooperativa pueden estar protegidos contra el desalojo por conversión durante 40 años. Para reunir los requisitos, deben tener 62 años o más, tener una discapacidad permanente o ser veteranos discapacitados que reúnan los requisitos, y deben cumplir con un límite de ingresos."
+ },
+ "r-0056": {
+  "requirement": "Un aumento de alquiler no debe ser abusivo y debe cumplir con cualquier ordenanza municipal. El alquiler no puede aumentarse a mitad del contrato de arrendamiento; el arrendador debe dar por terminado el contrato anterior con el aviso por escrito adecuado y ofrecer un nuevo contrato de arrendamiento con el alquiler aumentado."
+ },
+ "r-0057": {
+  "requirement": "New Jersey no tiene una ley estatal de control de alquileres. Los municipios pueden adoptar ordenanzas de control de alquileres o de nivelación de alquileres (rent leveling) en virtud de su poder de policía, y las juntas locales se encargan de hacerlas cumplir."
+ },
+ "r-0058": {
+  "requirement": "Los edificios de viviendas múltiples de nueva construcción están exentos de las ordenanzas locales de control de alquileres durante 30 años después de terminada la construcción."
+ },
+ "r-0059": {
+  "requirement": "Cuando un edificio se convierte a régimen de condominio, cooperativa o propiedad plena (fee simple), no se pueden aumentar los alquileres para cubrir costos que resulten únicamente de la conversión. Los aumentos por nuevos servicios o comodidades siguen estando permitidos."
+ },
+ "r-0060": {
+  "requirement": "Si un arrendador rechaza una solicitud de alquiler debido a un informe de crédito, debe darle al solicitante el nombre, la dirección y el número de teléfono de la agencia que proporcionó el informe."
+ },
+ "r-0061": {
+  "requirement": "Los arrendadores no pueden negarse a alquilar a familias con niños."
+ },
+ "r-0062": {
+  "requirement": "Los proveedores de vivienda no pueden preguntar sobre los antecedentes penales de un solicitante, ni de forma oral, ni por escrito, ni en una solicitud, hasta después de haber hecho una oferta condicional. Después de la oferta, solo pueden considerar ciertas condenas dentro de períodos de revisión establecidos, y nunca registros que no resultaron en condena, ni registros borrados (expunged), indultados, anulados, juveniles o sellados. Un proveedor solo puede retirar una oferta después de una evaluación individualizada que demuestre que el retiro es necesario para cumplir un interés sustancial, legítimo y no discriminatorio, con aviso por escrito y derecho de apelación. Los proveedores tampoco pueden anunciar prohibiciones por antecedentes penales ni exigir pruebas de drogas o alcohol."
+ },
+ "r-0063": {
+  "requirement": "Los arrendadores no pueden negarse a alquilar ni discriminar de ninguna otra forma por motivos de raza, credo, color, origen nacional, ascendencia, sexo, identidad o expresión de género, estado civil, de unión civil o de pareja de hecho (domestic partnership), situación familiar, orientación sexual, discapacidad, nacionalidad, o fuente de ingresos lícitos o de pago del alquiler. Por ejemplo, un arrendador no puede rechazar a un titular de un vale (voucher) de Section 8 lícito únicamente por esa fuente de ingresos."
+ },
+ "r-0064": {
+  "requirement": "Un depósito de seguridad, incluido cualquier depósito por mascota, no puede superar 1.5 veces el alquiler de un mes, y cualquier aumento anual no puede superar el 10% del depósito actual. Los fondos pagados por adelantado que garantizan alquiler futuro, como el alquiler del último mes, cuentan como parte del depósito sin importar cómo se denominen, por lo que al inicio del contrato de arrendamiento el arrendador puede cobrar como máximo el depósito más el alquiler del primer mes (2.5 veces el alquiler mensual)."
+ },
+ "r-0065": {
+  "requirement": "Dentro de los 30 días posteriores a la terminación del arrendamiento, el arrendador debe devolver el depósito más los intereses, menos las deducciones por daños que excedan el desgaste normal por uso u otras cantidades adeudadas conforme al contrato de arrendamiento, junto con una lista detallada. La devolución debe hacerse mediante entrega personal o por correo registrado o certificado. No se pueden hacer deducciones mientras el inquilino siga ocupando la vivienda, y los inquilinos desplazados por incendio, inundación, declaración de inhabitabilidad o evacuación deben recibir la devolución del depósito dentro de 5 días hábiles."
+ },
+ "r-0066": {
+  "requirement": "El depósito sigue siendo propiedad del inquilino y debe mantenerse en fideicomiso en una cuenta asegurada que genere intereses en un banco o una asociación de ahorro y préstamo de New Jersey, sin mezclarse con los bienes del arrendador. Los intereses pertenecen al inquilino y deben pagarse o acreditarse anualmente. El arrendador debe notificar por escrito el banco, el monto, el tipo de cuenta y la tasa de interés dentro de los 30 días posteriores a recibir el depósito y con cada pago anual de intereses."
+ },
+ "r-0067": {
+  "requirement": "Cuando un inquilino da por terminado un contrato de arrendamiento conforme a la Safe Housing Act como víctima de violencia doméstica, el arrendador debe poner a su disposición el depósito más los intereses dentro de 15 días hábiles. El arrendador también debe notificar por escrito al inquilino, dentro de 3 días hábiles, dónde y cuándo puede recogerlo."
+ },
+ "r-0068": {
+  "requirement": "Los arrendadores no pueden usar un dispositivo algorítmico, es decir, un software que utiliza datos no públicos de la competencia para recomendar precios de alquiler o niveles de ocupación, para fijar las rentas o la ocupación de propiedades residenciales en alquiler. Ninguna persona puede vender, licenciar ni proporcionar de otra manera un dispositivo de este tipo a un arrendador. Los inquilinos pueden demandar a los arrendadores para obtener una orden judicial (medida cautelar), daños y perjuicios o sanciones civiles de hasta $1,000 por infracción, y el inquilino que gane el caso recupera las costas y los honorarios razonables de abogado."
+ },
+ "r-0069": {
+  "requirement": "Un arrendador no puede dar por terminado un arrendamiento sin una causa justa, ya sea por culpa del inquilino o sin culpa del inquilino. Las causas sin culpa son: que el propietario o un familiar se mude a la vivienda, el retiro de la vivienda del mercado de alquiler, órdenes gubernamentales o judiciales, y la demolición o remodelación sustancial. Las terminaciones sin culpa requieren un aviso por escrito con 30 o 60 días de anticipación, asistencia para la reubicación y, para ciertas causas, un derecho de primera oferta durante 5 años. Las infracciones del contrato de arrendamiento que se pueden corregir requieren un aviso por escrito y la oportunidad de corregirlas antes de la terminación."
+ },
+ "r-0070": {
+  "requirement": "Al volver a ofrecer una unidad a un inquilino desplazado por un desalojo sin culpa, el arrendador puede evaluar al inquilino usando métodos aceptados en la industria, pero debe indicar los criterios mínimos de evaluación en la oferta por escrito para el nuevo arrendamiento."
+ },
+ "r-0071": {
+  "requirement": "Cuando un arrendador paga asistencia para la reubicación por una terminación sin culpa, ese pago es adicional a la devolución de cualquier depósito o garantía que se le deba al inquilino. El arrendador no puede usar la asistencia para la reubicación para compensar ni reemplazar la devolución del depósito."
+ },
+ "r-0072": {
+  "requirement": "Prohíbe vender o usar dispositivos algorítmicos para fijar las rentas o administrar los niveles de ocupación de unidades residenciales en San Francisco. Un dispositivo algorítmico es algo como un programa de software que analiza datos no públicos de alquileres de la competencia y le recomienda a un arrendador qué renta cobrar por una unidad desocupada. Un inquilino o el City Attorney pueden presentar una acción civil contra una entidad que se crea que está cometiendo una infracción."
+ },
+ "r-0073": {
+  "requirement": "Los propietarios que desalojen a inquilinos en virtud de la Ellis Act deben pagar indemnizaciones por reubicación. El monto depende de la fecha en que se entrega el aviso de desalojo."
+ },
+ "r-0074": {
+  "requirement": "Un propietario puede desalojar a un inquilino de una unidad de alquiler cubierta solo por una de las 17 causas justificadas enumeradas, y esa causa debe ser el motivo principal del desalojo. Algunos ejemplos son la falta de pago del alquiler, un incumplimiento sustancial no subsanado, molestias graves (nuisance), uso ilegal, la mudanza del propietario o de un familiar, la conversión a condominio, la demolición, las mejoras de capital, la rehabilitación sustancial, el retiro del mercado de alquiler bajo la Ellis Act, la eliminación de plomo, el vencimiento de un acuerdo Good Samaritan y un proyecto de desarrollo bajo la Section 317. El vencimiento del contrato de arrendamiento o un cambio de propietario no constituye causa justificada, y los propietarios también necesitan una causa justificada para retirar servicios de vivienda como estacionamiento, almacenamiento y lavandería."
+ },
+ "r-0075": {
+  "requirement": "Los propietarios que desalojen por la mudanza del propietario o de un familiar, por demolición o retiro permanente de la unidad del uso como vivienda, por obras temporales de mejoras de capital o por rehabilitación sustancial deben pagar indemnizaciones por reubicación a los inquilinos. El monto depende de la fecha en que se entrega el aviso de desalojo."
+ },
+ "r-0076": {
+  "requirement": "Para las unidades con control de alquiler, el aumento anual permitido del alquiler desde el 1 de marzo de 2026 hasta el 28 de febrero de 2027 es del 1.6% del alquiler base del inquilino. Para obtener el monto en dólares, multiplique el alquiler base por .016 y sume el resultado al alquiler base."
+ },
+ "r-0077": {
+  "requirement": "Protege a los residentes con antecedentes de arresto o condena cuando se toman decisiones sobre vivienda asequible."
+ },
+ "r-0078": {
+  "requirement": "Los propietarios deben pagar intereses sobre los depósitos de garantía de los inquilinos. La tasa para el período del 1 de marzo de 2026 al 28 de febrero de 2027 es del 4.2%."
+ },
+ "r-0079": {
+  "requirement": "Después de 30 días de arrendamiento, un propietario no puede poner fin a un arrendamiento residencial sin causa justificada, la cual debe indicarse en un aviso por escrito. La causa justificada incluye motivos por culpa del inquilino (falta de pago del alquiler, incumplimiento material del contrato de arrendamiento, molestias graves, actividad delictiva) y motivos sin culpa del inquilino (mudanza del propietario, retiro del mercado de alquiler, demolición o remodelación sustancial). Antes de entregar un aviso de terminación por culpa del inquilino, el propietario debe primero notificar al inquilino sobre la infracción y darle tiempo para corregirla. En una terminación sin culpa del inquilino, el propietario debe pagar 3 meses de asistencia para reubicación o eximir del pago del alquiler de los últimos 3 meses."
+ },
+ "r-0080": {
+  "requirement": "Los propietarios pueden aumentar el alquiler residencial una vez al año en no más del menor entre el 3% o el 80% del cambio en el CPI durante los 12 meses más recientes, y no pueden aumentarlo nada si el CPI es negativo. La Ciudad publica el aumento permitido a más tardar el 30 de junio de cada año, con vigencia a partir del 1 de septiembre. Para el período del 1 de septiembre de 2026 al 31 de agosto de 2027, el máximo es del 2.87%."
+ }
+}

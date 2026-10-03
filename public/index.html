@@ -30,10 +30,10 @@ h2{font-size:17px;margin:1.4rem 0 .5rem}
 blockquote{margin:.5rem 0;padding:.3rem .8rem;border-left:3px solid var(--line);font-size:14px;color:var(--mut)}
 .grp{margin:1.2rem 0 .5rem;font-size:15px;border-bottom:1px solid var(--line);padding-bottom:3px}.grp.pending{color:var(--pending)}.grp.not_yet_effective{color:var(--future)}
 .flag{display:inline-block;margin-left:6px;font-size:12px;color:var(--warnb);font-weight:700}
-#empty{background:var(--warn);border:1px solid var(--warnb);border-radius:6px;padding:12px}
+#lang{padding:2px 8px;font-size:12px;margin-left:8px}#mt{font-size:12px;color:var(--warnb);margin:.2rem 0}#empty{background:var(--warn);border:1px solid var(--warnb);border-radius:6px;padding:12px}
 [hidden]{display:none!important}
 </style>
-<div id="banner" role="note"><b>Not legal advice.</b> Informational only; rules may be incomplete, out of date or misread. Check the cited source and consult a qualified professional.</div>
+<div id="banner" role="note"><b id="b1"></b> <span id="b2"></span> <button id="lang" type="button" aria-label="Language / Idioma"></button></div>
 <main>
 <h1 id="title">Rental Housing Law Navigator</h1><p id="tagline"></p>
 <form id="f">
@@ -43,15 +43,38 @@ blockquote{margin:.5rem 0;padding:.3rem .8rem;border-left:3px solid var(--line);
 </form>
 <div id="examples"></div><div id="note" aria-live="polite"></div>
 <section id="resultView" hidden>
-  <p id="asline" class="meta"></p>
+  <p id="mt" hidden></p><p id="asline" class="meta"></p>
   <div id="empty" hidden></div>
-  <h2>Jurisdiction stack</h2><ul id="stack"></ul>
-  <h2>Rules for this address</h2><div id="rules"></div>
+  <h2 id="h-stack"></h2><ul id="stack"></ul>
+  <h2 id="h-rules"></h2><div id="rules"></div>
 </section>
 </main>
 <script>
 // Source order: live GET /api/lookup, else bundled fixtures (always labelled). No /api/chat.
 const $ = (id) => document.getElementById(id);
+// UI strings are fixed per language (never model output). Quoted spans and citations are always shown verbatim in English.
+const I18N = {
+  en: { b1: "Not legal advice.", b2: "Informational only; rules may be incomplete, out of date or misread. Check the cited source and consult a qualified professional.", mt: "",
+    label: { applies: "Applies", unknown: "Unknown", superseded: "Superseded", not_yet_effective: "Not yet effective", pending: "Pending (not law)" },
+    groups: { applies: "Enacted law: applies on this date", not_yet_effective: "Enacted law: not yet in effect", pending: "Pending bills: not law", superseded: "Superseded", unknown: "Unknown: cannot tell from our data", "": "Other" },
+    asof: (d) => `As of ${d}. Enacted law and pending bills are listed separately by status.`, fixture: " Showing FIXTURE data, not real extracted rules.", addr: (a) => ` ${a.street_address}, ${a.postal_city} ${a.state}. Year built: ${a.year_built ?? "unknown"}; units: ${a.units ?? "unknown"}.`,
+    stack: "Jurisdiction stack", rules: "Rules for this address", override: "Override: ", conflict: "⚑ possible conflict, human review", lowconf: (c) => `⚑ low confidence (${c}), verify against the source`,
+    why: "Why: ", conflictNote: "Conflict: ", source: "Source: ", nocite: "missing citation", retrieved: (x) => ` · retrieved ${x}`, noretr: " · retrieval date not recorded", effective: "effective ",
+    errPrefix: "Error. ", nc: "Unknown / not covered. ", ncMsg: "We cannot resolve this address, so no rules are shown rather than guessing.", none: "No rules in our data apply to this address. That is not a guarantee that none exist.",
+    looking: "Looking up…", fxnote: "Live lookup unavailable; showing bundled fixture data.", lookBtn: "Look up", asofLbl: "As of", addrLbl: "Address or address ID", other: "Español", untranslated: "" },
+  es: { b1: "No es asesoría legal.", b2: "Solo informativo; las reglas pueden estar incompletas, desactualizadas o mal interpretadas. Consulte la fuente citada y a un profesional calificado.", mt: "Traducción automática; el texto legal original prevalece",
+    label: { applies: "Aplica", unknown: "Desconocido", superseded: "Reemplazada", not_yet_effective: "Aún no en vigor", pending: "Pendiente (no es ley)" },
+    groups: { applies: "Ley vigente: aplica en esta fecha", not_yet_effective: "Ley promulgada: aún no en vigor", pending: "Proyectos pendientes: no son ley", superseded: "Reemplazadas", unknown: "Desconocido: no se puede determinar con nuestros datos", "": "Otras" },
+    asof: (d) => `Al ${d}. La ley vigente y los proyectos pendientes se muestran por separado según su estado.`, fixture: " Mostrando datos de PRUEBA, no reglas extraídas reales.", addr: (a) => ` ${a.street_address}, ${a.postal_city} ${a.state}. Año de construcción: ${a.year_built ?? "desconocido"}; unidades: ${a.units ?? "desconocido"}.`,
+    stack: "Jurisdicciones aplicables", rules: "Reglas para esta dirección", override: "Prevalece: ", conflict: "⚑ posible conflicto, requiere revisión humana", lowconf: (c) => `⚑ baja confianza (${c}), verifique con la fuente`,
+    why: "Por qué: ", conflictNote: "Conflicto: ", source: "Fuente (en inglés): ", nocite: "falta la cita", retrieved: (t) => ` · consultada ${t}`, noretr: " · fecha de consulta no registrada", effective: "vigente desde ",
+    errPrefix: "Error. ", nc: "Desconocido / no cubierto. ", ncMsg: "No podemos resolver esta dirección, así que no mostramos reglas en lugar de adivinar.", none: "Ninguna regla en nuestros datos aplica a esta dirección. Eso no garantiza que no existan.",
+    looking: "Buscando…", fxnote: "Búsqueda en vivo no disponible; mostrando datos de prueba.", lookBtn: "Buscar", asofLbl: "Fecha", addrLbl: "Dirección o ID de dirección", other: "English", untranslated: " (sin traducir)" },
+};
+let LANG = new URLSearchParams(location.search).get("lang") === "es" ? "es" : "en";
+const T = () => I18N[LANG];
+let es = null; // optional public/es.json: { team_rule_id: { requirement, explanation } } — machine translation of the plain-language summary only
+const loadEs = () => es ? Promise.resolve(es) : fetch("es.json").then((r) => r.ok ? r.json() : {}).catch(() => ({})).then((j) => (es = j));
 const LABEL = { applies: "Applies", unknown: "Unknown", superseded: "Superseded", not_yet_effective: "Not yet effective", pending: "Pending (not law)" };
 const FALLBACK = { title: "Rental Housing Law Navigator", tagline: "Which housing rules apply to this address on a given date? Not legal advice.", examples: ["6238 DE LONGPRE AVE", "1031-1035 CLINTON ST"] };
 const FIXTURES_ON = new URLSearchParams(location.search).get("fixtures") === "1";
@@ -91,27 +114,28 @@ async function lookup(address, asof) {
   return { data: d, source: "fixture" };
 }
 
-function render({ data: d, source }, asof) {
+let last = null;
+function render(res, asof) {
+  last = [res, asof]; const { data: d, source } = res, t = T();
   $("resultView").hidden = false;
-  $("asline").textContent = `As of ${d.as_of || asof}. Enacted law and pending bills are listed separately by status.` + (source === "fixture" ? " Showing FIXTURE data, not real extracted rules." : "");
+  $("asline").textContent = t.asof(d.as_of || asof) + (source === "fixture" ? t.fixture : "");
   const empty = $("empty"), stack = $("stack"), rules = $("rules");
   stack.replaceChildren(); rules.replaceChildren();
   if (d.not_covered || !d.results) {
-    empty.hidden = false; empty.textContent = (d.error ? "Error. " : "Unknown / not covered. ") + (d.message || "We cannot resolve this address, so no rules are shown rather than guessing.");
+    empty.hidden = false; empty.textContent = (d.error ? t.errPrefix : t.nc) + (LANG === "en" && d.message || t.ncMsg);
     return;
   }
   empty.hidden = true;
   const a = d.address;
-  if (a) $("asline").textContent += ` ${a.street_address}, ${a.postal_city} ${a.state}. Year built: ${a.year_built ?? "unknown"}; units: ${a.units ?? "unknown"}.`;
+  if (a) $("asline").textContent += t.addr(a);
   for (const s of d.stack || []) {
     const li = el("li"); li.append(el("span", "lvl", s.level), el("b", null, s.name));
-    if (s.note) li.append(el("span", "ovr", "Override: " + s.note));
+    if (s.note) li.append(el("span", "ovr", t.override + s.note));
     stack.append(li);
   }
-  if (!d.results.length) { rules.append(el("p", null, "No rules in our data apply to this address. That is not a guarantee that none exist.")); return; }
-  const groups = [["applies", "Enacted law: applies on this date"], ["not_yet_effective", "Enacted law: not yet in effect"], ["pending", "Pending bills: not law"], ["superseded", "Superseded"], ["unknown", "Unknown: cannot tell from our data"]];
-  const known = new Set(groups.map((g) => g[0]));
-  for (const [key, title] of [...groups, ["", "Other"]]) {
+  if (!d.results.length) { rules.append(el("p", null, t.none)); return; }
+  const known = new Set(["applies", "not_yet_effective", "pending", "superseded", "unknown"]);
+  for (const key of [...known, ""]) { const title = t.groups[key];
     const part = d.results.filter((r) => (known.has(r.result) ? r.result : "") === key);
     if (!part.length) continue;
     rules.append(el("h3", "grp " + key, `${title} (${part.length})`));
@@ -121,32 +145,45 @@ function render({ data: d, source }, asof) {
 
 function card(r) {
   {
-    const rule = r.rule || {}, c = el("article", "rule " + r.result);
-    const head = el("div"); head.append(el("span", "badge", LABEL[r.result] || r.result));
-    if (r.conflict_flag || rule.conflict_flag) head.append(el("span", "flag", "⚑ possible conflict, human review"));
+    const t = T(), rule = r.rule || {}, c = el("article", "rule " + r.result), tr = LANG === "es" ? (es?.[r.team_rule_id] || {}) : {};
+    const head = el("div"); head.append(el("span", "badge", t.label[r.result] || r.result));
+    if (r.conflict_flag || rule.conflict_flag) head.append(el("span", "flag", t.conflict));
     const conf = r.confidence ?? rule.confidence;
-    if (typeof conf === "number" && conf < 0.7) head.append(el("span", "flag", `⚑ low confidence (${conf}), verify against the source`));
+    if (typeof conf === "number" && conf < 0.7) head.append(el("span", "flag", t.lowconf(conf)));
     c.append(head, el("h3", null, rule.title || r.team_rule_id));
-    c.append(el("div", "meta", [rule.jurisdiction, rule.category?.replaceAll("_", " "), rule.effective_date && "effective " + rule.effective_date].filter(Boolean).join(" · ")));
-    if (rule.requirement) c.append(el("p", null, rule.requirement));
-    if (r.explanation) c.append(el("p", "meta", "Why: " + r.explanation));
-    if (rule.conflict_note) c.append(el("p", "meta", "Conflict: " + rule.conflict_note));
-    const cite = el("div", "meta"); cite.append("Source: ");
+    c.append(el("div", "meta", [rule.jurisdiction, rule.category?.replaceAll("_", " "), rule.effective_date && t.effective + rule.effective_date].filter(Boolean).join(" · ")));
+    if (rule.requirement) c.append(el("p", null, LANG === "es" ? (tr.requirement || rule.requirement + t.untranslated) : rule.requirement));
+    if (r.explanation) c.append(el("p", "meta", t.why + (LANG === "es" ? (tr.explanation || r.explanation + t.untranslated) : r.explanation)));
+    if (rule.conflict_note) c.append(el("p", "meta", t.conflictNote + rule.conflict_note));
+    const cite = el("div", "meta"); cite.append(t.source);
     if (rule.source_url && /^https?:/.test(rule.source_url)) { const l = el("a", null, rule.citation || rule.source_url); l.href = rule.source_url; l.target = "_blank"; l.rel = "noopener"; cite.append(l); }
     else cite.append(rule.citation || "missing citation");
-    cite.append(rule.retrieved_at ? ` · retrieved ${rule.retrieved_at}` : " · retrieval date not recorded");
+    cite.append(rule.retrieved_at ? t.retrieved(rule.retrieved_at) : t.noretr);
     c.append(cite);
     if (rule.quoted_span) c.append(el("blockquote", null, rule.quoted_span));
     return c;
   }
 }
 
+async function setLang(l) {
+  LANG = l; const t = T(); document.documentElement.lang = l;
+  if (l === "es") await loadEs();
+  $("b1").textContent = t.b1; $("b2").textContent = t.b2; $("lang").textContent = t.other;
+  $("mt").textContent = t.mt; $("mt").hidden = !t.mt;
+  $("h-stack").textContent = t.stack; $("h-rules").textContent = t.rules;
+  $("f").querySelector("button:not(#lang)").textContent = t.lookBtn;
+  $("addr").firstChild.textContent = t.addrLbl; $("asof").parentNode.firstChild.textContent = t.asofLbl;
+  if (last) render(...last);
+}
+$("lang").onclick = () => setLang(LANG === "en" ? "es" : "en");
+setLang(LANG);
+
 $("f").onsubmit = async (e) => {
   e.preventDefault();
-  $("note").textContent = "Looking up…";
+  $("note").textContent = T().looking;
   const asof = $("asof").value || "2026-10-01";
   const res = await lookup($("q").value, asof);
-  $("note").textContent = res.source === "fixture" ? "Live lookup unavailable; showing bundled fixture data." : "";
+  $("note").textContent = res.source === "fixture" ? T().fxnote : "";
   render(res, asof);
 };
 </script>
