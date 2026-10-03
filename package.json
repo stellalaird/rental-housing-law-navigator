@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node --env-file-if-exists=.env server.mjs",
     "build:static": "node build-static.mjs",
-    "record-replay": "node record-replay.mjs"
+    "record-replay": "node record-replay.mjs",
+    "rebuild": "node rebuild.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "latest",
