@@ -129,25 +129,28 @@ report.sections.referentialIntegrity = { ok: nDangling === 0, danglingLookupRule
 
 // ---- T6 (hour-16 ordinance): skipped while changes.json has no T6; once it does, every check below must pass.
 // changes.json T6 carries no rule id of its own (ingest-doc.mjs), so the rule is the id(s) it names if any, else the
-// new-* rules for a Cambridge jurisdiction. "Today" is --today YYYY-MM-DD or the local date.
+// new-* rules (Cambridge ones if any, else every new-* rule). The affected set is checked against each rule's own
+// jurisdiction ("City, ST" = postal city + state, a proxy for legal city; bare "ST" = state). "Today" is --today YYYY-MM-DD or the local date.
 const today = flag("--today", new Date().toLocaleDateString("en-CA"));
 const T6 = { present: !ch.__error && !!ch.T6, skipped: true, today, checks: [] };
 if (T6.present) {
   T6.skipped = false;
   const t6 = ch.T6, named = []; walkIds(t6, "T6", (id) => named.push(id));
   const cands = named.length ? named.map((id) => ruleById.get(id)).filter(Boolean)
-    : rules.filter((r) => /^new-/.test(r.team_rule_id) && /cambridge/i.test(r.jurisdiction));
-  T6.ruleSource = named.length ? "named in T6" : "new-* Cambridge rules (T6 names none)";
+    : (() => { const nw = rules.filter((r) => /^new-/.test(r.team_rule_id)), cam = nw.filter((r) => /cambridge/i.test(r.jurisdiction)); return cam.length ? cam : nw; })();
+  T6.ruleSource = named.length ? "named in T6" : "new-* rules (T6 names none)";
   T6.ruleIds = cands.map((r) => r.team_rule_id);
   const chk6 = (name, pass, detail) => T6.checks.push({ name, pass: !!pass, ...(detail ? { detail } : {}) });
-  chk6("T6 rule id exists in rules.json", cands.length > 0 && cands.length >= named.length, named.length ? `named ${named.join(", ")}` : "no new-* Cambridge rule in rules.json");
+  chk6("T6 rule id exists in rules.json", cands.length > 0 && cands.length >= named.length, named.length ? `named ${named.join(", ")}` : "no new-* rule in rules.json");
   const full = (r) => /^\d{4}-\d{2}-\d{2}/.test(String(r.effective_date || "")) ? String(r.effective_date).slice(0, 10) : null;
   chk6("status is not_yet_effective", cands.length > 0 && cands.every((r) => r.status === "not_yet_effective"), cands.map((r) => `${r.team_rule_id}=${r.status}`).join(", "));
   chk6(`effective date is a full date after ${today}`, cands.length > 0 && cands.every((r) => full(r) && full(r) > today), cands.map((r) => `${r.team_rule_id}=${r.effective_date}`).join(", "));
   const aff6 = t6.affected_address_ids || [], byId = new Map(addresses.map((a) => [a.address_id, a]));
-  const notCam = aff6.filter((id) => !(byId.get(id)?.postal_city.toLowerCase() === "cambridge" && byId.get(id)?.state === "MA"));
+  const inJur = (a, j) => { const m = /^(.+),\s*([A-Z]{2})$/.exec(String(j || "").trim()); if (m) return !!a && a.postal_city.toLowerCase() === m[1].toLowerCase() && a.state === m[2]; return /^[A-Z]{2}$/.test(String(j || "").trim()) && !!a && a.state === j.trim(); };
+  const outside = aff6.filter((id) => !cands.some((r) => inJur(byId.get(id), r.jurisdiction)));
+  const jurs = [...new Set(cands.map((r) => r.jurisdiction))].join(" / ");
   chk6("affected set non-empty", aff6.length > 0, `${aff6.length} addresses`);
-  chk6("affected set limited to Cambridge MA addresses (postal city, proxy for legal city)", notCam.length === 0, notCam.slice(0, 5).join(", "));
+  chk6(`affected set limited to the rule's jurisdiction (${jurs || "none"}; postal city, proxy for legal city)`, cands.length > 0 && outside.length === 0, outside.slice(0, 5).join(", "));
 }
 report.sections.t6 = T6;
 
