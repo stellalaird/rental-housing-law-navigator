@@ -28,6 +28,7 @@ Who: **p-a-3** = ingest, rebuild, UI, changes.json. **p-a-2** = rules.json, look
 - New rule ids are `new-<docname>-N`, not `r-NNNN`, until `normalize-rules.mjs` exists. Everything downstream accepts them.
 - A rule whose effective date is after `--today` gets `not_yet_effective`; the lookup flips to `applies` on and after that date.
 - If the new rule replaces an in-force rule in the same jurisdiction and category, ingest sets `supersedes` and the old rule stops applying. Check this in step 3: it is a heuristic and untested on a real amendment.
+- `refine-t6.mjs` deliberately drops addresses whose new-rule result is `pending` (it keeps only `applies`, `unknown`, `not_yet_effective`). This is p-a's ruling: a T6 rule is enacted, so one with a future effective date comes out `not_yet_effective`, never `pending`, and `pending` should not occur there. If a T6 count looks short, check that the rule's status is `enacted` before suspecting the filter.
 - Quotes that are not found verbatim in the document are dropped (`quote_unverified_dropped`). A non-zero count means the model paraphrased: say so on camera, do not hide it.
 - If step 5 stops at selfcheck, read which check failed before touching anything. A red check means data out of sync, not a script bug.
 - The Spanish view needs `public/es.json` regenerated (step 5 does it); a rule missing from it shows English marked "(sin traducir)".
