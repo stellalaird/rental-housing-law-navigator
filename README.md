@@ -1,93 +1,100 @@
-# Demo — Hack-Nation 7th Global AI Hackathon entry
+# Rental Housing Law Navigator — Hack-Nation 7 · Challenge 02 (RealPage)
 
-> **Placeholder content.** Title, tagline and prompts below are the kit's defaults. They get replaced once the challenge track is chosen (edit `config.mjs`, then re-record the replay).
+> Which rules apply to this apartment today, and what is about to change?
 
-A streaming AI web app built in one weekend: type a prompt, watch Claude answer token by token. It is built to **never show a dead screen in front of a judge**: if the live model call fails, it degrades to a plain JSON call, then to a recorded answer.
+An AI system that reads a corpus of real state and local housing law, extracts structured rule records, resolves any sample address to its jurisdiction stack, and answers with every applicable rule, in plain language, with a citation and quoted source text. It also tracks law changes: given a new or pending law, it lists the addresses affected and what changes for each.
+
+**Not legal advice.** Output is a reading aid built from public text, not a legal opinion or compliance certification. The answer key behind the challenge has not been reviewed by counsel.
 
 ## Demo
 
-<!-- TODO: replace after recording. `node record-demo.mjs steps.json --out demo.mp4`, then convert to GIF or link the hosted video. -->
-`[ demo GIF / video goes here ]`
+<!-- TODO: replace after recording (see video-scripts.md). -->
+`[ demo video / GIF goes here ]`
 
 Live demo: `[ link goes here ]`
 
+## Scores
+
+<!-- TODO: filled in from a real `score.py` run on the dev set. Do not write numbers that were not produced by that script. -->
+
+| Component | Max | Our dev-set result |
+|---|---|---|
+| Extraction accuracy | 25 | TODO |
+| Address coverage | 20 | TODO |
+| Citations | 15 | TODO |
+| Change tracking (T1–T6) | 15 | TODO |
+
+The judged components (usability 10, responsible design 10, scalability 5) are scored by judges, not by script. Scores come from the organisers' own `score.py` against the dev key; the held-out key is not available to us.
+
 ## How it works
 
-```
-Browser (public/index.html, vanilla JS)
-   │  POST /api/chat  (SSE stream)
-   ▼
-Express server (server.mjs)  ── guard: rate limit, size limits, concurrency cap
-   │
-   ├─ BACKEND=api  → Anthropic SDK, claude-opus-5-5, adaptive thinking, effort high
-   └─ BACKEND=cli  → spawns `claude -p` per request (owner's login, no key in repo)
-```
+The challenge defines five stages. This is how each maps to this repo.
 
-- **Frontend:** one static page, vanilla JS, no build step.
-- **Backend:** Node 22 + Express in a single file. `POST /api/chat` streams Server-Sent Events.
-- **Model:** `claude-opus-5-5` through `@anthropic-ai/sdk`, with adaptive thinking and `output_config.effort: high`. The API key stays server-side.
-- **Reskin in one file:** `config.mjs` holds the title, tagline, system prompt and example prompts. The system prompt never leaves the server; `GET /api/config` serves only the title, tagline and examples.
+| Stage | What it does | Where |
+|---|---|---|
+| 1. Extract | An LLM reads each corpus document and emits one record per rule in the provided schema: category, jurisdiction, requirement, coverage conditions, exemptions, effective date, status (enacted/pending), penalty, citation, quoted span. Automated, not hand-coded. | TODO: path |
+| 2. Resolve | Geocode an address, build the jurisdiction stack (state → county → city). | TODO: path |
+| 3. Apply | Test each rule's coverage conditions against building facts (year built, units, use code). Missing facts yield `unknown`, never a guess. | TODO: path |
+| 4. Explain | Every applicable rule, in plain language, with a citation and quoted span. Local-over-state overrides are stated explicitly. | TODO: path |
+| 5. Track change | For a new or pending law: affected addresses, before/after rule set, and an "as of date" query. | TODO: path |
+
+Scope: 3 states (CA, NJ, MA), 10 cities (9 with address samples; Santa Ana is extraction-only), 6 rule categories (rent increase limits, just-cause eviction, security deposits, application/screening fees, screening restrictions, algorithmic rent-setting).
+
+Lookup results use five states: `applies`, `unknown`, `superseded`, `not yet effective`, `pending`.
+
+## Output files
+
+| File | Contents |
+|---|---|
+| `rules.json` | Extracted rule records with citation and quoted source text |
+| `lookups.json` | For all 500 sample addresses, each rule's result |
+| `changes.json` | Affected addresses and conflict flags for each change test (T1–T6) |
 
 ## Run it
 
-Needs Node 22.
+<!-- TODO: p-a-2 to supply the real commands. The lines below are the kit's web app; pipeline commands go here once they exist. -->
+
+Needs Node 22 (web app) and Python 3 (scoring).
 
 ```bash
 npm install
-npm start          # http://localhost:3000
+npm start                      # http://localhost:3000
 ```
 
-**API mode (default):** put `ANTHROPIC_API_KEY=...` in a `.env` file in the repo root (gitignored; see `.env.example`). `npm start` loads it.
+API mode needs `ANTHROPIC_API_KEY` in a gitignored `.env` (see `.env.example`). CLI mode (`BACKEND=cli npm start`) uses a logged-in `claude` CLI instead.
 
-**CLI mode:** no key needed, uses a logged-in `claude` CLI on the same machine.
+Pipeline and scoring: `TODO: extract / lookup / changes commands` then `python score.py <args>` (the organisers' script, dev key).
 
-```bash
-BACKEND=cli npm start
-```
+## Responsible design
 
-Other settings (all optional environment variables): `PORT`, `CLI_TIMEOUT_MS`, `CLAUDE_BIN`, `CLI_MODEL`, `SYSTEM_PROMPT`, `USE_FALLBACKS`.
+The challenge asks for transparency, not legal verdicts. What this system does about it:
+
+- **Not legal advice.** Every interface says so.
+- **Citations on every answer.** Each reported rule carries its source and retrieval date, plus a quoted span that exists in the corpus.
+- **"As of" date on every answer,** with enacted law kept separate from pending law. Pending bills are never reported as in force.
+- **Explicit unknowns.** If coverage depends on a fact the data lacks (for example, year built is missing for San Diego), the answer is `unknown`, not a guess.
+- **No invented rules.** Where the source is silent, the system reports "no rule at this level".
+- **Conflicts flagged** for human review (for example, the NJ FAIR Act possibly preempting local bans).
+- **Corpus is data, not instructions.** Corpus text is passed to the model as quoted data. Directive-looking text inside a document is treated as content to extract or ignore, never obeyed. <!-- TODO: confirm against the actual extraction prompt. -->
+- **No evasion help.** The system explains rules; it does not suggest ways around them.
+- **Audit log** of sources, model outputs and changes. <!-- TODO: path / confirm it exists. -->
 
 ## Robustness
 
-Built so a flaky network, an API hiccup or a crowd of judges does not break the demo.
-
-| Layer | What it does |
-|---|---|
-| **Fallback chain** | Client tries the live SSE stream, then `POST /api/chat?stream=0` (plain JSON), then a recorded replay. |
-| **Recorded replay** | `npm run record-replay` runs the example prompts through the real backend and saves `public/replay.json`. |
-| **Static build** | `npm run build:static` copies `public/` to `dist/`. With no server, the page answers example prompts from the replay and labels them "Recorded response". Unrecorded prompts get an honest "no recorded response" message. |
-| **Rate limit** | `RATE_LIMIT`, default 10 requests/min per IP. |
-| **Size limits** | `MAX_PROMPT_CHARS` (4000 per message), `MAX_HISTORY` (20 messages). |
-| **Concurrency cap** | `MAX_CONCURRENT`, default 2 simultaneous model calls. Extra requests get a friendly 429 rather than a queue. |
-| **Clean rejections** | Rejections are JSON `{error}` sent before any SSE headers; slots are freed on finish or client disconnect. |
-
-Behind a tunnel or proxy, set `TRUST_PROXY=1` so each visitor gets their own rate bucket.
-
-## Testing
-
-With a server running:
-
-```bash
-node test-browser.mjs 3000
-```
-
-Headless Chrome via Playwright covers the live stream, the blocked-stream fallback, the friendly 429 and the static replay.
+Built so a flaky network or API does not break a live demo: the page tries a live stream, then a plain JSON call, then a recorded replay (`npm run record-replay`; `npm run build:static` makes a server-less build). Rate limit, size limits and a concurrency cap protect the API key (`RATE_LIMIT`, `MAX_PROMPT_CHARS`, `MAX_HISTORY`, `MAX_CONCURRENT`; set `TRUST_PROXY=1` behind a tunnel). Details are in `STACK.md`.
 
 ## How AI is used
 
-- **In the product:** Claude is the core engine. The server shapes the prompt (system prompt in `config.mjs`), streams the response, and checks `stop_reason` for refusals before showing anything.
-- **In the build:** the project was developed with Claude Code assisting the author. <!-- TODO: confirm the disclosure wording before submitting; the FAQ states no AI-disclosure policy. -->
+- **In the product:** Claude (`claude-opus-5-5`) extracts rules from statute text and writes the plain-language explanations.
+- **In the build:** developed with Claude Code assisting the author. <!-- TODO: owner to confirm disclosure wording; the FAQ states no AI-disclosure policy. -->
 
-## Repo map
+## Scalability
 
-| Path | Purpose |
-|---|---|
-| `server.mjs` | Express server, both backends, hardening |
-| `config.mjs` | Title, tagline, system prompt, examples |
-| `public/` | The page and `replay.json` |
-| `build-static.mjs`, `record-replay.mjs` | Static build and replay recorder |
-| `record-demo.mjs`, `tech-video/` | Demo-video recorder and tech-video slides |
-| `test-browser.mjs` | Browser test |
+New jurisdictions need no new code: add the source text to the corpus, rerun extraction, and the lookup and change-tracking stages work off the same schema. <!-- TODO: confirm and demonstrate with the hour-16 ordinance. -->
+
+## Data
+
+The starter pack (corpus, sample addresses, schema, dev key) is provided by the organisers and is not committed here unless its terms allow it. <!-- TODO: confirm what is in the repo. -->
 
 ## License
 
