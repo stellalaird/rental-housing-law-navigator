@@ -9,8 +9,8 @@
 | 1 | `rules.json` | **94 rules**, 94 schema-valid; quoted spans found in corpus for 78, the other 16 rest on fetched link-only pages (README Limitations) | `rules.json` | p-a-2 |
 | 2 | `lookups.json` | **500/500 addresses, 9403 entries**; 0 bad results, 0 unknown rule ids; 5791 of 6319 `applies` cited | `lookups.json` | p-a-2 |
 | 3 | `changes.json` | **T1 250, T2 89, T3 140, T4 110, T5 0** affected. **T6 absent**: waits on the hour-16 doc | `changes.json` | p-a-3 |
-| 4 | Demo video | `demo-take4.mp4` (6.0 MB, recorded 1:23 PM) or a re-record; **not in the repo yet**: copy from p-a-1's scratchpad into the repo (gitignored if large) | scratchpad `/private/tmp/claude-502/-Users-stellalaird-local-dev-personal-agent/cca67b2f-e607-4046-bd20-281b57284b92/scratchpad/` (where the files are; that it is p-a-1's is inferred) | p-a-1 records, owner uploads |
-| 5 | Tech video | `tech-take2.mp4` (1.4 MB), **55.2 s per p-a**; **T6 slide pending** until the drop; same copy-in step | same scratchpad | p-a-1 records, owner uploads |
+| 4 | Demo video | **UNCONFIRMED**: final file name and duration. p-a-1 is to copy the finals into `videos/` (gitignored) and send names and durations | `videos/` (empty until p-a-1 delivers) | p-a-1 records, owner uploads |
+| 5 | Tech video | **UNCONFIRMED**: final file name and duration; **T6 slide pending** until the drop | `videos/` (same) | p-a-1 records, owner uploads |
 | 6 | Team video | not made; ≤60 s, MP4/MOV | `video-scripts.md` | **owner** |
 | 7 | Team photo | not made; JPG/PNG/WebP ≤10 MB | HackOS | **owner** |
 | 8 | Public GitHub repo | local git only, no remote; steps in section 5 | owner terminal | **owner** pushes |
