@@ -61,7 +61,7 @@ npm install
 npm start                      # http://localhost:3000
 ```
 
-API mode needs `ANTHROPIC_API_KEY` in a gitignored `.env` (see `.env.example`). CLI mode (`BACKEND=cli npm start`) uses a logged-in `claude` CLI instead.
+**The demo server needs no model backend.** `GET /api/lookup`, `/api/rules` and `/api/lookups` only read `rules.json`, `lookups.json` and `jurisdictions.json` (plus an append to the audit log); the page calls nothing else. `BACKEND` and `ANTHROPIC_API_KEY` matter only for the legacy `/api/chat` route, which the page no longer calls, so the server can be hosted anywhere Node runs with those files and no `.env`. The model is used only offline, by the pipeline scripts (`ingest-doc.mjs`, `build-lookups.mjs`, `translate-es.mjs`, `add-city.mjs`), which call a logged-in `claude -p` regardless of `BACKEND`. For the legacy chat route: API mode needs `ANTHROPIC_API_KEY` in a gitignored `.env` (see `.env.example`); CLI mode (`BACKEND=cli npm start`) uses a logged-in `claude` CLI instead.
 
 Change tracking: `node make-changes.mjs` writes `changes.json`; `node ingest-doc.mjs <new-doc.txt>` ingests a new document and adds T6 (`--dry` writes nothing); `node test-changelog.mjs` runs the as-of cases. Extract and lookup commands: `TODO` (p-a-2). Scoring: `python score.py <args>` (the organisers' script, dev key).
 

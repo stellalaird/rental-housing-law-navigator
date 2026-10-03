@@ -12,10 +12,16 @@ Who: **p-a-3** = ingest, rebuild, UI, changes.json. **p-a-2** = rules.json, look
 | 4 | p-a-3 | Real run. Writes rules.json and changes.json (T6), appends an `ingest` audit record. | `node ingest-doc.mjs data/starter/hour16/<doc>.txt --today <today>` |
 | 5 | p-a-3 | Rebuild lookups, changes, Spanish, selfcheck. Stops at the first failure. Keeps T6. | `npm run rebuild -- --with-lookups` |
 | 6 | p-a-1 | Confirm selfcheck is green (0 unknown rule ids, T1–T5 ok, T6 check once added). | `node selfcheck.mjs` |
-| 7 | p-a-2 | Restart the server so it reloads rules.json and lookups.json. | `npm start` (port 3000) |
-| 8 | p-a-3 | Verify by hand: a Cambridge address before and after the effective date. | `curl "localhost:3000/api/lookup?address=A0010&asof=<day before>"` then `asof=<effective day>`: expect `not_yet_effective`, then `applies` |
+| 7 | p-a-2 | **Restart** the server after the rebuild finishes: it reads `rules.json` and `lookups.json` only at startup, so a running `:3000` keeps serving the old data (found one hour stale after the e0a3e31 fix). Stop the old process first, then start; do not trust a server that was already up. | stop the process on :3000, then `BACKEND=cli npm start` (port 3000); the new process must log its start line |
+| 8 | p-a-3 | **Confirm the live server has the new rule**, then verify by hand: a Cambridge address before and after the effective date. The response must contain a `new-<docname>-N` rule id; if it does not, the server is stale, go back to step 7. | `curl "localhost:3000/api/lookup?address=A0010&asof=<day before>"` then `asof=<effective day>`: expect the new rule, `not_yet_effective`, then `applies` |
 | 9 | p-a-1 | Record the hour-16 segment: doc dropped → ingest output → rebuild → lookup before/after. | `record-demo.mjs` plan in `demo-steps.json` |
 | 10 | p-a-3 | Commit, one `--only` commit per owner, under the board grant (re-read the card first): `rules.json lookups.json` (p-a-2), `changes.json public/es.json` (p-a-3). Report to p-a. | `git commit --only <paths> -F <msgfile>` |
+
+## Backend and model calls
+
+- Steps 3, 4 and 5 (`ingest-doc.mjs`, `build-lookups.mjs`, `translate-es.mjs`) and `add-city.mjs` call the model through `lib/llm.mjs`, which always spawns `claude -p` (the logged-in CLI). They do not read `BACKEND` or `.env`, so none of them depends on a `.env` or an API key; setting `BACKEND=cli` on them changes nothing. What they do need is the owner's `claude` login on this machine.
+- `BACKEND` only picks how the server's legacy `/api/chat` answers. Start the server with `BACKEND=cli npm start` so a missing `.env` cannot select the keyless `api` mode.
+- `/api/lookup` never calls the model: it reads `rules.json`, `lookups.json` and `jurisdictions.json` only, so the live demo needs no backend.
 
 ## Known behaviour to expect
 
