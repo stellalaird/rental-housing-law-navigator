@@ -53,6 +53,7 @@ blockquote{margin:.5rem 0;padding:.3rem .8rem;border-left:3px solid var(--line);
 const $ = (id) => document.getElementById(id);
 const LABEL = { applies: "Applies", unknown: "Unknown", superseded: "Superseded", not_yet_effective: "Not yet effective", pending: "Pending (not law)" };
 const FALLBACK = { title: "Rental Housing Law Navigator", tagline: "Which housing rules apply to this address on a given date? Not legal advice.", examples: ["6238 DE LONGPRE AVE", "1031-1035 CLINTON ST"] };
+const FIXTURES_ON = new URLSearchParams(location.search).get("fixtures") === "1";
 let fixtures = null;
 const loadFixtures = () => fixtures ? Promise.resolve(fixtures) : fetch("fixtures/lookup-fixtures.json").then((r) => r.ok ? r.json() : null).catch(() => null).then((j) => (fixtures = j));
 
@@ -77,6 +78,8 @@ async function lookup(address, asof) {
     // A 404 only means "address not covered" when the API itself answered with JSON; a static host's HTML 404 means no backend.
     if (r.status === 404 && (r.headers.get("content-type") || "").includes("json")) return { data: { not_covered: true, message: (await r.json().catch(() => ({}))).error || "Address not found." }, source: "live" };
   } catch {}
+  // Placeholder fixtures are opt-in (?fixtures=1) so a failed fetch can never pass fixture law off as real in a demo or the judged deployment.
+  if (!FIXTURES_ON) return { data: { error: true, message: "The lookup service is unavailable, so no rules can be shown. Try again; this is not a finding that no rules apply." }, source: "live" };
   const fx = await loadFixtures();
   const key = address.trim().toUpperCase();
   const hit = fx && Object.entries(fx.addresses).find(([id, v]) => id === key || v.address.street_address.toUpperCase() === key);
@@ -93,7 +96,7 @@ function render({ data: d, source }, asof) {
   const empty = $("empty"), stack = $("stack"), rules = $("rules");
   stack.replaceChildren(); rules.replaceChildren();
   if (d.not_covered || !d.results) {
-    empty.hidden = false; empty.textContent = "Unknown / not covered. " + (d.message || "We cannot resolve this address, so no rules are shown rather than guessing.");
+    empty.hidden = false; empty.textContent = (d.error ? "Error. " : "Unknown / not covered. ") + (d.message || "We cannot resolve this address, so no rules are shown rather than guessing.");
     return;
   }
   empty.hidden = true;
