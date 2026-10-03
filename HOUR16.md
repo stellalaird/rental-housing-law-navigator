@@ -1,12 +1,12 @@
 # HOUR16 runbook: the hour-16 ordinance drop
 
-Run from the repo root. Steps 2–5 were rehearsed end to end in a scratch copy with a fake Cambridge ordinance (2026-10-03): ingest 10 s, rebuild with lookups 19 s, about 30 s total. Steps 1 and 7 were not rehearsed.
+Run from the repo root. Steps 2–5 were rehearsed end to end in a scratch copy with a fake Cambridge ordinance (2026-10-03): ingest 10 s, rebuild with lookups 19 s, about 30 s total. Step 1's download was rehearsed separately on a real Drive file; step 7 (`npm start`) was not.
 
 Who: **p-a-3** = ingest, rebuild, UI, changes.json. **p-a-2** = rules.json, lookups.json, server. **p-a-1** = selfcheck, recording. **p-a** = go/no-go and commits board.
 
 | # | Who | Step | Command / check |
 |---|-----|------|-----------------|
-| 1 | p-a-3 | Watcher fires (exit 10, new entry printed). Tell p-a and p-a-2. Download into `data/starter/` only. | `node drive-watch.mjs` · download the file id with `gdown <id> -O data/starter/hour16/` (unrehearsed; fallback: open the file in a browser and save). Convert a PDF to text if needed, keeping the first lines `SOURCE: <url>` and `RETRIEVED: <date>` |
+| 1 | p-a-3 | Watcher fires (exit 10, new entry printed). Tell p-a and p-a-2. Download into `data/starter/` only. | `node drive-watch.mjs` · `mkdir -p data/starter/hour16 && curl -sSL -o data/starter/hour16/<name>.txt "https://drive.google.com/uc?export=download&id=<id>"` (rehearsed 2026-10-03 on D001: 0.8 s, byte-identical; `gdown` is not installed, do not use it; fallback: open the file in a browser and save). The id is in the `drive-watch.mjs` output. Convert a PDF to text if needed, keeping the first lines `SOURCE: <url>` and `RETRIEVED: <date>` |
 | 2 | p-a-2 | Freeze: no consolidation or rules.json writes while ingest runs (ingest rewrites rules.json). | message p-a-3 "clear" |
 | 3 | p-a-3 | Dry run first. Check: rule count, jurisdiction, effective date, `supersedes`, `quote_unverified_dropped` 0, `T6_affected`. | `node ingest-doc.mjs data/starter/hour16/<doc>.txt --dry --today <today>` |
 | 4 | p-a-3 | Real run. Writes rules.json and changes.json (T6), appends an `ingest` audit record. | `node ingest-doc.mjs data/starter/hour16/<doc>.txt --today <today>` |
