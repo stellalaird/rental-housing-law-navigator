@@ -1,7 +1,7 @@
 {
 "steps": [
 {
-"goto": "http://localhost:3000",
+"goto": "{BASE}",
 "narrate": "Which housing rules apply to this address, today? Dorchester is a postal name. The Census geocoder says it is legally Boston."
 },
 {
