@@ -22,7 +22,7 @@ export function makeChanges({ rules, tests, addresses, jur, extra = [] }) {
     const ids = t.rule_ids || [], found = ids.map((id) => ({ id, j: PREFIX[id.split("-")[0]], rs: ruleFor(id) }));
     const missing = found.filter((f) => !f.rs.length).map((f) => f.id);
     const notes = [];
-    let affected = new Set(), conflict = new Set();
+    let affected = new Set(), conflict = new Set(); const conflicts = [];
     if (t.type === "as_of") {
       for (const f of found) {
         // Affected = addresses in that jurisdiction whose status differs between the two query dates (T1, T3).
@@ -30,21 +30,26 @@ export function makeChanges({ rules, tests, addresses, jur, extra = [] }) {
         if (changed) addrIn(f.j).forEach((a) => affected.add(a));
         notes.push(f.rs.length ? `${f.j}: ${f.rs.map((r) => `${r.team_rule_id} ${statusOn(annotateOne(r, rules), t.as_of_before)} on ${t.as_of_before}, ${statusOn(annotateOne(r, rules), t.as_of_after)} on ${t.as_of_after}`).join("; ")}.` : `${f.j}: no extracted rule, used test spec.`);
       }
-      for (const cid of t.conflict_with || []) { const cj = PREFIX[cid.split("-")[0]]; addrIn(cj).forEach((a) => affected.has(a) && conflict.add(a)); }
+      for (const cid of t.conflict_with || []) {
+        const cj = PREFIX[cid.split("-")[0]], ca = addrIn(cj).filter((a) => affected.has(a)); ca.forEach((a) => conflict.add(a));
+        const ours = (rs) => (rs.length ? rs.map((r) => r.team_rule_id) : null);
+        conflicts.push({ rule_a: { test_id: ids[0], team_rule_ids: ours(found[0].rs) }, rule_b: { test_id: cid, team_rule_ids: ours(ruleFor(cid)) }, jurisdiction_b: cj, possible_conflict: "state law may preempt or conflict with the local ban; human review", addresses: ca });
+      }
       if ((t.conflict_with || []).length) notes.push(`Possible preemption of ${t.conflict_with.join(", ")}: addresses in those cities flagged for human review.`);
     } else if (t.type === "boundary") {
       for (const f of found) addrIn(f.j).forEach((a) => affected.add(a));
       notes.push(`Each city rule applies only inside its own legal city (Census geocoder, not postal city): ${found.map((f) => f.j).join(", ")}.`);
     } else if (t.type === "pending") {
       for (const st of t.states || []) addrIn(st).forEach((a) => affected.add(a));
-      notes.push(`Pending, not law as of ${t.as_of}. Listed set is every address in ${(t.states || []).join(", ")} that the bills would reach if enacted.`);
+      notes.push(`Pending, not law as of ${t.as_of}. Listed set is every address in ${(t.states || []).join(", ")} that the bills would reach if enacted (per change_tests.json; bill text not in corpus).`);
     } else if (t.type === "negative") {
       notes.push("Struck / failed measure: not law, so no address is affected.");
     } else if (t.type === "new_document") {
       for (const j of t.jurisdictions || []) addrIn(j).forEach((a) => affected.add(a));
     }
     if (missing.length) notes.push(`No extracted rule for ${missing.join(", ")}; those parts follow the test's written spec.`);
-    out[t.test_id] = { affected_address_ids: [...affected].sort(), ...(t.type === "as_of" && (t.conflict_with || []).length ? { conflict_flag_address_ids: [...conflict].sort() } : {}), notes: notes.join(" ") };
+    const source = t.type === "negative" || t.type === "new_document" ? "extracted rules" : missing.length ? (missing.length === found.length ? "change_tests.json spec, no extracted rule" : `extracted rules, except ${missing.join(", ")}: change_tests.json spec, no extracted rule`) : "extracted rules";
+    out[t.test_id] = { affected_address_ids: [...affected].sort(), ...(t.type === "as_of" && (t.conflict_with || []).length ? { conflict_flag_address_ids: [...conflict].sort(), conflicts } : {}), source, notes: notes.join(" ") };
   }
   return out;
 }
