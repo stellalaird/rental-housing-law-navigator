@@ -152,7 +152,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -308,7 +312,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -1058,7 +1066,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -1438,7 +1450,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -1600,7 +1616,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -1740,7 +1760,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -2300,7 +2324,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -2732,7 +2760,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -3596,7 +3628,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -3876,7 +3912,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -4032,7 +4072,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -4480,7 +4524,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -5524,7 +5572,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -5826,7 +5878,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -6078,7 +6134,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -6492,7 +6552,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -6752,7 +6816,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -7046,7 +7114,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -7806,7 +7878,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -8078,7 +8154,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -10292,7 +10372,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -10566,7 +10650,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -11748,7 +11836,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -12044,7 +12136,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -12200,7 +12296,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -13444,7 +13544,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -13722,7 +13826,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -13862,7 +13970,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -14194,7 +14306,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -14766,7 +14882,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -15082,7 +15202,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -15956,7 +16080,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -16362,7 +16490,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -16518,7 +16650,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -17168,7 +17304,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -17738,7 +17878,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -17894,7 +18038,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -18056,7 +18204,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -18196,7 +18348,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -18758,7 +18914,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -18914,7 +19074,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -19222,7 +19386,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -20124,7 +20292,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -20420,7 +20592,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -21922,7 +22098,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -22084,7 +22264,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -22230,7 +22414,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -22516,7 +22704,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -23140,7 +23332,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -23562,7 +23758,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -24336,7 +24536,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -24908,7 +25112,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -25064,7 +25272,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -25548,7 +25760,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -25694,7 +25910,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -25840,7 +26060,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -26332,7 +26556,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -28292,7 +28520,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -28910,7 +29142,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -30868,7 +31104,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -33384,7 +33624,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -33666,7 +33910,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -33806,7 +34054,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -34460,7 +34712,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -34622,7 +34878,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -35158,7 +35418,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -35460,7 +35724,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -36190,7 +36458,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -36638,7 +36910,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -36800,7 +37076,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -36946,7 +37226,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -37372,7 +37656,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -37534,7 +37822,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -38712,7 +39004,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -39816,7 +40112,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -39978,7 +40278,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -41010,7 +41314,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -41166,7 +41474,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -41434,7 +41746,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -42440,7 +42756,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -42596,7 +42916,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -43018,7 +43342,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -43294,7 +43622,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -44380,7 +44712,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -44542,7 +44878,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -45090,7 +45430,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -45230,7 +45574,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -45672,7 +46020,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -45962,7 +46314,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -46782,7 +47138,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -46938,7 +47298,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -47580,7 +47944,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -47736,7 +48104,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -48490,7 +48862,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -48828,7 +49204,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -49108,7 +49488,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -49922,7 +50306,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -50078,7 +50466,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -50240,7 +50632,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -51742,7 +52138,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -51904,7 +52304,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -52628,7 +53032,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -53144,7 +53552,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -54282,7 +54694,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -54422,7 +54838,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -54578,7 +54998,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -54972,7 +55396,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -55118,7 +55546,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -55830,7 +56262,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -55986,7 +56422,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -56548,7 +56988,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -57362,7 +57806,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -57678,7 +58126,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -58096,7 +58548,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -58242,7 +58698,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -58534,7 +58994,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -59344,7 +59808,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -59896,7 +60364,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -60896,7 +61368,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -61052,7 +61528,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -61354,7 +61834,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -62524,7 +63008,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -62680,7 +63168,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -62836,7 +63328,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -62998,7 +63494,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -63688,7 +64188,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -64236,7 +64740,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -64376,7 +64884,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -64678,7 +65190,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -65874,7 +66390,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -66030,7 +66550,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -66452,7 +66976,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -66608,7 +67136,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -67422,7 +67954,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -68354,7 +68890,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -68510,7 +69050,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -68666,7 +69210,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -69242,7 +69790,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",
@@ -69614,7 +70166,11 @@
         "team_rule_id": "r-0049",
         "result": "not_yet_effective",
         "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Enacted; takes effect 2027-07-01.",
-        "conflict_flag": true
+        "conflict_flag": true,
+        "if_in_force": {
+          "result": "unknown",
+          "explanation": "New Jersey FAIR Act – Prohibition on Algorithmic Rent Coordination (P.L. 2026, c.43, §4): Residential rental property owners and their agents may not pay for or use the services of a 'coordinator', meaning anyone operating algorithmic revenue management software or an algorithmic device that performs a coord… Coverage depends on unit count, which is not in the input."
+        }
       },
       {
         "team_rule_id": "r-0050",

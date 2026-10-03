@@ -60,7 +60,7 @@ for (const [id, j] of Object.entries(by)) {
   const known = j.status !== "unknown" && j.stack;
   const stack = known ? j.stack : [j.state].filter(Boolean);
   const out = [];
-  const push = (e, r) => { out.push({ team_rule_id: r.team_rule_id, result: e.result, explanation: e.explanation, conflict_flag: !!r.conflict_flag, ...(e.result === "applies" ? { source_doc_id: r.source_doc_id, quoted_span: r.quoted_span } : {}) }); stats[e.result] = (stats[e.result] || 0) + 1; };
+  const push = (e, r) => { out.push({ team_rule_id: r.team_rule_id, result: e.result, explanation: e.explanation, conflict_flag: !!r.conflict_flag, ...(e.if_in_force ? { if_in_force: e.if_in_force } : {}), ...(e.result === "applies" ? { source_doc_id: r.source_doc_id, quoted_span: r.quoted_span } : {}) }); stats[e.result] = (stats[e.result] || 0) + 1; };
   for (const t of asOf(stack, AS_OF, rules)) {
     const r = byId.get(t.team_rule_id), c = cov[r.team_rule_id] || {};
     const base = `${r.title}: ${short(r.requirement)}`;
@@ -74,13 +74,17 @@ for (const [id, j] of Object.entries(by)) {
       if (c.units_min != null) { if (units == null) miss.push("unit count"); else if (units < c.units_min) out_of_scope = true; }
       if (c.units_max != null) { if (units == null) miss.push("unit count"); else if (units > c.units_max) out_of_scope = true; }
       if (out_of_scope) continue;
-      // local override
+      // local override, then coverage unknowns. `gate` is what the rule becomes once it is in force; it is
+      // computed for every time status and stored on non-applies entries (if_in_force) so as-of queries on
+      // another date apply the same coverage logic instead of flipping to "applies" unchecked.
       const sup = r.level === "state" && known ? Object.entries(superseded[r.team_rule_id] || {}).find(([city]) => stack.includes(city)) : null;
-      if (sup && result === "applies") { push({ result: "superseded", explanation: `${base} Replaced here by ${sup[1].superseded_by}: ${sup[1].reason}` }, r); continue; }
-      if (miss.length && result === "applies") { push({ result: "unknown", explanation: `${base} Coverage depends on ${miss.join(" and ")}, which is not in the input.` }, r); continue; }
-      if (c.blocking_unknown && result === "applies") { push({ result: "unknown", explanation: `${base} Whether it covers this property depends on ${c.unknown_fact || "facts not in the input"}.` }, r); continue; }
+      let gate = null;
+      if (sup) gate = { result: "superseded", explanation: `${base} Replaced here by ${sup[1].superseded_by}: ${sup[1].reason}` };
+      else if (miss.length) gate = { result: "unknown", explanation: `${base} Coverage depends on ${miss.join(" and ")}, which is not in the input.` };
+      else if (c.blocking_unknown) gate = { result: "unknown", explanation: `${base} Whether it covers this property depends on ${c.unknown_fact || "facts not in the input"}.` };
+      if (gate && result === "applies") { push(gate, r); continue; }
       why = result === "applies" ? t.reason : result === "pending" ? "Not law yet: a pending bill." : t.reason;
-      push({ result, explanation: `${base} ${why}` }, r);
+      push({ result, explanation: `${base} ${why}`, ...(gate ? { if_in_force: gate } : {}) }, r);
     } else if (result === "superseded") push({ result, explanation: `${base} ${t.reason}` }, r);
   }
   if (!known) {
