@@ -61,7 +61,7 @@ const I18N = {
     stack: "Jurisdiction stack", rules: "Rules for this address", override: "Override: ", conflict: "⚑ possible conflict, human review", lowconf: (c) => `⚑ low confidence (${c}), verify against the source`,
     why: "Why: ", conflictNote: "Conflict: ", source: "Source: ", nocite: "missing citation", retrieved: (x) => ` · retrieved ${x}`, noretr: " · retrieval date not recorded", effective: "effective ",
     errPrefix: "Error. ", nc: "Unknown / not covered. ", ncMsg: "We cannot resolve this address, so no rules are shown rather than guessing.", none: "No rules in our data apply to this address. That is not a guarantee that none exist.",
-    looking: "Looking up…", fxnote: "Live lookup unavailable; showing bundled fixture data.", lookBtn: "Look up", asofLbl: "As of", addrLbl: "Address or address ID", other: "Español", untranslated: "" },
+    partial: "Partly covered, not everything is shown: ", looking: "Looking up…", fxnote: "Live lookup unavailable; showing bundled fixture data.", lookBtn: "Look up", asofLbl: "As of", addrLbl: "Address or address ID", other: "Español", untranslated: "" },
   es: { b1: "No es asesoría legal.", b2: "Solo informativo; las reglas pueden estar incompletas, desactualizadas o mal interpretadas. Consulte la fuente citada y a un profesional calificado.", mt: "Traducción automática; el texto legal original prevalece",
     label: { applies: "Aplica", unknown: "Desconocido", superseded: "Reemplazada", not_yet_effective: "Aún no en vigor", pending: "Pendiente (no es ley)" },
     groups: { applies: "Ley vigente: aplica en esta fecha", not_yet_effective: "Ley promulgada: aún no en vigor", pending: "Proyectos pendientes: no son ley", superseded: "Reemplazadas", unknown: "Desconocido: no se puede determinar con nuestros datos", "": "Otras" },
@@ -69,7 +69,7 @@ const I18N = {
     stack: "Jurisdicciones aplicables", rules: "Reglas para esta dirección", override: "Prevalece: ", conflict: "⚑ posible conflicto, requiere revisión humana", lowconf: (c) => `⚑ baja confianza (${c}), verifique con la fuente`,
     why: "Por qué: ", conflictNote: "Conflicto: ", source: "Fuente (en inglés): ", nocite: "falta la cita", retrieved: (t) => ` · consultada ${t}`, noretr: " · fecha de consulta no registrada", effective: "vigente desde ",
     errPrefix: "Error. ", nc: "Desconocido / no cubierto. ", ncMsg: "No podemos resolver esta dirección, así que no mostramos reglas en lugar de adivinar.", none: "Ninguna regla en nuestros datos aplica a esta dirección. Eso no garantiza que no existan.",
-    looking: "Buscando…", fxnote: "Búsqueda en vivo no disponible; mostrando datos de prueba.", lookBtn: "Buscar", asofLbl: "Fecha", addrLbl: "Dirección o ID de dirección", other: "English", untranslated: " (sin traducir)" },
+    partial: "Cobertura parcial, no se muestra todo: ", looking: "Buscando…", fxnote: "Búsqueda en vivo no disponible; mostrando datos de prueba.", lookBtn: "Buscar", asofLbl: "Fecha", addrLbl: "Dirección o ID de dirección", other: "English", untranslated: " (sin traducir)" },
 };
 let LANG = new URLSearchParams(location.search).get("lang") === "es" ? "es" : "en";
 const T = () => I18N[LANG];
@@ -121,11 +121,14 @@ function render(res, asof) {
   $("asline").textContent = t.asof(d.as_of || asof) + (source === "fixture" ? t.fixture : "");
   const empty = $("empty"), stack = $("stack"), rules = $("rules");
   stack.replaceChildren(); rules.replaceChildren();
-  if (d.not_covered || !d.results) {
+  // Live API sends not_covered as an ARRAY of uncovered scopes ([] = fully covered); the 404 path sends boolean true.
+  const ncList = Array.isArray(d.not_covered) ? d.not_covered : [];
+  if (d.not_covered === true || !d.results) {
     empty.hidden = false; empty.textContent = (d.error ? t.errPrefix : t.nc) + (LANG === "en" && d.message || t.ncMsg);
     return;
   }
-  empty.hidden = true;
+  empty.hidden = !ncList.length;
+  if (ncList.length) empty.textContent = t.partial + ncList.join("; ");
   const a = d.address;
   if (a) $("asline").textContent += t.addr(a);
   for (const s of d.stack || []) {
