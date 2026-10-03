@@ -116,6 +116,39 @@ if (!ch.__error) {
 }
 report.sections.changes = C;
 
+// ---- Module D (opt-in, --gold gold.json): compare against the hand-made mini gold set. Not part of the proxy total.
+const goldPath = flag("--gold", null);
+if (goldPath) {
+  const gold = load(goldPath), D = { rules: [], addresses: [] };
+  if (gold.__error) D.error = gold.__error;
+  else {
+    const jur = existsSync("jurisdictions.json") ? load("jurisdictions.json").by_address || {} : {};
+    const L = lk.lookups || {}, cand = {};
+    for (const g of gold.rules) {
+      const c = (rules || []).filter((r) => r.source_doc_id === g.doc && r.jurisdiction === g.jurisdiction && r.category === g.category);
+      cand[g.id] = c.map((r) => r.team_rule_id);
+      const r = c.find((x) => g.effective_date && x.effective_date === g.effective_date) || c[0];
+      D.rules.push({ id: g.id, found: !!r, status: r ? r.status === g.status : false, effective_date: r ? (g.effective_date ? r.effective_date === g.effective_date : true) : false,
+        key_value: r ? (g.key_value ? norm(r.key_value ?? "").includes(norm(g.key_value).replace(/\.0%$/, "")) : true) : false, span_in_doc: r ? !!ruleSpanOk.get(r.team_rule_id) : false });
+    }
+    for (const a of gold.addresses) {
+      const j = jur[a.id], row = { id: a.id, jurisdiction: j ? (a.jurisdiction.status === "unknown" ? j.status !== "ok" : j.status === "ok" && j.stack?.at(-1) === a.jurisdiction.place) : false, rules: {} };
+      for (const [gid, want] of Object.entries(a.expect)) {
+        const got = (L[a.id] || []).filter((x) => cand[gid]?.includes(x.team_rule_id)).map((x) => x.result);
+        row.rules[gid] = { want, got: got.join("|") || "(none)", pass: want === "not_applicable" ? !got.includes("applies") : want === "unknown" ? !got.includes("applies") && !got.includes("not_yet_effective") : got.includes(want) };
+      }
+      D.addresses.push(row);
+    }
+    const rc = D.rules.length, ap = D.addresses.flatMap((x) => Object.values(x.rules));
+    D.summary = { rulesFound: `${D.rules.filter((x) => x.found).length}/${rc}`, status: `${D.rules.filter((x) => x.status).length}/${rc}`, effective_date: `${D.rules.filter((x) => x.effective_date).length}/${rc}`, key_value: `${D.rules.filter((x) => x.key_value).length}/${rc}`,
+      jurisdiction: `${D.addresses.filter((x) => x.jurisdiction).length}/${D.addresses.length}`, lookups: `${ap.filter((x) => x.pass).length}/${ap.length}` };
+  }
+  report.sections.gold = D;
+  console.log(`GOLD (${goldPath}): ${D.error || JSON.stringify(D.summary)}`);
+  for (const a of D.addresses || []) for (const [g, x] of Object.entries(a.rules)) if (!x.pass) console.log(`  MISS ${a.id} ${g}: want ${x.want}, got ${x.got}`);
+  for (const r of D.rules || []) if (!(r.found && r.status && r.effective_date && r.key_value && r.span_in_doc)) console.log(`  RULE ${r.id}: ${JSON.stringify(r)}`);
+}
+
 // ---- scorecard (PROXY points mirroring rubric weights)
 const frac = (n, d) => (d ? n / d : 0);
 const aPts = A.rules ? 25 * frac(A.schemaValid, A.rules) : 0;
