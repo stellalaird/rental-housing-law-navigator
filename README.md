@@ -36,7 +36,7 @@ The challenge defines five stages. This is how each maps to this repo.
 | 2. Resolve | Geocode an address, build the jurisdiction stack (state → county → city). | TODO: path |
 | 3. Apply | Test each rule's coverage conditions against building facts (year built, units, use code). Missing facts yield `unknown`, never a guess. | TODO: path |
 | 4. Explain | Every applicable rule, in plain language, with a citation and quoted span. Local-over-state overrides are stated explicitly. | TODO: path |
-| 5. Track change | For a new or pending law: affected addresses, before/after rule set, and an "as of date" query. | TODO: path |
+| 5. Track change | For a new or pending law: affected addresses, before/after rule set, and an "as of date" query. `changelog.mjs` (`asOf`, `diff`), `make-changes.mjs` (T1–T5 to `changes.json`), `ingest-doc.mjs` (a new document to extracted rules, supersession and a T6 entry in one command). |
 
 Scope: 3 states (CA, NJ, MA), 10 cities (9 with address samples; Santa Ana is extraction-only), 6 rule categories (rent increase limits, just-cause eviction, security deposits, application/screening fees, screening restrictions, algorithmic rent-setting).
 
@@ -63,7 +63,7 @@ npm start                      # http://localhost:3000
 
 API mode needs `ANTHROPIC_API_KEY` in a gitignored `.env` (see `.env.example`). CLI mode (`BACKEND=cli npm start`) uses a logged-in `claude` CLI instead.
 
-Pipeline and scoring: `TODO: extract / lookup / changes commands` then `python score.py <args>` (the organisers' script, dev key).
+Change tracking: `node make-changes.mjs` writes `changes.json`; `node ingest-doc.mjs <new-doc.txt>` ingests a new document and adds T6 (`--dry` writes nothing); `node test-changelog.mjs` runs the as-of cases. Extract and lookup commands: `TODO` (p-a-2). Scoring: `python score.py <args>` (the organisers' script, dev key).
 
 ## Responsible design
 

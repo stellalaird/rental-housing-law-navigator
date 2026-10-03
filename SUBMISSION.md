@@ -10,7 +10,7 @@ Legend: **[agent]** = an agent can make it. **[owner]** = only the owner can do 
 |---|---|---|---|---|
 | 1 | `rules.json` (challenge) | Rule records in the provided schema, with citation and quoted source text; extracted automatically | **[agent]** p-a-2 | TODO |
 | 2 | `lookups.json` (challenge) | All 500 addresses; each rule's result is one of applies / unknown / superseded / not yet effective / pending | **[agent]** p-a-2 | TODO |
-| 3 | `changes.json` (challenge) | Affected addresses and conflict flags for each test T1–T6 | **[agent]** p-a-2 | TODO |
+| 3 | `changes.json` (challenge) | Affected addresses and conflict flags for each test T1–T6 | **[agent]** p-a-3 (`make-changes.mjs`) | T1–T5 generated (`f81868a`, from the 80-rule `rules.json`); T6 added by `ingest-doc.mjs` when the hour-16 doc arrives; regenerate after any `rules.json` change |
 | 4 | Team video (challenge + HackOS) | Introduce the team; MP4/MOV, ≤60 s, ≤1 GB | **[owner]** records and uploads | TODO |
 | 5 | Demo video | Show the tool in use; same limits | **[agent]** records; **[owner]** uploads | TODO |
 | 6 | Technical video | Walk through how it works; same limits | **[agent]** records; **[owner]** uploads | TODO |
@@ -42,7 +42,7 @@ Total 100: **75 automatic** (organisers' `score.py`) + **25 judged**.
 | Extraction accuracy | 25 | auto | Rules matched to the held-out key by jurisdiction, category and citation; field accuracy on date, status, key value, citation | `rules.json` | TODO |
 | Address coverage | 20 | auto | 100 held-out addresses; missing an applicable rule costs twice other errors; "unknown" earns partial credit | `lookups.json` | TODO |
 | Citations | 15 | auto | Share of "applies" answers backed by a source and a quoted span found in the corpus | every answer carries both | TODO |
-| Change tracking | 15 | auto | Overlap with expected affected-address sets for T1–T6, plus conflict flags on T3 | `changes.json` | TODO |
+| Change tracking | 15 | auto | Overlap with expected affected-address sets for T1–T6, plus conflict flags on T3 | `changes.json` | T1–T5 pass the local `selfcheck.mjs` proxy (15/15); the real score is judged against the held-out sets, so this is a floor on information |
 | Plain language and usability | 10 | judges | Demo | demo video, live link | judged |
 | Responsible design | 10 | judges | Uncertainty, audit trail, guardrails | section 4 | judged |
 | Scalability path | 5 | judges | How the approach extends to new jurisdictions | section 4 | judged |
@@ -57,12 +57,12 @@ Notes:
 
 | Test | Correct behaviour | Our result |
 |---|---|---|
-| T1 · CA AB 325 / SB 763, eff. 1/1/2026 | "Not yet effective" for CA addresses as of 12/31/2025; "applies" as of 1/2/2026 | TODO |
-| T2 · Hoboken and Jersey City local bans | Each ban only inside its own city; neither in Newark | TODO |
-| T3 · NJ FAIR Act, signed 7/20/2026, eff. 7/1/2027 | "Not yet effective" today, "applies" on 7/2/2027; flags possible conflict with the two local bans | TODO |
-| T4 · MA S.2983 and H.5222 (pending) | Reported as pending, never in force; lists addresses they would affect | TODO |
-| T5 · MA rent-control ballot question, struck 6/23/2026 | No rent cap for Boston or Cambridge; affected set empty | TODO |
-| T6 · Fictional Cambridge ordinance (hour 16) | Extracted unaided; affected addresses listed; future effective date correct | TODO |
+| T1 · CA AB 325 / SB 763, eff. 1/1/2026 | "Not yet effective" for CA addresses as of 12/31/2025; "applies" as of 1/2/2026 | 250 CA addresses affected; `asOf` returns not yet effective on 12/31/2025 and applies on 1/2/2026 (`test-changelog.mjs`, 9/9) |
+| T2 · Hoboken and Jersey City local bans | Each ban only inside its own city; neither in Newark | 89 affected, all inside Hoboken or Jersey City legal limits. **Currently the `change_tests.json` spec fallback, labelled in `changes.json`**: no Hoboken or Jersey City ban text was extractable. It becomes a cited extracted rule if the link-only docs yield text, then regenerate. |
+| T3 · NJ FAIR Act, signed 7/20/2026, eff. 7/1/2027 | "Not yet effective" today, "applies" on 7/2/2027; flags possible conflict with the two local bans | 140 affected; 89 flagged, with the two rule-pair conflicts as primary items and per-address flags as detail |
+| T4 · MA S.2983 and H.5222 (pending) | Reported as pending, never in force; lists addresses they would affect | 110 MA addresses listed as pending (per `change_tests.json`; the bill text is not in the corpus) |
+| T5 · MA rent-control ballot question, struck 6/23/2026 | No rent cap for Boston or Cambridge; affected set empty | 0 affected |
+| T6 · Fictional Cambridge ordinance (hour 16) | Extracted unaided; affected addresses listed; future effective date correct | Path built and run with `--dry` on a fake Cambridge ordinance (`not_yet_effective`, 2027-03-01, 49 addresses); real run waits for the hour-16 doc |
 
 ## 4. Judged criteria
 
