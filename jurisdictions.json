@@ -135,16 +135,12 @@
    "units": null
   },
   "A0009": {
-   "status": "ok",
-   "reason": null,
+   "status": "unknown",
+   "reason": "house_number_mismatch",
    "state": "MA",
-   "county": "Suffolk County, MA",
-   "place": "Boston",
-   "stack": [
-    "MA",
-    "Suffolk County, MA",
-    "Boston, MA"
-   ],
+   "county": null,
+   "place": null,
+   "stack": null,
    "matched_address": "5 WESTERN AVE, CAMBRIDGE, MA, 02163",
    "year_built": "1915",
    "units": "6"
@@ -5148,16 +5144,12 @@
    "units": null
   },
   "A0344": {
-   "status": "ok",
-   "reason": null,
+   "status": "unknown",
+   "reason": "house_number_mismatch",
    "state": "NJ",
-   "county": "Hudson County, NJ",
-   "place": "Jersey City",
-   "stack": [
-    "NJ",
-    "Hudson County, NJ",
-    "Jersey City, NJ"
-   ],
+   "county": null,
+   "place": null,
+   "stack": null,
    "matched_address": "242 GARFIELD AVE, JERSEY CITY, NJ, 07305",
    "year_built": "1928",
    "units": null

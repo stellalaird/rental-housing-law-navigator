@@ -58,6 +58,11 @@ function resolve(a, g) {
   if (!m) return { ...base, reason: g?.error ? "geocode_error" : "geocode_no_match" };
   const geo = m.geographies, st = geo.States?.[0]?.STUSAB, cnty = geo.Counties?.[0]?.NAME;
   const placeRaw = geo["Incorporated Places"]?.[0]?.BASENAME ?? null; // null => unincorporated / CDP
+  // The Census fuzzy-matches house numbers (input "322 Western Ave" matched "5 WESTERN AVE", a different city).
+  // Accept a match only if its number is one of the input's numbers (ranges like "408-410" or "322-322.5" count).
+  const inNums = (a.street_address.match(/^[\d.\-\s]+/)?.[0] ?? "").split(/[-\s]+/).map((x) => x.replace(/\.5$/, "")).filter(Boolean);
+  const mNum = m.matchedAddress.match(/^\d+/)?.[0];
+  if (inNums.length && !inNums.includes(mNum)) return { ...base, matched_address: m.matchedAddress, reason: "house_number_mismatch" };
   const out = { ...base, matched_address: m.matchedAddress, state: st, county: cnty ? `${cnty}, ${st}` : null, place: placeRaw };
   if (st !== a.state) return { ...out, status: "unknown", reason: "state_mismatch" };
   const placeKey = placeRaw && `${placeRaw}, ${st}`;
