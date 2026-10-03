@@ -4,6 +4,7 @@
 // Usage: node record-demo.mjs steps.json [--out demo.mp4] [--max 60] [--size 1280x720] [--keep-webm]
 // steps.json: {"steps":[ {"goto":"http://localhost:3000"}, {"type":{"selector":"#q","text":"hi","delay":70}},
 //   {"click":"#go"}, {"waitFor":{"selector":"#out","text":"done","timeout":90000}}, {"pause":2000}, {"press":"ArrowRight"} ]}
+//   type takes "clear":true to replace existing text; fill {selector,value} sets a field at once (use for <input type=date>).
 //   goto: a path without a scheme resolves relative to steps.json and opens as file://. press: a Playwright key name.
 // Optional narration: any step may carry "narrate":"text". Rendered with macOS `say`, started at that step's
 //   timestamp, muxed as AAC. Narrations that overlap or run past the cap trigger a warning.
@@ -66,8 +67,10 @@ try {
     if (k === "goto") { await page.goto(/^[a-z]+:/i.test(v) ? v : pathToFileURL(resolve(dirname(stepsFile), v)).href, { waitUntil: "load" }); tReady ??= Date.now() - t0; }
     else if (k === "type") {
       await moveTo(v.selector); await page.locator(v.selector).first().click();
+      if (v.clear) await page.keyboard.press("Meta+a"); // replace existing text instead of appending
       for (const ch of v.text) await page.keyboard.type(ch, { delay: 0 }), await sleep(rnd(v.delay ?? 70));
     }
+    else if (k === "fill") { await moveTo(v.selector); await page.locator(v.selector).first().fill(v.value); } // for date inputs, value YYYY-MM-DD
     else if (k === "click") { await moveTo(v); await page.locator(v).first().click(); }
     else if (k === "waitFor") {
       const to = v.timeout ?? 60000;

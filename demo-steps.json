@@ -1,0 +1,82 @@
+{
+"steps": [
+{
+"goto": "http://localhost:3000",
+"narrate": "Which housing rules apply to this address, today? Dorchester is a postal name. The Census geocoder says it is legally Boston."
+},
+{
+"pause": 500
+},
+{
+"type": {
+"selector": "#q",
+"text": "A0065",
+"delay": 90
+}
+},
+{
+"click": "#f button"
+},
+{
+"waitFor": {
+"selector": ".rule",
+"timeout": 20000
+}
+},
+{
+"pause": 6000,
+"narrate": "Massachusetts bans rent control. That state rule overrides any city rule, and the answer shows the override and a quoted source."
+},
+{
+"pause": 2500
+},
+{
+"type": {
+"selector": "#q",
+"text": "A0009",
+"delay": 70,
+"clear": true
+}
+},
+{
+"click": "#f button"
+},
+{
+"pause": 6000,
+"narrate": "This address cannot be placed in a city. The state layer still applies. City rules say unknown, never a guess."
+},
+{
+"type": {
+"selector": "#q",
+"text": "A0016",
+"delay": 70,
+"clear": true
+}
+},
+{
+"click": "#f button"
+},
+{
+"waitFor": {
+"selector": ".rule",
+"timeout": 20000
+}
+},
+{
+"pause": 4000,
+"narrate": "San Francisco, as of October 2026: a one point six percent limit. Change the date to February, and the answer changes to one point four."
+},
+{
+"fill": {
+"selector": "#asof",
+"value": "2026-02-15"
+}
+},
+{
+"click": "#f button"
+},
+{
+"pause": 6000
+}
+]
+}
