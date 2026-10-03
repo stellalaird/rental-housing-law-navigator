@@ -1,6 +1,6 @@
 # HOUR16 runbook: the hour-16 ordinance drop
 
-Run from the repo root. Steps 2–5 were rehearsed end to end in a scratch copy with a fake Cambridge ordinance (2026-10-03): ingest 10 s, rebuild with lookups 19 s, about 30 s total. Step 1's download was rehearsed separately on a real Drive file; step 7 (`npm start`) was not.
+Run from the repo root. Steps 2–5 were rehearsed end to end in a scratch copy with a fake Cambridge ordinance (2026-10-03): ingest 10 s, rebuild with lookups 19 s, about 30 s total. Step 1's download was rehearsed separately on a real Drive file. Step 7 was rehearsed on `PORT=3099` (starts in about a second, `/api/lookup` answered, stopped; `.env` was absent, so it logged "not found" and ran `backend=api`). Step 5 now also narrows T6 to addresses the new rule's coverage reaches (`refine-t6.mjs`); the log line is `T6 coverage refinement: N -> M addresses`.
 
 Who: **p-a-3** = ingest, rebuild, UI, changes.json. **p-a-2** = rules.json, lookups.json, server. **p-a-1** = selfcheck, recording. **p-a** = go/no-go and commits board.
 
