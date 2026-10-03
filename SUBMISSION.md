@@ -9,8 +9,8 @@
 | 1 | `rules.json` | **94 rules**, 94 schema-valid; quoted spans found in corpus for 78, the other 16 rest on fetched link-only pages (README Limitations) | `rules.json` | p-a-2 |
 | 2 | `lookups.json` | **500/500 addresses, 9403 entries**; 0 bad results, 0 unknown rule ids; 5791 of 6319 `applies` cited | `lookups.json` | p-a-2 |
 | 3 | `changes.json` | **T1 250, T2 89, T3 140, T4 110, T5 0** affected. **T6 absent**: waits on the hour-16 doc | `changes.json` | p-a-3 |
-| 4 | Demo video | **UNCONFIRMED**: final file name and duration. p-a-1 is to copy the finals into `videos/` (gitignored) and send names and durations | `videos/` (empty until p-a-1 delivers) | p-a-1 records, owner uploads |
-| 5 | Tech video | **UNCONFIRMED**: final file name and duration; **T6 slide pending** until the drop | `videos/` (same) | p-a-1 records, owner uploads |
+| 4 | Demo video | `demo-video.mp4`, **55.84 s** (6.2 MB; p-a-1's figure, recorded on :3000 as demo-take5; I did not measure the duration). Extra: `oakland-live-add.mp4`, 54.1 s (live Oakland add, scratch copies only), optional | `videos/` (gitignored) | p-a-1 records, owner uploads |
+| 5 | Tech video | `technical-video.mp4`, **55.2 s** (1.4 MB; p-a-1's figure, tech-take2; not measured by me). **T6 slide pending** until the drop, then a re-record | `videos/` (gitignored) | p-a-1 records, owner uploads |
 | 6 | Team video | not made; ≤60 s, MP4/MOV | `video-scripts.md` | **owner** |
 | 7 | Team photo | not made; JPG/PNG/WebP ≤10 MB | HackOS | **owner** |
 | 8 | Public GitHub repo | local git only, no remote; steps in section 5 | owner terminal | **owner** pushes |
