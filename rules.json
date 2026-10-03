@@ -382,8 +382,8 @@
       "coverage_conditions": "Any 'person' as defined in Bus. & Prof. Code § 16702, other than the end consumer. Applies to the price or commercial terms (level of service, availability, output) of any product or service, so it is not limited to rental housing. A common pricing algorithm is any methodology, including computer, software, or other technology, used by two or more persons that uses competitor data to recommend, align, stabilize, set, or otherwise influence a price or commercial term. Distribution includes selling, licensing, providing access, or subscription.",
       "exemptions": "End consumers of a product or service are excluded.",
       "overrides": [],
-      "interaction": "Part of the state Cartwright Act antitrust framework. The section does not impair or limit the applicability of other antitrust laws, so it coexists with them. Violations are punishable as a crime under the Cartwright Act. The source records give no effective date; the in_force status assumes enactment before the query date.",
-      "effective_date": null,
+      "interaction": "Part of the state Cartwright Act antitrust framework. The section does not impair or limit the applicability of other antitrust laws, so it coexists with them. Violations are punishable as a crime under the Cartwright Act. The source records give no effective date; the in_force status assumes enactment before the query date. AB 325 was chaptered 2025-10-06 (D022); no explicit date in the text, California non-urgency statutes take effect January 1 of the following year.",
+      "effective_date": "2026-01-01",
       "citation": "Business and Professions Code Section 16729(a)-(b) (AB 325, Chapter 338)",
       "source_doc_id": "D022",
       "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB325",
@@ -1010,6 +1010,32 @@
       "team_rule_id": "r-0039",
       "jurisdiction": "MA",
       "level": "state",
+      "category": "algorithmic_rent_setting",
+      "status": "pending",
+      "title": "MA House Bill H.5222: preventing algorithmic rent fixing",
+      "requirement": "Proposed bill to prevent algorithmic rent fixing in the rental housing market. Not enacted: referred to the House Committee on Ways and Means.",
+      "key_value": null,
+      "coverage_conditions": null,
+      "exemptions": null,
+      "overrides": [],
+      "interaction": "Companion to S.2983; no force of law until enacted.",
+      "effective_date": null,
+      "citation": "Bill H.5222 (194th General Court)",
+      "source_doc_id": "D045",
+      "source_url": "https://malegislature.gov/Bills/194/H5222",
+      "retrieved_at": "2026-10-01 22:36 UTC",
+      "quoted_span": "An Act relative to preventing algorithmic rent fixing in the rental housing market",
+      "confidence": 0.9,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "member_doc_ids": [
+        "D045"
+      ]
+    },
+    {
+      "team_rule_id": "r-0040",
+      "jurisdiction": "MA",
+      "level": "state",
       "category": "just_cause_eviction",
       "status": "in_force",
       "title": "Mass. Gen. Laws ch. 186, § 11: Nonpayment Termination of Written Lease",
@@ -1033,7 +1059,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0040",
+      "team_rule_id": "r-0041",
       "jurisdiction": "MA",
       "level": "state",
       "category": "just_cause_eviction",
@@ -1059,7 +1085,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0041",
+      "team_rule_id": "r-0042",
       "jurisdiction": "MA",
       "level": "state",
       "category": "just_cause_eviction",
@@ -1085,7 +1111,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0042",
+      "team_rule_id": "r-0043",
       "jurisdiction": "MA",
       "level": "state",
       "category": "just_cause_eviction",
@@ -1111,7 +1137,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0043",
+      "team_rule_id": "r-0044",
       "jurisdiction": "MA",
       "level": "state",
       "category": "rent_increase_limits",
@@ -1137,7 +1163,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0044",
+      "team_rule_id": "r-0045",
       "jurisdiction": "MA",
       "level": "state",
       "category": "rent_increase_limits",
@@ -1163,7 +1189,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0045",
+      "team_rule_id": "r-0046",
       "jurisdiction": "MA",
       "level": "state",
       "category": "screening_restrictions",
@@ -1189,7 +1215,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0046",
+      "team_rule_id": "r-0047",
       "jurisdiction": "MA",
       "level": "state",
       "category": "security_deposits",
@@ -1215,7 +1241,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0047",
+      "team_rule_id": "r-0048",
       "jurisdiction": "MA",
       "level": "state",
       "category": "security_deposits",
@@ -1241,7 +1267,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0048",
+      "team_rule_id": "r-0049",
       "jurisdiction": "NJ",
       "level": "state",
       "category": "algorithmic_rent_setting",
@@ -1267,7 +1293,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0049",
+      "team_rule_id": "r-0050",
       "jurisdiction": "NJ",
       "level": "state",
       "category": "application_screening_fees",
@@ -1293,7 +1319,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0050",
+      "team_rule_id": "r-0051",
       "jurisdiction": "NJ",
       "level": "state",
       "category": "application_screening_fees",
@@ -1319,7 +1345,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0051",
+      "team_rule_id": "r-0052",
       "jurisdiction": "NJ",
       "level": "state",
       "category": "just_cause_eviction",
@@ -1345,7 +1371,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0052",
+      "team_rule_id": "r-0053",
       "jurisdiction": "NJ",
       "level": "state",
       "category": "just_cause_eviction",
@@ -1371,7 +1397,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0053",
+      "team_rule_id": "r-0054",
       "jurisdiction": "NJ",
       "level": "state",
       "category": "just_cause_eviction",
@@ -1397,7 +1423,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0054",
+      "team_rule_id": "r-0055",
       "jurisdiction": "NJ",
       "level": "state",
       "category": "just_cause_eviction",
@@ -1423,7 +1449,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0055",
+      "team_rule_id": "r-0056",
       "jurisdiction": "NJ",
       "level": "state",
       "category": "rent_increase_limits",
@@ -1449,7 +1475,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0056",
+      "team_rule_id": "r-0057",
       "jurisdiction": "NJ",
       "level": "state",
       "category": "rent_increase_limits",
@@ -1475,7 +1501,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0057",
+      "team_rule_id": "r-0058",
       "jurisdiction": "NJ",
       "level": "state",
       "category": "rent_increase_limits",
@@ -1501,7 +1527,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0058",
+      "team_rule_id": "r-0059",
       "jurisdiction": "NJ",
       "level": "state",
       "category": "rent_increase_limits",
@@ -1527,7 +1553,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0059",
+      "team_rule_id": "r-0060",
       "jurisdiction": "NJ",
       "level": "state",
       "category": "screening_restrictions",
@@ -1553,7 +1579,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0060",
+      "team_rule_id": "r-0061",
       "jurisdiction": "NJ",
       "level": "state",
       "category": "screening_restrictions",
@@ -1579,7 +1605,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0061",
+      "team_rule_id": "r-0062",
       "jurisdiction": "NJ",
       "level": "state",
       "category": "screening_restrictions",
@@ -1605,7 +1631,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0062",
+      "team_rule_id": "r-0063",
       "jurisdiction": "NJ",
       "level": "state",
       "category": "screening_restrictions",
@@ -1632,7 +1658,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0063",
+      "team_rule_id": "r-0064",
       "jurisdiction": "NJ",
       "level": "state",
       "category": "security_deposits",
@@ -1658,7 +1684,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0064",
+      "team_rule_id": "r-0065",
       "jurisdiction": "NJ",
       "level": "state",
       "category": "security_deposits",
@@ -1684,7 +1710,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0065",
+      "team_rule_id": "r-0066",
       "jurisdiction": "NJ",
       "level": "state",
       "category": "security_deposits",
@@ -1710,7 +1736,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0066",
+      "team_rule_id": "r-0067",
       "jurisdiction": "NJ",
       "level": "state",
       "category": "security_deposits",
@@ -1736,7 +1762,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0067",
+      "team_rule_id": "r-0068",
       "jurisdiction": "San Diego, CA",
       "level": "city",
       "category": "algorithmic_rent_setting",
@@ -1762,7 +1788,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0068",
+      "team_rule_id": "r-0069",
       "jurisdiction": "San Diego, CA",
       "level": "city",
       "category": "just_cause_eviction",
@@ -1788,7 +1814,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0069",
+      "team_rule_id": "r-0070",
       "jurisdiction": "San Diego, CA",
       "level": "city",
       "category": "screening_restrictions",
@@ -1814,7 +1840,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0070",
+      "team_rule_id": "r-0071",
       "jurisdiction": "San Diego, CA",
       "level": "city",
       "category": "security_deposits",
@@ -1840,7 +1866,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0071",
+      "team_rule_id": "r-0072",
       "jurisdiction": "San Francisco, CA",
       "level": "city",
       "category": "algorithmic_rent_setting",
@@ -1866,7 +1892,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0072",
+      "team_rule_id": "r-0073",
       "jurisdiction": "San Francisco, CA",
       "level": "city",
       "category": "just_cause_eviction",
@@ -1893,7 +1919,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0073",
+      "team_rule_id": "r-0074",
       "jurisdiction": "San Francisco, CA",
       "level": "city",
       "category": "just_cause_eviction",
@@ -1919,7 +1945,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0074",
+      "team_rule_id": "r-0075",
       "jurisdiction": "San Francisco, CA",
       "level": "city",
       "category": "just_cause_eviction",
@@ -1946,7 +1972,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0075",
+      "team_rule_id": "r-0076",
       "jurisdiction": "San Francisco, CA",
       "level": "city",
       "category": "rent_increase_limits",
@@ -1973,7 +1999,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0076",
+      "team_rule_id": "r-0077",
       "jurisdiction": "San Francisco, CA",
       "level": "city",
       "category": "screening_restrictions",
@@ -1999,7 +2025,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0077",
+      "team_rule_id": "r-0078",
       "jurisdiction": "San Francisco, CA",
       "level": "city",
       "category": "security_deposits",
@@ -2025,7 +2051,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0078",
+      "team_rule_id": "r-0079",
       "jurisdiction": "Santa Ana, CA",
       "level": "city",
       "category": "just_cause_eviction",
@@ -2052,7 +2078,7 @@
       ]
     },
     {
-      "team_rule_id": "r-0079",
+      "team_rule_id": "r-0080",
       "jurisdiction": "Santa Ana, CA",
       "level": "city",
       "category": "rent_increase_limits",

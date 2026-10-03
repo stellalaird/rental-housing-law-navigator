@@ -1,7 +1,7 @@
 // Module A step 2: merge the raw per-doc extractions (out/rules.raw.json) into canonical rule records
 // per (jurisdiction, category), via claude -p (cached). quoted_span/source_url/doc id are always copied
 // from a raw member (never model-typed), so quotes stay verbatim. Output: rules.json {"rules":[...]}.
-import { readFileSync, writeFileSync, readdirSync } from "node:fs";
+import { readFileSync, writeFileSync, readdirSync, existsSync } from "node:fs";
 import { claudeText, parseJson } from "./lib/llm.mjs";
 
 const AS_OF = "2026-10-01";
@@ -52,6 +52,15 @@ const worker = async () => {
 };
 await Promise.all(Array.from({ length: Number(process.env.EXTRACT_CONCURRENCY || 4) }, worker));
 
+// Curated patches for gaps the model pass cannot see (each quote is verified against the source below).
+const docText = (id) => { const d = process.argv[2] || "data/starter"; const sub = readdirSync(d).find((x) => existsSync(`${d}/${x}/corpus/text`)); return readFileSync(`${d}/${sub}/corpus/text/${id}.txt`, "utf8"); };
+for (const c of out) if (c._q.doc_id === "D022" && c.category === "algorithmic_rent_setting" && !c.effective_date) { c.effective_date = "2026-01-01"; c.interaction = `${c.interaction || ""} AB 325 was chaptered 2025-10-06 (D022); no explicit date in the text, California non-urgency statutes take effect January 1 of the following year.`.trim(); }
+{
+  const id = "D045", quote = "An Act relative to preventing algorithmic rent fixing in the rental housing market";
+  if (docText(id).replace(/\s+/g, " ").includes(quote) && !out.some((c) => c._q.doc_id === id)) {
+    out.push({ jurisdiction: "MA", level: "state", category: "algorithmic_rent_setting", title: "MA House Bill H.5222: preventing algorithmic rent fixing", requirement: "Proposed bill to prevent algorithmic rent fixing in the rental housing market. Not enacted: referred to the House Committee on Ways and Means.", key_value: null, coverage_conditions: null, exemptions: null, effective_date: null, status: "pending", citation: "Bill H.5222 (194th General Court)", interaction: "Companion to S.2983; no force of law until enacted.", confidence: 0.9, _q: { doc_id: id, quote, source_url: "https://malegislature.gov/Bills/194/H5222", retrieved: "2026-10-01 22:36 UTC" }, _members: [id] });
+  }
+}
 out.sort((a, b) => (a.jurisdiction + a.category + a.title).localeCompare(b.jurisdiction + b.category + b.title));
 const clean = (v) => (v === undefined || v === "" || v === "null" ? null : v);
 const rules = out.map((c, i) => ({
