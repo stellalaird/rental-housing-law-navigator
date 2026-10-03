@@ -1,0 +1,10 @@
+{"steps":[
+ {"goto":"http://localhost:3100"},
+ {"pause":800},
+ {"type":{"selector":"#q","text":"In one sentence, what is a hackathon?","delay":60}},
+ {"pause":400},
+ {"click":"#go"},
+ {"waitFor":{"selector":"#out","timeout":90000}},
+ {"pause":6000},
+ {"pause":1500}
+]}

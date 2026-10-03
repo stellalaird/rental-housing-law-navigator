@@ -1,0 +1,10 @@
+{"steps":[
+{"goto":"index.html","narrate":"Here is how it works. The browser sends your prompt to a small Node server, which calls the AI model and streams the answer back."},
+{"pause":10500},{"press":"ArrowRight"},
+{"pause":300,"narrate":"The stack is deliberately simple. Node and Express on the server, server sent events for streaming, and a plain HTML front end with no build step."},
+{"pause":10500},{"press":"ArrowRight"},
+{"pause":300,"narrate":"The model does the core work for the user. We shape the prompt and supply context, and we check the output before it reaches the screen."},
+{"pause":10500},{"press":"ArrowRight"},
+{"pause":300,"narrate":"If the model call fails or times out, the app falls back to a saved answer, so the demo never shows an empty screen."},
+{"pause":10000}
+]}

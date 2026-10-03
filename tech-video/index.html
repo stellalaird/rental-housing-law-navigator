@@ -1,0 +1,34 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Tech video</title>
+<style>
+  :root{--bg:#0f1220;--fg:#f2f4ff;--mut:#9aa3c7;--acc:#6ee7b7;--box:#1b2040}
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);font:28px/1.4 -apple-system,system-ui,sans-serif;overflow:hidden}
+  section{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;padding:6vh 8vw}
+  section.on{display:flex}
+  h1{font-size:56px;margin:0 0 .5em;color:var(--acc)}
+  ul{margin:0;padding-left:1.1em} li{margin:.4em 0}
+  .mut{color:var(--mut)}
+  svg{width:100%;max-height:60vh}
+  svg rect{fill:var(--box);stroke:var(--acc);stroke-width:2} svg text{fill:var(--fg);font-size:22px;text-anchor:middle}
+  svg path{stroke:var(--mut);stroke-width:2;fill:none;marker-end:url(#a)}
+  .n{position:fixed;right:24px;bottom:16px;color:var(--mut);font-size:18px}
+</style>
+<section class="on"><h1>Architecture</h1>
+<svg viewBox="0 0 900 260"><defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" style="fill:#9aa3c7;stroke:none;marker-end:none"/></marker></defs>
+<rect x="20" y="90" width="200" height="80" rx="10"/><text x="120" y="138">Browser UI</text>
+<rect x="350" y="90" width="200" height="80" rx="10"/><text x="450" y="138">Node server</text>
+<rect x="680" y="90" width="200" height="80" rx="10"/><text x="780" y="138">AI model</text>
+<path d="M220 130H348"/><path d="M550 130H678"/><path d="M678 150H552"/><path d="M348 150H222"/>
+<text x="285" y="115" style="font-size:16px;fill:#9aa3c7">prompt</text><text x="615" y="115" style="font-size:16px;fill:#9aa3c7">request</text></svg></section>
+<section><h1>Stack</h1><ul><li>PLACEHOLDER: Node 22 + Express</li><li>PLACEHOLDER: server-sent events for streaming</li><li>PLACEHOLDER: plain HTML front end, no build step</li></ul></section>
+<section><h1>How the AI is used</h1><ul><li>PLACEHOLDER: the model does X for the user</li><li>PLACEHOLDER: prompt design and context we supply</li><li>PLACEHOLDER: output checked before display</li></ul></section>
+<section><h1>Robustness</h1><ul><li>PLACEHOLDER: if the model call fails, we fall back to Y</li><li>PLACEHOLDER: timeouts and replay of a saved answer</li></ul></section>
+<div class="n"></div>
+<script>
+  const S=[...document.querySelectorAll("section")],N=document.querySelector(".n");let i=0;
+  const show=n=>{i=Math.max(0,Math.min(S.length-1,n));S.forEach((s,j)=>s.classList.toggle("on",j===i));N.textContent=(i+1)+" / "+S.length};
+  addEventListener("keydown",e=>{if(["ArrowRight"," ","Enter","PageDown"].includes(e.key))show(i+1);if(["ArrowLeft","PageUp"].includes(e.key))show(i-1)});
+  show(0);
+</script>
