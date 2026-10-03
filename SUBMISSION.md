@@ -17,7 +17,7 @@
 | 9 | Live demo link | no host chosen; pick from `DEPLOY.md`; **also decide whether `sample_addresses.csv` may be redistributed** (without it every lookup is a 503; `ADDRESSES_CSV` env points to a copy) | `DEPLOY.md` | **owner** |
 | 10 | HackOS: pick challenge 02, upload, **press Submit** (Save alone does not submit) | not done | section 9 | **owner** |
 
-**Selfcheck: 73.7 / 75 (proxy, not the judges' `score.py`).** Extraction 25/25 and coverage 20/20 are measured against our own dev key (10 rules, 20 addresses), so they say little about the held-out 58 rules and 100 addresses. Citations 13.7/15 comes from the 5791/6319 cited ratio. Change tracking 15/15 checks only that sets exist and are in the right place. T6 check is skipped until a T6 entry exists. The judged 25 are not scored.
+**Selfcheck: 74 / 75 (proxy, not the judges' `score.py`).** Extraction 25/25 and coverage 20/20 are measured against our own dev key (10 rules, 20 addresses), so they say little about the held-out 58 rules and 100 addresses. Citations 14/15 comes from the 5791/6209 cited ratio. Change tracking 15/15 checks only that sets exist and are in the right place. T6 check is skipped until a T6 entry exists. The judged 25 are not scored.
 
 **Hour-16 steps still owed after the drop** (full runbook `HOUR16.md`):
 1. Drive watcher fires; download the doc into `data/starter/hour16/` (p-a-3).
