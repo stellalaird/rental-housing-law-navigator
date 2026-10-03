@@ -1,37 +1,68 @@
 <!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Rental Housing Law Navigator</title>
 <style>
-:root{--bg:#fff;--fg:#1a1d29;--mut:#5b6178;--line:#d9dce8;--card:#f6f7fb;--warn:#fff4d6;--warnb:#c58a00;
- --applies:#0f7b4f;--unknown:#8a5a00;--superseded:#5b3fa0;--future:#0a5ea8;--pending:#6b6f80}
-@media(prefers-color-scheme:dark){:root{--bg:#12141c;--fg:#eceef8;--mut:#9aa1bd;--line:#2b3046;--card:#1a1e2c;--warn:#3a2f10;--warnb:#d9a21b;
- --applies:#4ade9b;--unknown:#f2b64a;--superseded:#b79cff;--future:#6cb6ff;--pending:#a0a5ba}}
+/* Direction: editorial / legal-document. See DESIGN.md. System fonts only (offline). One ink accent; status colours appear only on stamps and card rules. */
+:root{--bg:#f3efe6;--surface:#fbf9f3;--fg:#1b1a17;--mut:#5f5b50;--faint:#8c8778;--line:#d8d2c2;--line2:#bdb6a2;--ink:#1b1a17;--on-ink:#f3efe6;--warn:#fff3cf;--warnb:#b07d00;
+ --applies:#0b6b45;--unknown:#8a5a00;--superseded:#5b3fa0;--future:#0a5ea8;--pending:#6b6a78;
+ --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:40px;--s7:72px;
+ --t-xs:11.5px;--t-sm:13.5px;--t-base:15.5px;--t-lg:19px;--t-xl:26px;--t-hero:clamp(40px,8vw,68px);--t-num:clamp(96px,22vw,168px);
+ --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+ --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+ --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;--r:2px}
+@media(prefers-color-scheme:dark){:root{--bg:#14130f;--surface:#1c1a15;--fg:#efe9da;--mut:#aaa38f;--faint:#7e7867;--line:#2e2b22;--line2:#443f31;--ink:#efe9da;--on-ink:#14130f;--warn:#2e260e;--warnb:#d9a21b;
+ --applies:#4ade9b;--unknown:#f2b64a;--superseded:#b79cff;--future:#6cb6ff;--pending:#a0a0b4}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 system-ui,sans-serif}
-main{max-width:860px;margin:0 auto;padding:0 16px 3rem}
-#banner{position:sticky;top:0;z-index:5;background:var(--warn);border-bottom:2px solid var(--warnb);padding:8px 16px;font-size:14px;text-align:center}
-h1{margin:1.2rem 0 .2rem;font-size:26px}#tagline{margin:0 0 1rem;color:var(--mut)}
-form{display:flex;flex-wrap:wrap;gap:8px;align-items:end}
-label{display:flex;flex-direction:column;font-size:13px;color:var(--mut);gap:2px}
-#addr{flex:1 1 320px}input,button{font:inherit;padding:9px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg)}
-button{cursor:pointer;background:var(--fg);color:var(--bg);border-color:var(--fg)}
-#examples{margin:.6rem 0;display:flex;gap:6px;flex-wrap:wrap}#examples button{background:var(--card);color:var(--fg);border-color:var(--line);font-size:13px;padding:4px 8px}
-#note{font-size:13px;color:var(--mut);margin:.5rem 0}
-h2{font-size:17px;margin:1.4rem 0 .5rem}
-#stack{list-style:none;margin:0;padding:0;display:grid;gap:6px}
-#stack li{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:8px 10px;display:flex;flex-wrap:wrap;gap:4px 10px}
-.lvl{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--mut);min-width:64px}
-.ovr{flex-basis:100%;font-size:14px;color:var(--superseded)}
-.rule{border:1px solid var(--line);border-left-width:5px;border-radius:6px;padding:10px 12px;margin:0 0 10px;background:var(--card)}
-.rule.applies{border-left-color:var(--applies)}.rule.unknown{border-left-color:var(--unknown)}.rule.superseded{border-left-color:var(--superseded)}
-.rule.not_yet_effective{border-left-color:var(--future)}.rule.pending{border-left-color:var(--pending)}
-.badge{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+body{margin:0;background:var(--bg);color:var(--fg);font:var(--t-base)/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+main{max-width:860px;margin:0 auto;padding:0 var(--s5) var(--s7)}
+#banner{position:sticky;top:0;z-index:5;background:var(--ink);color:var(--on-ink);padding:var(--s2) var(--s4);font:var(--t-xs)/1.4 var(--mono);text-align:center;letter-spacing:.01em}
+#banner b{font-weight:700}
+h1{margin:var(--s7) 0 var(--s3);font:400 var(--t-hero)/1.02 var(--serif);letter-spacing:-.025em}
+#tagline{margin:0 0 var(--s6);color:var(--mut);font:italic var(--t-lg)/1.45 var(--serif);max-width:30em}
+form{display:flex;flex-wrap:wrap;gap:var(--s4);align-items:end;border-top:2px solid var(--ink);border-bottom:1px solid var(--line2);padding:var(--s4) 0 var(--s5)}
+label{display:flex;flex-direction:column;font:700 var(--t-xs)/1.2 var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--mut);gap:var(--s2)}
+#addr{flex:1 1 300px}
+input,button{font:inherit;font-size:var(--t-base);padding:11px 12px;border:1px solid var(--line2);border-radius:var(--r);background:var(--surface);color:var(--fg)}
+input:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid var(--future);outline-offset:2px}
+button{cursor:pointer;background:var(--ink);color:var(--on-ink);border-color:var(--ink);font:700 var(--t-sm)/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:13px 20px}
+button:hover{opacity:.85}
+#examples{margin:var(--s4) 0 0;display:flex;gap:var(--s2);flex-wrap:wrap}
+#examples button{background:transparent;color:var(--mut);border:1px dashed var(--line2);font:var(--t-xs)/1 var(--mono);letter-spacing:.02em;text-transform:none;font-weight:400;padding:7px 10px}
+#examples button:hover{color:var(--fg);border-color:var(--fg);border-style:solid;opacity:1}
+#note{font:var(--t-sm) var(--mono);color:var(--mut);margin:var(--s2) 0 0;min-height:1.2em}
+/* the answer: one big number */
+#verdict{margin:var(--s6) 0 var(--s5);display:grid;grid-template-columns:auto 1fr;gap:var(--s2) var(--s5);align-items:end;border-bottom:2px solid var(--ink);padding-bottom:var(--s5)}
+#vnum{grid-row:1/3;font:400 var(--t-num)/.8 var(--serif);letter-spacing:-.05em;color:var(--applies);padding-top:var(--s3)}
+#verdict.none #vnum{color:var(--faint)}
+#vhead{text-transform:none;border:0;padding:0;color:var(--fg);margin:0;font:400 var(--t-xl)/1.15 var(--serif);letter-spacing:-.01em;align-self:end}
+#vsub{margin:0;font:var(--t-sm)/1.5 var(--mono);color:var(--mut);align-self:start}
+#asline{grid-column:1/-1;margin:var(--s4) 0 0;font:var(--t-xs)/1.5 var(--mono);color:var(--mut)}
+.meta{font-size:var(--t-sm);color:var(--mut)}
+#mt{font:var(--t-xs) var(--mono);color:var(--unknown);margin:var(--s4) 0 0}
+#empty{background:var(--warn);border:1px solid var(--warnb);border-left-width:6px;border-radius:var(--r);padding:var(--s4);margin:var(--s5) 0;font-size:var(--t-base)}
+h2{font:700 var(--t-xs)/1.2 var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--mut);margin:var(--s6) 0 var(--s3);padding-top:var(--s3);border-top:1px solid var(--line2)}
+#stack{list-style:none;margin:0;padding:0;display:grid;gap:0}
+#stack li{border-bottom:1px solid var(--line);padding:var(--s3) 0;display:flex;flex-wrap:wrap;gap:var(--s1) var(--s4);font-size:var(--t-base);align-items:baseline}
+.lvl{font:var(--t-xs) var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--faint);min-width:84px}
+.ovr{flex-basis:100%;font-size:var(--t-sm);color:var(--superseded);padding-left:100px}
+.grp{margin:var(--s6) 0 var(--s4);font:400 var(--t-xl)/1.15 var(--serif);letter-spacing:-.01em;padding:0}
+.grp.pending{color:var(--pending)}.grp.not_yet_effective{color:var(--future)}.grp.unknown{color:var(--unknown)}.grp.superseded{color:var(--superseded)}.grp.applies{color:var(--applies)}
+/* cards: stamp first, rule second, citation third */
+.rule{border-top:3px solid var(--line2);padding:var(--s4) 0 var(--s5);margin:0 0 var(--s2);background:transparent}
+.rule.applies{border-top-color:var(--applies)}.rule.unknown{border-top-color:var(--unknown)}.rule.superseded{border-top-color:var(--superseded)}
+.rule.not_yet_effective{border-top-color:var(--future)}.rule.pending{border-top-color:var(--pending)}
+.badge{display:inline-block;font:700 var(--t-xs)/1 var(--mono);text-transform:uppercase;letter-spacing:.12em;padding:5px 9px;border:2px solid currentColor;border-radius:var(--r);transform:rotate(-1.5deg)}
 .applies .badge{color:var(--applies)}.unknown .badge{color:var(--unknown)}.superseded .badge{color:var(--superseded)}.not_yet_effective .badge{color:var(--future)}.pending .badge{color:var(--pending)}
-.rule h3{margin:.1rem 0;font-size:16px}.meta{font-size:13px;color:var(--mut)}
-blockquote{margin:.5rem 0;padding:.3rem .8rem;border-left:3px solid var(--line);font-size:14px;color:var(--mut)}
-.grp{margin:1.2rem 0 .5rem;font-size:15px;border-bottom:1px solid var(--line);padding-bottom:3px}.grp.pending{color:var(--pending)}.grp.not_yet_effective{color:var(--future)}
-.flag{display:inline-block;margin-left:6px;font-size:12px;color:var(--warnb);font-weight:700}
-#lang{padding:2px 8px;font-size:12px;margin-left:8px}#mt{font-size:12px;color:var(--warnb);margin:.2rem 0}#empty{background:var(--warn);border:1px solid var(--warnb);border-radius:6px;padding:12px}
+.rule h3{margin:var(--s3) 0 var(--s1);font:400 var(--t-xl)/1.2 var(--serif);letter-spacing:-.01em}
+.rule p{margin:var(--s3) 0 0;max-width:62ch}
+.rule p.meta{margin-top:var(--s2)}
+.src{margin-top:var(--s4);padding:var(--s3) 0 0 var(--s3);border-left:2px solid var(--line2);font:var(--t-xs)/1.5 var(--mono);color:var(--faint)}
+.src .meta{font:var(--t-xs)/1.5 var(--mono);color:var(--faint);margin:0 0 var(--s1)}
+.src a{color:var(--mut);text-underline-offset:3px}
+blockquote{margin:var(--s2) 0 0;padding:0;font:italic var(--t-sm)/1.5 var(--serif);color:var(--mut)}
+.flag{display:inline-block;margin-left:var(--s3);font:700 var(--t-xs) var(--mono);color:var(--warnb)}
+#lang{padding:3px 8px;font:var(--t-xs) var(--mono);margin-left:var(--s2);background:transparent;color:var(--on-ink);border:1px solid var(--on-ink);text-transform:none;letter-spacing:0;font-weight:400}
 [hidden]{display:none!important}
+@media(max-width:560px){main{padding:0 var(--s4) var(--s6)}h1{margin-top:var(--s6)}#verdict{grid-template-columns:1fr}#vnum{grid-row:auto}.ovr{padding-left:0}}
 </style>
 <div id="banner" role="note"><b id="b1"></b> <span id="b2"></span> <button id="lang" type="button" aria-label="Language / Idioma"></button></div>
 <main>
@@ -43,7 +74,8 @@ blockquote{margin:.5rem 0;padding:.3rem .8rem;border-left:3px solid var(--line);
 </form>
 <div id="examples"></div><div id="note" aria-live="polite"></div>
 <section id="resultView" hidden>
-  <p id="mt" hidden></p><p id="asline" class="meta"></p>
+  <p id="mt" hidden></p>
+  <div id="verdict"><div id="vnum" aria-hidden="true"></div><h2 id="vhead"></h2><p id="vsub"></p><p id="asline" class="meta"></p></div>
   <div id="empty" hidden></div>
   <h2 id="h-stack"></h2><ul id="stack"></ul>
   <h2 id="h-rules"></h2><div id="rules"></div>
@@ -57,6 +89,8 @@ const I18N = {
   en: { b1: "Not legal advice.", b2: "Informational only; rules may be incomplete, out of date or misread. Check the cited source and consult a qualified professional.", mt: "",
     label: { applies: "Applies", unknown: "Unknown", superseded: "Superseded", not_yet_effective: "Not yet effective", pending: "Pending (not law)" },
     groups: { applies: "Enacted law: applies on this date", not_yet_effective: "Enacted law: not yet in effect", pending: "Pending bills: not law", superseded: "Superseded", unknown: "Unknown: cannot tell from our data", "": "Other" },
+    vApplies: (n) => n === 1 ? "rule applies to this address" : "rules apply to this address", vNone: "No enacted rule in our data applies to this address on this date",
+    vParts: { not_yet_effective: "not yet in effect", pending: "pending, not law", unknown: "unknown", superseded: "superseded" },
     asof: (d) => `As of ${d}. Enacted law and pending bills are listed separately by status.`, fixture: " Showing FIXTURE data, not real extracted rules.", addr: (a) => ` ${a.street_address}, ${a.postal_city} ${a.state}. Year built: ${a.year_built ?? "unknown"}; units: ${a.units ?? "unknown"}.`,
     stack: "Jurisdiction stack", rules: "Rules for this address", override: "Override: ", conflict: "⚑ possible conflict, human review", lowconf: (c) => `⚑ low confidence (${c}), verify against the source`,
     why: "Why: ", conflictNote: "Conflict: ", source: "Source: ", nocite: "missing citation", retrieved: (x) => ` · retrieved ${x}`, noretr: " · retrieval date not recorded", effective: "effective ", ifInForce: "In force only if: ", srcNote: "Source note: ",
@@ -65,6 +99,8 @@ const I18N = {
   es: { b1: "No es asesoría legal.", b2: "Solo informativo; las reglas pueden estar incompletas, desactualizadas o mal interpretadas. Consulte la fuente citada y a un profesional calificado.", mt: "Traducción automática; el texto legal original prevalece",
     label: { applies: "Aplica", unknown: "Desconocido", superseded: "Reemplazada", not_yet_effective: "Aún no en vigor", pending: "Pendiente (no es ley)" },
     groups: { applies: "Ley vigente: aplica en esta fecha", not_yet_effective: "Ley promulgada: aún no en vigor", pending: "Proyectos pendientes: no son ley", superseded: "Reemplazadas", unknown: "Desconocido: no se puede determinar con nuestros datos", "": "Otras" },
+    vApplies: (n) => n === 1 ? "regla aplica a esta dirección" : "reglas aplican a esta dirección", vNone: "Ninguna ley vigente en nuestros datos aplica a esta dirección en esta fecha",
+    vParts: { not_yet_effective: "aún no en vigor", pending: "pendientes, no son ley", unknown: "desconocidas", superseded: "reemplazadas" },
     asof: (d) => `Al ${d}. La ley vigente y los proyectos pendientes se muestran por separado según su estado.`, fixture: " Mostrando datos de PRUEBA, no reglas extraídas reales.", addr: (a) => ` ${a.street_address}, ${a.postal_city} ${a.state}. Año de construcción: ${a.year_built ?? "desconocido"}; unidades: ${a.units ?? "desconocido"}.`,
     stack: "Jurisdicciones aplicables", rules: "Reglas para esta dirección", override: "Prevalece: ", conflict: "⚑ posible conflicto, requiere revisión humana", lowconf: (c) => `⚑ baja confianza (${c}), verifique con la fuente`,
     why: "Por qué: ", conflictNote: "Conflicto: ", source: "Fuente (en inglés): ", nocite: "falta la cita", retrieved: (t) => ` · consultada ${t}`, noretr: " · fecha de consulta no registrada", effective: "vigente desde ", ifInForce: "En vigor solo si: ", srcNote: "Nota sobre la fuente (en inglés): ",
@@ -119,14 +155,22 @@ function render(res, asof) {
   last = [res, asof]; const { data: d, source } = res, t = T();
   $("resultView").hidden = false;
   $("asline").textContent = t.asof(d.as_of || asof) + (source === "fixture" ? t.fixture : "");
-  const empty = $("empty"), stack = $("stack"), rules = $("rules");
+  const empty = $("empty"), stack = $("stack"), rules = $("rules"), verdict = $("verdict");
   stack.replaceChildren(); rules.replaceChildren();
   // Live API sends not_covered as an ARRAY of uncovered scopes ([] = fully covered); the 404 path sends boolean true.
   const ncList = Array.isArray(d.not_covered) ? d.not_covered : [];
   if (d.not_covered === true || !d.results) {
+    verdict.hidden = true;
     empty.hidden = false; empty.textContent = (d.error ? t.errPrefix : t.nc) + (LANG === "en" && d.message || t.ncMsg);
     return;
   }
+  verdict.hidden = false;
+  const counts = {}; for (const r of d.results) counts[r.result] = (counts[r.result] || 0) + 1;
+  const nApplies = counts.applies || 0;
+  $("vnum").textContent = nApplies; $("vhead").textContent = nApplies ? t.vApplies(nApplies) : t.vNone;
+  verdict.classList.toggle("none", !nApplies);
+  $("vsub").textContent = Object.keys(t.vParts).filter((k) => counts[k]).map((k) => `${counts[k]} ${t.vParts[k]}`).join(" · ");
+  $("vsub").hidden = !$("vsub").textContent;
   empty.hidden = !ncList.length;
   if (ncList.length) empty.textContent = t.partial + ncList.join("; ");
   const a = d.address;
@@ -159,14 +203,16 @@ function card(r) {
     if (r.explanation) c.append(el("p", "meta", t.why + (LANG === "es" ? (tr.explanation || r.explanation + t.untranslated) : r.explanation)));
     if (rule.conflict_note) c.append(el("p", "meta", t.conflictNote + rule.conflict_note));
     if (r.if_in_force?.explanation) c.append(el("p", "meta if-in-force", t.ifInForce + r.if_in_force.explanation + t.untranslated));
+    const src = el("div", "src");
     const cite = el("div", "meta"); cite.append(t.source);
     if (rule.source_url && /^https?:/.test(rule.source_url)) { const l = el("a", null, rule.citation || rule.source_url); l.href = rule.source_url; l.target = "_blank"; l.rel = "noopener"; cite.append(l); }
     else cite.append(rule.citation || "missing citation");
     cite.append(rule.retrieved_at ? t.retrieved(rule.retrieved_at) : t.noretr);
-    c.append(cite);
+    src.append(cite);
     const sn = r.source_note || rule.source_note; // where this rule's text came from; shown verbatim, English only
-    if (sn) c.append(el("p", "meta source-note", t.srcNote + sn));
-    if (rule.quoted_span) c.append(el("blockquote", null, rule.quoted_span));
+    if (sn) src.append(el("p", "meta source-note", t.srcNote + sn));
+    if (rule.quoted_span) src.append(el("blockquote", null, rule.quoted_span));
+    c.append(src);
     return c;
   }
 }
