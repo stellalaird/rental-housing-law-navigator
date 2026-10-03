@@ -5,7 +5,7 @@
    "narrate": "Which housing rules apply to this address, today? Dorchester is a postal name. The Census geocoder says it is legally Boston."
   },
   {
-   "pause": 7000
+   "pause": 5500
   },
   {
    "type": {
@@ -31,7 +31,7 @@
    "narrate": "Massachusetts bans local rent control. That state rule applies to this Boston address, with its quoted source."
   },
   {
-   "pause": 9000
+   "pause": 7500
   },
   {
    "type": {
@@ -45,7 +45,7 @@
    "click": "#f button"
   },
   {
-   "pause": 6000,
+   "pause": 5000,
    "narrate": "This address cannot be placed in a city. The state layer still applies. City rules say unknown, never a guess."
   },
   {
@@ -76,7 +76,17 @@
    "narrate": "San Francisco, October 2026: the relocation payment rules apply today."
   },
   {
-   "pause": 3500
+   "pause": 5000
+  },
+  {
+   "scroll": "Superseded",
+   "narrate": "Two state rules show superseded: the San Francisco ordinance replaces them."
+  },
+  {
+   "pause": 4500
+  },
+  {
+   "scroll": "Relocation Payments"
   },
   {
    "fill": {
@@ -95,7 +105,7 @@
    "narrate": "Change the date to February, and four of them move to not yet in effect, because they start March first."
   },
   {
-   "pause": 9000
+   "pause": 8000
   }
  ]
 }
