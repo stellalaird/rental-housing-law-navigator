@@ -1,0 +1,145 @@
+#!/usr/bin/env node
+// Local self-check for the Rental Housing Law Navigator submission. NOT the judges' score.py (absent from our pack).
+// Usage: node selfcheck.mjs [--rules rules.json] [--lookups lookups.json] [--changes changes.json]
+//        [--pack "data/starter/participant-final-no-hour16 3"] [--json report.json]
+// Checks only what the pack lets us verify without an answer key: schema validity, quoted spans found in the
+// cited corpus doc, lookup coverage of every address, change-test sanity (T1-T5). Scores are PROXIES.
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { join } from "node:path";
+
+const argv = process.argv.slice(2);
+const flag = (n, d) => { const i = argv.indexOf(n); return i >= 0 ? argv[i + 1] : d; };
+const pack = flag("--pack", "data/starter/participant-final-no-hour16 3");
+const rulesPath = flag("--rules", "rules.json"), lookupsPath = flag("--lookups", "lookups.json"), changesPath = flag("--changes", "changes.json");
+const jsonOut = flag("--json", null);
+
+const load = (p) => { try { return JSON.parse(readFileSync(p, "utf8")); } catch (e) { return { __error: `${p}: ${e.code === "ENOENT" ? "missing" : e.message}` }; } };
+const norm = (s) => String(s).replace(/\s+/g, " ").trim().toLowerCase();
+const parseCsv = (txt) => { // minimal RFC4180 reader
+  const rows = []; let row = [], f = "", q = false;
+  for (let i = 0; i < txt.length; i++) {
+    const c = txt[i];
+    if (q) { if (c === '"') { if (txt[i + 1] === '"') { f += '"'; i++; } else q = false; } else f += c; }
+    else if (c === '"') q = true;
+    else if (c === ",") { row.push(f); f = ""; }
+    else if (c === "\n") { row.push(f); rows.push(row); row = []; f = ""; }
+    else if (c !== "\r") f += c;
+  }
+  if (f || row.length) { row.push(f); rows.push(row); }
+  const [h, ...r] = rows; return r.filter((x) => x.length > 1).map((x) => Object.fromEntries(h.map((k, i) => [k, x[i] ?? ""])));
+};
+
+const schema = load(join(pack, "schema/rule_record.schema.json"));
+const addresses = parseCsv(readFileSync(join(pack, "data/sample_addresses.csv"), "utf8"));
+const manifest = parseCsv(readFileSync(join(pack, "corpus/corpus_manifest.csv"), "utf8"));
+const docText = {};
+for (const m of manifest) if (m.text_file) { try { docText[m.doc_id] = norm(readFileSync(join(pack, "corpus", m.text_file), "utf8")); } catch {} }
+
+const report = { generated: new Date().toISOString(), note: "Local proxy; not judges' score.py. No answer key available.", inputs: { rulesPath, lookupsPath, changesPath }, sections: {} };
+
+// ---- Module A: schema + citations
+const rulesDoc = load(rulesPath);
+const rules = Array.isArray(rulesDoc) ? rulesDoc : rulesDoc.rules;
+const A = { present: !!rules, errors: rulesDoc.__error ? [rulesDoc.__error] : [] };
+const ruleById = new Map(), ruleSpanOk = new Map();
+if (rules) {
+  const typeOk = (v, t) => (Array.isArray(t) ? t : [t]).some((x) => x === "null" ? v === null : x === "array" ? Array.isArray(v) : x === "number" ? typeof v === "number" : typeof v === x);
+  let schemaOk = 0, spanOk = 0, spanMissingDoc = 0; const bad = [];
+  for (const r of rules) {
+    const e = [];
+    for (const k of schema.required) if (r[k] === undefined || r[k] === null || r[k] === "") e.push(`missing ${k}`);
+    for (const [k, p] of Object.entries(schema.properties)) {
+      const v = r[k]; if (v === undefined) continue;
+      if (p.enum && !p.enum.includes(v)) e.push(`${k}=${JSON.stringify(v)} not in enum`);
+      if (p.type && !typeOk(v, p.type)) e.push(`${k} wrong type`);
+      if (p.minLength && typeof v === "string" && v.length < p.minLength) e.push(`${k} shorter than ${p.minLength}`);
+      if (p.pattern && typeof v === "string" && !new RegExp(p.pattern).test(v)) e.push(`${k} fails pattern`);
+      if (p.minimum !== undefined && typeof v === "number" && (v < p.minimum || v > p.maximum)) e.push(`${k} out of range`);
+    }
+    if (ruleById.has(r.team_rule_id)) e.push("duplicate team_rule_id");
+    ruleById.set(r.team_rule_id, r);
+    if (!e.length) schemaOk++; else bad.push({ id: r.team_rule_id, errors: e });
+    // citation: quoted span found verbatim (whitespace/case-normalised) in the cited doc
+    let ok = false;
+    if (r.quoted_span && r.source_doc_id && docText[r.source_doc_id]) ok = docText[r.source_doc_id].includes(norm(r.quoted_span));
+    else if (r.quoted_span && r.source_doc_id && !docText[r.source_doc_id]) spanMissingDoc++;
+    ruleSpanOk.set(r.team_rule_id, ok); if (ok) spanOk++;
+  }
+  Object.assign(A, { rules: rules.length, schemaValid: schemaOk, schemaInvalid: bad.slice(0, 20), spanFound: spanOk, spanDocMissing: spanMissingDoc,
+    byCategory: Object.fromEntries([...new Set(rules.map((r) => r.category))].map((c) => [c, rules.filter((r) => r.category === c).length])),
+    byJurisdiction: Object.fromEntries([...new Set(rules.map((r) => r.jurisdiction))].map((c) => [c, rules.filter((r) => r.jurisdiction === c).length])) });
+}
+report.sections.extraction = A;
+
+// ---- Module B: lookups
+const lk = load(lookupsPath);
+const B = { present: !lk.__error, errors: lk.__error ? [lk.__error] : [] };
+const RESULTS = ["applies", "unknown", "superseded", "not_yet_effective", "pending"];
+if (!lk.__error) {
+  const L = lk.lookups || {}; const ids = addresses.map((a) => a.address_id);
+  const covered = ids.filter((id) => Array.isArray(L[id])).length;
+  let entries = 0, badResult = 0, unknownRule = 0, applies = 0, appliesCited = 0; const dist = {};
+  for (const id of Object.keys(L)) for (const x of L[id] || []) {
+    entries++; dist[x.result] = (dist[x.result] || 0) + 1;
+    if (!RESULTS.includes(x.result)) badResult++;
+    if (!ruleById.has(x.team_rule_id)) unknownRule++;
+    if (x.result === "applies") { applies++; if (ruleSpanOk.get(x.team_rule_id)) appliesCited++; }
+  }
+  Object.assign(B, { as_of: lk.as_of, addresses: ids.length, addressesCovered: covered, extraIds: Object.keys(L).filter((i) => !ids.includes(i)).length,
+    entries, badResult, entriesWithUnknownRuleId: unknownRule, resultCounts: dist, appliesAnswers: applies, appliesWithVerifiedSpan: appliesCited });
+}
+report.sections.lookups = B;
+
+// ---- Module C: change tests (sanity only; judges hold the expected sets)
+const ch = load(changesPath);
+const C = { present: !ch.__error, errors: ch.__error ? [ch.__error] : [], tests: {} };
+if (!ch.__error) {
+  const tests = load(join(pack, "dev/change_tests.json"));
+  const byState = (s) => new Set(addresses.filter((a) => a.state === s).map((a) => a.address_id));
+  const byCity = (c) => new Set(addresses.filter((a) => a.postal_city.toLowerCase() === c).map((a) => a.address_id));
+  const ST = { CA: byState("CA"), NJ: byState("NJ"), MA: byState("MA") };
+  const sub = (a, b) => [...a].every((x) => b.has(x));
+  for (const t of tests) {
+    const r = ch[t.test_id]; const out = { present: !!r, checks: [] };
+    if (r) {
+      const aff = new Set(r.affected_address_ids || []), flg = new Set(r.conflict_flag_address_ids || []);
+      const chk = (name, pass) => out.checks.push({ name, pass: !!pass });
+      chk("addresses exist", [...aff].every((x) => addresses.some((a) => a.address_id === x)));
+      if (t.test_id === "T1") chk("all CA addresses affected", sub(ST.CA, aff) && sub(aff, ST.CA));
+      if (t.test_id === "T3") { chk("all NJ addresses affected", sub(ST.NJ, aff) && sub(aff, ST.NJ)); chk("conflict flags non-empty, within affected", flg.size > 0 && sub(flg, aff)); }
+      if (t.test_id === "T4") chk("all MA addresses affected", sub(ST.MA, aff) && sub(aff, ST.MA));
+      if (t.test_id === "T5") chk("affected set empty", aff.size === 0);
+      if (t.test_id === "T2") { const ok = new Set([...byCity("hoboken"), ...byCity("jersey city")]); chk("only Hoboken/Jersey City postal cities (proxy for legal city)", sub(aff, ok)); chk("no Newark", ![...aff].some((x) => byCity("newark").has(x))); }
+    }
+    C.tests[t.test_id] = out;
+  }
+}
+report.sections.changes = C;
+
+// ---- scorecard (PROXY points mirroring rubric weights)
+const frac = (n, d) => (d ? n / d : 0);
+const aPts = A.rules ? 25 * frac(A.schemaValid, A.rules) : 0;
+const bPts = B.addresses ? 20 * frac(B.addressesCovered, B.addresses) * (B.entries ? 1 - frac(B.badResult + B.entriesWithUnknownRuleId, B.entries) : 0) : 0;
+const cPts = B.appliesAnswers ? 15 * frac(B.appliesWithVerifiedSpan, B.appliesAnswers) : 0;
+const checks = Object.values(C.tests || {}).flatMap((t) => (t.present ? t.checks : [{ pass: false }]));
+const dPts = checks.length ? 15 * frac(checks.filter((x) => x.pass).length, checks.length) : 0;
+report.scorecard = {
+  disclaimer: "PROXY points. Real scoring uses a held-out key we do not have: extraction accuracy vs key, applies/unknown correctness, and affected-set overlap are NOT measured here.",
+  extraction: { max: 25, proxy: +aPts.toFixed(1), basis: "share of rule records passing schema" },
+  address_coverage: { max: 20, proxy: +bPts.toFixed(1), basis: "share of addresses with a lookup list, minus invalid entries" },
+  citations: { max: 15, proxy: +cPts.toFixed(1), basis: "share of 'applies' answers whose rule quoted_span is found verbatim in its source doc" },
+  change_tracking: { max: 15, proxy: +dPts.toFixed(1), basis: "share of T1-T5 sanity checks passed" },
+  total_proxy: +(aPts + bPts + cPts + dPts).toFixed(1), total_max: 75,
+};
+
+if (jsonOut) writeFileSync(jsonOut, JSON.stringify(report, null, 2));
+const S = report.scorecard;
+console.log(`SELF-CHECK (proxy, not judges' score.py)  ${report.generated}`);
+console.log(`rules:    ${A.present ? `${A.rules} records, ${A.schemaValid} schema-valid, ${A.spanFound} quoted spans found in corpus` : (A.errors[0] || "absent")}`);
+console.log(`lookups:  ${B.present ? `${B.addressesCovered}/${B.addresses} addresses, ${B.entries} entries, ${B.badResult} bad result values, ${B.entriesWithUnknownRuleId} unknown rule ids; ${B.appliesWithVerifiedSpan}/${B.appliesAnswers} applies cited` : (B.errors[0] || "absent")}`);
+for (const [id, t] of Object.entries(C.tests || {})) console.log(`  ${id}: ${t.present ? t.checks.map((c) => `${c.pass ? "ok" : "FAIL"} ${c.name}`).join("; ") : "MISSING"}`);
+console.log(`Extraction        ${S.extraction.proxy} / 25`);
+console.log(`Address coverage  ${S.address_coverage.proxy} / 20`);
+console.log(`Citations         ${S.citations.proxy} / 15`);
+console.log(`Change tracking   ${S.change_tracking.proxy} / 15`);
+console.log(`TOTAL (proxy)     ${S.total_proxy} / 75   (judged 25 not scored)`);
