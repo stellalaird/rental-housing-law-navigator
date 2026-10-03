@@ -116,6 +116,17 @@ if (!ch.__error) {
 }
 report.sections.changes = C;
 
+// ---- Referential integrity: every rule id in lookups.json and changes.json must exist in rules.json.
+// A dangling id is a broken join (e.g. a rules.json consolidation that renumbered ids), not a citation shortfall.
+const dangling = { lookups: {}, changes: {} };
+if (!lk.__error) for (const [aid, es] of Object.entries(lk.lookups || {})) for (const x of es || [])
+  if (!ruleById.has(x.team_rule_id)) (dangling.lookups[x.team_rule_id] ??= []).push(aid);
+const walkIds = (v, path, fn) => { if (Array.isArray(v)) v.forEach((x, i) => walkIds(x, `${path}[${i}]`, fn)); else if (v && typeof v === "object") for (const [k, x] of Object.entries(v)) {
+  if (/^(team_)?rule_ids?$/.test(k)) [].concat(x).forEach((id) => typeof id === "string" && fn(id, `${path}.${k}`)); else walkIds(x, `${path}.${k}`, fn); } };
+if (!ch.__error) walkIds(ch, "changes", (id, where) => { if (!ruleById.has(id)) (dangling.changes[id] ??= []).push(where); });
+const nDangling = Object.keys(dangling.lookups).length + Object.keys(dangling.changes).length;
+report.sections.referentialIntegrity = { ok: nDangling === 0, danglingLookupRuleIds: Object.fromEntries(Object.entries(dangling.lookups).map(([id, a]) => [id, a.length])), danglingChangeRuleIds: dangling.changes };
+
 // ---- Module D (opt-in, --gold gold.json): compare against the hand-made mini gold set. Not part of the proxy total.
 const goldPath = flag("--gold", null);
 if (goldPath) {
@@ -176,3 +187,9 @@ console.log(`Address coverage  ${S.address_coverage.proxy} / 20`);
 console.log(`Citations         ${S.citations.proxy} / 15`);
 console.log(`Change tracking   ${S.change_tracking.proxy} / 15`);
 console.log(`TOTAL (proxy)     ${S.total_proxy} / 75   (judged 25 not scored)`);
+if (nDangling) {
+  console.log(`\n!!! REFERENTIAL INTEGRITY FAILED: ${nDangling} rule id(s) in lookups/changes are not in ${rulesPath} (broken join, not a citation shortfall)`);
+  for (const [id, a] of Object.entries(dangling.lookups)) console.log(`  lookups: ${id} dangling in ${a.length} entries (e.g. ${a.slice(0, 3).join(", ")})`);
+  for (const [id, w] of Object.entries(dangling.changes)) console.log(`  changes: ${id} at ${w.slice(0, 3).join(", ")}`);
+  process.exitCode = 1;
+}
