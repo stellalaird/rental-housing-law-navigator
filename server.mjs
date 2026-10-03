@@ -2,6 +2,8 @@ import express from "express";
 import { spawn } from "node:child_process";
 import Anthropic from "@anthropic-ai/sdk";
 import config from "./config.mjs";
+import { lookup, state as navState } from "./lib/navigator.mjs";
+import { audit } from "./audit.mjs";
 
 // BACKEND=api (default): SDK + ANTHROPIC_API_KEY from .env.
 // BACKEND=cli: `claude -p` subprocess, no tools, prompt over stdin, streamed back.
@@ -153,5 +155,17 @@ app.post("/api/chat", guard, async (req, res) => {
   }
   res.end();
 });
+
+// Rental Housing Law Navigator (read-only JSON; no model calls)
+const asofOf = (v) => (/^\d{4}-\d{2}-\d{2}$/.test(v || "") ? v : "2026-10-01");
+app.get("/api/lookup", (req, res) => {
+  const date = asofOf(req.query.asof), q = req.query.address;
+  const out = lookup(q, date);
+  if (!out) return res.status(404).json({ error: "address not found among the sample addresses; try an address_id such as A0001" });
+  audit({ kind: "lookup", input: String(q), as_of: date, rule_ids: out.results.map((r) => r.team_rule_id) });
+  res.json(out);
+});
+app.get("/api/rules", (req, res) => res.json({ rules: navState().rules }));
+app.get("/api/lookups", (req, res) => res.json(navState().lk));
 
 app.listen(PORT, () => console.log(`http://localhost:${PORT} backend=${BACKEND}`));

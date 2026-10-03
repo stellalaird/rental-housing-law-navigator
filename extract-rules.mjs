@@ -46,9 +46,9 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const files = readdirSync(dir).filter((f) => f.endsWith(".txt")).sort();
   const log = [];
   const per = await pool(files, CONCURRENCY, async (f) => {
-    const id = f.replace(/\.txt$/, "");
     const raw = readFileSync(`${dir}/${f}`, "utf8");
-    const header = raw.split("\n").slice(0, 3).filter((l) => /^(SOURCE|RETRIEVED):/.test(l)).join("\n");
+    const id = (raw.slice(0, 600).match(/^# doc_id: (\S+)/m) || [])[1] || f.replace(/\.txt$/, "");
+    const header = raw.split("\n").slice(0, 12).filter((l) => /^(SOURCE|RETRIEVED):|^# (source_url|retrieved_at|citation|alternate_source|manifest_url):/.test(l)).map((l) => l.replace(/^# source_url: /, "SOURCE: ").replace(/^# retrieved_at: /, "RETRIEVED: ")).join("\n");
     const body = raw.length > MAX_CHARS ? raw.slice(0, MAX_CHARS) : raw;
     try {
       const r = await claudeText({ system: SYSTEM, prompt: promptFor(id, header, body) });
@@ -56,8 +56,8 @@ if (import.meta.url === `file://${process.argv[1]}`) {
       // citation guard: drop any rule whose quote is not in the source text
       const norm = (s) => String(s).replace(/\s+/g, " ").trim().toLowerCase();
       const hay = norm(raw);
-      const kept = (Array.isArray(rules) ? rules : []).map((x) => ({ ...x, doc_id: id, source_url: (header.match(/SOURCE: (\S+)/) || [])[1] || null, retrieved: (header.match(/RETRIEVED: (.+)/) || [])[1] || null, quote_verified: !!x.quote && hay.includes(norm(x.quote)) }));
-      log.push(`${id} ${r.cached ? "cached" : "new"} rules=${kept.length} verified=${kept.filter((x) => x.quote_verified).length}${raw.length > MAX_CHARS ? " TRUNCATED" : ""}`);
+      const kept = (Array.isArray(rules) ? rules : []).map((x) => ({ ...x, doc_id: id, file: f, hdr_citation: (raw.slice(0, 1500).match(/^# citation: (.+)/m) || [])[1] || null, source_url: (header.match(/SOURCE: (\S+)/) || [])[1] || null, retrieved: (header.match(/RETRIEVED: (.+)/) || [])[1] || null, quote_verified: !!x.quote && hay.includes(norm(x.quote)) }));
+      log.push(`${f} ${r.cached ? "cached" : "new"} rules=${kept.length} verified=${kept.filter((x) => x.quote_verified).length}${raw.length > MAX_CHARS ? " TRUNCATED" : ""}`);
       console.log(log[log.length - 1]);
       return kept;
     } catch (e) { console.log(`${id} ERROR ${e.message}`); return []; }

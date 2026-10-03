@@ -5,7 +5,8 @@ import { readFileSync, writeFileSync, readdirSync, existsSync } from "node:fs";
 import { claudeText, parseJson } from "./lib/llm.mjs";
 
 const AS_OF = "2026-10-01";
-const raw = JSON.parse(readFileSync("out/rules.raw.json", "utf8")).filter((r) => r.quote_verified && r.quote && r.quote.length >= 20);
+const rawFiles = ["out/rules.raw.json", "out/rules.raw.fetched.json"].filter((f) => existsSync(f));
+const raw = rawFiles.flatMap((f) => JSON.parse(readFileSync(f, "utf8"))).filter((r) => r.quote_verified && r.quote && r.quote.length >= 20);
 const jur = (r) => (r.jurisdiction?.level === "state" || !r.jurisdiction?.name || r.jurisdiction.name === r.jurisdiction.state ? r.jurisdiction.state : `${r.jurisdiction.name}, ${r.jurisdiction.state}`);
 const STATE_NAMES = new Set(["California", "New Jersey", "Massachusetts"]);
 const jurNorm = (r) => (STATE_NAMES.has(r.jurisdiction?.name) ? r.jurisdiction.state : jur(r));
@@ -63,8 +64,14 @@ for (const c of out) if (c._q.doc_id === "D022" && c.category === "algorithmic_r
 }
 out.sort((a, b) => (a.jurisdiction + a.category + a.title).localeCompare(b.jurisdiction + b.category + b.title));
 const clean = (v) => (v === undefined || v === "" || v === "null" ? null : v);
+// Stable ids: a rule keeps the id it had in the previous rules.json (same jurisdiction, category, source doc and quote); new rules take the next free numbers.
+const prev = existsSync("rules.json") ? JSON.parse(readFileSync("rules.json", "utf8")).rules : [];
+const keyOf = (j, cat, doc, q) => [j, cat, doc, q].join("|");
+const prevIds = new Map(prev.map((r) => [keyOf(r.jurisdiction, r.category, r.source_doc_id, r.quoted_span), r.team_rule_id]));
+const used = new Set(); let nextNum = prev.reduce((m, r) => Math.max(m, Number(r.team_rule_id.slice(2))), 0) + 1;
+const idFor = (c) => { const k = keyOf(c.jurisdiction, c.category, c._q.doc_id, c._q.quote); const id = prevIds.get(k); if (id && !used.has(id)) { used.add(id); return id; } let n; do { n = `r-${String(nextNum++).padStart(4, "0")}`; } while (used.has(n)); used.add(n); return n; };
 const rules = out.map((c, i) => ({
-  team_rule_id: `r-${String(i + 1).padStart(4, "0")}`,
+  team_rule_id: idFor(c),
   jurisdiction: c.jurisdiction, level: c.level, category: c.category,
   status: ["in_force", "not_yet_effective", "pending", "failed"].includes(c.status) ? c.status : "in_force",
   title: c.title, requirement: c.requirement, key_value: clean(c.key_value),
@@ -76,5 +83,6 @@ const rules = out.map((c, i) => ({
   confidence: typeof c.confidence === "number" ? c.confidence : null, conflict_flag: false, conflict_note: null,
   member_doc_ids: [...new Set(c._members)],
 }));
+rules.sort((a, b) => a.team_rule_id.localeCompare(b.team_rule_id));
 writeFileSync("rules.json", JSON.stringify({ rules }, null, 2));
 console.log(`wrote rules.json: ${rules.length} rules`);
