@@ -80,6 +80,10 @@ try {
       else if (v.selector) await page.waitForSelector(v.selector, { timeout: to });
       else if (v.text) await page.getByText(v.text).first().waitFor({ timeout: to });
     }
+    else if (k === "scroll") { // {"scroll":"visible text"}: smooth-scroll the first element containing that text to the top of the page
+      await page.evaluate((t) => { const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT); let n; while ((n = w.nextNode())) if (n.textContent.includes(t)) { n.parentElement.scrollIntoView({ behavior: "smooth", block: "start" }); return; } throw new Error("scroll target not found: " + t); }, v);
+      await sleep(900);
+    }
     else if (k === "press") await page.keyboard.press(v);
     else if (k === "pause") await sleep(v);
     else throw new Error(`unknown step "${k}"`);
