@@ -1,0 +1,265 @@
+== 1. GET https://cao-94612.s3.amazonaws.com/documents/TPO-Amendment-July-2020.pdf
+fetched 399046 bytes, 116307 chars of text in 16.3s -> out/add-city/city-oakland-ca.txt
+
+== 2. BEFORE (the live rules.json, 94 rules)
+before 2026-10-01: 0 Oakland, CA rule(s)
+
+== 3. INGEST into scratch copies (real rules.json and changes.json untouched)
+{
+ "doc": "city-oakland-ca",
+ "extracted": 22,
+ "quote_unverified_dropped": 0,
+ "new_rules": [
+  {
+   "id": "new-city-oakland-ca-1",
+   "jurisdiction": "Oakland, CA",
+   "category": "rent_increase_limits",
+   "status": "in_force",
+   "effective_date": null,
+   "supersedes": []
+  },
+  {
+   "id": "new-city-oakland-ca-2",
+   "jurisdiction": "Oakland, CA",
+   "category": "rent_increase_limits",
+   "status": "in_force",
+   "effective_date": null,
+   "supersedes": []
+  },
+  {
+   "id": "new-city-oakland-ca-3",
+   "jurisdiction": "Oakland, CA",
+   "category": "rent_increase_limits",
+   "status": "in_force",
+   "effective_date": null,
+   "supersedes": []
+  },
+  {
+   "id": "new-city-oakland-ca-4",
+   "jurisdiction": "Oakland, CA",
+   "category": "rent_increase_limits",
+   "status": "in_force",
+   "effective_date": null,
+   "supersedes": []
+  },
+  {
+   "id": "new-city-oakland-ca-5",
+   "jurisdiction": "Oakland, CA",
+   "category": "rent_increase_limits",
+   "status": "in_force",
+   "effective_date": null,
+   "supersedes": []
+  },
+  {
+   "id": "new-city-oakland-ca-6",
+   "jurisdiction": "Oakland, CA",
+   "category": "rent_increase_limits",
+   "status": "in_force",
+   "effective_date": null,
+   "supersedes": []
+  },
+  {
+   "id": "new-city-oakland-ca-7",
+   "jurisdiction": "Oakland, CA",
+   "category": "rent_increase_limits",
+   "status": "in_force",
+   "effective_date": null,
+   "supersedes": []
+  },
+  {
+   "id": "new-city-oakland-ca-8",
+   "jurisdiction": "Oakland, CA",
+   "category": "rent_increase_limits",
+   "status": "in_force",
+   "effective_date": null,
+   "supersedes": []
+  },
+  {
+   "id": "new-city-oakland-ca-9",
+   "jurisdiction": "Oakland, CA",
+   "category": "rent_increase_limits",
+   "status": "in_force",
+   "effective_date": null,
+   "supersedes": []
+  },
+  {
+   "id": "new-city-oakland-ca-10",
+   "jurisdiction": "Oakland, CA",
+   "category": "just_cause_eviction",
+   "status": "in_force",
+   "effective_date": null,
+   "supersedes": []
+  },
+  {
+   "id": "new-city-oakland-ca-11",
+   "jurisdiction": "Oakland, CA",
+   "category": "just_cause_eviction",
+   "status": "in_force",
+   "effective_date": null,
+   "supersedes": []
+  },
+  {
+   "id": "new-city-oakland-ca-12",
+   "jurisdiction": "Oakland, CA",
+   "category": "just_cause_eviction",
+   "status": "in_force",
+   "effective_date": null,
+   "supersedes": []
+  },
+  {
+   "id": "new-city-oakland-ca-13",
+   "jurisdiction": "Oakland, CA",
+   "category": "just_cause_eviction",
+   "status": "in_force",
+   "effective_date": null,
+   "supersedes": []
+  },
+  {
+   "id": "new-city-oakland-ca-14",
+   "jurisdiction": "Oakland, CA",
+   "category": "just_cause_eviction",
+   "status": "in_force",
+   "effective_date": null,
+   "supersedes": []
+  },
+  {
+   "id": "new-city-oakland-ca-15",
+   "jurisdiction": "Oakland, CA",
+   "category": "just_cause_eviction",
+   "status": "in_force",
+   "effective_date": null,
+   "supersedes": []
+  },
+  {
+   "id": "new-city-oakland-ca-16",
+   "jurisdiction": "Oakland, CA",
+   "category": "just_cause_eviction",
+   "status": "in_force",
+   "effective_date": null,
+   "supersedes": []
+  },
+  {
+   "id": "new-city-oakland-ca-17",
+   "jurisdiction": "Oakland, CA",
+   "category": "just_cause_eviction",
+   "status": "in_force",
+   "effective_date": null,
+   "supersedes": []
+  },
+  {
+   "id": "new-city-oakland-ca-18",
+   "jurisdiction": "Oakland, CA",
+   "category": "just_cause_eviction",
+   "status": "in_force",
+   "effective_date": null,
+   "supersedes": []
+  },
+  {
+   "id": "new-city-oakland-ca-19",
+   "jurisdiction": "Oakland, CA",
+   "category": "just_cause_eviction",
+   "status": "in_force",
+   "effective_date": null,
+   "supersedes": []
+  },
+  {
+   "id": "new-city-oakland-ca-20",
+   "jurisdiction": "Oakland, CA",
+   "category": "just_cause_eviction",
+   "status": "in_force",
+   "effective_date": null,
+   "supersedes": []
+  },
+  {
+   "id": "new-city-oakland-ca-21",
+   "jurisdiction": "Oakland, CA",
+   "category": "screening_restrictions",
+   "status": "in_force",
+   "effective_date": null,
+   "supersedes": []
+  },
+  {
+   "id": "new-city-oakland-ca-22",
+   "jurisdiction": "Oakland, CA",
+   "category": "screening_restrictions",
+   "status": "in_force",
+   "effective_date": null,
+   "supersedes": []
+  }
+ ],
+ "superseded": [],
+ "T6_affected": 0,
+ "dry": false
+}
+ingest took 105.1s
+
+== 4. AFTER (scratch rules.json, 116 rules)
+after 2026-10-01: 22 Oakland, CA rule(s)
+  new-city-oakland-ca-1  applies            rent_increase_limits: Rent on a covered unit occupied continuously by the same tenant may be increased only once in a 12-month perio
+    In force; no effective date stated.  [O.M.C. 8.22.070.A.1]
+    "an Owner may increase the rent on a covered unit occupied continuously by the same tenant only once in a 12-month period."
+  new-city-oakland-ca-2  applies            rent_increase_limits: Rent for a covered unit may not rise in any 12-month period by more than the lower of 10% or the amount permit
+    In force; no effective date stated.  [O.M.C. 8.22.070.A.2]
+    "In no event may rent for any covered unit increase by more than ten percent in any 12-month period by more than 10 percent, or the amount pe"
+  new-city-oakland-ca-3  applies            rent_increase_limits: A series of rent increases in any five-year period may not exceed 30%. This applies to increases based on the 
+    In force; no effective date stated.  [O.M.C. 8.22.070.A.3]
+    "No series of rent increases in any five-year period can exceed 30 percent for any rent increases based on the CPI Rent Adjustment, as set ou"
+  new-city-oakland-ca-4  applies            rent_increase_limits: The annual CPI Rent Adjustment is the average of the percentage increases in CPI-All items and CPI-Less shelte
+    In force; no effective date stated.  [O.M.C. 8.22.070.B.3]
+    "the CPI Rent Adjustment is the average of the percentage increase in the CPI—All items and the CPI—Less shelter for the twelve (12) month pe"
+  new-city-oakland-ca-5  applies            rent_increase_limits: Rent increases based on grounds other than the CPI Rent Adjustment or Banking require the owner to petition th
+    In force; no effective date stated.  [O.M.C. 8.22.070.C.1]
+    "For Rent increases based on grounds other than the CPI Rent Adjustment or Banking, an Owner must first petition the Rent Program and receive"
+  new-city-oakland-ca-6  applies            rent_increase_limits: The owner may petition to raise rent by up to 5% for each occupant above the base occupancy level. The increas
+    In force; no effective date stated.  [O.M.C. 8.22.020 ("Additional occupant")]
+    "The owner may petition to increase the rent by an amount up to 5% for each additional occupant above the base occupancy level."
+  new-city-oakland-ca-7  applies            rent_increase_limits: Capital improvement costs passed through to tenants are limited to 70% of actual costs plus imputed financing.
+    In force; no effective date stated.  [O.M.C. 8.22.020 ("Capital improvements")]
+    "Capital improvement costs that may be passed through to tenants include seventy percent (70%) of actual costs, plus imputed financing."
+  new-city-oakland-ca-8  applies            rent_increase_limits: Any rent increase notice must include notice of the Rent Adjustment Ordinance and of the tenant's right to pet
+    In force; no effective date stated.  [O.M.C. 8.22.070.H.6]
+    "An owner's failure to provide the notice required by this section invalidates the rent increase or change of terms of tenancy."
+  new-city-oakland-ca-9  applies            rent_increase_limits: A decrease in housing services is treated as a rent increase, and the tenant may petition for a rent adjustmen
+    In force; no effective date stated.  [O.M.C. 8.22.070.F]
+    "A decrease in housing services is considered an increase in rent."
+  new-city-oakland-ca-10  applies            just_cause_eviction: A landlord may not try to recover possession, issue a termination notice, or recover possession of a rental un
+    In force; no effective date stated.  [O.M.C. 8.22.360.A (Measure EE Section 6)]
+    "No landlord shall endeavor to recover possession, issue a notice terminating tenancy, or recover possession of a rental unit in the city of "
+  new-city-oakland-ca-11  applies            just_cause_eviction: A landlord may not evict for subletting if it unreasonably withheld the right to sublet after the tenant's wri
+    In force; no effective date stated.  [O.M.C. 8.22.360.A.2.a]
+    "a landlord shall not endeavor to recover possession of a rental unit as a result of subletting of the rental unit by the tenant if the landl"
+  new-city-oakland-ca-12  applies            just_cause_eviction: A landlord may not evict based on added occupants if it unreasonably refused the tenant's written request to a
+    In force; no effective date stated.  [O.M.C. 8.22.360.A.2.b]
+    "Notwithstanding any lease provision to the contrary, a landlord shall not endeavor to recover possession of a rental unit based on the addit"
+  new-city-oakland-ca-13  applies            just_cause_eviction: Before seeking possession for a violation of subletting or occupancy limits, the landlord must serve written n
+    In force; no effective date stated.  [O.M.C. 8.22.360.A.2.c]
+    "the landlord shall serve the tenant a written notice of the violation that provides the tenant with a minimum of fourteen (14) days opportun"
+  new-city-oakland-ca-14  applies            just_cause_eviction: Owner/relative move-in evictions are barred if any tenant has lived in the unit 5+ years and is 60 or older or
+    In force; no effective date stated.  [O.M.C. 8.22.360.A.9.e]
+    "A landlord may not recover possession of a unit from a tenant under Subsection 6(A)(9) [8.22.360 A.9], if the landlord has or receives notic"
+  new-city-oakland-ca-15  applies            just_cause_eviction: An owner of record may use the owner/relative move-in ground no more than once in any 36-month period. Continu
+    In force; no effective date stated.  [O.M.C. 8.22.360.A.9.b]
+    "The owner of record may not recover possession pursuant to this subsection more than once in any thirty-six (36) month period,"
+  new-city-oakland-ca-16  applies            just_cause_eviction: A copy of any notice terminating tenancy must be filed with the Rent Board within 10 days of service.
+    In force; no effective date stated.  [O.M.C. 8.22.360.B.7]
+    "Within ten (10) days of service of a notice terminating tenancy upon a tenant, a copy of the same notice and any accompanying materials must"
+  new-city-oakland-ca-17  applies            just_cause_eviction: A landlord's failure to fully comply with required relocation payments, including amount and timing, is a defe
+    In force; no effective date stated.  [O.M.C. 8.22.360.D.5]
+    "A Landlord’s failure to fully comply with any applicable law requiring payment of relocation benefits to the tenant, such as those provided "
+  new-city-oakland-ca-18  applies            just_cause_eviction: In a nonpayment eviction, it is a defense if the landlord impeded payment. This includes refusing rent paid by
+    In force; no effective date stated.  [O.M.C. 8.22.360.D.4]
+    "In any action to recover possession of a rental unit filed under 8.22.360A1, it shall be a defense if the landlord impeded the tenant’s effo"
+  new-city-oakland-ca-19  applies            just_cause_eviction: A tenant may not be evicted for violating a covenant or obligation that was not in the rental agreement at the
+    In force; no effective date stated.  [O.M.C. 8.22.360.D.6]
+    "a tenant may not be evicted for a violation of a covenant or obligation that was not included in the tenant's written or oral rental agreeme"
+  new-city-oakland-ca-20  applies            just_cause_eviction: Tenant households required to move due to a Qualifying Relocation Event are entitled to relocation payments fr
+    In force; no effective date stated.  [O.M.C. 8.22.820.A]
+    "Tenant Households who are required to move as a result of a Qualifying Relocation Event shall be entitled to a relocation payment from the O"
+  new-city-oakland-ca-21  applies            screening_restrictions: Owners may not, in bad faith, request information that violates a tenant's privacy, such as residence or citiz
+    In force; no effective date stated.  [O.M.C. 8.22.640.A.14]
+    "Request information that violates a Tenant's right to privacy, including but not limited to residence or citizenship status or social securi"
+  new-city-oakland-ca-22  applies            screening_restrictions: Owners may not, in bad faith, interfere with a tenant's privacy. This includes unreasonable inquiry into a ten
+    In force; no effective date stated.  [O.M.C. 8.22.640.A.13]
+    "unreasonable inquiry into a Tenant’s relationship status or criminal history, and unreasonable restrictions on or inquiry into overnight gue"
+
+sample addresses in Oakland, CA: 0 of 500 (none exist in the pack), so changes.json T6 affects 0 addresses; the lookup above is by jurisdiction stack.

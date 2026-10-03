@@ -1,0 +1,8 @@
+{"steps":[
+ {"goto":"index.html","narrate":"Oakland is not one of the ten cities in our rules. Zero Oakland rules today."},
+ {"pause":6800},
+ {"pause":16500,"narrate":"One command. One official document, fetched by plain GET. Extraction takes about a hundred seconds. Cut here."},
+ {"pause":12500,"narrate":"After: Oakland rules, each with a citation and a quoted span, quote-checked against the source. A jurisdiction-stack lookup: no sample address is in Oakland."},
+ {"pause":11500,"narrate":"The source is a partial 2020 amendment, so no effective date is stated. Scratch copies only. The real rules file is untouched."},
+ {"pause":6500,"narrate":"A new city is one official document and one command."}
+]}
