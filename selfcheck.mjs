@@ -127,6 +127,30 @@ if (!ch.__error) walkIds(ch, "changes", (id, where) => { if (!ruleById.has(id)) 
 const nDangling = Object.keys(dangling.lookups).length + Object.keys(dangling.changes).length;
 report.sections.referentialIntegrity = { ok: nDangling === 0, danglingLookupRuleIds: Object.fromEntries(Object.entries(dangling.lookups).map(([id, a]) => [id, a.length])), danglingChangeRuleIds: dangling.changes };
 
+// ---- T6 (hour-16 ordinance): skipped while changes.json has no T6; once it does, every check below must pass.
+// changes.json T6 carries no rule id of its own (ingest-doc.mjs), so the rule is the id(s) it names if any, else the
+// new-* rules for a Cambridge jurisdiction. "Today" is --today YYYY-MM-DD or the local date.
+const today = flag("--today", new Date().toLocaleDateString("en-CA"));
+const T6 = { present: !ch.__error && !!ch.T6, skipped: true, today, checks: [] };
+if (T6.present) {
+  T6.skipped = false;
+  const t6 = ch.T6, named = []; walkIds(t6, "T6", (id) => named.push(id));
+  const cands = named.length ? named.map((id) => ruleById.get(id)).filter(Boolean)
+    : rules.filter((r) => /^new-/.test(r.team_rule_id) && /cambridge/i.test(r.jurisdiction));
+  T6.ruleSource = named.length ? "named in T6" : "new-* Cambridge rules (T6 names none)";
+  T6.ruleIds = cands.map((r) => r.team_rule_id);
+  const chk6 = (name, pass, detail) => T6.checks.push({ name, pass: !!pass, ...(detail ? { detail } : {}) });
+  chk6("T6 rule id exists in rules.json", cands.length > 0 && cands.length >= named.length, named.length ? `named ${named.join(", ")}` : "no new-* Cambridge rule in rules.json");
+  const full = (r) => /^\d{4}-\d{2}-\d{2}/.test(String(r.effective_date || "")) ? String(r.effective_date).slice(0, 10) : null;
+  chk6("status is not_yet_effective", cands.length > 0 && cands.every((r) => r.status === "not_yet_effective"), cands.map((r) => `${r.team_rule_id}=${r.status}`).join(", "));
+  chk6(`effective date is a full date after ${today}`, cands.length > 0 && cands.every((r) => full(r) && full(r) > today), cands.map((r) => `${r.team_rule_id}=${r.effective_date}`).join(", "));
+  const aff6 = t6.affected_address_ids || [], byId = new Map(addresses.map((a) => [a.address_id, a]));
+  const notCam = aff6.filter((id) => !(byId.get(id)?.postal_city.toLowerCase() === "cambridge" && byId.get(id)?.state === "MA"));
+  chk6("affected set non-empty", aff6.length > 0, `${aff6.length} addresses`);
+  chk6("affected set limited to Cambridge MA addresses (postal city, proxy for legal city)", notCam.length === 0, notCam.slice(0, 5).join(", "));
+}
+report.sections.t6 = T6;
+
 // ---- Module D (opt-in, --gold gold.json): compare against the hand-made mini gold set. Not part of the proxy total.
 const goldPath = flag("--gold", null);
 if (goldPath) {
@@ -192,4 +216,11 @@ if (nDangling) {
   for (const [id, a] of Object.entries(dangling.lookups)) console.log(`  lookups: ${id} dangling in ${a.length} entries (e.g. ${a.slice(0, 3).join(", ")})`);
   for (const [id, w] of Object.entries(dangling.changes)) console.log(`  changes: ${id} at ${w.slice(0, 3).join(", ")}`);
   process.exitCode = 1;
+}
+if (T6.skipped) console.log("\nT6 check: skipped (no T6 entry in " + changesPath + ")");
+else {
+  const bad = T6.checks.filter((c) => !c.pass);
+  console.log(`\nT6 check (as of ${T6.today}; rule via ${T6.ruleSource}): ${bad.length ? "FAILED" : "ok"}`);
+  for (const c of T6.checks) console.log(`  ${c.pass ? "pass" : "FAIL"}  ${c.name}${c.pass || !c.detail ? "" : "  [" + c.detail + "]"}`);
+  if (bad.length) process.exitCode = 1;
 }
