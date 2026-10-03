@@ -104,8 +104,8 @@ git push -u origin main
 Before pushing: confirm `.env` is untracked, that `rules.json`, `lookups.json`, `changes.json` and the README are committed, and check the starter pack's terms before committing corpus or address data (the brief says "No customer, pricing or proprietary data" and gives no redistribution terms, so TODO: owner to confirm).
 
 ## 6. Timeline
-- The hour-16 ordinance arrives ~16 h after the global kickoff (12:00 PM ET Oct 3), so ~4:00 AM ET Oct 4 (3:00 AM CDT). **INFERENCE** from the kickoff time; the brief says only "hour 16". The T6 and ordinance footage cannot be recorded before then.
-- Deadline 9:00 AM ET (8:00 AM CDT) leaves ~5 h to record, convert, upload and submit.
+- **Hour-16 release time: UNKNOWN.** The spec says only "released at hour 16" via the Google Drive folder, and the pack README says only "via the Google Drive folder". No source gives a clock time or when hour 0 starts. If hour 0 were the 12:00 PM ET global kickoff (FAQ-bot, not primary) it would be ~4:00 AM ET / 3:00 AM CDT Oct 4, but the spec's 24-hour plan (hours 20–23 for scoring) would then run past the 9:00 AM ET deadline, so do not rely on this. p-a-2 polls the Drive folder for T6. The T6 and ordinance footage cannot be recorded before it appears.
+- Deadline is 9:00 AM ET (8:00 AM CDT); leave time to record, convert, upload and submit after T6 appears.
 - Plan: record every video segment except T6/ordinance in advance; slot T6 in last.
 
 ## 7. Video production (agent-made)

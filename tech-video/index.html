@@ -1,30 +1,60 @@
 <!doctype html>
 <meta charset="utf-8">
-<title>Tech video</title>
+<title>Tech video — Rental Housing Law Navigator</title>
 <style>
-  :root{--bg:#0f1220;--fg:#f2f4ff;--mut:#9aa3c7;--acc:#6ee7b7;--box:#1b2040}
+  :root{--bg:#0f1220;--fg:#f2f4ff;--mut:#9aa3c7;--acc:#6ee7b7;--box:#1b2040;--warn:#fbbf24}
   *{box-sizing:border-box}
   html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);font:28px/1.4 -apple-system,system-ui,sans-serif;overflow:hidden}
-  section{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;padding:6vh 8vw}
+  section{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;padding:5vh 5vw}
   section.on{display:flex}
-  h1{font-size:56px;margin:0 0 .5em;color:var(--acc)}
-  ul{margin:0;padding-left:1.1em} li{margin:.4em 0}
-  .mut{color:var(--mut)}
-  svg{width:100%;max-height:60vh}
-  svg rect{fill:var(--box);stroke:var(--acc);stroke-width:2} svg text{fill:var(--fg);font-size:22px;text-anchor:middle}
+  h1{font-size:50px;margin:0 0 .4em;color:var(--acc)}
+  ul{margin:.6em 0 0;padding-left:1.1em} li{margin:.35em 0}
+  .mut{color:var(--mut)} .warn{color:var(--warn)}
+  svg{width:100%;max-height:48vh}
+  svg rect{fill:var(--box);stroke:var(--acc);stroke-width:2} svg text{fill:var(--fg);font-size:19px;text-anchor:middle}
   svg path{stroke:var(--mut);stroke-width:2;fill:none;marker-end:url(#a)}
+  svg .sm{font-size:14px;fill:#9aa3c7}
   .n{position:fixed;right:24px;bottom:16px;color:var(--mut);font-size:18px}
+  .foot{position:fixed;left:5vw;bottom:16px;color:var(--mut);font-size:18px}
 </style>
-<section class="on"><h1>Architecture</h1>
-<svg viewBox="0 0 900 260"><defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" style="fill:#9aa3c7;stroke:none;marker-end:none"/></marker></defs>
-<rect x="20" y="90" width="200" height="80" rx="10"/><text x="120" y="138">Browser UI</text>
-<rect x="350" y="90" width="200" height="80" rx="10"/><text x="450" y="138">Node server</text>
-<rect x="680" y="90" width="200" height="80" rx="10"/><text x="780" y="138">AI model</text>
-<path d="M220 130H348"/><path d="M550 130H678"/><path d="M678 150H552"/><path d="M348 150H222"/>
-<text x="285" y="115" style="font-size:16px;fill:#9aa3c7">prompt</text><text x="615" y="115" style="font-size:16px;fill:#9aa3c7">request</text></svg></section>
-<section><h1>Stack</h1><ul><li>PLACEHOLDER: Node 22 + Express</li><li>PLACEHOLDER: server-sent events for streaming</li><li>PLACEHOLDER: plain HTML front end, no build step</li></ul></section>
-<section><h1>How the AI is used</h1><ul><li>PLACEHOLDER: the model does X for the user</li><li>PLACEHOLDER: prompt design and context we supply</li><li>PLACEHOLDER: output checked before display</li></ul></section>
-<section><h1>Robustness</h1><ul><li>PLACEHOLDER: if the model call fails, we fall back to Y</li><li>PLACEHOLDER: timeouts and replay of a saved answer</li></ul></section>
+
+<!-- 1. Extract -->
+<section class="on"><h1>1 · Extract rules from the corpus</h1>
+<svg viewBox="0 0 1000 200"><defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" style="fill:#9aa3c7;stroke:none;marker-end:none"/></marker></defs>
+<rect x="10" y="60" width="190" height="80" rx="10"/><text x="105" y="95">Law corpus</text><text x="105" y="120" class="sm">87 documents</text>
+<rect x="270" y="60" width="190" height="80" rx="10"/><text x="365" y="95">claude -p</text><text x="365" y="120" class="sm">one rule record each</text>
+<rect x="530" y="60" width="190" height="80" rx="10"/><text x="625" y="95">Schema check</text><text x="625" y="120" class="sm">reject malformed</text>
+<rect x="790" y="60" width="200" height="80" rx="10"/><text x="890" y="95">rules.json</text><text x="890" y="120" class="sm">quoted span + citation</text>
+<path d="M200 100H268"/><path d="M460 100H528"/><path d="M720 100H788"/></svg>
+<ul><li>Automated: no hand-written rules</li><li>Every record carries a quoted span found in the source text</li></ul></section>
+
+<!-- 2. Resolve + apply -->
+<section><h1>2 · Resolve an address, apply the rules</h1>
+<svg viewBox="0 0 1000 200"><defs><marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" style="fill:#9aa3c7;stroke:none;marker-end:none"/></marker></defs>
+<rect x="10" y="60" width="170" height="80" rx="10"/><text x="95" y="108">Address</text>
+<rect x="240" y="60" width="200" height="80" rx="10"/><text x="340" y="95">Census geocoder</text><text x="340" y="120" class="sm">no API key</text>
+<rect x="500" y="60" width="210" height="80" rx="10"/><text x="605" y="95">Jurisdiction stack</text><text x="605" y="120" class="sm">state › county › city</text>
+<rect x="770" y="60" width="220" height="80" rx="10"/><text x="880" y="95">lookups.json</text><text x="880" y="120" class="sm">applies · unknown · …</text>
+<path d="M180 100H238" style="marker-end:url(#a2)"/><path d="M440 100H498" style="marker-end:url(#a2)"/><path d="M710 100H768" style="marker-end:url(#a2)"/></svg>
+<ul><li>Coverage conditions tested against year built, units, use code</li><li>Missing fact → <span class="warn">unknown</span>, never a guess</li></ul></section>
+
+<!-- 3. Change tracking -->
+<section><h1>3 · Track change, ask "as of" any date</h1>
+<ul><li>Every rule has an effective date and a status: enacted or pending</li>
+<li>Change log: new or amended law → affected addresses, before and after rule set</li>
+<li>"As of" query: <span class="mut">same address, 12/31/2025 vs 1/2/2026</span></li>
+<li>Pending bills stay <span class="warn">pending</span>; possible conflicts are flagged for a human</li></ul>
+<p class="mut">→ changes.json · tests T1–T6</p></section>
+
+<!-- 4. Guardrails -->
+<section><h1>4 · Guardrails</h1>
+<ul><li>Not legal advice, on every screen</li>
+<li>A citation and quoted span on every answer</li>
+<li>Corpus text is data, never instructions</li>
+<li>Audit log of sources, model outputs and changes</li>
+<li>Next jurisdiction: add text, rerun extraction</li></ul></section>
+
+<div class="foot">Rental Housing Law Navigator · Hack-Nation 7 · not legal advice</div>
 <div class="n"></div>
 <script>
   const S=[...document.querySelectorAll("section")],N=document.querySelector(".n");let i=0;

@@ -11,7 +11,7 @@ Any number below in `‹…›` is a placeholder for a real number from the actu
 ## 1. Demo video (~55 s) — agent records
 
 **Shows:** a real address lookup, then the hour-16 ordinance processed live.
-**Split of time:** 0–35 s lookup, 35–55 s ordinance. Record the lookup part early; record the ordinance part after it is released (~3:00 AM CDT, see `SUBMISSION.md` section 6) and join the clips.
+**Split of time:** 0–35 s lookup, 35–55 s ordinance. Record the lookup part early; record the ordinance part after it is released (release time unknown, see `SUBMISSION.md` section 6) and join the clips.
 
 | Time | On screen | Narration |
 |---|---|---|
@@ -47,7 +47,7 @@ Sketch of `steps.json` (selectors are placeholders until the page exists):
 | 24–42 | Full `score.py` report on screen, held long enough to read. | "Organisers' scoring script, dev set: extraction ‹X› of 25, address coverage ‹X› of 20, citations ‹X› of 15." |
 | 42–58 | T1–T6 table with pass/fail per test; T3 conflict flag highlighted. | "Change tests: ‹T1–T6 results›. T3 flags the possible conflict between the New Jersey FAIR Act and the two local bans." |
 
-Note: `tech-video/steps.json` and `tech-video/index.html` hold a generic template. They must be rewritten for this track (slides above, plus `report.html`). The existing narration there ("falls back to a saved answer") is placeholder content.
+Built: `tech-video/index.html` (4 slides) and `tech-video/steps.json` (ends on `report.html`). Generate the report page with `node tech-video/make-report.mjs --score score.txt [--tests tests.json]` (shows score.py output verbatim; no score.py output exists yet, so only a TODO table renders). Record: `node record-demo.mjs tech-video/steps.json --out tech.mp4`. Not yet recorded; the final slide timing was never run, so check total ≤60 s.
 
 ---
 
