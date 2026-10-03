@@ -47,7 +47,7 @@ Sketch of `steps.json` (selectors are placeholders until the page exists):
 | 24–42 | Full `score.py` report on screen, held long enough to read. | "Organisers' scoring script, dev set: extraction ‹X› of 25, address coverage ‹X› of 20, citations ‹X› of 15." |
 | 42–58 | T1–T6 table with pass/fail per test; T3 conflict flag highlighted. | "Change tests: ‹T1–T6 results›. T3 flags the possible conflict between the New Jersey FAIR Act and the two local bans." |
 
-Built: `tech-video/index.html` (4 slides) and `tech-video/steps.json` (ends on `report.html`). Generate the report page with `node tech-video/make-report.mjs --score score.txt [--tests tests.json]` (shows score.py output verbatim; no score.py output exists yet, so only a TODO table renders). Record: `node record-demo.mjs tech-video/steps.json --out tech.mp4`. Not yet recorded; the final slide timing was never run, so check total ≤60 s.
+Built: `tech-video/index.html` (4 slides) and `tech-video/steps.json` (ends on `report.html`). Generate the report page with `node tech-video/make-report.mjs --selfcheck report.json` (p-a-1's `selfcheck.mjs --json` output; PROXY scores, labelled as such, since no official score.py exists in our pack). `--score score.txt` still shows an official score.py output verbatim if one arrives. Narrate only proxy numbers as proxy. Record: `node record-demo.mjs tech-video/steps.json --out tech.mp4`. Not yet recorded; the final slide timing was never run, so check total ≤60 s.
 
 ---
 

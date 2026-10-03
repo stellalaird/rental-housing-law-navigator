@@ -1,75 +1,134 @@
 <!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Demo</title>
-<style>body{font:16px system-ui;max-width:720px;margin:2rem auto;padding:0 16px}#out{white-space:pre-wrap}#think{color:#888;white-space:pre-wrap;font-size:14px}#note{color:#a60;font-size:14px;margin:.5rem 0}textarea{width:100%}#examples button{margin:0 6px 6px 0}</style>
-<h1 id="title">Demo</h1><p id="tagline"></p><div id="examples"></div>
-<textarea id="q" rows="3"></textarea><button id="go">Send</button>
-<div id="note"></div><div id="think"></div><div id="out"></div>
+<title>Rental Housing Law Navigator</title>
+<style>
+:root{--bg:#fff;--fg:#1a1d29;--mut:#5b6178;--line:#d9dce8;--card:#f6f7fb;--warn:#fff4d6;--warnb:#c58a00;
+ --applies:#0f7b4f;--unknown:#8a5a00;--superseded:#5b3fa0;--future:#0a5ea8;--pending:#6b6f80}
+@media(prefers-color-scheme:dark){:root{--bg:#12141c;--fg:#eceef8;--mut:#9aa1bd;--line:#2b3046;--card:#1a1e2c;--warn:#3a2f10;--warnb:#d9a21b;
+ --applies:#4ade9b;--unknown:#f2b64a;--superseded:#b79cff;--future:#6cb6ff;--pending:#a0a5ba}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 system-ui,sans-serif}
+main{max-width:860px;margin:0 auto;padding:0 16px 3rem}
+#banner{position:sticky;top:0;z-index:5;background:var(--warn);border-bottom:2px solid var(--warnb);padding:8px 16px;font-size:14px;text-align:center}
+h1{margin:1.2rem 0 .2rem;font-size:26px}#tagline{margin:0 0 1rem;color:var(--mut)}
+form{display:flex;flex-wrap:wrap;gap:8px;align-items:end}
+label{display:flex;flex-direction:column;font-size:13px;color:var(--mut);gap:2px}
+#addr{flex:1 1 320px}input,button{font:inherit;padding:9px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg)}
+button{cursor:pointer;background:var(--fg);color:var(--bg);border-color:var(--fg)}
+#examples{margin:.6rem 0;display:flex;gap:6px;flex-wrap:wrap}#examples button{background:var(--card);color:var(--fg);border-color:var(--line);font-size:13px;padding:4px 8px}
+#note{font-size:13px;color:var(--mut);margin:.5rem 0}
+h2{font-size:17px;margin:1.4rem 0 .5rem}
+#stack{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+#stack li{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:8px 10px;display:flex;flex-wrap:wrap;gap:4px 10px}
+.lvl{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--mut);min-width:64px}
+.ovr{flex-basis:100%;font-size:14px;color:var(--superseded)}
+.rule{border:1px solid var(--line);border-left-width:5px;border-radius:6px;padding:10px 12px;margin:0 0 10px;background:var(--card)}
+.rule.applies{border-left-color:var(--applies)}.rule.unknown{border-left-color:var(--unknown)}.rule.superseded{border-left-color:var(--superseded)}
+.rule.not_yet_effective{border-left-color:var(--future)}.rule.pending{border-left-color:var(--pending)}
+.badge{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.applies .badge{color:var(--applies)}.unknown .badge{color:var(--unknown)}.superseded .badge{color:var(--superseded)}.not_yet_effective .badge{color:var(--future)}.pending .badge{color:var(--pending)}
+.rule h3{margin:.1rem 0;font-size:16px}.meta{font-size:13px;color:var(--mut)}
+blockquote{margin:.5rem 0;padding:.3rem .8rem;border-left:3px solid var(--line);font-size:14px;color:var(--mut)}
+.flag{display:inline-block;margin-left:6px;font-size:12px;color:var(--warnb);font-weight:700}
+#empty{background:var(--warn);border:1px solid var(--warnb);border-radius:6px;padding:12px}
+[hidden]{display:none!important}
+</style>
+<div id="banner" role="note"><b>Not legal advice.</b> Informational only; rules may be incomplete, out of date or misread. Check the cited source and consult a qualified professional.</div>
+<main>
+<h1 id="title">Rental Housing Law Navigator</h1><p id="tagline"></p>
+<form id="f">
+  <label id="addr">Address or address ID<input id="q" name="q" autocomplete="off" required placeholder="e.g. 6238 DE LONGPRE AVE or A0001"></label>
+  <label>As of<input id="asof" type="date" value="2026-10-01"></label>
+  <button>Look up</button>
+</form>
+<div id="examples"></div><div id="note" aria-live="polite"></div>
+<section id="resultView" hidden>
+  <p id="asline" class="meta"></p>
+  <div id="empty" hidden></div>
+  <h2>Jurisdiction stack</h2><ul id="stack"></ul>
+  <h2>Rules for this address</h2><div id="rules"></div>
+</section>
+</main>
 <script>
-// Modes: live stream -> non-streaming JSON (?stream=0) -> recorded replay (public/replay.json).
-// Replay is what a static host (no backend) serves; it is always labelled.
-const history = [];
-let replay = null;
-const loadReplay = () => replay ? Promise.resolve(replay) : fetch("replay.json").then((r) => r.ok ? r.json() : null).catch(() => null).then((j) => (replay = j));
+// Source order: live GET /api/lookup, else bundled fixtures (always labelled). No /api/chat.
+const $ = (id) => document.getElementById(id);
+const LABEL = { applies: "Applies", unknown: "Unknown", superseded: "Superseded", not_yet_effective: "Not yet effective", pending: "Pending (not law)" };
+const FALLBACK = { title: "Rental Housing Law Navigator", tagline: "Which housing rules apply to this address on a given date? Not legal advice.", examples: ["6238 DE LONGPRE AVE", "1031-1035 CLINTON ST"] };
+let fixtures = null;
+const loadFixtures = () => fixtures ? Promise.resolve(fixtures) : fetch("fixtures/lookup-fixtures.json").then((r) => r.ok ? r.json() : null).catch(() => null).then((j) => (fixtures = j));
 
 function applyConfig(c) {
-  document.title = title.textContent = c.title; tagline.textContent = c.tagline;
-  for (const ex of c.examples || []) {
-    const b = document.createElement("button"); b.textContent = ex;
-    b.onclick = () => { q.value = ex; go.onclick(); };
-    examples.append(b);
-  }
+  document.title = $("title").textContent = c.title; $("tagline").textContent = c.tagline;
+  $("examples").replaceChildren(...(c.examples || []).map((ex) => { const b = document.createElement("button"); b.type = "button"; b.textContent = ex; b.onclick = () => { $("q").value = ex; $("f").requestSubmit(); }; return b; }));
 }
-fetch("/api/config").then((r) => { if (!r.ok) throw 0; return r.json(); }).then(applyConfig)
-  .catch(() => loadReplay().then((j) => j && applyConfig(j)));
+fetch("/api/config").then((r) => { if (!r.ok) throw 0; return r.json(); }).then(applyConfig).catch(() => applyConfig(FALLBACK));
 
-async function viaStream() {
-  const r = await fetch("/api/chat", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ messages: history }) });
-  if (r.status === 429 || r.status === 400) { const j = await r.json().catch(() => ({})); throw Object.assign(new Error(j.error || "Request rejected."), { friendly: true }); }
-  if (!r.ok || !r.body) throw new Error("stream http " + r.status);
-  const rd = r.body.getReader(), dec = new TextDecoder(); let buf = "", reply = "", err = null;
-  for (;;) {
-    const { value, done } = await rd.read(); if (done) break;
-    buf += dec.decode(value, { stream: true }); const parts = buf.split("\n\n"); buf = parts.pop();
-    for (const p of parts) {
-      const m = JSON.parse(p.slice(6));
-      if (m.type === "text") { reply += m.data; out.textContent = reply; }
-      else if (m.type === "thinking") think.textContent += m.data;
-      else if (m.type === "refusal") out.textContent += "\n[refusal] " + JSON.stringify(m.data);
-      else if (m.type === "error") err = m.data;
-    }
-  }
-  if (err && !reply) throw new Error(err);   // nothing streamed: let the caller fall back
-  if (err) out.textContent += "\n[error] " + err;
-  return reply;
-}
-async function viaJson() {
-  const r = await fetch("/api/chat?stream=0", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ messages: history }) });
-  const j = await r.json();
-  if (j.error && !j.text) throw new Error(j.error);
-  think.textContent = j.thinking || ""; out.textContent = j.text || "";
-  if (j.refusal) out.textContent += "\n[refusal]";
-  return j.text || "";
-}
-async function viaReplay() {
-  const j = await loadReplay();
-  const last = history[history.length - 1].content;
-  const hit = j && j.items.find((i) => i.prompt === last);
-  if (!hit) { out.textContent = "No live backend is reachable and there is no recorded response for this prompt. Try one of the example prompts."; return ""; }
-  note.textContent = "Recorded response (live backend unavailable), recorded " + j.recordedAt;
-  out.textContent = hit.text; return hit.text;
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+
+// Fixture mode only: enacted-but-future rules are shown as not_yet_effective for the chosen date.
+function statusFor(r, asof) {
+  if (r.result === "applies" && r.rule?.effective_date && r.rule.effective_date.length === 10 && r.rule.effective_date > asof) return "not_yet_effective";
+  return r.result;
 }
 
-go.onclick = async () => {
-  if (!q.value.trim()) return;
-  history.push({ role: "user", content: q.value }); q.value = ""; out.textContent = ""; think.textContent = ""; note.textContent = "";
-  let reply = "";
-  try { reply = await viaStream(); }
-  catch (e1) {
-    if (e1.friendly) { history.pop(); out.textContent = ""; note.textContent = e1.message; return; }
-    note.textContent = "Stream failed, retrying without streaming…"; out.textContent = ""; think.textContent = "";
-    try { reply = await viaJson(); note.textContent = "Streaming unavailable; showing non-streamed reply."; }
-    catch (e2) { reply = await viaReplay(); }
+async function lookup(address, asof) {
+  try {
+    const r = await fetch("/api/lookup?" + new URLSearchParams({ address, asof }));
+    if (r.ok) return { data: await r.json(), source: "live" };
+    // A 404 only means "address not covered" when the API itself answered with JSON; a static host's HTML 404 means no backend.
+    if (r.status === 404 && (r.headers.get("content-type") || "").includes("json")) return { data: { not_covered: true, message: (await r.json().catch(() => ({}))).error || "Address not found." }, source: "live" };
+  } catch {}
+  const fx = await loadFixtures();
+  const key = address.trim().toUpperCase();
+  const hit = fx && Object.entries(fx.addresses).find(([id, v]) => id === key || v.address.street_address.toUpperCase() === key);
+  if (!hit) return { data: { not_covered: true, message: fx ? "No data for this address in the bundled fixtures." : "No backend and no fixtures reachable." }, source: "fixture" };
+  const d = structuredClone(hit[1]);
+  d.results.forEach((r) => { r.result = statusFor(r, asof); });
+  d.as_of = asof;
+  return { data: d, source: "fixture" };
+}
+
+function render({ data: d, source }, asof) {
+  $("resultView").hidden = false;
+  $("asline").textContent = `As of ${d.as_of || asof}. Enacted law and pending bills are listed separately by status.` + (source === "fixture" ? " Showing FIXTURE data, not real extracted rules." : "");
+  const empty = $("empty"), stack = $("stack"), rules = $("rules");
+  stack.replaceChildren(); rules.replaceChildren();
+  if (d.not_covered || !d.results) {
+    empty.hidden = false; empty.textContent = "Unknown / not covered. " + (d.message || "We cannot resolve this address, so no rules are shown rather than guessing.");
+    return;
   }
-  history.push({ role: "assistant", content: reply });
+  empty.hidden = true;
+  const a = d.address;
+  if (a) $("asline").textContent += ` ${a.street_address}, ${a.postal_city} ${a.state}. Year built: ${a.year_built ?? "unknown"}; units: ${a.units ?? "unknown"}.`;
+  for (const s of d.stack || []) {
+    const li = el("li"); li.append(el("span", "lvl", s.level), el("b", null, s.name));
+    if (s.note) li.append(el("span", "ovr", "Override: " + s.note));
+    stack.append(li);
+  }
+  if (!d.results.length) { rules.append(el("p", null, "No rules in our data apply to this address. That is not a guarantee that none exist.")); return; }
+  for (const r of d.results) {
+    const rule = r.rule || {}, c = el("article", "rule " + r.result);
+    const head = el("div"); head.append(el("span", "badge", LABEL[r.result] || r.result));
+    if (r.conflict_flag) head.append(el("span", "flag", "⚑ possible conflict, human review"));
+    c.append(head, el("h3", null, rule.title || r.team_rule_id));
+    c.append(el("div", "meta", [rule.jurisdiction, rule.category?.replaceAll("_", " "), rule.effective_date && "effective " + rule.effective_date].filter(Boolean).join(" · ")));
+    if (rule.requirement) c.append(el("p", null, rule.requirement));
+    if (r.explanation) c.append(el("p", "meta", "Why: " + r.explanation));
+    if (rule.conflict_note) c.append(el("p", "meta", "Conflict: " + rule.conflict_note));
+    const cite = el("div", "meta"); cite.append("Source: ");
+    if (rule.source_url && /^https?:/.test(rule.source_url)) { const l = el("a", null, rule.citation || rule.source_url); l.href = rule.source_url; l.target = "_blank"; l.rel = "noopener"; cite.append(l); }
+    else cite.append(rule.citation || "missing citation");
+    c.append(cite);
+    if (rule.quoted_span) c.append(el("blockquote", null, rule.quoted_span));
+    rules.append(c);
+  }
+}
+
+$("f").onsubmit = async (e) => {
+  e.preventDefault();
+  $("note").textContent = "Looking up…";
+  const asof = $("asof").value || "2026-10-01";
+  const res = await lookup($("q").value, asof);
+  $("note").textContent = res.source === "fixture" ? "Live lookup unavailable; showing bundled fixture data." : "";
+  render(res, asof);
 };
 </script>

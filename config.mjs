@@ -1,12 +1,7 @@
-// The one place to reskin the app after the track pick. Change content here only.
-// SYSTEM_PROMPT env var, if set, still overrides systemPrompt.
+// The reskin point. server.mjs serves title/tagline/examples at /api/config; the page falls back to the same values from public/replay.json.
 export default {
-  title: "Demo",
-  tagline: "Ask anything.",
-  systemPrompt: "You are a helpful assistant.",
-  examples: [
-    "Explain this in one paragraph.",
-    "Give me three ideas.",
-    "What should I ask next?",
-  ],
+  title: "Rental Housing Law Navigator",
+  tagline: "Which housing rules apply to this address on a given date? Not legal advice.",
+  systemPrompt: "You are a helpful assistant.", // unused by the lookup UI; /api/chat is no longer called by the page
+  examples: ["6238 DE LONGPRE AVE", "1031-1035 CLINTON ST"],
 };

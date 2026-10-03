@@ -1,0 +1,39 @@
+{
+  "_note": "FIXTURE ONLY. Shaped by the starter-pack schemas; titles, quoted spans and jurisdictions are placeholders, not extracted law. Replaced by /api/lookup once the server exposes it.",
+  "addresses": {
+    "A0001": {
+      "address": {"address_id":"A0001","street_address":"6238 DE LONGPRE AVE","postal_city":"Los Angeles","state":"CA","zip":"90028","year_built":1927,"units":32},
+      "resolved": {"city":"Los Angeles","county":"Los Angeles County","state":"CA"},
+      "stack": [
+        {"level":"federal","name":"United States","note":null},
+        {"level":"state","name":"California","note":null},
+        {"level":"county","name":"Los Angeles County","note":null},
+        {"level":"city","name":"Los Angeles","note":"FIXTURE: example override note shown when a local rule yields to or replaces a state rule."}
+      ],
+      "results": [
+        {"team_rule_id":"fx-0001","result":"applies","explanation":"FIXTURE: statewide rule; building has 5+ units.","conflict_flag":false,
+         "rule":{"team_rule_id":"fx-0001","jurisdiction":"CA","level":"state","category":"security_deposits","status":"in_force","title":"FIXTURE state security-deposit rule","requirement":"Placeholder requirement text.","key_value":"placeholder","effective_date":null,"citation":"FIXTURE citation","source_url":"https://example.invalid/fixture","quoted_span":"FIXTURE quoted span: exact source text would appear here, copied from the corpus."}},
+        {"team_rule_id":"fx-0002","result":"unknown","explanation":"FIXTURE: coverage depends on a certificate-of-occupancy date that is not in the data (year built 1927 is not a certificate date).","conflict_flag":false,
+         "rule":{"team_rule_id":"fx-0002","jurisdiction":"Los Angeles, CA","level":"city","category":"rent_increase_limits","status":"in_force","title":"FIXTURE city rent-increase rule","requirement":"Placeholder requirement text.","key_value":"placeholder","effective_date":null,"citation":"FIXTURE citation","source_url":"https://example.invalid/fixture","quoted_span":"FIXTURE quoted span: exact source text would appear here, copied from the corpus."}},
+        {"team_rule_id":"fx-0003","result":"applies","explanation":"FIXTURE: enacted with a future effective date; the UI recomputes the status from the as-of date.","conflict_flag":true,
+         "rule":{"team_rule_id":"fx-0003","jurisdiction":"CA","level":"state","category":"algorithmic_rent_setting","status":"in_force","title":"FIXTURE state algorithmic-pricing rule","requirement":"Placeholder requirement text.","key_value":null,"effective_date":"2026-01-01","citation":"FIXTURE citation","source_url":"https://example.invalid/fixture","quoted_span":"FIXTURE quoted span: exact source text would appear here, copied from the corpus.","conflict_note":"FIXTURE: possible conflict with a local rule; flagged for human review."}}
+      ],
+      "not_covered": false, "message": null
+    },
+    "A0002": {
+      "address": {"address_id":"A0002","street_address":"1031-1035 CLINTON ST","postal_city":"Hoboken","state":"NJ","zip":"07030","year_built":2001,"units":null},
+      "resolved": {"city":"Hoboken","county":"Hudson County","state":"NJ"},
+      "stack": [
+        {"level":"federal","name":"United States","note":null},
+        {"level":"state","name":"New Jersey","note":null},
+        {"level":"county","name":"Hudson County","note":null},
+        {"level":"city","name":"Hoboken","note":null}
+      ],
+      "results": [
+        {"team_rule_id":"fx-0004","result":"pending","explanation":"FIXTURE: a bill, not law.","conflict_flag":false,
+         "rule":{"team_rule_id":"fx-0004","jurisdiction":"NJ","level":"state","category":"just_cause_eviction","status":"pending","title":"FIXTURE pending bill","requirement":"Placeholder requirement text.","key_value":null,"effective_date":null,"citation":"FIXTURE citation","source_url":"https://example.invalid/fixture","quoted_span":"FIXTURE quoted span: exact source text would appear here, copied from the corpus."}}
+      ],
+      "not_covered": false, "message": null
+    }
+  }
+}

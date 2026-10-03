@@ -7,6 +7,6 @@
 {"pause":9000},{"press":"ArrowRight"},
 {"pause":300,"narrate":"Not legal advice. Every answer is cited, corpus text is treated as data, and there is an audit log."},
 {"pause":9000},
-{"goto":"report.html","narrate":"Dev set scores from the organisers' own script, then the six change tests."},
+{"goto":"report.html","narrate":"Our self-check scorecard, labelled as a proxy, then the change tests."},
 {"pause":14000}
 ]}
