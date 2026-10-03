@@ -59,7 +59,7 @@ const I18N = {
     groups: { applies: "Enacted law: applies on this date", not_yet_effective: "Enacted law: not yet in effect", pending: "Pending bills: not law", superseded: "Superseded", unknown: "Unknown: cannot tell from our data", "": "Other" },
     asof: (d) => `As of ${d}. Enacted law and pending bills are listed separately by status.`, fixture: " Showing FIXTURE data, not real extracted rules.", addr: (a) => ` ${a.street_address}, ${a.postal_city} ${a.state}. Year built: ${a.year_built ?? "unknown"}; units: ${a.units ?? "unknown"}.`,
     stack: "Jurisdiction stack", rules: "Rules for this address", override: "Override: ", conflict: "⚑ possible conflict, human review", lowconf: (c) => `⚑ low confidence (${c}), verify against the source`,
-    why: "Why: ", conflictNote: "Conflict: ", source: "Source: ", nocite: "missing citation", retrieved: (x) => ` · retrieved ${x}`, noretr: " · retrieval date not recorded", effective: "effective ",
+    why: "Why: ", conflictNote: "Conflict: ", source: "Source: ", nocite: "missing citation", retrieved: (x) => ` · retrieved ${x}`, noretr: " · retrieval date not recorded", effective: "effective ", ifInForce: "In force only if: ", srcNote: "Source note: ",
     errPrefix: "Error. ", nc: "Unknown / not covered. ", ncMsg: "We cannot resolve this address, so no rules are shown rather than guessing.", none: "No rules in our data apply to this address. That is not a guarantee that none exist.",
     partial: "Partly covered, not everything is shown: ", looking: "Looking up…", fxnote: "Live lookup unavailable; showing bundled fixture data.", lookBtn: "Look up", asofLbl: "As of", addrLbl: "Address or address ID", other: "Español", untranslated: "" },
   es: { b1: "No es asesoría legal.", b2: "Solo informativo; las reglas pueden estar incompletas, desactualizadas o mal interpretadas. Consulte la fuente citada y a un profesional calificado.", mt: "Traducción automática; el texto legal original prevalece",
@@ -67,7 +67,7 @@ const I18N = {
     groups: { applies: "Ley vigente: aplica en esta fecha", not_yet_effective: "Ley promulgada: aún no en vigor", pending: "Proyectos pendientes: no son ley", superseded: "Reemplazadas", unknown: "Desconocido: no se puede determinar con nuestros datos", "": "Otras" },
     asof: (d) => `Al ${d}. La ley vigente y los proyectos pendientes se muestran por separado según su estado.`, fixture: " Mostrando datos de PRUEBA, no reglas extraídas reales.", addr: (a) => ` ${a.street_address}, ${a.postal_city} ${a.state}. Año de construcción: ${a.year_built ?? "desconocido"}; unidades: ${a.units ?? "desconocido"}.`,
     stack: "Jurisdicciones aplicables", rules: "Reglas para esta dirección", override: "Prevalece: ", conflict: "⚑ posible conflicto, requiere revisión humana", lowconf: (c) => `⚑ baja confianza (${c}), verifique con la fuente`,
-    why: "Por qué: ", conflictNote: "Conflicto: ", source: "Fuente (en inglés): ", nocite: "falta la cita", retrieved: (t) => ` · consultada ${t}`, noretr: " · fecha de consulta no registrada", effective: "vigente desde ",
+    why: "Por qué: ", conflictNote: "Conflicto: ", source: "Fuente (en inglés): ", nocite: "falta la cita", retrieved: (t) => ` · consultada ${t}`, noretr: " · fecha de consulta no registrada", effective: "vigente desde ", ifInForce: "En vigor solo si: ", srcNote: "Nota sobre la fuente (en inglés): ",
     errPrefix: "Error. ", nc: "Desconocido / no cubierto. ", ncMsg: "No podemos resolver esta dirección, así que no mostramos reglas en lugar de adivinar.", none: "Ninguna regla en nuestros datos aplica a esta dirección. Eso no garantiza que no existan.",
     partial: "Cobertura parcial, no se muestra todo: ", looking: "Buscando…", fxnote: "Búsqueda en vivo no disponible; mostrando datos de prueba.", lookBtn: "Buscar", asofLbl: "Fecha", addrLbl: "Dirección o ID de dirección", other: "English", untranslated: " (sin traducir)" },
 };
@@ -158,11 +158,14 @@ function card(r) {
     if (rule.requirement) c.append(el("p", null, LANG === "es" ? (tr.requirement || rule.requirement + t.untranslated) : rule.requirement));
     if (r.explanation) c.append(el("p", "meta", t.why + (LANG === "es" ? (tr.explanation || r.explanation + t.untranslated) : r.explanation)));
     if (rule.conflict_note) c.append(el("p", "meta", t.conflictNote + rule.conflict_note));
+    if (r.if_in_force?.explanation) c.append(el("p", "meta if-in-force", t.ifInForce + r.if_in_force.explanation + t.untranslated));
     const cite = el("div", "meta"); cite.append(t.source);
     if (rule.source_url && /^https?:/.test(rule.source_url)) { const l = el("a", null, rule.citation || rule.source_url); l.href = rule.source_url; l.target = "_blank"; l.rel = "noopener"; cite.append(l); }
     else cite.append(rule.citation || "missing citation");
     cite.append(rule.retrieved_at ? t.retrieved(rule.retrieved_at) : t.noretr);
     c.append(cite);
+    const sn = r.source_note || rule.source_note; // where this rule's text came from; shown verbatim, English only
+    if (sn) c.append(el("p", "meta source-note", t.srcNote + sn));
     if (rule.quoted_span) c.append(el("blockquote", null, rule.quoted_span));
     return c;
   }
