@@ -74,11 +74,11 @@ for (const [id, j] of Object.entries(by)) {
       if (c.units_min != null) { if (units == null) miss.push("unit count"); else if (units < c.units_min) out_of_scope = true; }
       if (c.units_max != null) { if (units == null) miss.push("unit count"); else if (units > c.units_max) out_of_scope = true; }
       if (out_of_scope) continue;
-      if (miss.length && result === "applies") { push({ result: "unknown", explanation: `${base} Coverage depends on ${miss.join(" and ")}, which is not in the input.` }, r); continue; }
-      if (c.blocking_unknown && result === "applies") { push({ result: "unknown", explanation: `${base} Whether it covers this property depends on ${c.unknown_fact || "facts not in the input"}.` }, r); continue; }
       // local override
       const sup = r.level === "state" && known ? Object.entries(superseded[r.team_rule_id] || {}).find(([city]) => stack.includes(city)) : null;
       if (sup && result === "applies") { push({ result: "superseded", explanation: `${base} Replaced here by ${sup[1].superseded_by}: ${sup[1].reason}` }, r); continue; }
+      if (miss.length && result === "applies") { push({ result: "unknown", explanation: `${base} Coverage depends on ${miss.join(" and ")}, which is not in the input.` }, r); continue; }
+      if (c.blocking_unknown && result === "applies") { push({ result: "unknown", explanation: `${base} Whether it covers this property depends on ${c.unknown_fact || "facts not in the input"}.` }, r); continue; }
       why = result === "applies" ? t.reason : result === "pending" ? "Not law yet: a pending bill." : t.reason;
       push({ result, explanation: `${base} ${why}` }, r);
     } else if (result === "superseded") push({ result, explanation: `${base} ${t.reason}` }, r);

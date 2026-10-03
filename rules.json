@@ -992,7 +992,7 @@
       "status": "in_force",
       "title": "M.G.L. c. 40P, § 4 – Statewide prohibition on local rent control",
       "requirement": "Cities and towns may not enact, maintain or enforce rent control of any kind. The only exception is a city or town that accepts Chapter 40P, and its regulation must make owner compliance voluntary after six months, exclude certain owners and units, and compensate owners from the municipality's general funds.",
-      "key_value": "Local rent control banned; if adopted under c. 40P: owner compliance voluntary after 6 months; owners of fewer than 10 rental units and units with fair market rent over $400 excluded; municipality pays owners fair market rent minus controlled rent per unit",
+      "key_value": "Rent control prohibited statewide (no city or town may enact, maintain or enforce it); if adopted under c. 40P: owner compliance voluntary after 6 months; owners of fewer than 10 rental units and units with fair market rent over $400 excluded; municipality pays owners fair market rent minus controlled rent per unit",
       "coverage_conditions": "All cities and towns in Massachusetts. The conditions in subsections (a)-(c) apply to rental units and owners in a city or town that accepts Chapter 40P and adopts rent control regulation.",
       "exemptions": "A city or town that accepts c. 40P may adopt rent control meeting subsections (a)-(c). Any such regulation may not apply to units owned by a person or entity owning fewer than ten rental units, or to units with a fair market rent exceeding $400. The property of an owner who declines to participate (after 6 months) must be wholly unaffected.",
       "overrides": [],
@@ -1626,7 +1626,7 @@
       "title": "San Francisco annual allowable rent increase for rent-controlled units (March 1, 2026 – February 28, 2027)",
       "requirement": "For rent-controlled units, the annual allowable rent increase from March 1, 2026 through February 28, 2027 is 1.6% of the tenant's base rent. To get the dollar amount, multiply base rent by .016 and add the result to base rent.",
       "key_value": "1.6% (base rent x .016); prior periods: 1.4% (Mar 2025 – Feb 2026), 1.7% (2024-25)",
-      "coverage_conditions": "Rent-controlled units",
+      "coverage_conditions": "Rent-controlled units; units that first obtained a Certificate of Occupancy after June 13, 1979 are exempt from the rent increase limits (D079), so buildings built in or before 1979 are covered.",
       "exemptions": null,
       "overrides": [],
       "interaction": null,
@@ -1732,7 +1732,7 @@
       "status": "in_force",
       "title": "Santa Ana Rent Stabilization and Just Cause Eviction Ordinance – Annual Rent Increase Cap",
       "requirement": "Annual residential rent increases are capped at the lower of 3% or 80% of the CPI change over the most recent 12 months, and no increase is allowed if CPI is negative. The City publishes the allowable increase by June 30 each year, effective September 1. Owners may petition for more if needed for a fair and reasonable return, with a decision due within 60 days of a complete application.",
-      "key_value": "Lesser of 3% or 80% of CPI change per year (0% if CPI negative); 2.87% maximum for Sept 1, 2026 – Aug 31, 2027",
+      "key_value": "Lower of 3% or 80% of CPI change per year (0% if CPI negative); 2.87% maximum for Sept 1, 2026 – Aug 31, 2027",
       "coverage_conditions": "Residential rental property and mobile home spaces in Santa Ana",
       "exemptions": "Residential buildings constructed after February 1, 1995; mobile home spaces offered for rent after January 1, 1990",
       "overrides": [],
@@ -1827,12 +1827,13 @@
       "source_url": "https://www.cambridgeday.com/?p=158097",
       "retrieved_at": "2026-10-03T17:54:47.831Z",
       "quoted_span": "City council also unanimously passed a policy order initiating steps to ban residential property management companies from contracting companies that use algorithmic and AI-driven models to recommend what they should charge for rent.",
-      "confidence": 0.7,
+      "confidence": 0.5,
       "conflict_flag": false,
       "conflict_note": null,
       "member_doc_ids": [
         "D030"
-      ]
+      ],
+      "source_note": "source: secondary, non-official (www.cambridgeday.com), fetched 2026-10-03; quote verified verbatim against the fetched page; confirm against the primary text"
     },
     {
       "team_rule_id": "r-0084",
@@ -1914,7 +1915,8 @@
         "D002",
         "D034",
         "D037"
-      ]
+      ],
+      "source_note": "source: alt (official domain ecode360.com), fetched 2026-10-03; quote verified verbatim against the fetched page, not the starter corpus"
     },
     {
       "team_rule_id": "r-0087",
@@ -1940,7 +1942,8 @@
       "conflict_note": null,
       "member_doc_ids": [
         "D034"
-      ]
+      ],
+      "source_note": "source: alt (official domain ecode360.com), fetched 2026-10-03; quote verified verbatim against the fetched page, not the starter corpus"
     },
     {
       "team_rule_id": "r-0088",
@@ -1966,7 +1969,8 @@
       "conflict_note": null,
       "member_doc_ids": [
         "D033"
-      ]
+      ],
+      "source_note": "source: alt (official domain ecode360.com), fetched 2026-10-03; quote verified verbatim against the fetched page, not the starter corpus"
     },
     {
       "team_rule_id": "r-0089",
@@ -1992,7 +1996,8 @@
       "conflict_note": null,
       "member_doc_ids": [
         "D034"
-      ]
+      ],
+      "source_note": "source: alt (official domain ecode360.com), fetched 2026-10-03; quote verified verbatim against the fetched page, not the starter corpus"
     },
     {
       "team_rule_id": "r-0091",
@@ -2040,12 +2045,13 @@
       "source_url": "https://masslandlords.net/can-massachusetts-landlords-charge-an-application-fee/",
       "retrieved_at": "2026-10-03T17:54:49.245Z",
       "quoted_span": "brokers can charge application fees ( 254 CMR 7 ). This means even though both landlords and brokers may incur costs in screening tenants, only brokers can charge for credit checks or other background searches.",
-      "confidence": 0.8,
+      "confidence": 0.5,
       "conflict_flag": false,
       "conflict_note": null,
       "member_doc_ids": [
         "D054"
-      ]
+      ],
+      "source_note": "source: secondary, non-official (masslandlords.net), fetched 2026-10-03; quote verified verbatim against the fetched page; confirm against the primary text"
     },
     {
       "team_rule_id": "r-0093",
@@ -2066,12 +2072,13 @@
       "source_url": "https://masslandlords.net/can-massachusetts-landlords-charge-an-application-fee/",
       "retrieved_at": "2026-10-03T17:54:49.245Z",
       "quoted_span": "It states that prior to the beginning of a tenancy, no lessor may require payment for anything except first, last, security, and locks ( MGL Ch 186 Section 15B ).",
-      "confidence": 0.9,
+      "confidence": 0.5,
       "conflict_flag": false,
       "conflict_note": null,
       "member_doc_ids": [
         "D054"
-      ]
+      ],
+      "source_note": "source: secondary, non-official (masslandlords.net), fetched 2026-10-03; quote verified verbatim against the fetched page; confirm against the primary text"
     },
     {
       "team_rule_id": "r-0094",
@@ -2092,13 +2099,14 @@
       "source_url": "https://massrealestatelawblog.com/tag/cella-v-attorney-general/",
       "retrieved_at": "2026-10-03T17:54:50.251Z",
       "quoted_span": "Under the proposed law, annual rent increases would have been limited to the lesser of the annual increase in the Consumer Price Index or 5%.",
-      "confidence": 0.9,
+      "confidence": 0.5,
       "conflict_flag": false,
       "conflict_note": null,
       "member_doc_ids": [
         "D055",
         "D059"
-      ]
+      ],
+      "source_note": "source: secondary, non-official (massrealestatelawblog.com), fetched 2026-10-03; quote verified verbatim against the fetched page; confirm against the primary text"
     },
     {
       "team_rule_id": "r-0095",
@@ -2124,7 +2132,8 @@
       "conflict_note": null,
       "member_doc_ids": [
         "D070"
-      ]
+      ],
+      "source_note": "source: alt (official domain ecode360.com), fetched 2026-10-03; quote verified verbatim against the fetched page, not the starter corpus"
     },
     {
       "team_rule_id": "r-0096",
@@ -2150,7 +2159,8 @@
       "conflict_note": null,
       "member_doc_ids": [
         "D071"
-      ]
+      ],
+      "source_note": "source: alt (official domain ecode360.com), fetched 2026-10-03; quote verified verbatim against the fetched page, not the starter corpus"
     },
     {
       "team_rule_id": "r-0097",
@@ -2176,7 +2186,8 @@
       "conflict_note": null,
       "member_doc_ids": [
         "D070"
-      ]
+      ],
+      "source_note": "source: alt (official domain ecode360.com), fetched 2026-10-03; quote verified verbatim against the fetched page, not the starter corpus"
     },
     {
       "team_rule_id": "r-0098",
@@ -2202,7 +2213,8 @@
       "conflict_note": null,
       "member_doc_ids": [
         "D072"
-      ]
+      ],
+      "source_note": "source: alt (official domain ecode360.com), fetched 2026-10-03; quote verified verbatim against the fetched page, not the starter corpus"
     },
     {
       "team_rule_id": "r-0099",
@@ -2228,7 +2240,8 @@
       "conflict_note": null,
       "member_doc_ids": [
         "D071"
-      ]
+      ],
+      "source_note": "source: alt (official domain ecode360.com), fetched 2026-10-03; quote verified verbatim against the fetched page, not the starter corpus"
     },
     {
       "team_rule_id": "r-0100",
@@ -2249,7 +2262,7 @@
       "source_url": "https://www.publicceo.com/2026/02/santa-ana-city-council-continues-to-strengthen-tenant-protections-by-banning-anticompetitive-rent-setting-software/",
       "retrieved_at": "2026-10-03T17:54:58.234Z",
       "quoted_span": "prohibits the sale, licensing, provision and use of certain algorithmic rent-setting software for residential rental properties.",
-      "confidence": 0.85,
+      "confidence": 0.5,
       "conflict_flag": false,
       "conflict_note": null,
       "member_doc_ids": [
@@ -2257,7 +2270,8 @@
         "D037",
         "D086",
         "D087"
-      ]
+      ],
+      "source_note": "source: secondary, non-official (www.publicceo.com), fetched 2026-10-03; quote verified verbatim against the fetched page; confirm against the primary text"
     },
     {
       "team_rule_id": "r-0101",
@@ -2285,7 +2299,8 @@
         "D002",
         "D035",
         "D037"
-      ]
+      ],
+      "source_note": "source: alt (official domain cityofjerseycity.civicweb.net), fetched 2026-10-03; quote verified verbatim against the fetched page, not the starter corpus"
     },
     {
       "team_rule_id": "r-0102",
@@ -2311,7 +2326,8 @@
       "conflict_note": null,
       "member_doc_ids": [
         "D035"
-      ]
+      ],
+      "source_note": "source: alt (official domain cityofjerseycity.civicweb.net), fetched 2026-10-03; quote verified verbatim against the fetched page, not the starter corpus"
     },
     {
       "team_rule_id": "r-0103",
@@ -2473,6 +2489,32 @@
         "D067",
         "D063",
         "D064"
+      ]
+    },
+    {
+      "team_rule_id": "r-0109",
+      "jurisdiction": "Berkeley, CA",
+      "level": "city",
+      "category": "rent_increase_limits",
+      "status": "in_force",
+      "title": "Berkeley Rent Ordinance: coverage by unit type (rent control)",
+      "requirement": "Rent control applies to fully covered units. These are most units in multifamily properties built before 1980, single-family homes with current tenancies that began before 1996, and rooming houses, meaning single-family homes with five or more rooms rented out individually with separate leases. It also applies to such units that receive certain government subsidies.",
+      "key_value": null,
+      "coverage_conditions": "Most units in multifamily properties built before 1980 are fully covered. Units that received a Certificate of Occupancy after June 1980 are only partially covered, with no rent control.",
+      "exemptions": "Golden Duplex (duplex owner-occupied on December 31, 1979 and currently owner-occupied in one unit); units where the owner shares a kitchen or bath with the tenant if the owner lived on the property when the tenancy started; tenancies started after Nov 7, 2018 on properties where one unit is an ADU and either unit is owner-occupied; university rental units such as dormitories; nonprofit cooperatives",
+      "overrides": [],
+      "interaction": "Local rent control; the state AB 1482 cap does not apply where the local ordinance covers the unit.",
+      "effective_date": null,
+      "citation": "Berkeley Rent Stabilization and Eviction for Just Cause Ordinance",
+      "source_doc_id": "D009",
+      "source_url": "https://rentboard.berkeleyca.gov/sites/default/files/documents/Rent%20Ordinance%20Coverage%20by%20Unit%20Type.pdf",
+      "retrieved_at": "2026-10-01 22:35 UTC",
+      "quoted_span": "Most units in multifamily properties built before 1980** Fully Covered Yes Yes Yes Yes",
+      "confidence": 0.85,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "member_doc_ids": [
+        "D009"
       ]
     }
   ]

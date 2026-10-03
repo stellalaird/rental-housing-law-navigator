@@ -67,6 +67,13 @@ for (const c of out) if (c._q.doc_id === "D022" && c.category === "algorithmic_r
     out.push({ jurisdiction: "MA", level: "state", category: "algorithmic_rent_setting", title: "MA House Bill H.5222: preventing algorithmic rent fixing", requirement: "Proposed bill to prevent algorithmic rent fixing in the rental housing market. Not enacted: referred to the House Committee on Ways and Means.", key_value: null, coverage_conditions: null, exemptions: null, effective_date: null, status: "pending", citation: "Bill H.5222 (194th General Court)", interaction: "Companion to S.2983; no force of law until enacted.", confidence: 0.9, _q: { doc_id: id, quote, source_url: "https://malegislature.gov/Bills/194/H5222", retrieved: "2026-10-01 22:36 UTC" }, _members: [id] });
   }
 }
+{
+  // Berkeley's coverage-by-unit-type table (D009) is a distinct instrument from the annual adjustment order; the model merged it away.
+  const q = raw.find((r) => r.doc_id === "D009" && r.category === "rent_increase_limits" && /built before 1980/.test(r.quote));
+  if (q && !out.some((c) => c._q.doc_id === "D009" && c.category === "rent_increase_limits")) {
+    out.push({ jurisdiction: "Berkeley, CA", level: "city", category: "rent_increase_limits", title: "Berkeley Rent Ordinance: coverage by unit type (rent control)", requirement: q.requirement, key_value: null, coverage_conditions: "Most units in multifamily properties built before 1980 are fully covered. Units that received a Certificate of Occupancy after June 1980 are only partially covered, with no rent control.", exemptions: q.exemptions, effective_date: null, status: "in_force", citation: q.citation, interaction: "Local rent control; the state AB 1482 cap does not apply where the local ordinance covers the unit.", confidence: 0.85, _q: q, _members: ["D009"] });
+  }
+}
 out.sort((a, b) => (a.jurisdiction + a.category + a.title).localeCompare(b.jurisdiction + b.category + b.title));
 const clean = (v) => (v === undefined || v === "" || v === "null" ? null : v);
 // Stable ids: a rule keeps the id it had in the previous rules.json (same jurisdiction, category, source doc and quote); new rules take the next free numbers.
@@ -94,6 +101,22 @@ const patchRule = (jur, cite, fn) => { for (const r of rules) if (r.jurisdiction
 patchRule("NJ", "P.L. 2026, c.43", (r) => { r.conflict_flag = true; r.conflict_note = "Possible preemption of the Jersey City (Ord. 25-057, 25-098) and Hoboken (B-781, B-750) local algorithmic-rent rules: the act bars conflicting municipal ordinances except those authorized by other law. Needs human review. The quote comes from the 1R reprint (A3497 1R ACS) and may differ from the signed text of P.L. 2026, c. 43."; });
 patchRule("Jersey City, NJ", "25-057", (r) => { r.effective_date ||= "2025-05-21"; r.conflict_flag = true; r.conflict_note = "May be preempted by NJ P.L. 2026, c. 43 once it takes effect (2027-07-01); human review needed. Ordinance 25-057 was adopted 2025-05-21."; });
 patchRule("Hoboken, NJ", "B-781", (r) => { r.conflict_flag = true; r.conflict_note = "May be preempted by NJ P.L. 2026, c. 43 once it takes effect (2027-07-01); human review needed."; });
+// SF allowable-increase rule: D080 says only "rent-controlled units"; the cutoff is stated in D079 (units first certificated after 1979-06-13 are exempt from the rent increase limits).
+for (const r of rules) if (r.jurisdiction === "San Francisco, CA" && r.category === "rent_increase_limits" && r.coverage_conditions === "Rent-controlled units") r.coverage_conditions = "Rent-controlled units; units that first obtained a Certificate of Occupancy after June 13, 1979 are exempt from the rent increase limits (D079), so buildings built in or before 1979 are covered.";
+// Headline wording that matches the source's own phrasing (D048: "No city or town may enact, maintain or enforce rent control"; D085: "lower of 3% per year, or 80%").
+patchRule("MA", "Chapter 40P, Section 4", (r) => { if (r.category === "rent_increase_limits" && /^Local rent control banned/.test(r.key_value || "")) r.key_value = r.key_value.replace(/^Local rent control banned/, "Rent control prohibited statewide (no city or town may enact, maintain or enforce it)"); });
+patchRule("Santa Ana, CA", "Rent Stabilization Ordinance", (r) => { if (/^Lesser of 3%/.test(r.key_value || "")) r.key_value = r.key_value.replace(/^Lesser of 3% or 80% of CPI change per year/, "Lower of 3% or 80% of CPI change per year"); });
+// Quote provenance: a quote absent from corpus/text came from a fetched page (data/starter/fetched, verified verbatim at extraction). Label it; unofficial hosts get a lower confidence.
+{
+  const OFFICIAL = /(^|\.)(ecode360\.com|civicweb\.net|malegislature\.gov|njleg\.state\.nj\.us|nj\.gov|ca\.gov|mass\.gov|cambridgema\.gov|hobokennj\.gov|santa-ana\.org|ci\.santa-ana\.ca\.us)$/;
+  for (const r of rules) {
+    if (inCorpus({ doc_id: r.source_doc_id, quote: r.quoted_span })) continue;
+    let host = ""; try { host = new URL(r.source_url).hostname; } catch {}
+    const day = (r.retrieved_at || "").slice(0, 10);
+    if (OFFICIAL.test(host)) r.source_note = `source: alt (official domain ${host}), fetched ${day}; quote verified verbatim against the fetched page, not the starter corpus`;
+    else { r.source_note = `source: secondary, non-official (${host}), fetched ${day}; quote verified verbatim against the fetched page; confirm against the primary text`; r.confidence = Math.min(r.confidence ?? 0.5, 0.5); }
+  }
+}
 rules.sort((a, b) => a.team_rule_id.localeCompare(b.team_rule_id));
 writeFileSync("rules.json", JSON.stringify({ rules }, null, 2));
 console.log(`wrote rules.json: ${rules.length} rules`);
