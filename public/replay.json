@@ -1,0 +1,24 @@
+{
+  "recordedAt": "2026-10-03T14:08:18.897Z",
+  "title": "Demo",
+  "tagline": "Ask anything.",
+  "examples": [
+    "Explain this in one paragraph.",
+    "Give me three ideas.",
+    "What should I ask next?"
+  ],
+  "items": [
+    {
+      "prompt": "Explain this in one paragraph.",
+      "text": "It looks like nothing came through with your message. There's no text, file, or code attached for me to explain. Could you paste the content, or share the file path if it's on your machine? Once I have it, I'll sum it up in one paragraph."
+    },
+    {
+      "prompt": "Give me three ideas.",
+      "text": "Happy to help. Since you didn't name a topic, here are three ideas from different areas:\n\n1. **Weekend project: a personal \"commonplace\" CLI.** Build a small command-line tool that saves quotes, links, and notes to a local SQLite file and lets you search them with full-text search. It's a good way to practice a language you're learning, and you'll actually use it.\n\n2. **Habit experiment: a 30-day \"one small thing\" log.** Pick one 10-minute daily action, like sketching, writing a paragraph, or stretching. Track it in a plain text file. At the end, review what changed. Keeping the effort small is what makes it last.\n\n3. **Creative prompt: a short story told only through artifacts.** Write a story entirely through receipts, voicemails, sticky notes, and calendar entries. The reader pieces the plot together from what's left behind.\n\nIf you meant ideas for something specific, like a business, a gift, a codebase, or dinner, tell me and I'll tailor them."
+    },
+    {
+      "prompt": "What should I ask next?",
+      "text": "There's no earlier conversation to build on, so here are some ideas depending on what you'd like to do:\n\n**Get oriented in your environment**\n- \"What's in my current directory?\" (You're at `/`, the root of your Mac.)\n- \"Help me find a project folder on my machine.\"\n- \"Show me what's using the most disk space.\"\n\n**Work on code**\n- \"Set up a new Python/Node/etc. project for me.\"\n- \"Review this file and suggest improvements.\"\n- \"Help me debug this error: …\"\n- \"Initialize a git repo and make a first commit.\"\n\n**Automate or script something**\n- \"Write a shell script that backs up a folder every day.\"\n- \"Rename all the files in a folder to match a pattern.\"\n- \"Convert these CSV files to JSON.\"\n\n**Learn or explore**\n- \"Explain how [concept] works with an example.\"\n- \"Compare two libraries or tools for [task].\"\n- \"Walk me through setting up [tool] on macOS.\"\n\nIf you tell me what you're working on or what you'd like to get done, I can suggest more specific next steps."
+    }
+  ]
+}

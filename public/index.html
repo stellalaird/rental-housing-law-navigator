@@ -1,0 +1,75 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Demo</title>
+<style>body{font:16px system-ui;max-width:720px;margin:2rem auto;padding:0 16px}#out{white-space:pre-wrap}#think{color:#888;white-space:pre-wrap;font-size:14px}#note{color:#a60;font-size:14px;margin:.5rem 0}textarea{width:100%}#examples button{margin:0 6px 6px 0}</style>
+<h1 id="title">Demo</h1><p id="tagline"></p><div id="examples"></div>
+<textarea id="q" rows="3"></textarea><button id="go">Send</button>
+<div id="note"></div><div id="think"></div><div id="out"></div>
+<script>
+// Modes: live stream -> non-streaming JSON (?stream=0) -> recorded replay (public/replay.json).
+// Replay is what a static host (no backend) serves; it is always labelled.
+const history = [];
+let replay = null;
+const loadReplay = () => replay ? Promise.resolve(replay) : fetch("replay.json").then((r) => r.ok ? r.json() : null).catch(() => null).then((j) => (replay = j));
+
+function applyConfig(c) {
+  document.title = title.textContent = c.title; tagline.textContent = c.tagline;
+  for (const ex of c.examples || []) {
+    const b = document.createElement("button"); b.textContent = ex;
+    b.onclick = () => { q.value = ex; go.onclick(); };
+    examples.append(b);
+  }
+}
+fetch("/api/config").then((r) => { if (!r.ok) throw 0; return r.json(); }).then(applyConfig)
+  .catch(() => loadReplay().then((j) => j && applyConfig(j)));
+
+async function viaStream() {
+  const r = await fetch("/api/chat", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ messages: history }) });
+  if (r.status === 429 || r.status === 400) { const j = await r.json().catch(() => ({})); throw Object.assign(new Error(j.error || "Request rejected."), { friendly: true }); }
+  if (!r.ok || !r.body) throw new Error("stream http " + r.status);
+  const rd = r.body.getReader(), dec = new TextDecoder(); let buf = "", reply = "", err = null;
+  for (;;) {
+    const { value, done } = await rd.read(); if (done) break;
+    buf += dec.decode(value, { stream: true }); const parts = buf.split("\n\n"); buf = parts.pop();
+    for (const p of parts) {
+      const m = JSON.parse(p.slice(6));
+      if (m.type === "text") { reply += m.data; out.textContent = reply; }
+      else if (m.type === "thinking") think.textContent += m.data;
+      else if (m.type === "refusal") out.textContent += "\n[refusal] " + JSON.stringify(m.data);
+      else if (m.type === "error") err = m.data;
+    }
+  }
+  if (err && !reply) throw new Error(err);   // nothing streamed: let the caller fall back
+  if (err) out.textContent += "\n[error] " + err;
+  return reply;
+}
+async function viaJson() {
+  const r = await fetch("/api/chat?stream=0", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ messages: history }) });
+  const j = await r.json();
+  if (j.error && !j.text) throw new Error(j.error);
+  think.textContent = j.thinking || ""; out.textContent = j.text || "";
+  if (j.refusal) out.textContent += "\n[refusal]";
+  return j.text || "";
+}
+async function viaReplay() {
+  const j = await loadReplay();
+  const last = history[history.length - 1].content;
+  const hit = j && j.items.find((i) => i.prompt === last);
+  if (!hit) { out.textContent = "No live backend is reachable and there is no recorded response for this prompt. Try one of the example prompts."; return ""; }
+  note.textContent = "Recorded response (live backend unavailable), recorded " + j.recordedAt;
+  out.textContent = hit.text; return hit.text;
+}
+
+go.onclick = async () => {
+  if (!q.value.trim()) return;
+  history.push({ role: "user", content: q.value }); q.value = ""; out.textContent = ""; think.textContent = ""; note.textContent = "";
+  let reply = "";
+  try { reply = await viaStream(); }
+  catch (e1) {
+    if (e1.friendly) { history.pop(); out.textContent = ""; note.textContent = e1.message; return; }
+    note.textContent = "Stream failed, retrying without streaming…"; out.textContent = ""; think.textContent = "";
+    try { reply = await viaJson(); note.textContent = "Streaming unavailable; showing non-streamed reply."; }
+    catch (e2) { reply = await viaReplay(); }
+  }
+  history.push({ role: "assistant", content: reply });
+};
+</script>
