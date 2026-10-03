@@ -33,6 +33,9 @@ If a published effective date conflicts between records, use the primary officia
 RECORDS:
 ${items.map((r, i) => JSON.stringify({ i, doc: r.doc_id, citation: r.citation, requirement: r.requirement, key_value: r.key_value, coverage: r.coverage, exemptions: r.exemptions, effective_date: r.effective_date, status: r.status, penalty: r.penalty, note: r.preemption_note, quote: r.quote })).join("\n")}`;
 
+const corpusDir = (() => { const d = process.argv[2] || "data/starter"; const sub = existsSync(d) ? readdirSync(d).find((x) => existsSync(`${d}/${x}/corpus/text`)) : null; return sub ? `${d}/${sub}/corpus/text` : null; })();
+const norm = (t) => t.replace(/\s+/g, " ");
+const inCorpus = (r) => corpusDir && existsSync(`${corpusDir}/${r.doc_id}.txt`) && norm(readFileSync(`${corpusDir}/${r.doc_id}.txt`, "utf8")).includes(norm(r.quote));
 const entries = Object.entries(groups);
 const out = []; let n = 0;
 const worker = async () => {
@@ -43,8 +46,10 @@ const worker = async () => {
       const r = await claudeText({ system: SYSTEM, prompt: prompt(j, cat, items) });
       const arr = parseJson(r.text);
       for (const c of Array.isArray(arr) ? arr : []) {
-        const q = items[c.quote_from] ?? items[(c.members || [])[0]];
+        let q = items[c.quote_from] ?? items[(c.members || [])[0]];
         if (!q) continue;
+        // Prefer a member whose quote can be verified in the corpus text (the citation check reads corpus/text/<doc>.txt).
+        if (!inCorpus(q)) { const alt = (c.members || []).map((m) => items[m]).find((m) => m && inCorpus(m)); if (alt) q = alt; }
         out.push({ jurisdiction: j, level: j.includes(",") ? "city" : "state", category: cat, ...c, _q: q, _members: (c.members || []).map((m) => items[m]?.doc_id).filter(Boolean) });
       }
       console.log(`${key} raw=${items.length} -> ${(Array.isArray(arr) ? arr : []).length}${r.cached ? " cached" : ""}`);
@@ -68,8 +73,9 @@ const clean = (v) => (v === undefined || v === "" || v === "null" ? null : v);
 const prev = existsSync("rules.json") ? JSON.parse(readFileSync("rules.json", "utf8")).rules : [];
 const keyOf = (j, cat, doc, q) => [j, cat, doc, q].join("|");
 const prevIds = new Map(prev.map((r) => [keyOf(r.jurisdiction, r.category, r.source_doc_id, r.quoted_span), r.team_rule_id]));
+const prevByTitle = new Map(prev.map((r) => [[r.jurisdiction, r.category, r.title].join("|"), r.team_rule_id]));
 const used = new Set(); let nextNum = prev.reduce((m, r) => Math.max(m, Number(r.team_rule_id.slice(2))), 0) + 1;
-const idFor = (c) => { const k = keyOf(c.jurisdiction, c.category, c._q.doc_id, c._q.quote); const id = prevIds.get(k); if (id && !used.has(id)) { used.add(id); return id; } let n; do { n = `r-${String(nextNum++).padStart(4, "0")}`; } while (used.has(n)); used.add(n); return n; };
+const idFor = (c) => { const k = keyOf(c.jurisdiction, c.category, c._q.doc_id, c._q.quote); const id = prevIds.get(k) ?? (prevByTitle.get([c.jurisdiction, c.category, c.title].join("|"))); if (id && !used.has(id)) { used.add(id); return id; } let n; do { n = `r-${String(nextNum++).padStart(4, "0")}`; } while (used.has(n)); used.add(n); return n; };
 const rules = out.map((c, i) => ({
   team_rule_id: idFor(c),
   jurisdiction: c.jurisdiction, level: c.level, category: c.category,
@@ -83,6 +89,11 @@ const rules = out.map((c, i) => ({
   confidence: typeof c.confidence === "number" ? c.confidence : null, conflict_flag: false, conflict_note: null,
   member_doc_ids: [...new Set(c._members)],
 }));
+// Owner-ruled patches (2026-10-03). Matched on jurisdiction + citation text, so they survive id changes.
+const patchRule = (jur, cite, fn) => { for (const r of rules) if (r.jurisdiction === jur && r.citation.includes(cite)) fn(r); };
+patchRule("NJ", "P.L. 2026, c.43", (r) => { r.conflict_flag = true; r.conflict_note = "Possible preemption of the Jersey City (Ord. 25-057, 25-098) and Hoboken (B-781, B-750) local algorithmic-rent rules: the act bars conflicting municipal ordinances except those authorized by other law. Needs human review. The quote comes from the 1R reprint (A3497 1R ACS) and may differ from the signed text of P.L. 2026, c. 43."; });
+patchRule("Jersey City, NJ", "25-057", (r) => { r.effective_date ||= "2025-05-21"; r.conflict_flag = true; r.conflict_note = "May be preempted by NJ P.L. 2026, c. 43 once it takes effect (2027-07-01); human review needed. Ordinance 25-057 was adopted 2025-05-21."; });
+patchRule("Hoboken, NJ", "B-781", (r) => { r.conflict_flag = true; r.conflict_note = "May be preempted by NJ P.L. 2026, c. 43 once it takes effect (2027-07-01); human review needed."; });
 rules.sort((a, b) => a.team_rule_id.localeCompare(b.team_rule_id));
 writeFileSync("rules.json", JSON.stringify({ rules }, null, 2));
 console.log(`wrote rules.json: ${rules.length} rules`);
