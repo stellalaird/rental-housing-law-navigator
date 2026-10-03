@@ -16,7 +16,7 @@ Any number below in `‹…›` is a placeholder for a real number from the actu
 | Time | On screen | Narration |
 |---|---|---|
 | 0–6 | Landing page, "not legal advice" visible | "Which housing rules apply to this apartment today, and what is about to change? Pick any address." |
-| 6–20 | Type/select a sample address (TODO: choose one with a local-over-state override, e.g. a San Francisco building). Result lists rules. | "Here is a building in ‹city›, built ‹year›. The system builds its jurisdiction stack and lists every applicable rule, in plain language." |
+| 6–20 | Type/select a sample address (TODO: choose one with a local-over-state override, e.g. a San Francisco building; or a Dorchester address, postal name Dorchester → legally Boston, per p-a-1's geocoder c42b414: 32 of 500 addresses are Boston neighborhoods, 1 is San Ysidro → San Diego. Do NOT use Cambridge → Boston: retracted false match). Result lists rules. | "Here is a building in ‹city›, built ‹year›. The system builds its jurisdiction stack and lists every applicable rule, in plain language." |
 | 20–35 | Click a rule: citation, retrieval date, quoted span. Point at an "unknown" and a "pending" row. | "Every rule carries its source and a quoted span. Where a fact is missing, it says unknown. Pending bills are never shown as law." |
 | 35–55 | Hour-16 Cambridge ordinance: drop it in, extraction runs, affected addresses list, future effective date shown. | "Now the surprise ordinance, released this morning. Extracted with no hand coding. ‹N› Cambridge addresses affected, effective ‹date›." |
 

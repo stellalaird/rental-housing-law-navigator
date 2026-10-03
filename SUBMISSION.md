@@ -77,6 +77,7 @@ Cover each of these, in the README and on screen:
 - **Not legal advice:** stated on every interface (the rules of the event require this).
 - **Explicit unknowns:** `unknown` when coverage depends on a fact not in the data (for example, no year built for San Diego, none for Berkeley, no units for Berkeley).
 - **Citations on every answer:** source, retrieval date and a quoted span found in the corpus; no invented rules or citations where the text is silent.
+- **Legal jurisdiction, not postal city** (p-a-1 geocoder `c42b414`, verified by p-a): lookups match on the legal jurisdiction; 32 of 500 addresses have a Boston neighborhood as postal name (e.g. Dorchester → legally Boston), 1 is San Ysidro → San Diego. Fuzzy matches with a wrong house number resolve to `unknown` instead of a guess (9 of 500 unknown). Do not cite a Cambridge → Boston example (retracted).
 - **As-of date and enacted vs pending:** every answer carries both.
 - **Corpus-as-data prompt-injection handling:** corpus text is passed as quoted data; instructions inside a document are not obeyed. TODO: confirm the prompt wording and show one example.
 - **Conflicts and low confidence flagged** for human review (T3 is the visible case).
