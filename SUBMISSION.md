@@ -2,23 +2,32 @@
 
 **Deadline: Sunday Oct 4, 2026, 9:00 AM ET (8:00 AM CDT).** Spec: `challenges/02-rental-housing-law-realpage.pdf` (read in full). Platform rules (HackOS, video limits) are **FAQ-bot output, not a primary source** (`NOTES.md`); if the HackOS page differs, the page wins.
 
-Legend: **[agent]** = an agent can make it. **[owner]** = only the owner can do it. **TODO** = a number or fact not yet produced; never fill it from memory.
+## 1. Tonight's checklist (state as of 2026-10-03 ~1:30 PM CDT)
 
-## 1. Deliverables map
-
-| # | Deliverable (source) | Spec | Who | Status |
+| # | Item | Status | Where / waiting on | Owner |
 |---|---|---|---|---|
-| 1 | `rules.json` (challenge) | Rule records in the provided schema, with citation and quoted source text; extracted automatically | **[agent]** p-a-2 | TODO |
-| 2 | `lookups.json` (challenge) | All 500 addresses; each rule's result is one of applies / unknown / superseded / not yet effective / pending | **[agent]** p-a-2 | TODO |
-| 3 | `changes.json` (challenge) | Affected addresses and conflict flags for each test T1–T6 | **[agent]** p-a-3 (`make-changes.mjs`) | T1–T5 generated (`f81868a`, from the 80-rule `rules.json`); T6 added by `ingest-doc.mjs` when the hour-16 doc arrives; regenerate after any `rules.json` change |
-| 4 | Team video (challenge + HackOS) | Introduce the team; MP4/MOV, ≤60 s, ≤1 GB | **[owner]** records and uploads | TODO |
-| 5 | Demo video | Show the tool in use; same limits | **[agent]** records; **[owner]** uploads | TODO |
-| 6 | Technical video | Walk through how it works; same limits | **[agent]** records; **[owner]** uploads | TODO |
-| 7 | Public GitHub repo | Code, README with run instructions, and the three output files; private repos do NOT count | **[owner]** creates and pushes (section 5) | TODO |
-| 8 | Live demo link | Working link to the tool; must be live when judges look | **[agent]** serves; **[owner]** account/tunnel | TODO |
-| 9 | Team photo (HackOS) | JPG/PNG/WebP, ≤10 MB | **[owner]** | TODO |
-| 10 | Pick challenge 02 on HackOS | Latest submission's challenge counts | **[owner]** | TODO |
-| 11 | Press Submit | "Save project" alone does NOT submit; look for "Your project is submitted" / "Project submitted" | **[owner]** | TODO |
+| 1 | `rules.json` | **94 rules**, 94 schema-valid; quoted spans found in corpus for 78, the other 16 rest on fetched link-only pages (README Limitations) | `rules.json` | p-a-2 |
+| 2 | `lookups.json` | **500/500 addresses, 9403 entries**; 0 bad results, 0 unknown rule ids; 5791 of 6319 `applies` cited | `lookups.json` | p-a-2 |
+| 3 | `changes.json` | **T1 250, T2 89, T3 140, T4 110, T5 0** affected. **T6 absent**: waits on the hour-16 doc | `changes.json` | p-a-3 |
+| 4 | Demo video | `demo-take4.mp4` (6.0 MB, recorded 1:23 PM) or a re-record; **not in the repo yet**: copy from p-a-1's scratchpad into the repo (gitignored if large) | scratchpad `/private/tmp/claude-502/-Users-stellalaird-local-dev-personal-agent/cca67b2f-e607-4046-bd20-281b57284b92/scratchpad/` (where the files are; that it is p-a-1's is inferred) | p-a-1 records, owner uploads |
+| 5 | Tech video | `tech-take2.mp4` (1.4 MB), **55.2 s per p-a**; **T6 slide pending** until the drop; same copy-in step | same scratchpad | p-a-1 records, owner uploads |
+| 6 | Team video | not made; ≤60 s, MP4/MOV | `video-scripts.md` | **owner** |
+| 7 | Team photo | not made; JPG/PNG/WebP ≤10 MB | HackOS | **owner** |
+| 8 | Public GitHub repo | local git only, no remote; steps in section 5 | owner terminal | **owner** pushes |
+| 9 | Live demo link | no host chosen; pick from `DEPLOY.md`; **also decide whether `sample_addresses.csv` may be redistributed** (without it every lookup is a 503; `ADDRESSES_CSV` env points to a copy) | `DEPLOY.md` | **owner** |
+| 10 | HackOS: pick challenge 02, upload, **press Submit** (Save alone does not submit) | not done | section 9 | **owner** |
+
+**Selfcheck: 73.7 / 75 (proxy, not the judges' `score.py`).** Extraction 25/25 and coverage 20/20 are measured against our own dev key (10 rules, 20 addresses), so they say little about the held-out 58 rules and 100 addresses. Citations 13.7/15 comes from the 5791/6319 cited ratio. Change tracking 15/15 checks only that sets exist and are in the right place. T6 check is skipped until a T6 entry exists. The judged 25 are not scored.
+
+**Hour-16 steps still owed after the drop** (full runbook `HOUR16.md`):
+1. Drive watcher fires; download the doc into `data/starter/hour16/` (p-a-3).
+2. `ingest-doc.mjs <doc> --dry`, check, then the real run (p-a-3).
+3. `npm run rebuild -- --with-lookups`, then restart the server on :3000 (p-a-3, p-a-2).
+4. Confirm the new `new-*` rule id in `/api/lookup` before and after its effective date; `node selfcheck.mjs` T6 check (p-a-3, p-a-1).
+5. Record the hour-16 segment, add the T6 slide to the tech video (p-a-1).
+6. Commit `rules.json lookups.json changes.json public/es.json`; owner uploads the final videos.
+
+Legend: **[owner]** = only the owner can do it. **TODO** = a number or fact not yet produced; never fill it from memory. Section 2 onward is background and may lag the table above; the table wins.
 
 ### What the three videos must show (from the challenge brief)
 The brief says the three videos "need to include your scores". Required on screen across them:
@@ -39,9 +48,9 @@ Total 100: **75 automatic** (organisers' `score.py`) + **25 judged**.
 
 | Component | Pts | Type | How measured (brief) | Where we address it | Our score |
 |---|---|---|---|---|---|
-| Extraction accuracy | 25 | auto | Rules matched to the held-out key by jurisdiction, category and citation; field accuracy on date, status, key value, citation | `rules.json` | TODO |
-| Address coverage | 20 | auto | 100 held-out addresses; missing an applicable rule costs twice other errors; "unknown" earns partial credit | `lookups.json` | TODO |
-| Citations | 15 | auto | Share of "applies" answers backed by a source and a quoted span found in the corpus | every answer carries both | TODO |
+| Extraction accuracy | 25 | auto | Rules matched to the held-out key by jurisdiction, category and citation; field accuracy on date, status, key value, citation | `rules.json` | 25/25 proxy (own dev key only) |
+| Address coverage | 20 | auto | 100 held-out addresses; missing an applicable rule costs twice other errors; "unknown" earns partial credit | `lookups.json` | 20/20 proxy (own dev key only) |
+| Citations | 15 | auto | Share of "applies" answers backed by a source and a quoted span found in the corpus | every answer carries both | 13.7/15 proxy |
 | Change tracking | 15 | auto | Overlap with expected affected-address sets for T1–T6, plus conflict flags on T3 | `changes.json` | T1–T5 pass the local `selfcheck.mjs` proxy (15/15); the real score is judged against the held-out sets, so this is a floor on information |
 | Plain language and usability | 10 | judges | Demo | demo video, live link | judged |
 | Responsible design | 10 | judges | Uncertainty, audit trail, guardrails | section 4 | judged |
@@ -117,9 +126,7 @@ Before pushing: confirm `.env` is untracked, that `rules.json`, `lookups.json`, 
 - A terminal showing the `score.py` report is not a browser page. TODO: decide how to show it (render the report in an HTML page the recorder can drive, or have the owner screen-record the terminal).
 
 ## 8. Live demo link
-Pick one; details and sources in `NOTES.md`.
-- **Static (safest):** `npm run build:static`, publish `dist/` to GitHub Pages (needs the public repo) or Cloudflare Pages. Answers from recorded replay only. **[owner]** account needed.
-- **Live backend from the owner's laptop:** `npm start` plus `cloudflared tunnel --url http://localhost:3000` (no account per Cloudflare docs; `brew install cloudflared` is an owner step). Caveats: URL changes every run, dies when the laptop sleeps, and quick tunnels do not support SSE, so the page falls back to JSON. Set `TRUST_PROXY=1`. **A public URL exposes the API key's spend**; set a budget cap in the Anthropic console first.
+The server needs no model, no `claude` CLI and no `.env`; what a host must provide, and the one data file it needs, is in `DEPLOY.md`. Host choice, TLS and domain are the owner's. The older static-build and tunnel options are in `NOTES.md`; a tunnel from the laptop dies when it sleeps.
 
 ## 9. Final steps on HackOS
 1. Pick challenge 02.
