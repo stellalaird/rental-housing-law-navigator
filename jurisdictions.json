@@ -1,0 +1,7490 @@
+{
+ "as_of": "2026-10-03",
+ "source": "US Census geocoder, Public_AR_Current benchmark",
+ "corpus_places": [
+  "Berkeley, CA",
+  "Boston, MA",
+  "Cambridge, MA",
+  "Hoboken, NJ",
+  "Jersey City, NJ",
+  "Los Angeles, CA",
+  "Newark, NJ",
+  "San Diego, CA",
+  "San Francisco, CA",
+  "Santa Ana, CA"
+ ],
+ "by_address": {
+  "A0001": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "6238 DE LONGPRE AVE, LOS ANGELES, CA, 90028",
+   "year_built": "1927",
+   "units": "32"
+  },
+  "A0002": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "1035 CLINTON ST, HOBOKEN, NJ, 07030",
+   "year_built": "2001",
+   "units": null
+  },
+  "A0003": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "878 S 14TH ST, NEWARK, NJ, 07108",
+   "year_built": null,
+   "units": null
+  },
+  "A0004": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "10050 MOUNTAIR AVE, TUJUNGA, CA, 91042",
+   "year_built": "1964",
+   "units": "39"
+  },
+  "A0005": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "1609 ADDISON ST, BERKELEY, CA, 94703",
+   "year_built": null,
+   "units": null
+  },
+  "A0006": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "71 WESTLAND AVE, BOSTON, MA, 02115",
+   "year_built": "1900",
+   "units": null
+  },
+  "A0007": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "4257 SAN PEDRO PL, LOS ANGELES, CA, 90011",
+   "year_built": "1913",
+   "units": "6"
+  },
+  "A0008": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "1065 SUMMIT AVE, JERSEY CITY, NJ, 07307",
+   "year_built": null,
+   "units": null
+  },
+  "A0009": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "5 WESTERN AVE, CAMBRIDGE, MA, 02163",
+   "year_built": "1915",
+   "units": "6"
+  },
+  "A0010": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "134 OXFORD ST, CAMBRIDGE, MA, 02140",
+   "year_built": "1915",
+   "units": "6"
+  },
+  "A0011": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "836 RAYMOND BLVD, NEWARK, NJ, 07105",
+   "year_built": null,
+   "units": null
+  },
+  "A0012": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "1064 SUMMIT AVE, JERSEY CITY, NJ, 07307",
+   "year_built": "1900",
+   "units": null
+  },
+  "A0013": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "137 N 11TH ST, NEWARK, NJ, 07107",
+   "year_built": null,
+   "units": null
+  },
+  "A0014": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "5907 CAHUENGA BLVD, NORTH HOLLYWOOD, CA, 91601",
+   "year_built": "1947",
+   "units": "7"
+  },
+  "A0015": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "15 EVERETT ST, CAMBRIDGE, MA, 02138",
+   "year_built": "1930",
+   "units": "83"
+  },
+  "A0016": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "3515 FILLMORE ST, SAN FRANCISCO, CA, 94123",
+   "year_built": "1926",
+   "units": "21"
+  },
+  "A0017": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "225 DUNCAN AVE, JERSEY CITY, NJ, 07306",
+   "year_built": null,
+   "units": null
+  },
+  "A0018": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "1906 BONITA AVE, BERKELEY, CA, 94704",
+   "year_built": null,
+   "units": null
+  },
+  "A0019": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "3820 HAINES ST, SAN DIEGO, CA, 92109",
+   "year_built": null,
+   "units": "16"
+  },
+  "A0020": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "648 N 6TH ST, NEWARK, NJ, 07107",
+   "year_built": null,
+   "units": null
+  },
+  "A0021": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "22 PRECITA AVE, SAN FRANCISCO, CA, 94110",
+   "year_built": "1963",
+   "units": "6"
+  },
+  "A0022": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "10908 HARTSOOK ST, NORTH HOLLYWOOD, CA, 91601",
+   "year_built": "2012",
+   "units": "5"
+  },
+  "A0023": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "843 IROLO ST, LOS ANGELES, CA, 90005",
+   "year_built": "1987",
+   "units": "33"
+  },
+  "A0024": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "227 CHARLES ST, CAMBRIDGE, MA, 02141",
+   "year_built": "1920",
+   "units": "6"
+  },
+  "A0025": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "2341 8TH ST, BERKELEY, CA, 94710",
+   "year_built": null,
+   "units": null
+  },
+  "A0026": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "59 OAK ST, JERSEY CITY, NJ, 07304",
+   "year_built": "1901",
+   "units": null
+  },
+  "A0027": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "3918 FULTON ST, SAN FRANCISCO, CA, 94118",
+   "year_built": "1923",
+   "units": "6"
+  },
+  "A0028": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "585 N 5TH ST, NEWARK, NJ, 07107",
+   "year_built": null,
+   "units": null
+  },
+  "A0029": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "284 VERONA AVE, NEWARK, NJ, 07104",
+   "year_built": null,
+   "units": null
+  },
+  "A0030": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "2051 DIVISADERO ST, SAN FRANCISCO, CA, 94115",
+   "year_built": "1908",
+   "units": "5"
+  },
+  "A0031": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "5624 S SAN PEDRO ST, LOS ANGELES, CA, 90011",
+   "year_built": "1911",
+   "units": "5"
+  },
+  "A0032": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "63 OAK ST, JERSEY CITY, NJ, 07304",
+   "year_built": null,
+   "units": null
+  },
+  "A0033": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1260 KEARNY ST, SAN FRANCISCO, CA, 94133",
+   "year_built": "1910",
+   "units": "5"
+  },
+  "A0034": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "25 GORE ST, CAMBRIDGE, MA, 02141",
+   "year_built": "1886",
+   "units": "6"
+  },
+  "A0035": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "5239 HARMONY AVE, NORTH HOLLYWOOD, CA, 91601",
+   "year_built": "1997",
+   "units": "14"
+  },
+  "A0036": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "33 WARD ST, SOUTH BOSTON, MA, 02127",
+   "year_built": "2019",
+   "units": null
+  },
+  "A0037": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "770 IROLO ST, LOS ANGELES, CA, 90005",
+   "year_built": "2001",
+   "units": "47"
+  },
+  "A0038": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "154 YUKON ST, SAN FRANCISCO, CA, 94114",
+   "year_built": "1908",
+   "units": "5"
+  },
+  "A0039": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "1 CRAIGIE ST, CAMBRIDGE, MA, 02138",
+   "year_built": "1910",
+   "units": "32"
+  },
+  "A0040": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "75 JACKSON ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0041": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "122 TIFFANY AVE, SAN FRANCISCO, CA, 94110",
+   "year_built": "1900",
+   "units": "15"
+  },
+  "A0042": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "320 FORREST ST, JERSEY CITY, NJ, 07304",
+   "year_built": "1912",
+   "units": null
+  },
+  "A0043": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "4 ORCHARD ST, CAMBRIDGE, MA, 02140",
+   "year_built": "1920",
+   "units": "6"
+  },
+  "A0044": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "775 SANDFORD AVE, NEWARK, NJ, 07106",
+   "year_built": null,
+   "units": null
+  },
+  "A0045": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "12829 BRANFORD ST, PACOIMA, CA, 91331",
+   "year_built": "1987",
+   "units": "65"
+  },
+  "A0046": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "12 SODEN ST, CAMBRIDGE, MA, 02139",
+   "year_built": "1975",
+   "units": "44"
+  },
+  "A0047": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "14 RUTGERS AVE, JERSEY CITY, NJ, 07305",
+   "year_built": "1913",
+   "units": null
+  },
+  "A0048": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "1619 COMMONWEALTH AVE, BRIGHTON, MA, 02135",
+   "year_built": "1899",
+   "units": null
+  },
+  "A0049": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "721 CLINTON ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0050": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "36 HOFF ST, SAN FRANCISCO, CA, 94110",
+   "year_built": "1986",
+   "units": "49"
+  },
+  "A0051": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "65 OAKLAND AVE, JERSEY CITY, NJ, 07306",
+   "year_built": null,
+   "units": null
+  },
+  "A0052": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "88 GARDNER ST, ALLSTON, MA, 02134",
+   "year_built": "1965",
+   "units": null
+  },
+  "A0053": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "32 GARRISON ST, BOSTON, MA, 02116",
+   "year_built": "1990",
+   "units": null
+  },
+  "A0054": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "13 SHETLAND ST, ROXBURY, MA, 02119",
+   "year_built": "2020",
+   "units": null
+  },
+  "A0055": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "305 10TH AVE, SAN FRANCISCO, CA, 94118",
+   "year_built": "1963",
+   "units": "6"
+  },
+  "A0056": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "43 EDGERLY RD, BOSTON, MA, 02115",
+   "year_built": "1920",
+   "units": null
+  },
+  "A0057": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "57 STONE ST, NEWARK, NJ, 07104",
+   "year_built": null,
+   "units": null
+  },
+  "A0058": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "3137 BOSTON AVE, SAN DIEGO, CA, 92113",
+   "year_built": null,
+   "units": "7"
+  },
+  "A0059": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "86 WALNUT ST, NEWARK, NJ, 07102",
+   "year_built": null,
+   "units": null
+  },
+  "A0060": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "5737 WILLOWCREST AVE, NORTH HOLLYWOOD, CA, 91601",
+   "year_built": "1962",
+   "units": "8"
+  },
+  "A0061": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "106 18TH AVE, SAN FRANCISCO, CA, 94121",
+   "year_built": "1915",
+   "units": "5"
+  },
+  "A0062": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "77 HOFF ST, SAN FRANCISCO, CA, 94110",
+   "year_built": "1906",
+   "units": "6"
+  },
+  "A0063": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "11 CORTES ST, BOSTON, MA, 02116",
+   "year_built": "1899",
+   "units": null
+  },
+  "A0064": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "26 CONCORD AVE, CAMBRIDGE, MA, 02138",
+   "year_built": "1890",
+   "units": "84"
+  },
+  "A0065": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "63 BAILEY ST, DORCHESTER, MA, 02124",
+   "year_built": null,
+   "units": null
+  },
+  "A0066": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "1318 N ORANGE DR, LOS ANGELES, CA, 90028",
+   "year_built": "1988",
+   "units": "36"
+  },
+  "A0067": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "1335 N VISTA ST, LOS ANGELES, CA, 90046",
+   "year_built": "1954",
+   "units": "8"
+  },
+  "A0068": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "42 CLEARWAY ST, BOSTON, MA, 02115",
+   "year_built": "1920",
+   "units": null
+  },
+  "A0069": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "2277 UNION ST, SAN FRANCISCO, CA, 94123",
+   "year_built": "1900",
+   "units": "7"
+  },
+  "A0070": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "43 FAYETTE ST, CAMBRIDGE, MA, 02139",
+   "year_built": "1910",
+   "units": "7"
+  },
+  "A0071": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "16 VANDINE ST, CAMBRIDGE, MA, 02141",
+   "year_built": "1900",
+   "units": "5"
+  },
+  "A0072": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1251 10TH AVE, SAN FRANCISCO, CA, 94122",
+   "year_built": "1973",
+   "units": "6"
+  },
+  "A0073": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "37 INMAN ST, CAMBRIDGE, MA, 02139",
+   "year_built": "1900",
+   "units": "6"
+  },
+  "A0074": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "717 S BERENDO ST, LOS ANGELES, CA, 90005",
+   "year_built": "1963",
+   "units": "34"
+  },
+  "A0075": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "27 EVERETT ST, CAMBRIDGE, MA, 02138",
+   "year_built": "1880",
+   "units": "10"
+  },
+  "A0076": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "304 E KINNEY ST, NEWARK, NJ, 07105",
+   "year_built": null,
+   "units": null
+  },
+  "A0077": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "91 BROOKLINE ST, CAMBRIDGE, MA, 02139",
+   "year_built": "1902",
+   "units": "6"
+  },
+  "A0078": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "115 BAYVIEW AVE, JERSEY CITY, NJ, 07305",
+   "year_built": null,
+   "units": null
+  },
+  "A0079": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "2361 PORTLAND ST, LOS ANGELES, CA, 90007",
+   "year_built": "1912",
+   "units": "9"
+  },
+  "A0080": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "690 S CATALINA ST, LOS ANGELES, CA, 90005",
+   "year_built": "2002",
+   "units": "90"
+  },
+  "A0081": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "145 TAYLOR ST, SAN FRANCISCO, CA, 94102",
+   "year_built": "2005",
+   "units": "69"
+  },
+  "A0082": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "63 INMAN ST, CAMBRIDGE, MA, 02139",
+   "year_built": "1880",
+   "units": "16"
+  },
+  "A0083": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "38 KENILWORTH ST, ROXBURY, MA, 02119",
+   "year_built": "1890",
+   "units": null
+  },
+  "A0084": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1725 CHESTNUT ST, SAN FRANCISCO, CA, 94123",
+   "year_built": "1908",
+   "units": "5"
+  },
+  "A0085": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1101 CHURCH ST, SAN FRANCISCO, CA, 94114",
+   "year_built": "1926",
+   "units": "6"
+  },
+  "A0086": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "67 PLYMOUTH ST, CAMBRIDGE, MA, 02141",
+   "year_built": "1837",
+   "units": "5"
+  },
+  "A0087": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "323 BLOOMFIELD ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0088": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "201 CLEMENT ST, SAN FRANCISCO, CA, 94118",
+   "year_built": "1908",
+   "units": "9"
+  },
+  "A0089": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "935 PARK AVE, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0090": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "30 JACKSON ST, NEWARK, NJ, 07105",
+   "year_built": null,
+   "units": null
+  },
+  "A0091": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "2229 DWIGHT WAY, BERKELEY, CA, 94704",
+   "year_built": null,
+   "units": null
+  },
+  "A0092": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "2514 PIEDMONT AVE, BERKELEY, CA, 94704",
+   "year_built": null,
+   "units": null
+  },
+  "A0093": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "90 BICKFORD ST, JAMAICA PLAIN, MA, 02130",
+   "year_built": "2004",
+   "units": null
+  },
+  "A0094": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "1371 27TH ST, SAN DIEGO, CA, 92154",
+   "year_built": null,
+   "units": "88"
+  },
+  "A0095": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "23 ELM ST, CAMBRIDGE, MA, 02139",
+   "year_built": "1900",
+   "units": "6"
+  },
+  "A0096": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "81 WESTLAND AVE, BOSTON, MA, 02115",
+   "year_built": "1910",
+   "units": null
+  },
+  "A0097": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1560 MASON ST, SAN FRANCISCO, CA, 94133",
+   "year_built": "1907",
+   "units": "8"
+  },
+  "A0098": {
+   "status": "unknown",
+   "reason": "geocode_no_match",
+   "state": "MA",
+   "county": null,
+   "place": null,
+   "stack": null,
+   "matched_address": null,
+   "year_built": null,
+   "units": null
+  },
+  "A0099": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "822 WASHINGTON ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0100": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "4732 BANCROFT ST, SAN DIEGO, CA, 92116",
+   "year_built": null,
+   "units": "7"
+  },
+  "A0101": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "319 FAIRMOUNT AVE, JERSEY CITY, NJ, 07306",
+   "year_built": null,
+   "units": null
+  },
+  "A0102": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "124 BLOOMFIELD ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0103": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "2161 ALLSTON WAY, BERKELEY, CA, 94704",
+   "year_built": null,
+   "units": null
+  },
+  "A0104": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "409 N 5TH ST, NEWARK, NJ, 07107",
+   "year_built": null,
+   "units": null
+  },
+  "A0105": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "140 PORTOLA DR, SAN FRANCISCO, CA, 94131",
+   "year_built": "2019",
+   "units": "7"
+  },
+  "A0106": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "250 FREMONT ST, SAN FRANCISCO, CA, 94105",
+   "year_built": null,
+   "units": "60"
+  },
+  "A0107": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "10635 SHERMAN GROVE AVE, SUNLAND, CA, 91040",
+   "year_built": "1978",
+   "units": "20"
+  },
+  "A0108": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "13 JEFFERSON AVE, JERSEY CITY, NJ, 07306",
+   "year_built": null,
+   "units": null
+  },
+  "A0109": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "2922 OTIS ST, BERKELEY, CA, 94703",
+   "year_built": null,
+   "units": null
+  },
+  "A0110": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "132 2ND AVE, NEWARK, NJ, 07104",
+   "year_built": null,
+   "units": null
+  },
+  "A0111": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "10075 TUJUNGA CANYON BLVD, TUJUNGA, CA, 91042",
+   "year_built": "1984",
+   "units": "40"
+  },
+  "A0112": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "448 BRODERICK ST, SAN FRANCISCO, CA, 94117",
+   "year_built": "1905",
+   "units": "9"
+  },
+  "A0113": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "3151 ETON AVE, BERKELEY, CA, 94705",
+   "year_built": null,
+   "units": null
+  },
+  "A0114": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "3743 INDIA ST, SAN DIEGO, CA, 92103",
+   "year_built": null,
+   "units": "6"
+  },
+  "A0115": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "397 5TH AVE, SAN FRANCISCO, CA, 94118",
+   "year_built": "1900",
+   "units": "6"
+  },
+  "A0116": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "36 PROSPECT ST, JERSEY CITY, NJ, 07307",
+   "year_built": "1923",
+   "units": null
+  },
+  "A0117": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "1733 N CHEROKEE AVE, LOS ANGELES, CA, 90028",
+   "year_built": "1924",
+   "units": "40"
+  },
+  "A0118": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "34 KINGBIRD RD, DORCHESTER, MA, 02124",
+   "year_built": "2009",
+   "units": null
+  },
+  "A0119": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "607 ADAMS ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0120": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "139 ELM ST, NEWARK, NJ, 07105",
+   "year_built": null,
+   "units": null
+  },
+  "A0121": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "4079 FRONT ST, SAN DIEGO, CA, 92103",
+   "year_built": null,
+   "units": "22"
+  },
+  "A0122": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "4812 S BROADWAY, LOS ANGELES, CA, 90037",
+   "year_built": "1909",
+   "units": "8"
+  },
+  "A0123": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "123 CONDOR ST, EAST BOSTON, MA, 02128",
+   "year_built": "2013",
+   "units": null
+  },
+  "A0124": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "35 BROOKLINE ST, CAMBRIDGE, MA, 02139",
+   "year_built": "1929",
+   "units": "16"
+  },
+  "A0125": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "227 GRAND ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0126": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1350 POTRERO AVE, SAN FRANCISCO, CA, 94110",
+   "year_built": "1927",
+   "units": "8"
+  },
+  "A0127": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "10029 N SEPULVEDA BLVD, MISSION HILLS, CA, 91345",
+   "year_built": "1964",
+   "units": "5"
+  },
+  "A0128": {
+   "status": "unknown",
+   "reason": "geocode_no_match",
+   "state": "MA",
+   "county": null,
+   "place": null,
+   "stack": null,
+   "matched_address": null,
+   "year_built": null,
+   "units": null
+  },
+  "A0129": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "532 MULBERRY ST, NEWARK, NJ, 07114",
+   "year_built": null,
+   "units": null
+  },
+  "A0130": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "554 MARKET ST, NEWARK, NJ, 07105",
+   "year_built": null,
+   "units": null
+  },
+  "A0131": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "43 POPLAR ST, JERSEY CITY, NJ, 07307",
+   "year_built": "1900",
+   "units": null
+  },
+  "A0132": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "587 N 6TH ST, NEWARK, NJ, 07107",
+   "year_built": null,
+   "units": null
+  },
+  "A0133": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "8819 LANKERSHIM BLVD, SUN VALLEY, CA, 91352",
+   "year_built": "1956",
+   "units": "6"
+  },
+  "A0134": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "101 NORFOLK ST, DORCHESTER, MA, 02124",
+   "year_built": "1899",
+   "units": null
+  },
+  "A0135": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "843 CLAY ST, SAN FRANCISCO, CA, 94108",
+   "year_built": "1908",
+   "units": "29"
+  },
+  "A0136": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "920 HUDSON ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0137": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "71 NORFOLK ST, NEWARK, NJ, 07103",
+   "year_built": null,
+   "units": null
+  },
+  "A0138": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "1033 E 51ST ST, LOS ANGELES, CA, 90011",
+   "year_built": "1959",
+   "units": "5"
+  },
+  "A0139": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "54 STUYVESANT AVE, JERSEY CITY, NJ, 07306",
+   "year_built": "1910",
+   "units": null
+  },
+  "A0140": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "459 BEACON ST, BOSTON, MA, 02115",
+   "year_built": "1910",
+   "units": null
+  },
+  "A0141": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "2601 43RD AVE, SAN FRANCISCO, CA, 94116",
+   "year_built": "1974",
+   "units": "8"
+  },
+  "A0142": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "4615 AVALON BLVD, LOS ANGELES, CA, 90011",
+   "year_built": "1957",
+   "units": "8"
+  },
+  "A0143": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "75 ELM HILL AVE, DORCHESTER, MA, 02121",
+   "year_built": null,
+   "units": null
+  },
+  "A0144": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "114 AMORY ST, ROXBURY, MA, 02119",
+   "year_built": "1910",
+   "units": null
+  },
+  "A0145": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "4515 FELTON ST, SAN DIEGO, CA, 92116",
+   "year_built": null,
+   "units": "8"
+  },
+  "A0146": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "93-95 HAWKINS ST, NEWARK, NJ, 07105",
+   "year_built": null,
+   "units": null
+  },
+  "A0147": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "2850 GOLDEN GATE AVE, SAN FRANCISCO, CA, 94118",
+   "year_built": "1900",
+   "units": "5"
+  },
+  "A0148": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "166 5TH ST, NEWARK, NJ, 07107",
+   "year_built": null,
+   "units": null
+  },
+  "A0149": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "25 EVERETT ST, EAST BOSTON, MA, 02128",
+   "year_built": "2023",
+   "units": null
+  },
+  "A0150": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "3784 BROADWAY, SAN DIEGO, CA, 92102",
+   "year_built": null,
+   "units": "9"
+  },
+  "A0151": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "16 QUEENSBERRY ST, BOSTON, MA, 02215",
+   "year_built": "1899",
+   "units": null
+  },
+  "A0152": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "1669 SUNSET CLIFFS BLVD, SAN DIEGO, CA, 92107",
+   "year_built": null,
+   "units": "12"
+  },
+  "A0153": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "366 E 55TH ST, LOS ANGELES, CA, 90011",
+   "year_built": "1924",
+   "units": "9"
+  },
+  "A0154": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "4568 IDAHO ST, SAN DIEGO, CA, 92116",
+   "year_built": null,
+   "units": "8"
+  },
+  "A0155": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "473 HARVARD ST, DORCHESTER, MA, 02124",
+   "year_built": null,
+   "units": null
+  },
+  "A0156": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "290 GREEN ST, SAN FRANCISCO, CA, 94111",
+   "year_built": "1927",
+   "units": "9"
+  },
+  "A0157": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "2701 RIDGE RD, BERKELEY, CA, 94709",
+   "year_built": null,
+   "units": null
+  },
+  "A0158": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "2522 HILGARD AVE, BERKELEY, CA, 94709",
+   "year_built": null,
+   "units": null
+  },
+  "A0159": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "104 SUNSET AVE, NEWARK, NJ, 07106",
+   "year_built": null,
+   "units": null
+  },
+  "A0160": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "86 CHARLES ST, JERSEY CITY, NJ, 07307",
+   "year_built": "1918",
+   "units": null
+  },
+  "A0161": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "317 UNION ST, JERSEY CITY, NJ, 07304",
+   "year_built": "1930",
+   "units": null
+  },
+  "A0162": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "1640 N POINSETTIA PL, LOS ANGELES, CA, 90046",
+   "year_built": "1987",
+   "units": "24"
+  },
+  "A0163": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "235 2ND ST, JERSEY CITY, NJ, 07302",
+   "year_built": "1870",
+   "units": null
+  },
+  "A0164": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "725 14TH ST, SAN FRANCISCO, CA, 94114",
+   "year_built": "1911",
+   "units": "6"
+  },
+  "A0165": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "734 JAMAICA CT, SAN DIEGO, CA, 92109",
+   "year_built": null,
+   "units": "8"
+  },
+  "A0166": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "1 POTTER PARK, CAMBRIDGE, MA, 02138",
+   "year_built": "1900",
+   "units": "5"
+  },
+  "A0167": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "4616 FLORIDA ST, SAN DIEGO, CA, 92116",
+   "year_built": null,
+   "units": "20"
+  },
+  "A0168": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "600 JACKSON ST, HOBOKEN, NJ, 07030",
+   "year_built": "2007",
+   "units": null
+  },
+  "A0169": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "115 KILSYTH RD, BRIGHTON, MA, 02135",
+   "year_built": "1920",
+   "units": null
+  },
+  "A0170": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "8917 CEDROS AVE, PANORAMA CITY, CA, 91402",
+   "year_built": "1990",
+   "units": "32"
+  },
+  "A0171": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "127 OGDEN AVE, JERSEY CITY, NJ, 07307",
+   "year_built": "1910",
+   "units": null
+  },
+  "A0172": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "8504 WILLIS AVE, PANORAMA CITY, CA, 91402",
+   "year_built": "1960",
+   "units": "33"
+  },
+  "A0173": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "13180 FOOTHILL BLVD, SYLMAR, CA, 91342",
+   "year_built": "1937",
+   "units": "9"
+  },
+  "A0174": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "84 HAMPSHIRE ST, CAMBRIDGE, MA, 02139",
+   "year_built": "1900",
+   "units": "19"
+  },
+  "A0175": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "10 DOVER ST, CAMBRIDGE, MA, 02140",
+   "year_built": "1922",
+   "units": "6"
+  },
+  "A0176": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "15 CHESTER ST, CAMBRIDGE, MA, 02140",
+   "year_built": "1965",
+   "units": "29"
+  },
+  "A0177": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "166 HIGHLAND AVE, JERSEY CITY, NJ, 07306",
+   "year_built": "1912",
+   "units": null
+  },
+  "A0178": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "5308 RIVERTON AVE, NORTH HOLLYWOOD, CA, 91601",
+   "year_built": "1961",
+   "units": "7"
+  },
+  "A0179": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "7006 LANEWOOD AVE, LOS ANGELES, CA, 90028",
+   "year_built": "1958",
+   "units": "18"
+  },
+  "A0180": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "845 S KINGSLEY DR, LOS ANGELES, CA, 90005",
+   "year_built": "1990",
+   "units": "33"
+  },
+  "A0181": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "931 GARDEN ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0182": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "923 CLINTON ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0183": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "2427 HILGARD AVE, BERKELEY, CA, 94709",
+   "year_built": null,
+   "units": null
+  },
+  "A0184": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "156 W 32ND ST, LOS ANGELES, CA, 90007",
+   "year_built": "1907",
+   "units": "16"
+  },
+  "A0185": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "154 TERHUNE AVE, JERSEY CITY, NJ, 07305",
+   "year_built": "1922",
+   "units": null
+  },
+  "A0186": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "107 BEACON AVE, JERSEY CITY, NJ, 07306",
+   "year_built": null,
+   "units": null
+  },
+  "A0187": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "146 CARLTON AVE, JERSEY CITY, NJ, 07306",
+   "year_built": "1925",
+   "units": null
+  },
+  "A0188": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "2819 MCGEE AVE, BERKELEY, CA, 94703",
+   "year_built": null,
+   "units": null
+  },
+  "A0189": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "1811 CARLETON ST, BERKELEY, CA, 94703",
+   "year_built": null,
+   "units": null
+  },
+  "A0190": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "283 ADAMS ST, NEWARK, NJ, 07105",
+   "year_built": null,
+   "units": null
+  },
+  "A0191": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "60 KIRKLAND ST, CAMBRIDGE, MA, 02138",
+   "year_built": "1891",
+   "units": "6"
+  },
+  "A0192": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "780 POST ST, SAN FRANCISCO, CA, 94109",
+   "year_built": "1916",
+   "units": "36"
+  },
+  "A0193": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "1626 BONITA AVE, BERKELEY, CA, 94709",
+   "year_built": null,
+   "units": null
+  },
+  "A0194": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "72 BURBANK ST, BOSTON, MA, 02115",
+   "year_built": "2022",
+   "units": null
+  },
+  "A0195": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "1848 COMMONWEALTH AVE, BRIGHTON, MA, 02135",
+   "year_built": "1910",
+   "units": null
+  },
+  "A0196": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "16915 BLACKHAWK ST, GRANADA HILLS, CA, 91344",
+   "year_built": "1962",
+   "units": "30"
+  },
+  "A0197": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "1611 62ND ST, BERKELEY, CA, 94703",
+   "year_built": null,
+   "units": null
+  },
+  "A0198": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "194 HAVRE ST, EAST BOSTON, MA, 02128",
+   "year_built": "2019",
+   "units": null
+  },
+  "A0199": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "42 BAY STATE RD, CAMBRIDGE, MA, 02138",
+   "year_built": "2012",
+   "units": "5"
+  },
+  "A0200": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "1853 N HIGHLAND AVE, LOS ANGELES, CA, 90028",
+   "year_built": null,
+   "units": "5"
+  },
+  "A0201": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "2737 BENVENUE AVE, BERKELEY, CA, 94705",
+   "year_built": null,
+   "units": null
+  },
+  "A0202": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1446 JACKSON ST, SAN FRANCISCO, CA, 94109",
+   "year_built": "1907",
+   "units": "6"
+  },
+  "A0203": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "2930 WASHINGTON ST, ROXBURY, MA, 02119",
+   "year_built": "2002",
+   "units": null
+  },
+  "A0204": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "208 6TH AVE W, NEWARK, NJ, 07107",
+   "year_built": null,
+   "units": null
+  },
+  "A0205": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "2425 GRANT ST, BERKELEY, CA, 94703",
+   "year_built": null,
+   "units": null
+  },
+  "A0206": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "401 43RD AVE, SAN FRANCISCO, CA, 94121",
+   "year_built": "1929",
+   "units": "21"
+  },
+  "A0207": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "705 W 23RD ST, LOS ANGELES, CA, 90007",
+   "year_built": "1901",
+   "units": "10"
+  },
+  "A0208": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "126 ADAMS ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0209": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "19 TROWBRIDGE ST, CAMBRIDGE, MA, 02138",
+   "year_built": "1910",
+   "units": "6"
+  },
+  "A0210": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "1432 N CURSON AVE, LOS ANGELES, CA, 90046",
+   "year_built": "2016",
+   "units": "9"
+  },
+  "A0211": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "499 BEACON ST, BOSTON, MA, 02215",
+   "year_built": "1899",
+   "units": null
+  },
+  "A0212": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1311 S VAN NESS AVE, SAN FRANCISCO, CA, 94110",
+   "year_built": "1900",
+   "units": "5"
+  },
+  "A0213": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "11649 ACAMA ST, STUDIO CITY, CA, 91604",
+   "year_built": "1986",
+   "units": "7"
+  },
+  "A0214": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "358 HARVARD ST, CAMBRIDGE, MA, 02138",
+   "year_built": "1900",
+   "units": "6"
+  },
+  "A0215": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "2295 CALIFORNIA ST, SAN FRANCISCO, CA, 94115",
+   "year_built": "1924",
+   "units": "21"
+  },
+  "A0216": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "2309 HASTE ST, BERKELEY, CA, 94704",
+   "year_built": null,
+   "units": null
+  },
+  "A0217": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "172 MAVERICK ST, EAST BOSTON, MA, 02128",
+   "year_built": "2011",
+   "units": null
+  },
+  "A0218": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "15 RICHDALE AVE, CAMBRIDGE, MA, 02140",
+   "year_built": "1910",
+   "units": "46"
+  },
+  "A0219": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "3735 32ND ST, SAN DIEGO, CA, 92104",
+   "year_built": null,
+   "units": "8"
+  },
+  "A0220": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "23 FAULKNER ST, DORCHESTER, MA, 02122",
+   "year_built": "1900",
+   "units": null
+  },
+  "A0221": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "191 PARK DR, BOSTON, MA, 02215",
+   "year_built": "1910",
+   "units": null
+  },
+  "A0222": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1901 VALLEJO ST, SAN FRANCISCO, CA, 94123",
+   "year_built": "1960",
+   "units": "8"
+  },
+  "A0223": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "504 COURT ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0224": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "8727 TOBIAS AVE, PANORAMA CITY, CA, 91402",
+   "year_built": "1960",
+   "units": "13"
+  },
+  "A0225": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1627 JACKSON ST, SAN FRANCISCO, CA, 94109",
+   "year_built": "1913",
+   "units": "9"
+  },
+  "A0226": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "663 MASSACHUSETTS AVE, BOSTON, MA, 02118",
+   "year_built": "1905",
+   "units": null
+  },
+  "A0227": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "1401 HUDSON ST, HOBOKEN, NJ, 07030",
+   "year_built": "2010",
+   "units": "2"
+  },
+  "A0228": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "225 COLLINGWOOD ST, SAN FRANCISCO, CA, 94114",
+   "year_built": "1907",
+   "units": "5"
+  },
+  "A0229": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "5164 3RD ST, SAN FRANCISCO, CA, 94124",
+   "year_built": "1914",
+   "units": "6"
+  },
+  "A0230": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "85 HANCOCK ST, CAMBRIDGE, MA, 02139",
+   "year_built": "1996",
+   "units": "18"
+  },
+  "A0231": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "521 ARGUELLO BLVD, SAN FRANCISCO, CA, 94118",
+   "year_built": "1971",
+   "units": "6"
+  },
+  "A0232": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "189 3RD ST, CAMBRIDGE, MA, 02141",
+   "year_built": "1900",
+   "units": "6"
+  },
+  "A0233": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "30 MEDFIELD ST, BOSTON, MA, 02215",
+   "year_built": "1920",
+   "units": null
+  },
+  "A0234": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "2212 BLAKE ST, BERKELEY, CA, 94704",
+   "year_built": null,
+   "units": null
+  },
+  "A0235": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "6736 SELMA AVE, LOS ANGELES, CA, 90028",
+   "year_built": null,
+   "units": null
+  },
+  "A0236": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1110 JACKSON ST, SAN FRANCISCO, CA, 94133",
+   "year_built": "1961",
+   "units": "9"
+  },
+  "A0237": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "36 VALLEY ST, SAN FRANCISCO, CA, 94110",
+   "year_built": "1927",
+   "units": "12"
+  },
+  "A0238": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "15256 ACRE ST, NORTH HILLS, CA, 91343",
+   "year_built": "1957",
+   "units": "6"
+  },
+  "A0239": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "1476 UNIVERSITY AVE, BERKELEY, CA, 94702",
+   "year_built": null,
+   "units": null
+  },
+  "A0240": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "4135 38TH ST, SAN DIEGO, CA, 92105",
+   "year_built": null,
+   "units": "7"
+  },
+  "A0241": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "913 GARDEN ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0242": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "87 SIERRA RD, HYDE PARK, MA, 02136",
+   "year_built": "1960",
+   "units": null
+  },
+  "A0243": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "664 OCEAN AVE, JERSEY CITY, NJ, 07305",
+   "year_built": "1910",
+   "units": null
+  },
+  "A0244": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "1126 HUDSON ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0245": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "30 W HOWELL ST, DORCHESTER, MA, 02125",
+   "year_built": "2018",
+   "units": null
+  },
+  "A0246": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "4386 COPELAND AVE, SAN DIEGO, CA, 92105",
+   "year_built": null,
+   "units": "8"
+  },
+  "A0247": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "4957 CAPE MAY AVE, SAN DIEGO, CA, 92107",
+   "year_built": null,
+   "units": "10"
+  },
+  "A0248": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "941 S KENMORE AVE, LOS ANGELES, CA, 90006",
+   "year_built": "1923",
+   "units": "24"
+  },
+  "A0249": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "500 HAWTHORNE AVE, NEWARK, NJ, 07112",
+   "year_built": null,
+   "units": null
+  },
+  "A0250": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "211 BALDWIN AVE, JERSEY CITY, NJ, 07306",
+   "year_built": null,
+   "units": null
+  },
+  "A0251": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "4663 33RD ST, SAN DIEGO, CA, 92116",
+   "year_built": null,
+   "units": "8"
+  },
+  "A0252": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "15514 CHASE ST, NORTH HILLS, CA, 91343",
+   "year_built": "1984",
+   "units": "6"
+  },
+  "A0253": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "2250 N POINT ST, SAN FRANCISCO, CA, 94123",
+   "year_built": "1928",
+   "units": "7"
+  },
+  "A0254": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "805 WASHINGTON ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0255": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "851 E 51ST ST, LOS ANGELES, CA, 90011",
+   "year_built": "1923",
+   "units": "8"
+  },
+  "A0256": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "327 JACKSON ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0257": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "5 COMMER CT, SAN FRANCISCO, CA, 94124",
+   "year_built": null,
+   "units": "6"
+  },
+  "A0258": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "471 COLUMBIA RD, DORCHESTER, MA, 02125",
+   "year_built": "1930",
+   "units": null
+  },
+  "A0259": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "872 N POINT ST, SAN FRANCISCO, CA, 94109",
+   "year_built": "1900",
+   "units": "5"
+  },
+  "A0260": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "2479 LE CONTE AVE, BERKELEY, CA, 94709",
+   "year_built": null,
+   "units": null
+  },
+  "A0261": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "525 ADAMS ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0262": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "2924 JUNIPER ST, SAN DIEGO, CA, 92104",
+   "year_built": null,
+   "units": "18"
+  },
+  "A0263": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "1636 MARTIN LUTHER KING JR WAY, BERKELEY, CA, 94709",
+   "year_built": null,
+   "units": null
+  },
+  "A0264": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "589 ELIZABETH AVE, NEWARK, NJ, 07112",
+   "year_built": null,
+   "units": null
+  },
+  "A0265": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "102 BALDWIN AVE, JERSEY CITY, NJ, 07306",
+   "year_built": "1912",
+   "units": null
+  },
+  "A0266": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "52 BRIGHT ST, JERSEY CITY, NJ, 07302",
+   "year_built": null,
+   "units": null
+  },
+  "A0267": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "1314 N VAN NESS AVE, LOS ANGELES, CA, 90038",
+   "year_built": null,
+   "units": null
+  },
+  "A0268": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1848 FRANKLIN ST, SAN FRANCISCO, CA, 94109",
+   "year_built": "1914",
+   "units": "7"
+  },
+  "A0269": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "1015 CLINTON ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0270": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "29 CONCORD ST, JERSEY CITY, NJ, 07306",
+   "year_built": "1890",
+   "units": null
+  },
+  "A0271": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "4115 LINCOLN WAY, SAN FRANCISCO, CA, 94122",
+   "year_built": "1928",
+   "units": "13"
+  },
+  "A0272": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "5 EVERETT ST, CAMBRIDGE, MA, 02138",
+   "year_built": "1890",
+   "units": "6"
+  },
+  "A0273": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "3911 CENTRE ST, SAN DIEGO, CA, 92103",
+   "year_built": null,
+   "units": "10"
+  },
+  "A0274": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "7072 EASTMAN ST, SAN DIEGO, CA, 92111",
+   "year_built": null,
+   "units": "6"
+  },
+  "A0275": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "4091 MORRELL ST, SAN DIEGO, CA, 92109",
+   "year_built": null,
+   "units": "7"
+  },
+  "A0276": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "4361 ILLINOIS ST, SAN DIEGO, CA, 92104",
+   "year_built": null,
+   "units": "6"
+  },
+  "A0277": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "2736 GRANT ST, BERKELEY, CA, 94703",
+   "year_built": null,
+   "units": null
+  },
+  "A0278": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1800 FRANKLIN ST, SAN FRANCISCO, CA, 94109",
+   "year_built": "1919",
+   "units": "17"
+  },
+  "A0279": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "90 KENSINGTON AVE, JERSEY CITY, NJ, 07304",
+   "year_built": "1925",
+   "units": null
+  },
+  "A0280": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1215 11TH AVE, SAN FRANCISCO, CA, 94122",
+   "year_built": "1971",
+   "units": "6"
+  },
+  "A0281": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "1725 N GOWER ST, LOS ANGELES, CA, 90028",
+   "year_built": "1946",
+   "units": "20"
+  },
+  "A0282": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "2240 10TH ST, BERKELEY, CA, 94710",
+   "year_built": null,
+   "units": null
+  },
+  "A0283": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "90 BARTLETT ST, SAN FRANCISCO, CA, 94110",
+   "year_built": "1986",
+   "units": "51"
+  },
+  "A0284": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "345 COLUMBIA ST, CAMBRIDGE, MA, 02141",
+   "year_built": "1920",
+   "units": "9"
+  },
+  "A0285": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "5255 HARMONY AVE, NORTH HOLLYWOOD, CA, 91601",
+   "year_built": null,
+   "units": "8"
+  },
+  "A0286": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "27 IRVING TER, CAMBRIDGE, MA, 02138",
+   "year_built": "1925",
+   "units": "29"
+  },
+  "A0287": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "404 GRAND ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0288": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "75 CLENDENNY AVE, JERSEY CITY, NJ, 07304",
+   "year_built": null,
+   "units": null
+  },
+  "A0289": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "1741 MARTIN LUTHER KING JR WAY, BERKELEY, CA, 94709",
+   "year_built": null,
+   "units": null
+  },
+  "A0290": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "21 FOREST ST, CAMBRIDGE, MA, 02140",
+   "year_built": "1880",
+   "units": "10"
+  },
+  "A0291": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "165 CAMBRIDGEPARK DR, CAMBRIDGE, MA, 02140",
+   "year_built": "2014",
+   "units": "244"
+  },
+  "A0292": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "24 BERKSHIRE ST, CAMBRIDGE, MA, 02141",
+   "year_built": "2019",
+   "units": "6"
+  },
+  "A0293": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1314 NATOMA ST, SAN FRANCISCO, CA, 94103",
+   "year_built": "1907",
+   "units": "6"
+  },
+  "A0294": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "178 RICHDALE AVE, CAMBRIDGE, MA, 02140",
+   "year_built": "1920",
+   "units": "6"
+  },
+  "A0295": {
+   "status": "unknown",
+   "reason": "geocode_no_match",
+   "state": "MA",
+   "county": null,
+   "place": null,
+   "stack": null,
+   "matched_address": null,
+   "year_built": "2019",
+   "units": null
+  },
+  "A0296": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "85 MCWHORTER ST, NEWARK, NJ, 07105",
+   "year_built": null,
+   "units": null
+  },
+  "A0297": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "213 SUMMER AVE, NEWARK, NJ, 07104",
+   "year_built": null,
+   "units": null
+  },
+  "A0298": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "361 WASHINGTON ST, CAMBRIDGE, MA, 02139",
+   "year_built": "1900",
+   "units": "6"
+  },
+  "A0299": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "1037 WASHINGTON ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0300": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "36 TROWBRIDGE ST, CAMBRIDGE, MA, 02138",
+   "year_built": "1920",
+   "units": "5"
+  },
+  "A0301": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "165 HAMPSHIRE ST, CAMBRIDGE, MA, 02139",
+   "year_built": "1905",
+   "units": "6"
+  },
+  "A0302": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "6 CLINTON ST, CAMBRIDGE, MA, 02139",
+   "year_built": "1900",
+   "units": "8"
+  },
+  "A0303": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "188 E 35TH ST, LOS ANGELES, CA, 90011",
+   "year_built": "1909",
+   "units": "10"
+  },
+  "A0304": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "4541 HAMILTON ST, SAN DIEGO, CA, 92116",
+   "year_built": null,
+   "units": "7"
+  },
+  "A0305": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "638 45TH AVE, SAN FRANCISCO, CA, 94121",
+   "year_built": "1908",
+   "units": "5"
+  },
+  "A0306": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "335A HARVARD ST, CAMBRIDGE, MA, 02139",
+   "year_built": "1920",
+   "units": "17"
+  },
+  "A0307": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "296 VAN BUREN ST, NEWARK, NJ, 07105",
+   "year_built": null,
+   "units": null
+  },
+  "A0308": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "1032 HUDSON ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0309": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "1706 N STANLEY AVE, LOS ANGELES, CA, 90046",
+   "year_built": "1951",
+   "units": "6"
+  },
+  "A0310": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "55 ASHFORD ST, ALLSTON, MA, 02134",
+   "year_built": "1900",
+   "units": null
+  },
+  "A0311": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "38 SOMME ST, NEWARK, NJ, 07105",
+   "year_built": null,
+   "units": null
+  },
+  "A0312": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "25 ORLANDO ST, MATTAPAN, MA, 02126",
+   "year_built": "1965",
+   "units": null
+  },
+  "A0313": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "319 W RUNYON ST, NEWARK, NJ, 07108",
+   "year_built": null,
+   "units": null
+  },
+  "A0314": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "6640 LELAND WAY, LOS ANGELES, CA, 90028",
+   "year_built": "1919",
+   "units": "7"
+  },
+  "A0315": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "5233 CARTWRIGHT AVE, NORTH HOLLYWOOD, CA, 91601",
+   "year_built": "1990",
+   "units": "8"
+  },
+  "A0316": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "3978 FLORIDA ST, SAN DIEGO, CA, 92104",
+   "year_built": null,
+   "units": "8"
+  },
+  "A0317": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "2233 CHANNING WAY, BERKELEY, CA, 94704",
+   "year_built": null,
+   "units": null
+  },
+  "A0318": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "2041 FRANCISCO ST, BERKELEY, CA, 94709",
+   "year_built": null,
+   "units": null
+  },
+  "A0319": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "2315 GRANT ST, BERKELEY, CA, 94703",
+   "year_built": null,
+   "units": null
+  },
+  "A0320": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "408 MADISON ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0321": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "200 NUNDA AVE, JERSEY CITY, NJ, 07306",
+   "year_built": null,
+   "units": null
+  },
+  "A0322": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "227 CYPRESS DR, SAN YSIDRO, CA, 92173",
+   "year_built": null,
+   "units": "31"
+  },
+  "A0323": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "4627 COMPTON AVE, LOS ANGELES, CA, 90011",
+   "year_built": "1907",
+   "units": "5"
+  },
+  "A0324": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "2003 FRANKLIN ST, SAN FRANCISCO, CA, 94109",
+   "year_built": "1885",
+   "units": "6"
+  },
+  "A0325": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "38A GAUTIER AVE, JERSEY CITY, NJ, 07306",
+   "year_built": "1925",
+   "units": null
+  },
+  "A0326": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "46 JEFFERSON ST, NEWARK, NJ, 07105",
+   "year_built": null,
+   "units": null
+  },
+  "A0327": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "1605 N MARTEL AVE, LOS ANGELES, CA, 90046",
+   "year_built": "1954",
+   "units": "36"
+  },
+  "A0328": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1845 8TH AVE, SAN FRANCISCO, CA, 94122",
+   "year_built": "1960",
+   "units": "6"
+  },
+  "A0329": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "51 MADISON ST, NEWARK, NJ, 07105",
+   "year_built": null,
+   "units": null
+  },
+  "A0330": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "5229 WILLOWCREST AVE, NORTH HOLLYWOOD, CA, 91601",
+   "year_built": "2018",
+   "units": "24"
+  },
+  "A0331": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "344 IRVINE TURNER BLVD, NEWARK, NJ, 07108",
+   "year_built": "1910",
+   "units": null
+  },
+  "A0332": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "26 SONOMA ST, DORCHESTER, MA, 02121",
+   "year_built": null,
+   "units": null
+  },
+  "A0333": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "3752 33RD ST, SAN DIEGO, CA, 92104",
+   "year_built": null,
+   "units": "8"
+  },
+  "A0334": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "2025 FRANCISCO ST, BERKELEY, CA, 94709",
+   "year_built": null,
+   "units": null
+  },
+  "A0335": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "125 BEMIS ST, SAN FRANCISCO, CA, 94131",
+   "year_built": "1968",
+   "units": "10"
+  },
+  "A0336": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "151 N FIRST ST, CAMBRIDGE, MA, 02141",
+   "year_built": "2020",
+   "units": "468"
+  },
+  "A0337": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "66 MONROE ST, NEWARK, NJ, 07105",
+   "year_built": null,
+   "units": null
+  },
+  "A0338": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "523 S 17TH ST, NEWARK, NJ, 07103",
+   "year_built": null,
+   "units": null
+  },
+  "A0339": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "124 BERKSHIRE ST, CAMBRIDGE, MA, 02141",
+   "year_built": "1920",
+   "units": "8"
+  },
+  "A0340": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "14735 ROSCOE BLVD, PANORAMA CITY, CA, 91402",
+   "year_built": "1959",
+   "units": "50"
+  },
+  "A0341": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "4225 50TH ST, SAN DIEGO, CA, 92115",
+   "year_built": null,
+   "units": "6"
+  },
+  "A0342": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "49 ROSELAND ST, CAMBRIDGE, MA, 02140",
+   "year_built": "1910",
+   "units": "6"
+  },
+  "A0343": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "410 N 5TH ST, NEWARK, NJ, 07107",
+   "year_built": null,
+   "units": null
+  },
+  "A0344": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "242 GARFIELD AVE, JERSEY CITY, NJ, 07305",
+   "year_built": "1928",
+   "units": null
+  },
+  "A0345": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "153 W VERNON AVE, LOS ANGELES, CA, 90037",
+   "year_built": "1921",
+   "units": "5"
+  },
+  "A0346": {
+   "status": "unknown",
+   "reason": "geocode_no_match",
+   "state": "CA",
+   "county": null,
+   "place": null,
+   "stack": null,
+   "matched_address": null,
+   "year_built": null,
+   "units": "8"
+  },
+  "A0347": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "2142 2ND AVE, SAN DIEGO, CA, 92101",
+   "year_built": null,
+   "units": "9"
+  },
+  "A0348": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "229 CLINTON ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0349": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "2400 DANA ST, BERKELEY, CA, 94704",
+   "year_built": null,
+   "units": null
+  },
+  "A0350": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "1051 W SIDE AVE, JERSEY CITY, NJ, 07306",
+   "year_built": "1900",
+   "units": null
+  },
+  "A0351": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "628 HYDE ST, SAN FRANCISCO, CA, 94109",
+   "year_built": "1907",
+   "units": "7"
+  },
+  "A0352": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "42 MT PROSPECT AVE, NEWARK, NJ, 07104",
+   "year_built": "1900",
+   "units": null
+  },
+  "A0353": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "1044 E JEFFERSON BLVD, LOS ANGELES, CA, 90011",
+   "year_built": null,
+   "units": null
+  },
+  "A0354": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "73 LUBEC ST, EAST BOSTON, MA, 02128",
+   "year_built": "1899",
+   "units": null
+  },
+  "A0355": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "10701 AMESTOY AVE, GRANADA HILLS, CA, 91344",
+   "year_built": "1986",
+   "units": "7"
+  },
+  "A0356": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "16 BRAINERD RD, ALLSTON, MA, 02134",
+   "year_built": "1930",
+   "units": null
+  },
+  "A0357": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "173 7TH ST, SAN FRANCISCO, CA, 94103",
+   "year_built": "1997",
+   "units": "29"
+  },
+  "A0358": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "717 N 6TH ST, NEWARK, NJ, 07107",
+   "year_built": null,
+   "units": null
+  },
+  "A0359": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "925 PARK AVE, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0360": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "140 NEW YORK AVE, JERSEY CITY, NJ, 07307",
+   "year_built": "1924",
+   "units": null
+  },
+  "A0361": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "15 BERKSHIRE ST, CAMBRIDGE, MA, 02141",
+   "year_built": "1915",
+   "units": "6"
+  },
+  "A0362": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "368 RIVERWAY, BOSTON, MA, 02115",
+   "year_built": "1920",
+   "units": null
+  },
+  "A0363": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "2451 SHATTUCK AVE, BERKELEY, CA, 94704",
+   "year_built": null,
+   "units": null
+  },
+  "A0364": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "125 3RD AVE, SAN FRANCISCO, CA, 94118",
+   "year_built": "1964",
+   "units": "6"
+  },
+  "A0365": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "3940 IDAHO ST, SAN DIEGO, CA, 92104",
+   "year_built": null,
+   "units": "12"
+  },
+  "A0366": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "230 EVERETT ST, EAST BOSTON, MA, 02128",
+   "year_built": "2024",
+   "units": null
+  },
+  "A0367": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "219 S 35TH ST, SAN DIEGO, CA, 92113",
+   "year_built": null,
+   "units": "7"
+  },
+  "A0368": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1430 FRANCISCO ST, SAN FRANCISCO, CA, 94123",
+   "year_built": "1926",
+   "units": "12"
+  },
+  "A0369": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "3260 CALIFORNIA ST, BERKELEY, CA, 94703",
+   "year_built": null,
+   "units": null
+  },
+  "A0370": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "2222 TOBERMAN ST, LOS ANGELES, CA, 90007",
+   "year_built": "1924",
+   "units": "6"
+  },
+  "A0371": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "80 BRUEN ST, NEWARK, NJ, 07105",
+   "year_built": null,
+   "units": null
+  },
+  "A0372": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "314 7TH ST, JERSEY CITY, NJ, 07302",
+   "year_built": null,
+   "units": null
+  },
+  "A0373": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "1315 SPRUCE ST, BERKELEY, CA, 94709",
+   "year_built": null,
+   "units": null
+  },
+  "A0374": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "686 S ARDMORE AVE, LOS ANGELES, CA, 90005",
+   "year_built": "1990",
+   "units": "15"
+  },
+  "A0375": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1880 FULTON ST, SAN FRANCISCO, CA, 94117",
+   "year_built": "1921",
+   "units": "9"
+  },
+  "A0376": {
+   "status": "unknown",
+   "reason": "geocode_no_match",
+   "state": "MA",
+   "county": null,
+   "place": null,
+   "stack": null,
+   "matched_address": null,
+   "year_built": null,
+   "units": null
+  },
+  "A0377": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "206 BLOOMFIELD ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0378": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "4053 IDAHO ST, SAN DIEGO, CA, 92104",
+   "year_built": null,
+   "units": "9"
+  },
+  "A0379": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "1336 BRUNNER ST, SAN DIEGO, CA, 92110",
+   "year_built": null,
+   "units": "12"
+  },
+  "A0380": {
+   "status": "unknown",
+   "reason": "geocode_no_match",
+   "state": "MA",
+   "county": null,
+   "place": null,
+   "stack": null,
+   "matched_address": null,
+   "year_built": null,
+   "units": null
+  },
+  "A0381": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "523 MARKET ST, NEWARK, NJ, 07105",
+   "year_built": null,
+   "units": null
+  },
+  "A0382": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "119 DAY ST, SAN FRANCISCO, CA, 94131",
+   "year_built": "1964",
+   "units": "10"
+  },
+  "A0383": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "1908 CALIFORNIA ST, BERKELEY, CA, 94703",
+   "year_built": null,
+   "units": null
+  },
+  "A0384": {
+   "status": "unknown",
+   "reason": "geocode_no_match",
+   "state": "CA",
+   "county": null,
+   "place": null,
+   "stack": null,
+   "matched_address": null,
+   "year_built": "1925",
+   "units": "7"
+  },
+  "A0385": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1059 UNION ST, SAN FRANCISCO, CA, 94133",
+   "year_built": "1986",
+   "units": "16"
+  },
+  "A0386": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "3654 ARIZONA ST, SAN DIEGO, CA, 92104",
+   "year_built": null,
+   "units": "7"
+  },
+  "A0387": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "10303 CMT ALVAREZ, SAN DIEGO, CA, 92126",
+   "year_built": null,
+   "units": "152"
+  },
+  "A0388": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "155 CLERK ST, JERSEY CITY, NJ, 07305",
+   "year_built": null,
+   "units": null
+  },
+  "A0389": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "923 GARDEN ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0390": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "70 DARCY ST, NEWARK, NJ, 07105",
+   "year_built": null,
+   "units": null
+  },
+  "A0391": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "265 22ND ST, SAN DIEGO, CA, 92102",
+   "year_built": null,
+   "units": "9"
+  },
+  "A0392": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "4545 39TH ST, SAN DIEGO, CA, 92116",
+   "year_built": null,
+   "units": "7"
+  },
+  "A0393": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "91 JORDAN AVE, JERSEY CITY, NJ, 07306",
+   "year_built": null,
+   "units": null
+  },
+  "A0394": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "45 RAVINE AVE, JERSEY CITY, NJ, 07307",
+   "year_built": "1912",
+   "units": null
+  },
+  "A0395": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "1632 RUSSELL ST, BERKELEY, CA, 94703",
+   "year_built": null,
+   "units": null
+  },
+  "A0396": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "3244 CLAIREMONT DR, SAN DIEGO, CA, 92117",
+   "year_built": null,
+   "units": "6"
+  },
+  "A0397": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1677 BUSH ST, SAN FRANCISCO, CA, 94109",
+   "year_built": "1900",
+   "units": "21"
+  },
+  "A0398": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "890 GREEN ST, SAN FRANCISCO, CA, 94133",
+   "year_built": "1908",
+   "units": "5"
+  },
+  "A0399": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "227 WILLOW AVE, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0400": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "174 MT PROSPECT AVE, NEWARK, NJ, 07104",
+   "year_built": null,
+   "units": null
+  },
+  "A0401": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "257 14TH ST, SAN FRANCISCO, CA, 94103",
+   "year_built": "1908",
+   "units": "6"
+  },
+  "A0402": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "2914 LARKIN ST, SAN FRANCISCO, CA, 94109",
+   "year_built": "1900",
+   "units": "5"
+  },
+  "A0403": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "45 MYRTLE ST, BOSTON, MA, 02114",
+   "year_built": "1899",
+   "units": null
+  },
+  "A0404": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "240 BOWERS ST, JERSEY CITY, NJ, 07307",
+   "year_built": "1900",
+   "units": null
+  },
+  "A0405": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "10214 FERNGLEN AVE, TUJUNGA, CA, 91042",
+   "year_built": "2008",
+   "units": "6"
+  },
+  "A0406": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "170 W SPRINGFIELD ST, BOSTON, MA, 02118",
+   "year_built": "1899",
+   "units": null
+  },
+  "A0407": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "4188 GREENBUSH AVE, SHERMAN OAKS, CA, 91423",
+   "year_built": "1964",
+   "units": "10"
+  },
+  "A0408": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "14375 POLK ST, SYLMAR, CA, 91342",
+   "year_built": "1964",
+   "units": "23"
+  },
+  "A0409": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "4428 GRESHAM ST, SAN DIEGO, CA, 92109",
+   "year_built": null,
+   "units": "5"
+  },
+  "A0410": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "319 SUMMIT AVE, JERSEY CITY, NJ, 07306",
+   "year_built": "1920",
+   "units": null
+  },
+  "A0411": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "1833 BERKELEY WAY, BERKELEY, CA, 94703",
+   "year_built": null,
+   "units": null
+  },
+  "A0412": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "231 GRAFTON AVE, NEWARK, NJ, 07104",
+   "year_built": null,
+   "units": null
+  },
+  "A0413": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "2209 GRAND AVE, SAN DIEGO, CA, 92109",
+   "year_built": null,
+   "units": "8"
+  },
+  "A0414": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1987 CALIFORNIA ST, SAN FRANCISCO, CA, 94109",
+   "year_built": "1922",
+   "units": "9"
+  },
+  "A0415": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "95 WAYNE ST, JERSEY CITY, NJ, 07302",
+   "year_built": null,
+   "units": null
+  },
+  "A0416": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "882 PAVONIA AVE, JERSEY CITY, NJ, 07306",
+   "year_built": null,
+   "units": null
+  },
+  "A0417": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "4957 CAHUENGA BLVD, NORTH HOLLYWOOD, CA, 91601",
+   "year_built": null,
+   "units": "5"
+  },
+  "A0418": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "221 SIP AVE, JERSEY CITY, NJ, 07306",
+   "year_built": null,
+   "units": null
+  },
+  "A0419": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "1538 HENRY ST, BERKELEY, CA, 94709",
+   "year_built": null,
+   "units": null
+  },
+  "A0420": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "4419 CLEVELAND AVE, SAN DIEGO, CA, 92116",
+   "year_built": null,
+   "units": "10"
+  },
+  "A0421": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "17106 CHATSWORTH ST, GRANADA HILLS, CA, 91344",
+   "year_built": "1964",
+   "units": "6"
+  },
+  "A0422": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "23 MARION ST, CAMBRIDGE, MA, 02141",
+   "year_built": "1900",
+   "units": "6"
+  },
+  "A0423": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "10 CAMELOT CT, BRIGHTON, MA, 02135",
+   "year_built": "1965",
+   "units": null
+  },
+  "A0424": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "208 JEFFERSON ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0425": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "650 POST ST, SAN FRANCISCO, CA, 94109",
+   "year_built": "1916",
+   "units": "23"
+  },
+  "A0426": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "1307 COLUSA ST, SAN DIEGO, CA, 92110",
+   "year_built": null,
+   "units": "12"
+  },
+  "A0427": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "7665 W FOUNTAIN AVE, LOS ANGELES, CA, 90046",
+   "year_built": "1986",
+   "units": "15"
+  },
+  "A0428": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "314 MT PROSPECT AVE, NEWARK, NJ, 07104",
+   "year_built": null,
+   "units": null
+  },
+  "A0429": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "12 BLACKWOOD ST, BOSTON, MA, 02115",
+   "year_built": "1899",
+   "units": null
+  },
+  "A0430": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "1950 ADDISON ST, BERKELEY, CA, 94704",
+   "year_built": null,
+   "units": null
+  },
+  "A0431": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "245 EUCLID AVE, SAN DIEGO, CA, 92114",
+   "year_built": null,
+   "units": "5"
+  },
+  "A0432": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "14605 RAYEN ST, PANORAMA CITY, CA, 91402",
+   "year_built": "1978",
+   "units": "23"
+  },
+  "A0433": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "720 W 27TH ST, LOS ANGELES, CA, 90007",
+   "year_built": "1964",
+   "units": "58"
+  },
+  "A0434": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1225 HYDE ST, SAN FRANCISCO, CA, 94109",
+   "year_built": "1913",
+   "units": "8"
+  },
+  "A0435": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "310 MONROE ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0436": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "832 WILLOW AVE, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0437": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "2969 SAN MARINO ST, LOS ANGELES, CA, 90006",
+   "year_built": "2004",
+   "units": "20"
+  },
+  "A0438": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "62 CAMBRIDGE AVE, JERSEY CITY, NJ, 07307",
+   "year_built": null,
+   "units": null
+  },
+  "A0439": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "225 25TH AVE, SAN FRANCISCO, CA, 94121",
+   "year_built": "1988",
+   "units": "7"
+  },
+  "A0440": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "4042 FULTON ST, SAN FRANCISCO, CA, 94118",
+   "year_built": "1921",
+   "units": "5"
+  },
+  "A0441": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "4017 ILLINOIS ST, SAN DIEGO, CA, 92104",
+   "year_built": null,
+   "units": "6"
+  },
+  "A0442": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "7014 LANEWOOD AVE, LOS ANGELES, CA, 90028",
+   "year_built": "1986",
+   "units": "18"
+  },
+  "A0443": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "3526 FAIRMOUNT AVE, SAN DIEGO, CA, 92105",
+   "year_built": null,
+   "units": "16"
+  },
+  "A0444": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "231 COMMONWEALTH AVE, BOSTON, MA, 02116",
+   "year_built": "1899",
+   "units": null
+  },
+  "A0445": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "8790 VAN NUYS BLVD, PANORAMA CITY, CA, 91402",
+   "year_built": "1977",
+   "units": "25"
+  },
+  "A0446": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "610 COLUMBUS AVE, BOSTON, MA, 02118",
+   "year_built": "1899",
+   "units": null
+  },
+  "A0447": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "208 CLINTON ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0448": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "153 LAFAYETTE ST, NEWARK, NJ, 07105",
+   "year_built": null,
+   "units": null
+  },
+  "A0449": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "338 CLINTON PL, NEWARK, NJ, 07112",
+   "year_built": null,
+   "units": null
+  },
+  "A0450": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "94 NEPTUNE AVE, JERSEY CITY, NJ, 07305",
+   "year_built": null,
+   "units": null
+  },
+  "A0451": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "7300 VALMONT ST, TUJUNGA, CA, 91042",
+   "year_built": "1989",
+   "units": "8"
+  },
+  "A0452": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "1310 N LAS PALMAS AVE, LOS ANGELES, CA, 90028",
+   "year_built": "1952",
+   "units": "8"
+  },
+  "A0453": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "11 CARLISLE ST, CAMBRIDGE, MA, 02139",
+   "year_built": "1910",
+   "units": "6"
+  },
+  "A0454": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "8944 COLUMBUS AVE, NORTH HILLS, CA, 91343",
+   "year_built": "1959",
+   "units": "6"
+  },
+  "A0455": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "78 STEVENS AVE, JERSEY CITY, NJ, 07305",
+   "year_built": null,
+   "units": null
+  },
+  "A0456": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "2151 CHATSWORTH BLVD, SAN DIEGO, CA, 92107",
+   "year_built": null,
+   "units": "17"
+  },
+  "A0457": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1856 GREEN ST, SAN FRANCISCO, CA, 94123",
+   "year_built": "1906",
+   "units": "5"
+  },
+  "A0458": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "1670 E 48TH PL, LOS ANGELES, CA, 90011",
+   "year_built": "1963",
+   "units": "6"
+  },
+  "A0459": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "202 SOUTH ST, JERSEY CITY, NJ, 07307",
+   "year_built": "1915",
+   "units": null
+  },
+  "A0460": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "229 SHEPHARD AVE, NEWARK, NJ, 07112",
+   "year_built": null,
+   "units": null
+  },
+  "A0461": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "735 11TH AVE, SAN FRANCISCO, CA, 94118",
+   "year_built": "1923",
+   "units": "5"
+  },
+  "A0462": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "128 ST PAULS AVE, JERSEY CITY, NJ, 07306",
+   "year_built": "1890",
+   "units": null
+  },
+  "A0463": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "4 BEECHWOOD ST, DORCHESTER, MA, 02121",
+   "year_built": "2007",
+   "units": null
+  },
+  "A0464": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "98 DABNEY ST, ROXBURY, MA, 02119",
+   "year_built": "1966",
+   "units": null
+  },
+  "A0465": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "141 OXFORD ST, CAMBRIDGE, MA, 02140",
+   "year_built": "1915",
+   "units": "8"
+  },
+  "A0466": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "115 NORWAY ST, BOSTON, MA, 02115",
+   "year_built": "1920",
+   "units": null
+  },
+  "A0467": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "24 ST ALBANS RD, BOSTON, MA, 02115",
+   "year_built": "1923",
+   "units": null
+  },
+  "A0468": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "13 SHEPARD ST, CAMBRIDGE, MA, 02138",
+   "year_built": "1910",
+   "units": "6"
+  },
+  "A0469": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "2701 SHATTUCK AVE, BERKELEY, CA, 94705",
+   "year_built": null,
+   "units": null
+  },
+  "A0470": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Alameda County, CA",
+   "place": "Berkeley",
+   "stack": [
+    "CA",
+    "Alameda County, CA",
+    "Berkeley, CA"
+   ],
+   "matched_address": "1919 CURTIS ST, BERKELEY, CA, 94702",
+   "year_built": null,
+   "units": null
+  },
+  "A0471": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "334 GARDEN ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0472": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "321 WILLOW AVE, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0473": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "20 PHILLIPS ST, BOSTON, MA, 02114",
+   "year_built": "1899",
+   "units": null
+  },
+  "A0474": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "3438 MCKINLEY AVE, LOS ANGELES, CA, 90011",
+   "year_built": "1928",
+   "units": "8"
+  },
+  "A0475": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "361 1ST ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0476": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "28 COTTAGE ST, NEWARK, NJ, 07102",
+   "year_built": null,
+   "units": null
+  },
+  "A0477": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "2250 MISSION ST, SAN FRANCISCO, CA, 94110",
+   "year_built": "1975",
+   "units": "19"
+  },
+  "A0478": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "3860 CHEROKEE AVE, SAN DIEGO, CA, 92104",
+   "year_built": null,
+   "units": "9"
+  },
+  "A0479": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "12948 MOORPARK ST, STUDIO CITY, CA, 91604",
+   "year_built": "1990",
+   "units": "8"
+  },
+  "A0480": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "4046 43RD ST, SAN DIEGO, CA, 92105",
+   "year_built": null,
+   "units": "11"
+  },
+  "A0481": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "536 LEAVENWORTH ST, SAN FRANCISCO, CA, 94109",
+   "year_built": "1925",
+   "units": "63"
+  },
+  "A0482": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "101 CLIFTON PL, JERSEY CITY, NJ, 07304",
+   "year_built": null,
+   "units": null
+  },
+  "A0483": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1580 MARKET ST, SAN FRANCISCO, CA, 94102",
+   "year_built": "1917",
+   "units": "72"
+  },
+  "A0484": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "1801 8TH AVE, SAN FRANCISCO, CA, 94122",
+   "year_built": "1948",
+   "units": "5"
+  },
+  "A0485": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Middlesex County, MA",
+   "place": "Cambridge",
+   "stack": [
+    "MA",
+    "Middlesex County, MA",
+    "Cambridge, MA"
+   ],
+   "matched_address": "302 WESTERN AVE, CAMBRIDGE, MA, 02139",
+   "year_built": "1920",
+   "units": "6"
+  },
+  "A0486": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "2280 MISSION ST, SAN FRANCISCO, CA, 94110",
+   "year_built": "1910",
+   "units": "9"
+  },
+  "A0487": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "2118 FILLMORE ST, SAN FRANCISCO, CA, 94115",
+   "year_built": "1900",
+   "units": "11"
+  },
+  "A0488": {
+   "status": "ok",
+   "reason": null,
+   "state": "MA",
+   "county": "Suffolk County, MA",
+   "place": "Boston",
+   "stack": [
+    "MA",
+    "Suffolk County, MA",
+    "Boston, MA"
+   ],
+   "matched_address": "197 BEACON ST, BOSTON, MA, 02116",
+   "year_built": "1900",
+   "units": null
+  },
+  "A0489": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "204 GRAND ST, HOBOKEN, NJ, 07030",
+   "year_built": "2000",
+   "units": null
+  },
+  "A0490": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Hoboken",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Hoboken, NJ"
+   ],
+   "matched_address": "526 ADAMS ST, HOBOKEN, NJ, 07030",
+   "year_built": null,
+   "units": null
+  },
+  "A0491": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "37 IRVING ST, NEWARK, NJ, 07104",
+   "year_built": null,
+   "units": null
+  },
+  "A0492": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "800 S HARVARD BLVD, LOS ANGELES, CA, 90005",
+   "year_built": "2019",
+   "units": "131"
+  },
+  "A0493": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "4450 GEARY BLVD, SAN FRANCISCO, CA, 94118",
+   "year_built": "1916",
+   "units": "10"
+  },
+  "A0494": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Francisco County, CA",
+   "place": "San Francisco",
+   "stack": [
+    "CA",
+    "San Francisco County, CA",
+    "San Francisco, CA"
+   ],
+   "matched_address": "2641 FRANKLIN ST, SAN FRANCISCO, CA, 94123",
+   "year_built": "1923",
+   "units": "6"
+  },
+  "A0495": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Hudson County, NJ",
+   "place": "Jersey City",
+   "stack": [
+    "NJ",
+    "Hudson County, NJ",
+    "Jersey City, NJ"
+   ],
+   "matched_address": "230 VAN HORNE ST, JERSEY CITY, NJ, 07304",
+   "year_built": "1895",
+   "units": null
+  },
+  "A0496": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "512 32ND ST, SAN DIEGO, CA, 92102",
+   "year_built": null,
+   "units": "8"
+  },
+  "A0497": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "San Diego County, CA",
+   "place": "San Diego",
+   "stack": [
+    "CA",
+    "San Diego County, CA",
+    "San Diego, CA"
+   ],
+   "matched_address": "3750 29TH ST, SAN DIEGO, CA, 92104",
+   "year_built": null,
+   "units": "5"
+  },
+  "A0498": {
+   "status": "ok",
+   "reason": null,
+   "state": "NJ",
+   "county": "Essex County, NJ",
+   "place": "Newark",
+   "stack": [
+    "NJ",
+    "Essex County, NJ",
+    "Newark, NJ"
+   ],
+   "matched_address": "686 SUMMER AVE, NEWARK, NJ, 07104",
+   "year_built": null,
+   "units": null
+  },
+  "A0499": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "8519 WILLIS AVE, PANORAMA CITY, CA, 91402",
+   "year_built": "1962",
+   "units": "33"
+  },
+  "A0500": {
+   "status": "ok",
+   "reason": null,
+   "state": "CA",
+   "county": "Los Angeles County, CA",
+   "place": "Los Angeles",
+   "stack": [
+    "CA",
+    "Los Angeles County, CA",
+    "Los Angeles, CA"
+   ],
+   "matched_address": "8811 BURNET AVE, NORTH HILLS, CA, 91343",
+   "year_built": "1954",
+   "units": "36"
+  }
+ }
+}
