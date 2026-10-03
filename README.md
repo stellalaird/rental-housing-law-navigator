@@ -82,6 +82,7 @@ The challenge asks for transparency, not legal verdicts. What this system does a
 ## Limitations
 
 - **Citations:** 16 of 94 rules (528 of 6319 `applies` answers) rest on pages that are link-only in the starter corpus, so their text is not in it. Each quoted span is verbatim from a page fetched by plain GET (`data/starter/fetched/`), labelled in `source_note`; non-official hosts are capped at confidence 0.5. Confirm against the primary text.
+- **Supersession is city-wide:** where a city ordinance overrides a state rule, the whole city is marked superseded. Los Angeles's RSO-only override (r-0020 over r-0034) is not modelled, because adding it would mark every non-RSO LA address superseded.
 
 ## Robustness
 
