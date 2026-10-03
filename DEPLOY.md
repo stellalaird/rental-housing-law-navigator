@@ -29,7 +29,7 @@ Start it **from the repo root**: the page is served from `./public` relative to 
 | `changes.json` | not read by the server; ship it only if the host should serve or show the change-tracking output |
 | **`data/starter/participant-final-no-hour16 3/data/sample_addresses.csv`** | **read by `lib/navigator.mjs` on the first lookup** (see below) |
 
-**The address CSV is a hard dependency, and it sits under the folder that is otherwise excluded.** Without it the server starts and the page loads, but every `/api/lookup` returns HTTP 500 (`ENOENT … sample_addresses.csv`); reproduced. Either ship that single file at that exact path, or have the owner of `lib/navigator.mjs` (p-a-2) point it at a copy kept outside `data/starter/`. It is the organisers' data: confirm its terms allow redistribution before putting it on a public host.
+**The address CSV is a hard dependency, and it sits under the folder that is otherwise excluded.** Without it the server starts and the page loads, but `/api/lookup`, `/api/rules` and `/api/lookups` return HTTP 503 `{"error":"address data not installed"}` (stderr: `address data missing: <path> (set ADDRESSES_CSV)`). Either ship that single file at that exact path, or set **`ADDRESSES_CSV=/path/to/sample_addresses.csv`**, which overrides the default (added in `e1463b2`; the 503 behaviour is p-a-2's, read from the code, not re-run here). It is the organisers' data: whether it may be redistributed is the owner's open question, so do not put it on a public host until that is answered.
 
 ## Excluded
 

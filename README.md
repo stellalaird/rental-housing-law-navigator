@@ -79,6 +79,10 @@ The challenge asks for transparency, not legal verdicts. What this system does a
 - **No evasion help.** The system explains rules; it does not suggest ways around them.
 - **Audit log** of sources, model outputs and changes. <!-- TODO: path / confirm it exists. -->
 
+## Limitations
+
+- **Citations:** 16 of 94 rules (528 of 6319 `applies` answers) rest on pages that are link-only in the starter corpus, so their text is not in it. Each quoted span is verbatim from a page fetched by plain GET (`data/starter/fetched/`), labelled in `source_note`; non-official hosts are capped at confidence 0.5. Confirm against the primary text.
+
 ## Robustness
 
 Built so a flaky network or API does not break a live demo: the page tries a live stream, then a plain JSON call, then a recorded replay (`npm run record-replay`; `npm run build:static` makes a server-less build). Rate limit, size limits and a concurrency cap protect the API key (`RATE_LIMIT`, `MAX_PROMPT_CHARS`, `MAX_HISTORY`, `MAX_CONCURRENT`; set `TRUST_PROXY=1` behind a tunnel). Details are in `STACK.md`.
