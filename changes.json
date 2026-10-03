@@ -347,8 +347,8 @@
       "A0490",
       "A0495"
     ],
-    "source": "change_tests.json spec, no extracted rule",
-    "notes": "Each city rule applies only inside its own legal city (Census geocoder, not postal city): Hoboken, NJ, Jersey City, NJ. No extracted rule for HOB-ALG-01, JC-ALG-01; those parts follow the test's written spec."
+    "source": "extracted rules",
+    "notes": "Each city rule applies only inside its own legal city (Census geocoder, not postal city): Hoboken, NJ, Jersey City, NJ."
   },
   "T3": {
     "affected_address_ids": [
@@ -594,7 +594,10 @@
         },
         "rule_b": {
           "test_id": "JC-ALG-01",
-          "team_rule_ids": null
+          "team_rule_ids": [
+            "r-0101",
+            "r-0102"
+          ]
         },
         "jurisdiction_b": "Jersey City, NJ",
         "possible_conflict": "state law may preempt or conflict with the local ban; human review",
@@ -659,7 +662,10 @@
         },
         "rule_b": {
           "test_id": "HOB-ALG-01",
-          "team_rule_ids": null
+          "team_rule_ids": [
+            "r-0086",
+            "r-0087"
+          ]
         },
         "jurisdiction_b": "Hoboken, NJ",
         "possible_conflict": "state law may preempt or conflict with the local ban; human review",
