@@ -1,0 +1,198 @@
+{
+  "cells": {
+    "CA|Berkeley, CA|algorithmic_rent_setting": {
+      "prompt_sha": "a2530d8aae1eb2d3",
+      "overrides": []
+    },
+    "CA|Berkeley, CA|application_screening_fees": {
+      "prompt_sha": "b108f1dd51ae9c2a",
+      "overrides": []
+    },
+    "CA|Berkeley, CA|just_cause_eviction": {
+      "prompt_sha": "8aa74c57310b0f69",
+      "overrides": [
+        {
+          "state_rule": "r-0017",
+          "superseded_by": "r-0003",
+          "reason": "The state just cause rule says it does not apply where a more protective local just cause ordinance covers the property, and Berkeley's just cause ordinance (r-0003) as written adds protections beyond the state rule, such as a minimum rent debt for nonpayment evictions and stricter conditions for evictions based on lease breaches."
+        }
+      ]
+    },
+    "CA|Berkeley, CA|rent_increase_limits": {
+      "prompt_sha": "601b10110bfaa687",
+      "overrides": [
+        {
+          "state_rule": "r-0020",
+          "superseded_by": "r-0008",
+          "reason": "The state rent cap says it does not apply to housing under a valid local rent control that restricts increases below it, and Berkeley's Annual General Adjustment (65% of CPI, never more than 5%) is such a restriction for fully covered units."
+        }
+      ]
+    },
+    "CA|Berkeley, CA|screening_restrictions": {
+      "prompt_sha": "d3f06d7f55ed3c28",
+      "overrides": []
+    },
+    "CA|Berkeley, CA|security_deposits": {
+      "prompt_sha": "5fa2d5de4bc41c9d",
+      "overrides": []
+    },
+    "CA|Los Angeles, CA|just_cause_eviction": {
+      "prompt_sha": "ea7c94966c5d476e",
+      "overrides": [
+        {
+          "state_rule": "r-0017",
+          "superseded_by": "r-0029",
+          "reason": "The state just cause rule does not apply to property covered by a more protective local just cause ordinance, and the Los Angeles JCO appears more protective because it applies after 6 months instead of 12 and requires larger relocation payments under Chart A."
+        }
+      ]
+    },
+    "CA|Los Angeles, CA|rent_increase_limits": {
+      "prompt_sha": "3257395d5881a343",
+      "overrides": []
+    },
+    "CA|Los Angeles, CA|security_deposits": {
+      "prompt_sha": "4c16aeb8d6b1d78a",
+      "overrides": []
+    },
+    "CA|San Diego, CA|algorithmic_rent_setting": {
+      "prompt_sha": "92cf1ec3677fe797",
+      "overrides": []
+    },
+    "CA|San Diego, CA|just_cause_eviction": {
+      "prompt_sha": "d5fcad52c368acf9",
+      "overrides": [
+        {
+          "state_rule": "r-0017",
+          "superseded_by": "r-0069",
+          "reason": "Section 1946.2 does not apply where a more protective local just cause ordinance adopted after September 1, 2019 exists, and San Diego's 2023 just cause ordinance adds protections beyond state law, such as greater relocation assistance."
+        }
+      ]
+    },
+    "CA|San Diego, CA|screening_restrictions": {
+      "prompt_sha": "c6fdbd5f299fd967",
+      "overrides": []
+    },
+    "CA|San Diego, CA|security_deposits": {
+      "prompt_sha": "d6e5601ae9bdc15b",
+      "overrides": []
+    },
+    "CA|San Francisco, CA|algorithmic_rent_setting": {
+      "prompt_sha": "3326c894e873c8ce",
+      "overrides": []
+    },
+    "CA|San Francisco, CA|just_cause_eviction": {
+      "prompt_sha": "b5a61796c67a1476",
+      "overrides": [
+        {
+          "state_rule": "r-0017",
+          "superseded_by": "r-0074",
+          "reason": "The state just cause rule says it does not apply where a local just cause ordinance covers the property, and San Francisco's just cause ordinance covers the same subject, with protections the record presents as broader: it requires just cause as the dominant motive, extends to Costa-Hawkins exempt tenancies, and requires just cause to remove housing services."
+        }
+      ]
+    },
+    "CA|San Francisco, CA|rent_increase_limits": {
+      "prompt_sha": "4d039c85a1275c24",
+      "overrides": [
+        {
+          "state_rule": "r-0020",
+          "superseded_by": "r-0076",
+          "reason": "The state rent cap says it does not apply to housing under a valid local rent control that limits increases below the cap, and San Francisco's 1.6% allowable increase for rent-controlled units is such a limit."
+        }
+      ]
+    },
+    "CA|San Francisco, CA|screening_restrictions": {
+      "prompt_sha": "5b2fac89ab26e088",
+      "overrides": []
+    },
+    "CA|San Francisco, CA|security_deposits": {
+      "prompt_sha": "5a14724605f9c94f",
+      "overrides": []
+    },
+    "CA|Santa Ana, CA|algorithmic_rent_setting": {
+      "prompt_sha": "9939ae4f806f3060",
+      "overrides": []
+    },
+    "CA|Santa Ana, CA|just_cause_eviction": {
+      "prompt_sha": "b2d3c38a425a59b8",
+      "overrides": [
+        {
+          "state_rule": "r-0017",
+          "superseded_by": "r-0079",
+          "reason": "The state just cause section does not apply where a more protective local just cause ordinance exists, and Santa Ana's ordinance is more protective because it requires just cause after 30 days instead of 12 months and requires 3 months of relocation assistance instead of one month."
+        }
+      ]
+    },
+    "CA|Santa Ana, CA|rent_increase_limits": {
+      "prompt_sha": "19363ffc7bba60dc",
+      "overrides": [
+        {
+          "state_rule": "r-0020",
+          "superseded_by": "r-0080",
+          "reason": "The state rent cap says it does not apply to housing under a valid local rent control that limits increases below it, and Santa Ana's cap of the lower of 3% or 80% of CPI is such a local limit."
+        }
+      ]
+    },
+    "MA|Boston, MA|just_cause_eviction": {
+      "prompt_sha": "614602a53563ddf4",
+      "overrides": []
+    },
+    "MA|Boston, MA|screening_restrictions": {
+      "prompt_sha": "a07df75d9a93bca1",
+      "overrides": []
+    },
+    "MA|Cambridge, MA|algorithmic_rent_setting": {
+      "prompt_sha": "294c66ec8611f92d",
+      "overrides": []
+    },
+    "MA|Cambridge, MA|screening_restrictions": {
+      "prompt_sha": "e52b6c20c0da8695",
+      "overrides": []
+    },
+    "NJ|Hoboken, NJ|algorithmic_rent_setting": {
+      "prompt_sha": "4fd19e28c1669520",
+      "overrides": []
+    },
+    "NJ|Hoboken, NJ|rent_increase_limits": {
+      "prompt_sha": "33ac904bbc7cc4fd",
+      "overrides": [
+        {
+          "state_rule": "r-0057",
+          "superseded_by": "r-0088",
+          "reason": "The state rule says local rent control ordinances govern rent levels, and Hoboken Code Chapter 155 is such a municipal rent leveling ordinance."
+        }
+      ]
+    },
+    "NJ|Jersey City, NJ|algorithmic_rent_setting": {
+      "prompt_sha": "906e175dcbc3fb2c",
+      "overrides": []
+    },
+    "NJ|Jersey City, NJ|rent_increase_limits": {
+      "prompt_sha": "213d7c6d39312018",
+      "overrides": [
+        {
+          "state_rule": "r-0057",
+          "superseded_by": "r-0028",
+          "reason": "The state rule says local rent control ordinances govern rent levels, and Jersey City's Chapter 260 Rent Control Ordinance is such an ordinance."
+        }
+      ]
+    },
+    "NJ|Newark, NJ|just_cause_eviction": {
+      "prompt_sha": "e0994f708fe80751",
+      "overrides": []
+    },
+    "NJ|Newark, NJ|rent_increase_limits": {
+      "prompt_sha": "a1812b2d3d800ce8",
+      "overrides": [
+        {
+          "state_rule": "r-0057",
+          "superseded_by": "r-0097",
+          "reason": "The state rule says local ordinances govern rent levels, and Newark's Rent Control Ordinance is such a local ordinance setting rent increase limits for covered multiple dwellings."
+        }
+      ]
+    },
+    "NJ|Newark, NJ|screening_restrictions": {
+      "prompt_sha": "c5d3bd4d24175ef3",
+      "overrides": []
+    }
+  }
+}

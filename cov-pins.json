@@ -1,0 +1,881 @@
+{
+  "note": "Coverage pins: decided from each rule's own text. blocking_unknown is true only when the quoted text makes coverage depend on a fact the address schema does not hold. Schema fields are listed in schema_fields. Entries with a basis were set by hand; the rest are copied from the model's cached answer. A pin is used only while prompt_sha matches the rule's current prompt. exempt_if_built_within_years / unknown_if_built_within_years are rolling windows computed against the as-of year.",
+  "schema_fields": [
+    "address_id",
+    "street_address",
+    "postal_city",
+    "state",
+    "zip",
+    "year_built",
+    "units",
+    "use_code",
+    "use_description",
+    "source_dataset",
+    "retrieved_at"
+  ],
+  "rules": {
+    "r-0002": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "e794c89441c871ee"
+    },
+    "r-0003": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "fc1401034ac32ba6"
+    },
+    "r-0004": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "70d732b473b73c7a"
+    },
+    "r-0005": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "58f265d0343c1f79"
+    },
+    "r-0006": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "55add48ffde9c3e1"
+    },
+    "r-0007": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "Whether the unit is subject to Berkeley permanent rent ceilings and the landlord is eligible under Regulation 1148, and whether the tenancy began on or after 2025-01-01 with rent set under Costa-Hawkins",
+      "prompt_sha": "c6c2a05d7ee9ed58"
+    },
+    "r-0008": {
+      "year_built_max": 1979,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "tenancy start date (single-family homes covered only if tenancy began before 1996-01-01), condominium status, and owner occupancy (Golden Duplex, shared kitchen/bath, ADU exemptions)",
+      "prompt_sha": "dfe61e6ed6c4ec99"
+    },
+    "r-0009": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "35cbfdfe0a9205d1"
+    },
+    "r-0010": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "642098ff97b6bb1d"
+    },
+    "r-0011": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "271a0ede618feba1"
+    },
+    "r-0012": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "2bd5c72ebbe48ea8"
+    },
+    "r-0013": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "Whether the housing provider receives DND funding or land, or has income-restricted units under the BPDA Inclusionary Development Policy",
+      "prompt_sha": "54c4fcdc63bea8ce"
+    },
+    "r-0014": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "45db6c0aafa110e8"
+    },
+    "r-0015": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "35d1dabd753c401b",
+      "basis": "\"Any 'person' under Bus. & Prof. Code §16702 who uses or distributes a common pricing algorithm… Not limited to rental housing\": binds any person, so using an algorithm is a compliance fact, not a coverage fact"
+    },
+    "r-0017": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "owner type and exemption notice (a separately alienable single-family home or condo is exempt unless owned by a REIT, corporation or LLC with a corporate member, and the required notice was given) and owner occupancy",
+      "prompt_sha": "4451d14bc9b5cf8c",
+      "exempt_if_built_within_years": 15,
+      "basis": "\"housing issued a certificate of occupancy within the previous 15 years\" is rolling, computed against the as-of date; owner type is a fact the address schema does not hold"
+    },
+    "r-0018": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "a732f7ffeb7dfbae"
+    },
+    "r-0019": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "47fb28a19c89be1e"
+    },
+    "r-0020": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "owner type and exemption notice (single-family home or condo owned by a REIT, corporation or LLC with a corporate member), owner-occupied duplex, subsidized or deed-restricted housing, or stricter local rent control",
+      "prompt_sha": "f156cbc405d7aad1",
+      "exempt_if_built_within_years": 15,
+      "basis": "\"Housing issued a certificate of occupancy within the previous 15 years (rolling)\": computed against the as-of date, not frozen at 2011"
+    },
+    "r-0022": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "aefd8b6bfc206d72"
+    },
+    "r-0023": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "92508984c71f8ad8"
+    },
+    "r-0024": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "727699ddfb8f4a7e"
+    },
+    "r-0027": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "cf2d3163878055d0"
+    },
+    "r-0028": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": 5,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "539757e3b470c969"
+    },
+    "r-0029": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "whether the unit is regulated by the Rent Stabilization Ordinance (RSO); RSO units are not covered by the JCO",
+      "prompt_sha": "fa2d4afa6d8ee3b1",
+      "basis": "\"Landlords of covered non-RSO units\" / not regulated by the RSO: RSO status is a fact about the tenancy, not in the address schema"
+    },
+    "r-0030": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "90280a984bdd994b"
+    },
+    "r-0031": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "8d441c404845d022"
+    },
+    "r-0032": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "whether the unit is an RSO (Rent Stabilization Ordinance) rental unit in the City of Los Angeles",
+      "prompt_sha": "9ce3f897763280f2"
+    },
+    "r-0033": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "0d78dd6e81ad8b79"
+    },
+    "r-0034": {
+      "year_built_max": 1978,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "Property type and tenancy start date: covers only multi-unit and listed property types, so a lone single-family dwelling on its own parcel is not covered. Condos and townhomes with tenancies that began after December 31, 1995 are exempt. A Luxury Exemption may also apply.",
+      "prompt_sha": "949391ef61bc9672"
+    },
+    "r-0035": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "whether the rental unit is subject to the City of Los Angeles Rent Stabilization Ordinance (RSO)",
+      "prompt_sha": "21e3a5414e7b1495"
+    },
+    "r-0036": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "whether the unit is subject to the Los Angeles Rent Stabilization Ordinance (RSO)",
+      "prompt_sha": "88296dec71e1814a"
+    },
+    "r-0038": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "9de3bfac6e2a15d3"
+    },
+    "r-0039": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "34b02a9f8d10ac21"
+    },
+    "r-0040": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "2d7176d86177a17e"
+    },
+    "r-0041": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "whether the tenancy is a tenancy at will (vs. a fixed-term lease)",
+      "prompt_sha": "54904020a15d6177"
+    },
+    "r-0042": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "4e9ccfa633240a24"
+    },
+    "r-0043": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "whether the property's city or town has adopted rent control regulation under Chapter 40P",
+      "prompt_sha": "9e8630de1b71724c",
+      "basis": "\"Cities and towns adopting rent control regulation under Chapter 40P\": coverage depends on a jurisdiction fact the schema does not hold"
+    },
+    "r-0044": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "360bb890a2de11c8"
+    },
+    "r-0045": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "598b3134c670a902"
+    },
+    "r-0046": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "7cc877f7a7c4903f"
+    },
+    "r-0047": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "6c3af4f289f9af6b"
+    },
+    "r-0048": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "72ce28aba770c1a5",
+      "basis": "\"the sum of fees paid to waive a security deposit and the payment of the security deposit shall not exceed, in total, the amount of 1 month's rent\": binds any lessor who offers the option; every covered landlord is a lessor"
+    },
+    "r-0049": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": 1,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "04ee5a492d63f042"
+    },
+    "r-0050": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": 3,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "f16f751ef34d3f8f"
+    },
+    "r-0051": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "Whether the owner occupies the premises (exempt if the building has 4 or fewer units and is owner-occupied)",
+      "prompt_sha": "6b920c2a2ed7c50e"
+    },
+    "r-0054": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "Whether the tenant occupies the unit because of a director's housing order that was later overturned on appeal",
+      "prompt_sha": "a9f9035dab6b484e"
+    },
+    "r-0055": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "Whether the building is being converted to a condominium or cooperative and the tenant is a qualifying senior (62+), permanently disabled, or disabled-veteran tenant meeting the residency and income limits",
+      "prompt_sha": "c51e5035cc468c9c"
+    },
+    "r-0057": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "Whether the property's municipality has adopted a rent control/rent leveling ordinance and whether that ordinance covers the property (also whether the property is HUD-owned/subsidized or NJHMFA-financed)",
+      "prompt_sha": "2e5bcfec85c5a393"
+    },
+    "r-0058": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "c9e3691bf1d5cc70"
+    },
+    "r-0059": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "4c47e7f6adecb50a"
+    },
+    "r-0060": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "76f48e5503740b01"
+    },
+    "r-0061": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "cd84307ff3eed1b8"
+    },
+    "r-0062": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "Whether the owner lives on premises with four or fewer units (owner-occupied premises of not more than four units are exempt)",
+      "prompt_sha": "ab4892dc1e586599"
+    },
+    "r-0068": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "c823a47f3aa150a2"
+    },
+    "r-0069": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "owner type and exemption notice (separately alienable units owned by a REIT, corporation or LLC with a corporate member) and owner occupancy",
+      "prompt_sha": "acb9945d93d9d532",
+      "exempt_if_built_within_years": 15,
+      "basis": "\"Housing with a certificate of occupancy issued within the previous 15 years (unless a mobilehome)\" is rolling, computed against the as-of date"
+    },
+    "r-0070": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "f47147889e1e6922"
+    },
+    "r-0071": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "cff79b473d74245a"
+    },
+    "r-0072": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "9cf772e86f446434"
+    },
+    "r-0073": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "b90da2b0e2ad0087"
+    },
+    "r-0074": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "61e251efa25b8b11"
+    },
+    "r-0075": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "4a603c41f43fb875"
+    },
+    "r-0076": {
+      "year_built_max": 1979,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "89fa3a38b8fecf40"
+    },
+    "r-0077": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "Whether the property is affordable housing",
+      "prompt_sha": "3484bc44b5820adb"
+    },
+    "r-0078": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "fab093be0c9578ab"
+    },
+    "r-0079": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "d85b712fc707488c",
+      "exempt_if_built_within_years": 15,
+      "basis": "\"Housing produced in the last 15 years\" is rolling, computed against the as-of date; the other exemptions are special housing categories, not tenancy facts"
+    },
+    "r-0080": {
+      "year_built_max": 1995,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "584845dc9f2f2317"
+    },
+    "r-0081": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "7d86f4fa45c81a2f"
+    },
+    "r-0082": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "c6ff3b3d32f248a9"
+    },
+    "r-0083": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "whether a residential property management company is involved in the tenancy",
+      "prompt_sha": "41090343d9be5f1b",
+      "basis": "\"ban residential property management companies from contracting companies that use algorithmic and AI-driven models\": a management company is a party only some rentals have"
+    },
+    "r-0084": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "03950f5bae3aae92"
+    },
+    "r-0085": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "49a17a0e573dbf86"
+    },
+    "r-0086": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "f2b0e32830c6b365"
+    },
+    "r-0087": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "95f387f410bed2b7"
+    },
+    "r-0088": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "c8db469654c77d90"
+    },
+    "r-0089": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "f2ce2e17e34220d7"
+    },
+    "r-0091": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "whether the rental unit is subject to the Los Angeles Rent Stabilization Ordinance (LARSO)",
+      "prompt_sha": "c2b0f0dbde2a55cd"
+    },
+    "r-0092": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "whether a licensed broker is involved in the tenancy",
+      "prompt_sha": "24781e5a5fee57a8",
+      "basis": "\"brokers can charge application fees ( 254 CMR 7 )\": a broker is a party only some rentals have"
+    },
+    "r-0093": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "353661c9ae95e096"
+    },
+    "r-0094": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "f88daf9ce1ac0faa"
+    },
+    "r-0095": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "whether the dwelling is subject to Newark's rent control ordinance (Ch. 19:2)",
+      "prompt_sha": "448462f4bb29ec88"
+    },
+    "r-0096": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "Whether the unit is HOME-assisted under the City of Newark Neighborhood Rehabilitation Program and within its period of affordability",
+      "prompt_sha": "9e1960538810712d"
+    },
+    "r-0097": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": 1,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "d75288c5bb6b3409",
+      "unknown_if_built_within_years": 30,
+      "unknown_if_built_fact": "whether the building is a newly constructed multiple dwelling still inside its exemption period (set by the initial mortgage amortization, up to 30 years, with Board certification)",
+      "basis": "\"Newly constructed multiple dwellings are exempt for the lesser of the initial mortgage amortization period or 30 years after completion\": buildings newer than 30 years before the as-of date are unknown"
+    },
+    "r-0098": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "bbe772c5ec91bdf2"
+    },
+    "r-0099": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "Whether the unit is HOME-assisted under the City of Newark Neighborhood Rehabilitation Program",
+      "prompt_sha": "24f608eae96e7da7"
+    },
+    "r-0100": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "69745002a2c3490e"
+    },
+    "r-0101": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "314d301a35a7858f"
+    },
+    "r-0102": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "f23691e3afc6005d"
+    },
+    "r-0103": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "63b91b340a11d210"
+    },
+    "r-0104": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "fd11126a7a6d9926"
+    },
+    "r-0105": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "91d8c4e7841c1c68"
+    },
+    "r-0106": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "f57dd1b418a16138"
+    },
+    "r-0107": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "84298094848ac225"
+    },
+    "r-0108": {
+      "year_built_max": null,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": false,
+      "unknown_fact": null,
+      "prompt_sha": "5b602b2a524c1d33"
+    },
+    "r-0109": {
+      "year_built_max": 1979,
+      "year_built_min": null,
+      "units_min": null,
+      "units_max": null,
+      "blocking_unknown": true,
+      "unknown_fact": "tenancy start date (single-family homes covered only if the current tenancy began before 1996) and owner-occupancy status (Golden Duplex, shared kitchen/bath, and ADU exemptions)",
+      "prompt_sha": "c6f8e8de624620cb"
+    }
+  }
+}

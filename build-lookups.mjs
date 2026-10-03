@@ -2,12 +2,23 @@
 // Pipeline: p-a-1 stackFor() -> p-a-3 asOf() time status -> coverage predicates (model-derived once per rule,
 // cached, hard fields only) -> local-over-state "superseded" (model-derived once per city/state/category, cached).
 // Results: applies | unknown | superseded | not_yet_effective | pending. Rules clearly out of scope are omitted.
-import { readFileSync, writeFileSync } from "node:fs";
+// Pins: cov-pins.json / supersession-pins.json hold those two model-derived steps, decided from each rule's own text
+// and keyed by a hash of the exact prompt. A pin whose hash still matches is used as is, so a rebuild is deterministic;
+// the model is called only for a rule or cell with no pin or a stale one (a new or edited rule). --export-pins writes
+// the pin files from whatever the model/cache returns, then exits without touching lookups.json.
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { claudeText, parseJson } from "./lib/llm.mjs";
 import { asOf, loadRules } from "./changelog.mjs";
 import { loadJurisdictions } from "./jurisdictions.mjs";
 
-const AS_OF = process.argv[2] || "2026-10-01";
+const EXPORT = process.argv.includes("--export-pins");
+const AS_OF = process.argv.slice(2).find((a) => !a.startsWith("--")) || "2026-10-01";
+const AS_YEAR = Number(AS_OF.slice(0, 4));
+const sha = (t) => createHash("sha256").update(t).digest("hex").slice(0, 16);
+const readPins = (f) => (existsSync(f) ? JSON.parse(readFileSync(f, "utf8")) : {});
+const covPins = readPins("cov-pins.json").rules || {}, supPins = readPins("supersession-pins.json").cells || {};
+const used = { cov: 0, covModel: 0, covStale: 0, sup: 0, supModel: 0, supStale: 0 };
 const rules = loadRules();
 const byId = new Map(rules.map((r) => [r.team_rule_id, r]));
 const by = loadJurisdictions();
@@ -30,8 +41,11 @@ let next = 0;
 const list = [...rules];
 await Promise.all(Array.from({ length: 4 }, async () => {
   while (next < list.length) {
-    const r = list[next++];
-    try { cov[r.team_rule_id] = parseJson((await claudeText({ system: SYS, prompt: covPrompt(r) })).text); }
+    const r = list[next++], h = sha(covPrompt(r)), pin = covPins[r.team_rule_id];
+    if (pin && pin.prompt_sha === h && !EXPORT) { cov[r.team_rule_id] = pin; used.cov++; continue; }
+    if (pin && pin.prompt_sha !== h) used.covStale++;
+    used.covModel++;
+    try { cov[r.team_rule_id] = { ...parseJson((await claudeText({ system: SYS, prompt: covPrompt(r) })).text), prompt_sha: h }; }
     catch (e) { console.log(r.team_rule_id, "cov ERROR", e.message); cov[r.team_rule_id] = { blocking_unknown: true, unknown_fact: "coverage could not be determined" }; }
   }
 }));
@@ -40,6 +54,7 @@ await Promise.all(Array.from({ length: 4 }, async () => {
 const cells = {};
 for (const r of rules) if (r.level === "city") { const st = r.jurisdiction.split(", ")[1]; (cells[`${st}|${r.jurisdiction}|${r.category}`] ||= { st, city: r.jurisdiction, cat: r.category }); }
 const superseded = {}; // stateRuleId -> { [city]: {by, reason} }
+const supOut = {};
 await Promise.all(Object.values(cells).map(async (c) => {
   const st = rules.filter((r) => r.jurisdiction === c.st && r.category === c.cat);
   const lo = rules.filter((r) => r.jurisdiction === c.city && r.category === c.cat);
@@ -47,9 +62,25 @@ await Promise.all(Object.values(cells).map(async (c) => {
   const show = (r) => `${r.team_rule_id}: ${r.title} | ${r.requirement} | key=${r.key_value} | interaction=${r.interaction}`;
   const p = `State rules (${c.st}):\n${st.map(show).join("\n")}\n\nLocal rules (${c.city}):\n${lo.map(show).join("\n")}\n\nFor each STATE rule decide whether a LOCAL rule listed above replaces it for properties in ${c.city} because the local law covers the same subject and controls over it (preemption by the local law, or the state rule says local law governs). Be conservative: a local rule that merely adds to or coexists with the state rule does NOT supersede it. Also count it as replaced when the STATE rule's own text says it does not apply where a local ordinance on the same subject exists (for example one adopted before a stated date, or a more protective one) and a listed LOCAL rule is such an ordinance, even if the local rule's text says it coexists. Only use what is written above.
 Output JSON array: [{"state_rule":"r-....","superseded_by":"r-....","reason":"<one plain sentence>"}] listing only superseded ones; [] if none.`;
-  try { for (const x of parseJson((await claudeText({ system: SYS, prompt: p })).text)) if (byId.has(x.state_rule) && byId.has(x.superseded_by)) (superseded[x.state_rule] ||= {})[c.city] = x; }
-  catch (e) { console.log(c.city, c.cat, "override ERROR", e.message); }
+  const key = `${c.st}|${c.city}|${c.cat}`, h = sha(p), pin = supPins[key];
+  const apply = (xs) => { for (const x of xs) if (byId.has(x.state_rule) && byId.has(x.superseded_by)) (superseded[x.state_rule] ||= {})[c.city] = x; };
+  if (pin && pin.prompt_sha === h && !EXPORT) { apply(pin.overrides); used.sup++; return; }
+  if (pin && pin.prompt_sha !== h) used.supStale++;
+  used.supModel++;
+  let xs = [];
+  try { xs = parseJson((await claudeText({ system: SYS, prompt: p })).text); apply(xs); }
+  catch (e) { console.log(c.city, c.cat, "override ERROR", e.message); xs = []; }
+  supOut[key] = { prompt_sha: h, overrides: xs.filter((x) => byId.has(x.state_rule) && byId.has(x.superseded_by)) };
 }));
+
+console.log(`pins: coverage ${used.cov} pinned, ${used.covModel} model calls (${used.covStale} stale pins); supersession ${used.sup} pinned, ${used.supModel} model calls (${used.supStale} stale pins)`);
+if (EXPORT) {
+  const sorted = (o) => Object.fromEntries(Object.entries(o).sort(([a], [b]) => a.localeCompare(b)));
+  writeFileSync("cov-pins.json", JSON.stringify({ rules: sorted(cov) }, null, 2) + "\n");
+  writeFileSync("supersession-pins.json", JSON.stringify({ cells: sorted(supOut) }, null, 2) + "\n");
+  console.log(`exported ${Object.keys(cov).length} coverage pins, ${Object.keys(supOut).length} supersession pins`);
+  process.exit(0);
+}
 
 // 3. per address
 const num = (v) => { const n = parseInt(String(v ?? "").replace(/[^\d]/g, ""), 10); return Number.isFinite(n) && n > 0 ? n : null; };
@@ -73,6 +104,10 @@ for (const [id, j] of Object.entries(by)) {
       if (c.year_built_min != null) { if (yb == null) miss.push("year built"); else if (yb < c.year_built_min) out_of_scope = true; }
       if (c.units_min != null) { if (units == null) miss.push("unit count"); else if (units < c.units_min) out_of_scope = true; }
       if (c.units_max != null) { if (units == null) miss.push("unit count"); else if (units > c.units_max) out_of_scope = true; }
+      // rolling cutoffs, computed against AS_OF (year built stands in for the certificate-of-occupancy year):
+      // built after the cutoff year -> inside the window; in the cutoff year -> depends on the exact date
+      const cut = c.exempt_if_built_within_years != null ? AS_YEAR - c.exempt_if_built_within_years : null;
+      if (cut != null) { if (yb == null) miss.push("year built"); else if (yb > cut) out_of_scope = true; else if (yb === cut) miss.push("certificate-of-occupancy date"); }
       if (out_of_scope) continue;
       // local override, then coverage unknowns. `gate` is what the rule becomes once it is in force; it is
       // computed for every time status and stored on non-applies entries (if_in_force) so as-of queries on
@@ -81,6 +116,7 @@ for (const [id, j] of Object.entries(by)) {
       let gate = null;
       if (sup) gate = { result: "superseded", explanation: `${base} Replaced here by ${sup[1].superseded_by}: ${sup[1].reason}` };
       else if (miss.length) gate = { result: "unknown", explanation: `${base} Coverage depends on ${miss.join(" and ")}, which is not in the input.` };
+      else if (c.unknown_if_built_within_years != null && (yb == null || yb > AS_YEAR - c.unknown_if_built_within_years)) gate = { result: "unknown", explanation: `${base} Whether it covers this property depends on ${c.unknown_if_built_fact || "facts not in the input"}.` };
       else if (c.blocking_unknown) gate = { result: "unknown", explanation: `${base} Whether it covers this property depends on ${c.unknown_fact || "facts not in the input"}.` };
       if (gate && result === "applies") { push(gate, r); continue; }
       why = result === "applies" ? t.reason : result === "pending" ? "Not law yet: a pending bill." : t.reason;
