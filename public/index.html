@@ -28,6 +28,7 @@ h2{font-size:17px;margin:1.4rem 0 .5rem}
 .applies .badge{color:var(--applies)}.unknown .badge{color:var(--unknown)}.superseded .badge{color:var(--superseded)}.not_yet_effective .badge{color:var(--future)}.pending .badge{color:var(--pending)}
 .rule h3{margin:.1rem 0;font-size:16px}.meta{font-size:13px;color:var(--mut)}
 blockquote{margin:.5rem 0;padding:.3rem .8rem;border-left:3px solid var(--line);font-size:14px;color:var(--mut)}
+.grp{margin:1.2rem 0 .5rem;font-size:15px;border-bottom:1px solid var(--line);padding-bottom:3px}.grp.pending{color:var(--pending)}.grp.not_yet_effective{color:var(--future)}
 .flag{display:inline-block;margin-left:6px;font-size:12px;color:var(--warnb);font-weight:700}
 #empty{background:var(--warn);border:1px solid var(--warnb);border-radius:6px;padding:12px}
 [hidden]{display:none!important}
@@ -108,10 +109,23 @@ function render({ data: d, source }, asof) {
     stack.append(li);
   }
   if (!d.results.length) { rules.append(el("p", null, "No rules in our data apply to this address. That is not a guarantee that none exist.")); return; }
-  for (const r of d.results) {
+  const groups = [["applies", "Enacted law: applies on this date"], ["not_yet_effective", "Enacted law: not yet in effect"], ["pending", "Pending bills: not law"], ["superseded", "Superseded"], ["unknown", "Unknown: cannot tell from our data"]];
+  const known = new Set(groups.map((g) => g[0]));
+  for (const [key, title] of [...groups, ["", "Other"]]) {
+    const part = d.results.filter((r) => (known.has(r.result) ? r.result : "") === key);
+    if (!part.length) continue;
+    rules.append(el("h3", "grp " + key, `${title} (${part.length})`));
+    for (const r of part) rules.append(card(r));
+  }
+}
+
+function card(r) {
+  {
     const rule = r.rule || {}, c = el("article", "rule " + r.result);
     const head = el("div"); head.append(el("span", "badge", LABEL[r.result] || r.result));
-    if (r.conflict_flag) head.append(el("span", "flag", "⚑ possible conflict, human review"));
+    if (r.conflict_flag || rule.conflict_flag) head.append(el("span", "flag", "⚑ possible conflict, human review"));
+    const conf = r.confidence ?? rule.confidence;
+    if (typeof conf === "number" && conf < 0.7) head.append(el("span", "flag", `⚑ low confidence (${conf}), verify against the source`));
     c.append(head, el("h3", null, rule.title || r.team_rule_id));
     c.append(el("div", "meta", [rule.jurisdiction, rule.category?.replaceAll("_", " "), rule.effective_date && "effective " + rule.effective_date].filter(Boolean).join(" · ")));
     if (rule.requirement) c.append(el("p", null, rule.requirement));
@@ -120,9 +134,10 @@ function render({ data: d, source }, asof) {
     const cite = el("div", "meta"); cite.append("Source: ");
     if (rule.source_url && /^https?:/.test(rule.source_url)) { const l = el("a", null, rule.citation || rule.source_url); l.href = rule.source_url; l.target = "_blank"; l.rel = "noopener"; cite.append(l); }
     else cite.append(rule.citation || "missing citation");
+    cite.append(rule.retrieved_at ? ` · retrieved ${rule.retrieved_at}` : " · retrieval date not recorded");
     c.append(cite);
     if (rule.quoted_span) c.append(el("blockquote", null, rule.quoted_span));
-    rules.append(c);
+    return c;
   }
 }
 

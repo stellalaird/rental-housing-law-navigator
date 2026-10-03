@@ -11,6 +11,7 @@ import { claudeText, parseJson } from "./lib/llm.mjs";
 import { SYSTEM, promptFor } from "./extract-rules.mjs";
 import { loadRules, fullDate } from "./changelog.mjs";
 import { makeChanges } from "./make-changes.mjs";
+import { audit } from "./audit.mjs";
 
 const argv = process.argv.slice(2), flag = (n, d) => { const i = argv.indexOf(n); return i >= 0 ? argv[i + 1] : d; };
 const docPath = argv.find((a, i) => !a.startsWith("--") && !(argv[i - 1] || "").startsWith("--"));
@@ -63,4 +64,5 @@ t6res.notes = `New document ${docId}: ${fresh.length} rule(s) in ${t6.jurisdicti
 changes.T6 = t6res;
 
 if (!argv.includes("--dry")) { writeFileSync(rulesOut, JSON.stringify({ rules: merged }, null, 2) + "\n"); writeFileSync(changesOut, JSON.stringify(changes, null, 2) + "\n"); }
+if (!argv.includes("--dry")) audit({ kind: "ingest", input: docPath, as_of: today, rule_ids: fresh.map((n) => n.team_rule_id), detail: { extracted: extracted.length, dropped_unverified: dropped.length, superseded } });
 console.log(JSON.stringify({ doc: docId, extracted: extracted.length, quote_unverified_dropped: dropped.length, new_rules: fresh.map((n) => ({ id: n.team_rule_id, jurisdiction: n.jurisdiction, category: n.category, status: n.status, effective_date: n.effective_date, supersedes: n.supersedes || [] })), superseded, T6_affected: t6res.affected_address_ids.length, dry: argv.includes("--dry") }, null, 1));
