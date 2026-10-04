@@ -135,6 +135,17 @@ The server needs no model, no `claude` CLI and no `.env`; what a host must provi
 4. Confirm "Your project is submitted" / "Project submitted".
 5. Editable until the deadline; the latest save before 9:00 AM ET counts.
 
+## 10. HackOS paste-ready fields
+Written from the README and the scoring sections only; every number is from `node selfcheck.mjs` (2026-10-04 ~2:45 AM CDT). Re-check them if `rules.json` changes (hour-16 drop). **Not yet filled:** GitHub URL (owner pushes, section 5) and live demo link (section 8).
+
+- **Project name:** Rental Housing Law Navigator
+- **Challenge:** 02, Rental Housing Law Navigator (RealPage)
+- **Tagline:** Which housing rules apply to this address today, and what is about to change?
+- **GitHub URL:** `https://github.com/<your-username>/hack-nation-7` (placeholder until the repo is public)
+- **Description (about 150 words):**
+
+> Rental Housing Law Navigator reads real state and local housing law and tells a renter, landlord or advocate which rules apply to a specific address on a specific date. An LLM extracts structured rule records (94 across California, New Jersey and Massachusetts) in six categories. An address is resolved to its state, county and city, each rule's coverage conditions are tested against known building facts, and the answer lists every applicable rule in plain language with a source link and a quoted span. When a fact is missing the answer is "unknown", never a guess; pending and not-yet-effective law is shown separately from law in force. A change tracker takes a new or pending law and lists the affected addresses, with an as-of-date query. All 500 sample addresses are precomputed and the live lookup calls no model. On our own proxy score the build gets 74 of 75 automatic points; the judges' score may differ. Not legal advice.
+
 ## After
 - Finalists emailed Oct 7 (FAQ) or Oct 8 (Luma); sources disagree. Virtual pitches Oct 10, 12:00–1:00 PM ET.
 - Questions: questions@hack-nation.com.
