@@ -1,5 +1,5 @@
 <!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Rental Housing Law Navigator</title>
+<title>LegalLens</title>
 <style>
 /* Direction v2: plain reference document. One sans family, sentence-case labels, a left rail, hairlines. See DESIGN.md. System fonts only (offline). */
 :root{--bg:#fff;--fg:#0b0c0c;--mut:#4b5056;--faint:#6b7177;--line:#d6d9dc;--line2:#b1b4b6;--link:#0b55a3;--on:#fff;--tint:#f3f4f5;--warn:#fff7d6;--warnb:#a87b00;
@@ -83,7 +83,7 @@ blockquote{margin:var(--s2) 0 0;padding:0 0 0 var(--s3);border-left:3px solid va
 </style>
 <div id="banner" role="note"><b id="b1"></b> <span id="b2"></span></div>
 <main>
-<header><h1 id="title">Rental Housing Law Navigator</h1><button id="lang" type="button" aria-label="Language / Idioma"></button></header><p id="tagline"></p>
+<header><h1 id="title">LegalLens</h1><button id="lang" type="button" aria-label="Language / Idioma"></button></header><p id="tagline"></p>
 <form id="f">
   <label id="addr">Address or address ID<input id="q" name="q" autocomplete="off" required placeholder="e.g. 6238 DE LONGPRE AVE or A0001"></label>
   <label>As of<input id="asof" type="date" value="2026-10-01"></label>
@@ -131,7 +131,7 @@ const loadEs = () => es ? Promise.resolve(es) : fetch("es.json").then((r) => r.o
 let plain = null; // optional public/plain.json: { team_rule_id: { en, es } } — short plain-language summary shown on the card; the precise text sits under "Legal details"
 const loadPlain = () => plain ? Promise.resolve(plain) : fetch("plain.json").then((r) => r.ok ? r.json() : {}).catch(() => ({})).then((j) => (plain = j));
 const LABEL = { applies: "Applies", unknown: "Unknown", superseded: "Superseded", not_yet_effective: "Not yet effective", pending: "Pending (not law)" };
-const FALLBACK = { title: "Rental Housing Law Navigator", tagline: "Which housing rules apply to this address on a given date? Not legal advice.", examples: ["6238 DE LONGPRE AVE", "1031-1035 CLINTON ST"] };
+const FALLBACK = { title: "LegalLens", tagline: "Rental Housing Law Navigator. Which housing rules apply to this address on a given date? Not legal advice.", examples: ["6238 DE LONGPRE AVE", "1031-1035 CLINTON ST"] };
 const FIXTURES_ON = new URLSearchParams(location.search).get("fixtures") === "1";
 let fixtures = null;
 const loadFixtures = () => fixtures ? Promise.resolve(fixtures) : fetch("fixtures/lookup-fixtures.json").then((r) => r.ok ? r.json() : null).catch(() => null).then((j) => (fixtures = j));
