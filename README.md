@@ -1,4 +1,4 @@
-# Rental Housing Law Navigator — Hack-Nation 7 · Challenge 02 (RealPage)
+# LegalLens: Rental Housing Law Navigator — Hack-Nation 7 · Challenge 02 (RealPage)
 
 > Which rules apply to this apartment today, and what is about to change?
 
@@ -15,16 +15,17 @@ Live demo: `[ link goes here ]`
 
 ## Scores
 
-<!-- TODO: filled in from a real `score.py` run on the dev set. Do not write numbers that were not produced by that script. -->
+Our own proxy from `node selfcheck.mjs` (run 2026-10-04). It is **not** the organisers' `score.py`, which is not in our pack and has no answer key behind it here. It checks structure only: schema validity, quoted spans found in the cited corpus text, lookup coverage of all 500 addresses, and sanity of the change-test outputs.
 
-| Component | Max | Our dev-set result |
+| Component | Max | Our proxy |
 |---|---|---|
-| Extraction accuracy | 25 | TODO |
-| Address coverage | 20 | TODO |
-| Citations | 15 | TODO |
-| Change tracking (T1–T6) | 15 | TODO |
+| Extraction accuracy | 25 | 25 (94 of 94 records schema-valid; 78 quoted spans found in the corpus) |
+| Address coverage | 20 | 20 (500 of 500 addresses covered, 0 bad result values) |
+| Citations | 15 | 14 (5791 of 6209 `applies` answers cited) |
+| Change tracking (T1–T6) | 15 | 15 (T1–T5 sanity checks pass; T6 skipped, no T6 entry in `changes.json`) |
+| **Total** | 75 | **74** |
 
-The judged components (usability 10, responsible design 10, scalability 5) are scored by judges, not by script. Scores come from the organisers' own `score.py` against the dev key; the held-out key is not available to us.
+A proxy cannot show that the extracted rules are correct, only that they are well formed. The judged components (usability 10, responsible design 10, scalability 5) are scored by judges, not by script, and the held-out key is not available to us.
 
 ## How it works
 
@@ -99,20 +100,20 @@ The challenge asks for transparency, not legal verdicts. What this system does a
 
 ## Robustness
 
-Built so a flaky network or API does not break a live demo: the page tries a live stream, then a plain JSON call, then a recorded replay (`npm run record-replay`; `npm run build:static` makes a server-less build). Rate limit, size limits and a concurrency cap protect the API key (`RATE_LIMIT`, `MAX_PROMPT_CHARS`, `MAX_HISTORY`, `MAX_CONCURRENT`; set `TRUST_PROXY=1` behind a tunnel). Details are in `STACK.md`.
+The lookup page needs the Node server: it calls `GET /api/lookup`, which reads `rules.json`, `lookups.json` and the organisers' `sample_addresses.csv`. `npm run build:static` is not a working static demo. It copies `public/` to `dist/`, which has no `/api`, so the page reports lookups as unavailable. `?fixtures=1` loads `fixtures/lookup-fixtures.json`, which is placeholder data for layout checks and not real law. The server has a rate limit, size limits and a concurrency cap (`RATE_LIMIT`, `MAX_PROMPT_CHARS`, `MAX_HISTORY`, `MAX_CONCURRENT`; set `TRUST_PROXY=1` behind a tunnel). Details are in `STACK.md` and `DEPLOY.md`.
 
 ## How AI is used
 
-- **In the product:** Claude (`claude-opus-5-5`) extracts rules from statute text and writes the plain-language explanations.
+- **In the product:** Claude extracts rules from the statute text offline, and the lookup pipeline uses it for pinned coverage and supersession decisions (`cov-pins.json`, `supersession-pins.json`), for the Spanish text (`public/es.json`), and for the short plain-language summaries (`public/plain.json`, made offline by `plain-lang.mjs`). Each summary is checked mechanically: any number in it must appear in that rule's own record, and it is capped at 25 words; a summary that fails is dropped and the page falls back to the rule's requirement text. This does not check that a summary is semantically faithful. No model is called at lookup time.
 - **In the build:** developed with Claude Code assisting the author. <!-- TODO: owner to confirm disclosure wording; the FAQ states no AI-disclosure policy. -->
 
 ## Scalability
 
-New jurisdictions need no new code: add the source text to the corpus, rerun extraction, and the lookup and change-tracking stages work off the same schema. <!-- TODO: confirm and demonstrate with the hour-16 ordinance. -->
+New jurisdictions need no new code: add the source text to the corpus, rerun extraction, and the lookup and change-tracking stages work off the same schema. Current size: 94 rules, 500 addresses, 3 states and 10 cities. `ingest-doc.mjs` takes a new document through extraction, supersession and a T6 entry in one command (see `HOUR16.md`).
 
 ## Data
 
-The starter pack (corpus, sample addresses, schema, dev key) is provided by the organisers and is not committed here unless its terms allow it. <!-- TODO: confirm what is in the repo. -->
+The starter pack (corpus, sample addresses, schema, dev key) is provided by the organisers and is gitignored: a fresh clone does not contain it. The corpus has 87 manifest rows, 54 with text and 33 link-only; for 16 of the 94 rules the quoted text comes from pages fetched by plain GET (`data/starter/fetched/`), also gitignored. `lookups.json` keys results by address id (A0001 to A0500) and holds no street addresses. Whether the pack may be redistributed is unconfirmed.
 
 ## License
 
