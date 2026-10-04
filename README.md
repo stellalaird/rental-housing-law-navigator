@@ -63,6 +63,8 @@ curl "localhost:3000/api/lookup?address=A0001&asof=2026-10-01"
 
 The server reads the organisers' `sample_addresses.csv` from `data/starter/participant-final-no-hour16 3/data/` (gitignored, not in a fresh clone), or from `ADDRESSES_CSV=/path/to/sample_addresses.csv`. Without it `/api/lookup` returns 503 `address data not installed`.
 
+Hosted: deployed with the `vercel` CLI (`vercel.json`); the address CSV is bundled privately and is not in this repo.
+
 Rebuild pipeline, in order (each calls the model through `claude -p`, cached in `cache/`):
 
 ```bash
