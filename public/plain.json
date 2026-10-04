@@ -1,0 +1,372 @@
+{
+ "r-0002": {
+  "en": "Before charging screening fees, Berkeley owners must give applicants a rights statement, and may not charge tenants non-refundable renewal fees.",
+  "es": "Antes de cobrar cuotas de evaluación, los propietarios en Berkeley deben dar una declaración de derechos; no pueden cobrar cuotas no reembolsables por renovar."
+ },
+ "r-0003": {
+  "en": "Covered tenants can only be evicted for just cause. Landlords must file termination notices with the Rent Board within 3 business days of service.",
+  "es": "Solo se puede desalojar a inquilinos cubiertos con causa justa. Los propietarios deben registrar avisos ante la Rent Board hasta 3 días hábiles tras entregarlos."
+ },
+ "r-0004": {
+  "en": "Landlords may not refuse to rent or end tenancies based on criminal history; violations can bring fines of $1,000 to $10,000 each.",
+  "es": "Los propietarios no pueden negarse a alquilar ni terminar contratos por antecedentes penales; cada infracción puede tener multas de $1,000 a $10,000."
+ },
+ "r-0005": {
+  "en": "Owners who evict tenants to leave the rental market under the Ellis Act must pay $19,413 in relocation aid, plus $6,471 for qualifying households.",
+  "es": "Los propietarios que desalojen para retirar la propiedad del mercado (Ley Ellis) deben pagar $19,413 de reubicación, más $6,471 para hogares que califiquen."
+ },
+ "r-0006": {
+  "en": "Owners who evict tenants for owner move-in must pay $19,413 in relocation aid, plus $6,471 for qualifying households.",
+  "es": "Los propietarios que desalojen para ocupar la unidad deben pagar $19,413 de reubicación, más $6,471 para hogares que califiquen."
+ },
+ "r-0007": {
+  "en": "Eligible landlords may raise 2025 permanent rent ceilings by 1.0%, no earlier than January 1, 2026, and must give tenants required notice.",
+  "es": "Los propietarios elegibles pueden subir los topes de renta permanentes de 2025 un 1.0%, desde el 1 de enero de 2026, con el aviso requerido."
+ },
+ "r-0008": {
+  "en": "Berkeley landlords of fully covered units may raise rent yearly only by 65% of the CPI increase, capped at 5%.",
+  "es": "En Berkeley, los propietarios de unidades totalmente cubiertas solo pueden subir el alquiler anual el 65% del aumento del CPI, máximo 5%."
+ },
+ "r-0009": {
+  "en": "Berkeley rental housing providers may not ask about or use criminal history in tenant decisions and must post the required notice to applicants.",
+  "es": "En Berkeley, los arrendadores no pueden preguntar sobre antecedentes penales ni usarlos al decidir sobre inquilinos, y deben publicar el aviso requerido para solicitantes."
+ },
+ "r-0010": {
+  "en": "Berkeley landlords must pay tenants interest on security deposits at each year's end, prorated if the tenant moves out earlier.",
+  "es": "En Berkeley, los propietarios deben pagar a los inquilinos intereses anuales sobre el depósito de seguridad, prorrateados si el inquilino se muda antes."
+ },
+ "r-0011": {
+  "en": "Berkeley landlords may not charge a higher security deposit or higher rent because of an applicant's or tenant's criminal history.",
+  "es": "En Berkeley, los propietarios no pueden cobrar un depósito de seguridad o alquiler más alto por antecedentes penales de solicitantes o inquilinos."
+ },
+ "r-0012": {
+  "en": "Boston landlords ending a tenancy must include a Notice of Tenants' Rights and Resources with the Notice to Quit and send the City a copy.",
+  "es": "Los propietarios en Boston que terminen un alquiler deben adjuntar un aviso de derechos al aviso de desalojo y enviar copia a la Ciudad."
+ },
+ "r-0013": {
+  "en": "Covered Boston housing providers must review applicants individually, may not consider convictions older than 5 years, and may not use credit scores to decide.",
+  "es": "Los proveedores de vivienda cubiertos en Boston deben evaluar cada caso, no pueden considerar condenas de más de 5 años ni usar puntajes de crédito."
+ },
+ "r-0014": {
+  "en": "Boston landlords may not discriminate based on protected traits, or refuse applicants who use rental assistance such as Section 8 or veterans vouchers.",
+  "es": "Los caseros de Boston no pueden discriminar por rasgos protegidos ni rechazar solicitantes con ayuda de alquiler, como Sección 8 o vales de veteranos."
+ },
+ "r-0015": {
+  "en": "California bans using or distributing a common pricing algorithm, which uses competitor data, to restrain trade or pressure others to adopt its prices.",
+  "es": "California prohíbe usar o distribuir algoritmos comunes de precios con datos de competidores para restringir el comercio o imponer sus precios a otros."
+ },
+ "r-0017": {
+  "en": "After 12 months (sometimes 24), California owners may end tenancies only for listed just causes; no-fault endings require relocation aid or a final-month rent waiver.",
+  "es": "Tras 12 meses (a veces 24), propietarios californianos solo pueden desalojar por causa justa listada; sin culpa, pagan reubicación o condonan el último mes."
+ },
+ "r-0018": {
+  "en": "California tenant households displaced under 20 days for capital improvements get $446.00 per day plus actual moving expenses (notices served 3/01/26 – 2/28/27).",
+  "es": "En California, hogares inquilinos desplazados menos de 20 días por mejoras de capital reciben $446.00 diarios más gastos de mudanza reales (avisos 3/01/26 – 2/28/27)."
+ },
+ "r-0019": {
+  "en": "Cambridge landlords must apply reasonable applicant standards equally and may not discriminate over source of income, like Section 8. Fines can reach $300 per violation.",
+  "es": "Los caseros en Cambridge deben aplicar criterios razonables por igual; no pueden discriminar por fuente de ingresos, como Sección 8. Multa máxima: $300 por infracción."
+ },
+ "r-0020": {
+  "en": "Over 12 months, California owners may raise rent at most the lower of 5% plus regional CPI or 10%, in up to two increases.",
+  "es": "En 12 meses, los dueños en California pueden subir la renta hasta lo menor entre 5% más IPC regional o 10%, en máximo dos aumentos."
+ },
+ "r-0022": {
+  "en": "Housing providers may not ban all applicants with criminal histories or consider non-conviction arrests, sealed, expunged, or juvenile records.",
+  "es": "Los proveedores de vivienda no pueden vetar a todo solicitante con antecedentes penales ni considerar arrestos sin condena o registros sellados, eliminados o juveniles."
+ },
+ "r-0023": {
+  "en": "Landlords may not discriminate based on source of income, like Section 8. Income standards must rely only on the tenant-paid rent share.",
+  "es": "Los arrendadores no pueden discriminar por fuente de ingresos, como Sección 8. Los requisitos de ingreso usan solo la renta que paga el inquilino."
+ },
+ "r-0024": {
+  "en": "Landlords may not use credit history for applicants with government rent subsidies unless they let applicants show other proof of ability to pay.",
+  "es": "Los arrendadores no pueden usar historial de crédito de solicitantes con subsidio de renta gubernamental sin permitirles mostrar otra prueba de capacidad de pago."
+ },
+ "r-0027": {
+  "en": "Security deposits max out at one month's rent (2 for qualifying small landlords); landlords must refund within 21 calendar days of move-out.",
+  "es": "El depósito máximo es un mes de renta (2 para pequeños arrendadores que califican); el arrendador debe devolverlo en 21 días calendario tras la mudanza."
+ },
+ "r-0028": {
+  "en": "Jersey City regulates rents at properties with 5 or more units. Landlords must apply for higher increases; tenants may challenge illegal rent or poor conditions.",
+  "es": "Jersey City regula rentas en propiedades de 5 o más unidades. Aumentos mayores requieren solicitud; los inquilinos pueden impugnar rentas ilegales o malas condiciones."
+ },
+ "r-0029": {
+  "en": "In covered Los Angeles units, landlords need a just cause to end a tenancy and must pay relocation assistance for no-fault evictions.",
+  "es": "En unidades cubiertas de Los Ángeles, los arrendadores necesitan causa justa para terminar un arrendamiento y deben pagar ayuda de reubicación en desalojos sin culpa."
+ },
+ "r-0030": {
+  "en": "Landlords may evict RSO or JCO tenants for unpaid rent only if the amount owed exceeds Fair Market Rent for the unit's bedroom size.",
+  "es": "Los propietarios solo pueden desalojar a inquilinos RSO o JCO por impago si la deuda supera la Fair Market Rent según los dormitorios."
+ },
+ "r-0031": {
+  "en": "For no-fault RSO or JCO evictions, landlords must file with LAHD and provide relocation pay, or escrow it, within 15 days of notice.",
+  "es": "En desalojos sin culpa RSO o JCO, los propietarios deben presentar declaración ante LAHD y pagar reubicación, o depositarla, en 15 días tras el aviso."
+ },
+ "r-0032": {
+  "en": "Landlords may evict RSO tenants only for listed reasons. No-fault evictions require relocation assistance, a filing with LAHD, and 30-day or 60-day written notice."
+ },
+ "r-0033": {
+  "en": "Tenants of Protected Units demolished for new construction get a 6-month notice, relocation pay, and a right to return if demolition does not proceed."
+ },
+ "r-0034": {
+  "en": "Landlords may raise RSO rent only once every 12 months; the allowed increase was 3% from July 1, 2025 to June 30, 2026.",
+  "es": "Los propietarios solo pueden subir la renta RSO cada 12 meses: 3% del 1 de julio de 2025 al 30 de junio de 2026."
+ },
+ "r-0035": {
+  "en": "After registering units and giving written notice, RSO landlords may add $1.61 monthly for the RSO fee and $2.83 for the SCEP fee.",
+  "es": "Tras registrar unidades y dar aviso escrito, los propietarios RSO pueden cobrar $1.61 al mes por la tarifa RSO y $2.83 por la SCEP."
+ },
+ "r-0036": {
+  "en": "With LAHD approval, Los Angeles RSO landlords may raise rent for certain improvement costs or when income does not cover operating expenses.",
+  "es": "Con aprobación de LAHD, propietarios RSO en Los Ángeles pueden subir la renta por ciertas mejoras o si los ingresos no cubren gastos operativos."
+ },
+ "r-0038": {
+  "en": "Proposed Massachusetts bill S.2983 would ban algorithmic rent-setting software. It is not law yet and was sent to Senate Ways and Means.",
+  "es": "El proyecto S.2983 de Massachusetts prohibiría el software algorítmico para fijar rentas. Aún no es ley; pasó al comité Senate Ways and Means."
+ },
+ "r-0039": {
+  "en": "Proposed Massachusetts bill H.5222 aims to prevent algorithmic rent fixing. It is not law; it was sent to House Ways and Means.",
+  "es": "El proyecto H.5222 de Massachusetts busca prevenir la fijación algorítmica de rentas. No es ley; pasó al comité House Ways and Means."
+ },
+ "r-0040": {
+  "en": "Landlords may end a written lease over unpaid rent with 14 days' notice. Paying all rent, interest and costs by the answer date stops it.",
+  "es": "Los propietarios pueden terminar un contrato escrito por impago con aviso de 14 días; pagar todo con intereses y costos hasta la respuesta lo evita."
+ },
+ "r-0041": {
+  "en": "Landlords may give tenants at will a 14-day notice for unpaid rent; paying in full within 10 days stops it, once per 12 months.",
+  "es": "En arrendamientos a voluntad, el impago permite un aviso de 14 días; pagar todo en 10 días lo anula, una vez cada 12 meses."
+ },
+ "r-0042": {
+  "en": "A termination notice within six months after protected tenant action is presumed retaliation, except for nonpayment. Retaliating landlords owe damages, costs and attorney's fees.",
+  "es": "Tras acción protegida del inquilino, avisar la terminación en seis meses se presume represalia, salvo por impago. Quien la cometa paga daños, costos y honorarios."
+ },
+ "r-0043": {
+  "en": "Rent control adopted under Chapter 40P may not cover evictions, occupancy, services, condo conversions, or removing properties from regulation.",
+  "es": "El control de rentas adoptado bajo el Capítulo 40P no puede cubrir desalojos, ocupación, servicios, conversión a condominios ni retirar propiedades de la regulación."
+ },
+ "r-0044": {
+  "en": "Cities and towns may not have rent control, except under Chapter 40P, where owner participation becomes voluntary after 6 months.",
+  "es": "Ciudades y pueblos no pueden tener control de rentas, salvo bajo el Capítulo 40P, donde participar es voluntario para propietarios tras 6 meses."
+ },
+ "r-0045": {
+  "en": "A rent increase notice given within six months after a tenant takes protected action, like reporting violations, is presumed to be a reprisal.",
+  "es": "Un aviso de aumento de renta recibido dentro de seis meses tras una acción protegida del inquilino, como denunciar infracciones, se presume represalia."
+ },
+ "r-0046": {
+  "en": "Housing providers may not refuse to rent or set different terms based on protected traits, including race, disability, public assistance, or having children.",
+  "es": "Los proveedores de vivienda no pueden negarse a alquilar ni fijar condiciones distintas por rasgos protegidos, como raza, discapacidad, asistencia pública o tener hijos."
+ },
+ "r-0047": {
+  "en": "Landlords may collect only first and last month's rent, a deposit up to one month's rent, and lock costs, returning deposits within 30 days.",
+  "es": "Los arrendadores solo pueden cobrar primer y último mes, un depósito de hasta un mes de renta y la cerradura; deben devolverlo en 30 días."
+ },
+ "r-0048": {
+  "en": "Landlords offering a fee instead of a security deposit must offer it to all approved applicants; fees plus deposit cannot exceed one month's rent.",
+  "es": "Los arrendadores que ofrezcan una tarifa sustituta del depósito deben ofrecerla a todo solicitante aprobado; tarifas más depósito no pueden superar un mes de renta."
+ },
+ "r-0049": {
+  "en": "Starting July 1, 2027, New Jersey rental owners may not use algorithmic software that sets rents using competitors' sensitive information.",
+  "es": "Desde el 1 de julio de 2027, los arrendadores de Nueva Jersey no podrán usar algoritmos que fijen rentas con información sensible de competidores."
+ },
+ "r-0050": {
+  "en": "Landlords and their agents may charge at most $50 to apply for a rental, adjusted each January 1 for CPI. Overcharges must be refunded.",
+  "es": "Los arrendadores y sus agentes pueden cobrar como máximo $50 por solicitud, ajustado cada 1 de enero según el IPC. Los cobros excesivos se devuelven."
+ },
+ "r-0051": {
+  "en": "Before accepting application fees, housing providers must tell applicants in writing if criminal history is reviewed and that applicants may submit supporting evidence.",
+  "es": "Antes de aceptar cuotas de solicitud, los proveedores de vivienda deben informar por escrito si revisan antecedentes penales y que el solicitante puede presentar pruebas."
+ },
+ "r-0054": {
+  "en": "If a housing provider wins an appeal overturning a director's order to house someone, it may evict them with at least 45 days' notice.",
+  "es": "Si un proveedor gana una apelación contra la orden del director de alojar a alguien, puede desalojarlo con al menos 45 días de aviso."
+ },
+ "r-0055": {
+  "en": "Qualifying tenants 62 or older, disabled, or disabled veterans in condo or co-op conversions may avoid eviction for up to 40 years, with income limits.",
+  "es": "Inquilinos de 62 años o más, discapacitados o veteranos discapacitados en conversiones a condominio o cooperativa pueden evitar el desalojo hasta 40 años, según ingresos."
+ },
+ "r-0057": {
+  "en": "New Jersey has no statewide rent control. Towns may adopt rent control or rent leveling rules, enforced by local boards.",
+  "es": "Nueva Jersey no tiene control de rentas estatal. Los municipios pueden adoptar normas de control o nivelación de rentas, aplicadas por juntas locales."
+ },
+ "r-0058": {
+  "en": "Newly built multi-unit buildings are exempt from local rent control for 30 years after construction is completed.",
+  "es": "Los edificios de varias viviendas recién construidos están exentos del control de rentas local durante 30 años después de terminar la construcción."
+ },
+ "r-0059": {
+  "en": "Landlords cannot raise rent to cover costs caused only by a condo, co-op or fee simple conversion, but may for new services or amenities.",
+  "es": "La renta no puede subir por costos debidos solo a una conversión a condominio, cooperativa o pleno dominio, pero sí por nuevos servicios o comodidades."
+ },
+ "r-0060": {
+  "en": "Landlords who deny a rental application because of a credit report must give the applicant the reporting agency's name, address and phone number.",
+  "es": "Si un propietario rechaza una solicitud por un informe de crédito, debe dar al solicitante nombre, dirección y teléfono de la agencia que lo emitió."
+ },
+ "r-0061": {
+  "en": "Landlords may not refuse to rent to families with children, except in housing for older persons or owner-occupied buildings with no more than two units.",
+  "es": "Los propietarios no pueden rechazar a familias con niños, salvo en viviendas para personas mayores o edificios de hasta dos unidades donde vive el dueño."
+ },
+ "r-0062": {
+  "en": "Landlords may not ask about criminal records before a conditional offer and may never consider arrests without conviction, sealed or expunged records, or juvenile cases.",
+  "es": "Los propietarios no pueden preguntar por antecedentes penales antes de una oferta condicional, ni considerar arrestos sin condena, expedientes sellados o borrados, ni casos juveniles."
+ },
+ "r-0068": {
+  "en": "In San Diego, landlords may not use software that uses nonpublic competitor data to recommend rents or occupancy levels. Penalties can reach $1,000 per violation.",
+  "es": "En San Diego, los propietarios no pueden usar software que recomiende rentas u ocupación con datos privados de competidores. Multas de hasta $1,000 por infracción."
+ },
+ "r-0069": {
+  "en": "Landlords need just cause to end covered tenancies. No-fault relocation aid is 2 months' actual rent, or 3 for seniors 62+ or disabled tenants.",
+  "es": "Los propietarios necesitan causa justa para terminar contratos cubiertos. Sin culpa del inquilino, pagan 2 meses de renta real; 3 si tiene 62+ o discapacidad."
+ },
+ "r-0070": {
+  "en": "Landlords re-offering units to tenants displaced by no-fault evictions may screen them but must list minimum screening criteria in the written offer.",
+  "es": "Al reofrecer la unidad a inquilinos desalojados sin culpa, los propietarios pueden evaluarlos, pero deben indicar criterios mínimos en la oferta escrita."
+ },
+ "r-0071": {
+  "en": "Relocation assistance for a no-fault termination is separate from any deposit owed. Landlords cannot use it to replace or offset the deposit return.",
+  "es": "La ayuda de reubicación por terminación sin culpa es aparte del depósito adeudado. Los propietarios no pueden usarla en lugar de devolver el depósito."
+ },
+ "r-0072": {
+  "en": "San Francisco landlords may not use rent-setting software that analyzes nonpublic competitor data. Civil penalties are up to $1,000 per violation.",
+  "es": "En San Francisco, los propietarios no pueden usar algoritmos con datos no públicos de competidores para fijar rentas. Multas civiles: hasta $1,000 por infracción."
+ },
+ "r-0073": {
+  "en": "Landlords evicting under the Ellis Act owe $11,110.05 per tenant, max $33,330.13 per unit, plus $7,443.90 per tenant 62+ or disabled (notices served 3/01/26–2/28/27).",
+  "es": "Al desalojar por Ley Ellis, los propietarios pagan $11,110.05 por inquilino, máximo $33,330.13 por unidad, más $7,443.90 por inquilino mayor (62+) o discapacitado (avisos 3/01/26–2/28/27)."
+ },
+ "r-0074": {
+  "en": "Landlords may evict covered tenants only for one of 17 just causes. Lease expiration or an ownership change is not just cause.",
+  "es": "Los propietarios solo pueden desalojar a inquilinos cubiertos por una de 17 causas justas. El vencimiento del contrato o cambio de dueño no cuenta."
+ },
+ "r-0075": {
+  "en": "Landlords evicting for certain no-fault reasons must pay $8,245.00 per tenant, max $24,733.00 per unit, plus $5,497.00 for elderly, disabled or child households (notices 3/01/26–2/28/27).",
+  "es": "Por ciertos desalojos sin culpa, los propietarios deben pagar $8,245.00 por inquilino, máximo $24,733.00 por unidad, más $5,497.00 para mayores, discapacitados o menores (avisos 3/01/26–2/28/27)."
+ },
+ "r-0076": {
+  "en": "From March 1, 2026 through February 28, 2027, San Francisco rent-controlled rents may rise up to 1.6% of base rent.",
+  "es": "Del 1 de marzo de 2026 al 28 de febrero de 2027, la renta controlada en San Francisco puede subir 1.6% de la renta base."
+ },
+ "r-0077": {
+  "en": "San Francisco protects residents with an arrest or conviction history when decisions about affordable housing are made.",
+  "es": "San Francisco protege a residentes con antecedentes de arresto o condena en las decisiones sobre vivienda asequible."
+ },
+ "r-0078": {
+  "en": "San Francisco landlords must pay interest on tenant security deposits; the rate is 4.2% from March 1, 2026 to February 28, 2027.",
+  "es": "En San Francisco, los propietarios deben pagar intereses sobre depósitos de garantía: 4.2% del 1 de marzo de 2026 al 28 de febrero de 2027."
+ },
+ "r-0079": {
+  "en": "After 30 days, Santa Ana owners need written just cause to end tenancies; no-fault endings require 3 months' relocation aid or 3 months' rent waived.",
+  "es": "Tras 30 días, desalojar en Santa Ana exige causa justa escrita; sin culpa, el dueño paga 3 meses de reubicación o no cobra 3 meses."
+ },
+ "r-0080": {
+  "en": "Santa Ana caps yearly rent increases at the lower of 3% or 80% of CPI change; 2.87% for Sept 1, 2026 – Aug 31, 2027.",
+  "es": "Tope anual de renta en Santa Ana: menor de 3% u 80% del cambio del CPI; 2.87% del 1 sept 2026 al 31 ago 2027."
+ },
+ "r-0081": {
+  "en": "Berkeley landlords may not use algorithms based on nonpublic competitor data to set rents or occupancy. Penalties: up to $1,000 per unit, per month."
+ },
+ "r-0082": {
+  "en": "California landlords may charge applicants screening fees covering actual costs only, up to $68.96 in 2026. They must give receipts and refund unused amounts.",
+  "es": "Los propietarios en California solo pueden cobrar a solicitantes el costo real de evaluación, hasta $68.96 en 2026. Deben dar recibo y reembolsar sobrantes."
+ },
+ "r-0083": {
+  "en": "Cambridge has started work on a possible ban on rent-setting algorithm software for property management companies. No ban has been enacted yet.",
+  "es": "Cambridge comenzó a trabajar en una posible prohibición del software algorítmico para fijar rentas en empresas administradoras de propiedades. Aún no se ha aprobado."
+ },
+ "r-0084": {
+  "en": "First-come screening requires written criteria, reviewing applications in order, and approving the first qualified applicant. Landlords must use reusable screening reports tenants provide.",
+  "es": "Con selección por orden de llegada, los propietarios deben dar criterios escritos, revisar en orden y aprobar al primer calificado. Además, deben usar informes reutilizables."
+ },
+ "r-0085": {
+  "en": "California housing providers may not charge higher deposits for children or source of income, or pet deposits or rent for service or support animals.",
+  "es": "Los arrendadores en California no pueden cobrar más depósito por hijos o fuente de ingresos, ni cargos por mascota a animales de servicio o apoyo."
+ },
+ "r-0086": {
+  "en": "Hoboken landlords may not use algorithms with nonpublic competitor data to coordinate rents. Penalty: up to a $2,000 fine or 90 days' community service."
+ },
+ "r-0087": {
+  "en": "Hoboken landlords raising a current tenant's rent over 10% on renewal must state whether a rent algorithm was used. Fines reach $1,000 per incident.",
+  "es": "Propietarios en Hoboken que suben la renta más del 10% al renovar deben indicar si usaron un algoritmo. Multa: hasta $1,000 por incidente."
+ },
+ "r-0088": {
+  "en": "Hoboken cost-of-living increases are capped at the lesser of 5% or CPI change, once per 12 months, only when a lease or tenancy ends.",
+  "es": "Aumentos por costo de vida en Hoboken: máximo el menor entre 5% y cambio del CPI, uno cada 12 meses, al vencer contrato o arrendamiento."
+ },
+ "r-0089": {
+  "en": "Before raising rent over 10% on renewal, Hoboken landlords must give tenants written disclosures, including itemized costs and whether a rent algorithm was used.",
+  "es": "Antes de subir la renta más del 10% al renovar, propietarios de Hoboken deben informar por escrito los costos y si usaron un algoritmo."
+ },
+ "r-0091": {
+  "en": "Landlords of Los Angeles RSO units must pay tenants security deposit interest monthly or yearly, directly or as rent credit. The 2025 rate was 4.320%."
+ },
+ "r-0092": {
+  "en": "Massachusetts licensed brokers may charge prospective tenants application fees, but must give written notice of the fee and its terms at the first meeting.",
+  "es": "Corredores con licencia en Massachusetts pueden cobrar cuotas de solicitud, pero deben dar a solicitantes aviso escrito del monto y condiciones en la primera reunión."
+ },
+ "r-0093": {
+  "en": "Before a tenancy starts, Massachusetts landlords may charge only first and last month's rent, a security deposit, and a lock-change fee. Other fees are banned.",
+  "es": "Antes del arriendo, propietarios en Massachusetts solo pueden cobrar primer y último mes de renta, depósito y cambio de cerradura. Otros cargos están prohibidos."
+ },
+ "r-0094": {
+  "en": "A proposed Massachusetts cap on yearly rent increases (lesser of CPI or 5%) was blocked from the November 2026 ballot.",
+  "es": "Massachusetts: un tope propuesto a aumentos anuales de alquiler (el menor entre IPC o 5%) quedó fuera de la boleta de noviembre de 2026."
+ },
+ "r-0095": {
+  "en": "Newark landlords may not sue to evict tenants in retaliation for asserting rent control rights. Forcibly evicting tenants to rehabilitate units may bring triple damages.",
+  "es": "Los propietarios de Newark no pueden desalojar como represalia por reclamar derechos de renta controlada. Desalojar a la fuerza para rehabilitar puede implicar triple indemnización."
+ },
+ "r-0096": {
+  "en": "Newark HOME-assisted unit rents are capped at the lower of HUD fair market rent or an income limit; increases need 30 days' written notice."
+ },
+ "r-0097": {
+  "en": "Newark landlords may raise rent once per 12 months, by the CPI change but never above 4%, with 30 days' written notice.",
+  "es": "Propietarios en Newark pueden subir el alquiler una vez cada 12 meses, hasta el cambio del IPC, máximo 4%, con 30 días de aviso escrito."
+ },
+ "r-0098": {
+  "en": "Newark landlords and brokers may consider criminal history only after a formal application and must explain denials in writing within 10 business days.",
+  "es": "En Newark, propietarios y corredores solo pueden considerar antecedentes penales tras una solicitud formal y deben explicar rechazos por escrito en 10 días hábiles."
+ },
+ "r-0099": {
+  "en": "Owners of Newark HOME-assisted units may not refuse to rent to applicants who hold a Section 8 voucher or similar rental assistance.",
+  "es": "Los dueños de unidades HOME en Newark no pueden negarse a alquilar a solicitantes con vales de Sección 8 o asistencia de alquiler similar."
+ },
+ "r-0100": {
+  "en": "Santa Ana landlords may not use rent-setting software built on nonpublic competitor data, with penalties up to $1,000 per violation and per month.",
+  "es": "Caseros de Santa Ana no pueden fijar rentas con software basado en datos no públicos de competidores; sanciones hasta $1,000 por infracción y por mes."
+ },
+ "r-0101": {
+  "en": "Jersey City landlords may not use services that coordinate rents with competitor data. Fines: at least $100, up to $2,000 per day for later violations.",
+  "es": "Caseros de Jersey City no pueden usar servicios que coordinan rentas con datos de competidores. Multas: desde $100, hasta $2,000 diarios por reincidencia."
+ },
+ "r-0102": {
+  "en": "Jersey City leases and rent increase notices must include a sworn statement that no rent-setting service or shared competitor data was used.",
+  "es": "Contratos y avisos de aumento en Jersey City deben incluir declaración jurada: no se usaron servicios de rentas ni datos compartidos de competidores."
+ },
+ "r-0103": {
+  "en": "In New Jersey, foreclosure alone does not justify eviction. A buyer moving in needs a 90-day notice and must let existing leases expire.",
+  "es": "La ejecución hipotecaria sola no justifica desalojos en Nueva Jersey. Un comprador que vivirá allí debe dar aviso de 90 días y respetar contratos vigentes."
+ },
+ "r-0104": {
+  "en": "Most New Jersey landlords may evict or deny renewal only by proving a good-cause ground in Superior Court, usually after a Notice to Quit.",
+  "es": "Casi todos los caseros de Nueva Jersey solo pueden desalojar o negar renovación probando causa justificada ante el Tribunal Superior, normalmente tras aviso de desalojo."
+ },
+ "r-0105": {
+  "en": "In New Jersey, rent increases must not be unconscionable, or tenants cannot be evicted for not paying them. Rent cannot rise mid-lease.",
+  "es": "En Nueva Jersey, los aumentos de renta no pueden ser abusivos o no se podrá desalojar por impago. Tampoco se permiten a mitad de contrato."
+ },
+ "r-0106": {
+  "en": "New Jersey landlords generally may not refuse renters over protected traits, including lawful income like Section 8 vouchers, or families with children under 18.",
+  "es": "Los propietarios de Nueva Jersey generalmente no pueden rechazar inquilinos por rasgos protegidos, como ingresos legales (vales Sección 8) o hijos menores de 18."
+ },
+ "r-0107": {
+  "en": "Prepaid rent, including last month's, counts toward New Jersey's deposit cap, so landlords may collect at most 2.5x monthly rent at lease start.",
+  "es": "En Nueva Jersey, la renta prepagada, incluido el último mes, cuenta como depósito; al inicio del contrato, el máximo es 2.5x la renta mensual."
+ },
+ "r-0108": {
+  "en": "New Jersey landlords generally may charge deposits up to 1.5x monthly rent and must return them with interest within 30 days after tenancy ends.",
+  "es": "En Nueva Jersey, el depósito generalmente no puede superar 1.5x la renta mensual y debe devolverse con intereses en 30 días tras terminar el alquiler."
+ },
+ "r-0109": {
+  "en": "Berkeley rent control covers most units in multifamily properties built before 1980, single-family homes with tenancies begun before 1996, and certain rooming houses.",
+  "es": "El control de rentas de Berkeley cubre la mayoría de unidades multifamiliares anteriores a 1980, casas unifamiliares alquiladas desde antes de 1996 y ciertas pensiones."
+ }
+}
