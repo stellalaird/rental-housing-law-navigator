@@ -6,3 +6,4 @@ cache/
 audit.jsonl
 videos/
 tech-video/report.html
+.vercel
