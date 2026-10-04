@@ -8,8 +8,9 @@ An AI system that reads a corpus of real state and local housing law, extracts s
 
 ## Demo
 
-<!-- TODO: replace after recording (see video-scripts.md). -->
-`[ demo video / GIF goes here ]`
+- Demo video: https://drive.google.com/file/d/11SvzBiiczr9XP8WUnkI_PvYji1nhANhz/view?usp=drive_link
+- Technical video: https://drive.google.com/file/d/1Fdnfnm2L212nYPzWRsAjnB0-dLPheVl0/view?usp=drive_link
+- Team video: https://drive.google.com/file/d/1fenLndzAN6doFLSCMfP7zsLlCkZGxk7u/view?usp=drive_link
 
 Live demo: https://hack-nation-7.vercel.app/index.html (link `/index.html`; the bare `/` returns 404)
 
