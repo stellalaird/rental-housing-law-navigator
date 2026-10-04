@@ -11,7 +11,7 @@ An AI system that reads a corpus of real state and local housing law, extracts s
 <!-- TODO: replace after recording (see video-scripts.md). -->
 `[ demo video / GIF goes here ]`
 
-Live demo: `[ link goes here ]`
+Live demo: https://hack-nation-7.vercel.app/index.html (link `/index.html`; the bare `/` returns 404)
 
 ## Scores
 
