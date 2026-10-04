@@ -68,7 +68,13 @@ h2{font:700 var(--t-lg)/1.25 var(--sans);color:var(--fg);margin:var(--s5) 0 var(
 .src{margin-top:var(--s4);padding:var(--s3) 0 0;border-top:1px solid var(--line);font:var(--t-sm)/1.5 var(--sans);color:var(--mut)}
 .src .meta{font:var(--t-sm)/1.5 var(--sans);color:var(--mut);margin:0 0 var(--s1)}
 .src p.meta{max-width:50em}
-.whyfull{margin:var(--s3) 0 0}.whyfull summary{cursor:pointer;color:var(--link);font-size:var(--t-sm);text-decoration:underline;text-underline-offset:3px}.rule .whyfull p.meta{font-size:var(--t-sm);color:var(--mut)}
+.rule p.plain{font-size:var(--t-base);line-height:1.5}
+.cite-short{margin:var(--s2) 0 0}
+details.legal{margin:var(--s3) 0 0}details.legal summary{cursor:pointer;color:var(--link);font-size:var(--t-sm);text-decoration:underline;text-underline-offset:3px}
+details.legal[open] summary{margin-bottom:var(--s2)}
+.rule details.legal p.meta{font-size:var(--t-sm);color:var(--mut)}
+#toggle-all{grid-column:1/-1;justify-self:start;margin:var(--s3) 0 0;height:36px;padding:0 var(--s3);background:transparent;color:var(--link);border:2px solid var(--link);font:700 var(--t-sm) var(--sans);cursor:pointer}
+#toggle-all:hover{background:var(--link);color:#fff}
 .src a{color:var(--link);text-underline-offset:3px}
 blockquote{margin:var(--s2) 0 0;padding:0 0 0 var(--s3);border-left:3px solid var(--line2);font:var(--t-sm)/1.5 var(--sans);color:var(--mut);max-width:50em}
 .flag{display:inline-block;margin-left:var(--s3);font:700 var(--t-sm) var(--sans);color:var(--warnb)}
@@ -86,7 +92,7 @@ blockquote{margin:var(--s2) 0 0;padding:0 0 0 var(--s3);border-left:3px solid va
 <div id="examples"></div><div id="note" aria-live="polite"></div>
 <section id="resultView" hidden>
   <p id="mt" hidden></p>
-  <div id="verdict"><div id="vnum" aria-hidden="true"></div><h2 id="vhead"></h2><p id="vsub"></p><p id="asline" class="meta"></p></div>
+  <div id="verdict"><div id="vnum" aria-hidden="true"></div><h2 id="vhead"></h2><p id="vsub"></p><button id="toggle-all" type="button" aria-expanded="false"></button><p id="asline" class="meta"></p></div>
   <div id="empty" hidden></div>
   <h2 id="h-stack"></h2><ul id="stack"></ul>
   <h2 id="h-rules"></h2><div id="rules"></div>
@@ -106,7 +112,7 @@ const I18N = {
     stack: "Jurisdiction stack", rules: "Rules for this address", override: "Override: ", conflict: "⚑ possible conflict, human review", lowconf: (c) => `⚑ low confidence (${c}), verify against the source`,
     why: "Why: ", conflictNote: "Conflict: ", source: "Source: ", nocite: "missing citation", retrieved: (x) => ` · retrieved ${x}`, noretr: " · retrieval date not recorded", effective: "effective ", ifInForce: "In force only if: ", srcNote: "Source note: ",
     errPrefix: "Error. ", nc: "Unknown / not covered. ", ncMsg: "We cannot resolve this address, so no rules are shown rather than guessing.", none: "No rules in our data apply to this address. That is not a guarantee that none exist.",
-    partial: "Partly covered, not everything is shown: ", looking: "Looking up…", fxnote: "Live lookup unavailable; showing bundled fixture data.", lookBtn: "Look up", asofLbl: "As of", addrLbl: "Address or address ID", other: "Español", untranslated: "" },
+    partial: "Partly covered, not everything is shown: ", looking: "Looking up…", fxnote: "Live lookup unavailable; showing bundled fixture data.", noEff: "no effective date stated", legal: "Legal details", showAll: "Show all legal details", hideAll: "Hide all legal details", lookBtn: "Look up", asofLbl: "As of", addrLbl: "Address or address ID", other: "Español", untranslated: "" },
   es: { b1: "No es asesoría legal.", b2: "Solo informativo; las reglas pueden estar incompletas, desactualizadas o mal interpretadas. Consulte la fuente citada y a un profesional calificado.", mt: "Traducción automática; el texto legal original prevalece",
     label: { applies: "Aplica", unknown: "Desconocido", superseded: "Reemplazada", not_yet_effective: "Aún no en vigor", pending: "Pendiente (no es ley)" },
     groups: { applies: "Ley vigente: aplica en esta fecha", not_yet_effective: "Ley promulgada: aún no en vigor", pending: "Proyectos pendientes: no son ley", superseded: "Reemplazadas", unknown: "Desconocido: no se puede determinar con nuestros datos", "": "Otras" },
@@ -116,12 +122,14 @@ const I18N = {
     stack: "Jurisdicciones aplicables", rules: "Reglas para esta dirección", override: "Prevalece: ", conflict: "⚑ posible conflicto, requiere revisión humana", lowconf: (c) => `⚑ baja confianza (${c}), verifique con la fuente`,
     why: "Por qué: ", conflictNote: "Conflicto: ", source: "Fuente (en inglés): ", nocite: "falta la cita", retrieved: (t) => ` · consultada ${t}`, noretr: " · fecha de consulta no registrada", effective: "vigente desde ", ifInForce: "En vigor solo si: ", srcNote: "Nota sobre la fuente (en inglés): ",
     errPrefix: "Error. ", nc: "Desconocido / no cubierto. ", ncMsg: "No podemos resolver esta dirección, así que no mostramos reglas en lugar de adivinar.", none: "Ninguna regla en nuestros datos aplica a esta dirección. Eso no garantiza que no existan.",
-    partial: "Cobertura parcial, no se muestra todo: ", looking: "Buscando…", fxnote: "Búsqueda en vivo no disponible; mostrando datos de prueba.", lookBtn: "Buscar", asofLbl: "Fecha", addrLbl: "Dirección o ID de dirección", other: "English", untranslated: " (sin traducir)" },
+    partial: "Cobertura parcial, no se muestra todo: ", looking: "Buscando…", fxnote: "Búsqueda en vivo no disponible; mostrando datos de prueba.", noEff: "sin fecha de vigencia indicada", legal: "Detalles legales", showAll: "Mostrar todos los detalles legales", hideAll: "Ocultar todos los detalles legales", lookBtn: "Buscar", asofLbl: "Fecha", addrLbl: "Dirección o ID de dirección", other: "English", untranslated: " (sin traducir)" },
 };
 let LANG = new URLSearchParams(location.search).get("lang") === "es" ? "es" : "en";
 const T = () => I18N[LANG];
 let es = null; // optional public/es.json: { team_rule_id: { requirement, explanation } } — machine translation of the plain-language summary only
 const loadEs = () => es ? Promise.resolve(es) : fetch("es.json").then((r) => r.ok ? r.json() : {}).catch(() => ({})).then((j) => (es = j));
+let plain = null; // optional public/plain.json: { team_rule_id: { en, es } } — short plain-language summary shown on the card; the precise text sits under "Legal details"
+const loadPlain = () => plain ? Promise.resolve(plain) : fetch("plain.json").then((r) => r.ok ? r.json() : {}).catch(() => ({})).then((j) => (plain = j));
 const LABEL = { applies: "Applies", unknown: "Unknown", superseded: "Superseded", not_yet_effective: "Not yet effective", pending: "Pending (not law)" };
 const FALLBACK = { title: "Rental Housing Law Navigator", tagline: "Which housing rules apply to this address on a given date? Not legal advice.", examples: ["6238 DE LONGPRE AVE", "1031-1035 CLINTON ST"] };
 const FIXTURES_ON = new URLSearchParams(location.search).get("fixtures") === "1";
@@ -199,48 +207,54 @@ function render(res, asof) {
     rules.append(el("h3", "grp " + key, `${title} (${part.length})`));
     for (const r of part) rules.append(card(r));
   }
+  syncToggle();
 }
 
 function card(r) {
-  {
-    const t = T(), rule = r.rule || {}, c = el("article", "rule " + r.result), tr = LANG === "es" ? (es?.[r.team_rule_id] || {}) : {};
-    const head = el("div"); head.append(el("span", "badge", t.label[r.result] || r.result));
-    if (r.conflict_flag || rule.conflict_flag) head.append(el("span", "flag", t.conflict));
-    const conf = r.confidence ?? rule.confidence;
-    if (typeof conf === "number" && conf < 0.7) head.append(el("span", "flag", t.lowconf(conf)));
-    c.append(head, el("h3", null, rule.title || r.team_rule_id));
-    c.append(el("div", "meta", [rule.jurisdiction, rule.category?.replaceAll("_", " "), rule.effective_date && t.effective + rule.effective_date].filter(Boolean).join(" · ")));
-    if (rule.requirement) c.append(el("p", null, LANG === "es" ? (tr.requirement || rule.requirement + t.untranslated) : rule.requirement));
-    if (r.explanation) {
-      const why = LANG === "es" ? (tr.explanation || r.explanation + t.untranslated) : r.explanation;
-      // The generated explanation often restates the title and requirement; show only the new part and keep the full text one click away.
-      const rep = LANG === "en" && rule.title && why.startsWith(rule.title) && rule.requirement && why.includes(rule.requirement.slice(0, 40));
-      if (!rep) c.append(el("p", "meta", t.why + why));
-      else {
-        const i = why.lastIndexOf("… "), tail = i >= 0 ? why.slice(i + 2) : "";
-        if (tail) c.append(el("p", "meta", t.why + tail));
-        const d = el("details", "meta whyfull"); d.append(el("summary", null, tail ? "Full explanation" : t.why.replace(/:\s*$/, "")), el("p", "meta", why)); c.append(d);
-      }
-    }
-    if (rule.conflict_note) c.append(el("p", "meta", t.conflictNote + rule.conflict_note));
-    if (r.if_in_force?.explanation) c.append(el("p", "meta if-in-force", t.ifInForce + r.if_in_force.explanation + t.untranslated));
-    const src = el("div", "src");
-    const cite = el("div", "meta"); cite.append(t.source);
-    if (rule.source_url && /^https?:/.test(rule.source_url)) { const l = el("a", null, rule.citation || rule.source_url); l.href = rule.source_url; l.target = "_blank"; l.rel = "noopener"; cite.append(l); }
-    else cite.append(rule.citation || "missing citation");
-    cite.append(rule.retrieved_at ? t.retrieved(rule.retrieved_at) : t.noretr);
-    src.append(cite);
-    const sn = r.source_note || rule.source_note; // where this rule's text came from; shown verbatim, English only
-    if (sn) src.append(el("p", "meta source-note", t.srcNote + sn));
-    if (rule.quoted_span) src.append(el("blockquote", null, rule.quoted_span));
-    c.append(src);
-    return c;
-  }
+  const t = T(), rule = r.rule || {}, c = el("article", "rule " + r.result), tr = LANG === "es" ? (es?.[r.team_rule_id] || {}) : {};
+  const head = el("div"); head.append(el("span", "badge", t.label[r.result] || r.result));
+  if (r.conflict_flag || rule.conflict_flag) head.append(el("span", "flag", t.conflict));
+  const conf = r.confidence ?? rule.confidence;
+  if (typeof conf === "number" && conf < 0.7) head.append(el("span", "flag", t.lowconf(conf)));
+  c.append(head, el("h3", null, rule.title || r.team_rule_id));
+  const reqText = LANG === "es" ? (tr.requirement || (rule.requirement || "") + t.untranslated) : (rule.requirement || "");
+  const ps = plain?.[r.team_rule_id]?.[LANG];
+  // Collapsed card: plain summary (falls back to the requirement text), the in-force condition, the short citation name.
+  const summary = ps || reqText;
+  if (summary) c.append(el("p", "plain", summary));
+  if (r.if_in_force?.explanation) c.append(el("p", "meta if-in-force", t.ifInForce + r.if_in_force.explanation + t.untranslated));
+  const ed = rule.effective_date ? t.effective + rule.effective_date : t.noEff;
+  c.append(el("div", "meta cite-short", [rule.citation, ed].filter(Boolean).join(" · ")));
+  // One disclosure per card: everything precise lives here.
+  const d = el("details", "legal"); d.append(el("summary", null, t.legal));
+  d.append(el("div", "meta", [rule.jurisdiction, rule.category?.replaceAll("_", " ")].filter(Boolean).join(" · ")));
+  if (ps && reqText) d.append(el("p", null, reqText));
+  if (r.explanation) d.append(el("p", "meta", t.why + (LANG === "es" ? (tr.explanation || r.explanation + t.untranslated) : r.explanation)));
+  if (rule.conflict_note) d.append(el("p", "meta", t.conflictNote + rule.conflict_note));
+  const src = el("div", "src");
+  const cite = el("div", "meta"); cite.append(t.source);
+  if (rule.source_url && /^https?:/.test(rule.source_url)) { const l = el("a", null, rule.citation || rule.source_url); l.href = rule.source_url; l.target = "_blank"; l.rel = "noopener"; cite.append(l); }
+  else cite.append(rule.citation || "missing citation");
+  cite.append(rule.retrieved_at ? t.retrieved(rule.retrieved_at) : t.noretr);
+  src.append(cite);
+  const sn = r.source_note || rule.source_note; // where this rule's text came from; shown verbatim, English only
+  if (sn) src.append(el("p", "meta source-note", t.srcNote + sn));
+  if (rule.quoted_span) src.append(el("blockquote", null, rule.quoted_span));
+  d.append(src); c.append(d);
+  d.addEventListener("toggle", syncToggle);
+  return c;
 }
+
+function syncToggle() {
+  const ds = [...document.querySelectorAll("#rules details.legal")], all = ds.length && ds.every((d) => d.open), t = T();
+  const b = $("toggle-all"); b.textContent = all ? t.hideAll : t.showAll; b.setAttribute("aria-expanded", String(!!all)); b.hidden = !ds.length;
+}
+$("toggle-all").onclick = () => { const ds = [...document.querySelectorAll("#rules details.legal")], open = !ds.every((d) => d.open); ds.forEach((d) => { d.open = open; }); syncToggle(); };
 
 async function setLang(l) {
   LANG = l; const t = T(); document.documentElement.lang = l;
   if (l === "es") await loadEs();
+  await loadPlain();
   $("b1").textContent = t.b1; $("b2").textContent = t.b2; $("lang").textContent = t.other;
   $("mt").textContent = t.mt; $("mt").hidden = !t.mt;
   $("h-stack").textContent = t.stack; $("h-rules").textContent = t.rules;
